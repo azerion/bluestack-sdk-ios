@@ -12,12 +12,13 @@ It contains a dispacher that will select an ads server according to the priority
 ### Version
 1.0
 
-### Installation
+### Manual Install
 
 - download [MngAdsSDK.zip]
 - unzip [MngAdsSDK.zip]
 - drag and drop it in your project
 - check that libMngAds.a existe in "Link Binary With Libraries"
+
 
 MngAds SDK needs:
 
@@ -35,9 +36,13 @@ MngAds SDK needs:
 - StoreKit.framework
 - CoreLocation.framework
 
-### Development
+### Sample Application
 
-####Initializing the SDK
+Included is a [MngAds sample app] to use as example and for help on MngAds integration. This basic application allows users to test our different format.
+
+### Start Integrating
+
+#### Initializing the SDK
 
 You have to init the SDK in AppDelegate.m in application:didFinishLaunchingWithOptions:
 ```objc
@@ -183,7 +188,7 @@ HomeViewController *home =  [[HomeViewController alloc]init];
 Native ads give you the control to design the perfect ad units for your app. With our Native Ad API, you can determine the look and feel, size and location of your ads. Because you decide how the ads are formatted, ads can fit seamlessly in your application.
 #####Init factory
 
-To create a native ads you have to init an object with type MNGAdsSDKFactory and set the nativeDelegate.
+To create a nativeAd  you have to init an object with type MNGAdsSDKFactory and set the nativeDelegate.
 
 ```objc
 nativeAdsFactory = [[MNGAdsSDKFactory alloc]init];
@@ -253,3 +258,4 @@ License
 [Google DFP]:https://developers.google.com/mobile-ads-sdk/download#download
 [Facebook Audience Network]:https://developers.facebook.com/docs/ios?locale=fr_FR
 [MngAdsSDK.zip]:http://dispatcher.mng-ads.com/sdk/ios/MngAdsSDK.zip
+ [MngAds sample app]:https://bitbucket.org/mngcorp/mngads-demo-ios/src
