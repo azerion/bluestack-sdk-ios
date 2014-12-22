@@ -1,6 +1,6 @@
 # MngAds for IOS
 
-It provides the functionalities for monetizing your mobile application: it facilitates inserting native mobile ads. MngAds SDK is a library that allow you to handle the following Ads servers with the easy way:
+It provides the functionalities for monetizing your mobile application: it facilitates inserting native mobile ads. MngAds SDK is a library that allow you to handle (Waterfall) the following Ads servers with the easy way:
 
 - [Smart ads server]
 - [Google DFP]
