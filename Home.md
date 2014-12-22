@@ -249,7 +249,6 @@ preference.location = [[CLLocation alloc]initWithLatitude:48.876 longitude:10.45
 ```
 `Note`: this [link] can help you to get device location.
 
-License
 ----
 
 [link]:http://www.tutorialspoint.com/ios/ios_location_handling.htm
