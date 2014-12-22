@@ -14,8 +14,8 @@ It contains a dispacher that will select an ads server according to the priority
 
 ### Installation
 
-- download MngAdsSDK.zip
-- unzip MngAdsSDK.zip
+- download [MngAdsSDK.zip]
+- unzip [MngAdsSDK.zip]
 - drag and drop it in your project
 - check that libMngAds.a existe in "Link Binary With Libraries"
 
@@ -252,3 +252,4 @@ License
 [Mng-perf]:https://dashboard.mng-ads.com/sdk/mng-perf-sdk-integration-ios.html
 [Google DFP]:https://developers.google.com/mobile-ads-sdk/download#download
 [Facebook Audience Network]:https://developers.facebook.com/docs/ios?locale=fr_FR
+[MngAdsSDK.zip]:http://dispatcher.mng-ads.com/sdk/ios/MngAdsSDK.zip
