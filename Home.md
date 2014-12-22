@@ -54,7 +54,7 @@ You have to init the SDK in AppDelegate.m in application:didFinishLaunchingWithO
 ...
 }
 ```
-### Timeout
+#### Timeout
 The time given to the ad view to download the ad data. After this time, the dispacher stops the ad server running (with failure) and move to the next.
 
 the default timeout is 1s.
@@ -62,7 +62,7 @@ the default timeout is 1s.
 adsFactory = [[MNGAdsSDKFactory alloc]init];
 adsFactory.timeout = 3;
 ```
-### isBusy
+#### isBusy
 Before making a request you have to check that factory not busy (handling old request).
 
 Ads factory is busy means that it has not finished the previous request yet.
@@ -89,7 +89,7 @@ NSLog(@"Ads Factory is not busy");
 $Ads Factory is not busy
 $Ads Factory is busy
 ```
-#### Banner
+### Banner
 #####Init factory
 
 To create a banner you have to init an object with type MNGAdsSDKFactory and set the bannerDelegate and the viewController.
@@ -133,7 +133,7 @@ NSLog(@"%@",error);
 }
 ```
 
-#### Interstitial
+### Interstitial
 #####Init factory
 
 To create a interstitial you have to init an object with type MNGAdsSDKFactory and set the interstitalDelegate and the viewController.
@@ -184,7 +184,7 @@ HomeViewController *home =  [[HomeViewController alloc]init];
 }
 ```
 
-#### Native Ads
+### Native Ads
 Native ads give you the control to design the perfect ad units for your app. With our Native Ad API, you can determine the look and feel, size and location of your ads. Because you decide how the ads are formatted, ads can fit seamlessly in your application.
 #####Init factory
 
