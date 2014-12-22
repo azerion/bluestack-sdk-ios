@@ -9,10 +9,10 @@ MngAds SDK is a library that allow you to handle the following Ads servers with 
 
 It contains a dispacher that will select an ads server according to the priority and state.
 
-### Version
+## Version
 1.0
 
-### Manual Install
+## Manual Install
 
 - download [MngAdsSDK.zip]
 - unzip [MngAdsSDK.zip]
@@ -36,13 +36,13 @@ MngAds SDK needs:
 - StoreKit.framework
 - CoreLocation.framework
 
-### Sample Application
+## Sample Application
 
 Included is a [MngAds sample app] to use as example and for help on MngAds integration. This basic application allows users to test our different format.
 
-### Start Integrating
+## Start Integrating
 
-#### Initializing the SDK
+### Initializing the SDK
 
 You have to init the SDK in AppDelegate.m in application:didFinishLaunchingWithOptions:
 ```objc
@@ -54,7 +54,7 @@ You have to init the SDK in AppDelegate.m in application:didFinishLaunchingWithO
 ...
 }
 ```
-#### Timeout
+### Timeout
 The time given to the ad view to download the ad data. After this time, the dispacher stops the ad server running (with failure) and move to the next.
 
 the default timeout is 1s.
@@ -62,7 +62,7 @@ the default timeout is 1s.
 adsFactory = [[MNGAdsSDKFactory alloc]init];
 adsFactory.timeout = 3;
 ```
-####isBusy
+### isBusy
 Before making a request you have to check that factory not busy (handling old request).
 
 Ads factory is busy means that it has not finished the previous request yet.
@@ -70,7 +70,7 @@ Ads factory is busy means that it has not finished the previous request yet.
 isBusy will be setted to true when factory start handling request.
 
 isBusy will be setted to false when factory finish handling request.
-######example:
+##### example:
 ```objc
 if (bannerAdsFactory.isBusy) {
 NSLog(@"Ads Factory is busy");
