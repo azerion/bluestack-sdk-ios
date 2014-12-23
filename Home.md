@@ -249,8 +249,25 @@ preference.location = [[CLLocation alloc]initWithLatitude:48.876 longitude:10.45
 ```
 `Note`: this [link] can help you to get device location.
 
-----
+####Memory managment
+When you have finished your ads plant you must free the memory.
 
+When using [ARC] it will be done automatically. Otherwise you have to call "releaseMemory".
+######ARC
+```objc
+[adsFactory releaseMemory];//optional
+adsFactory = nil;
+```
+
+######No ARC
+```objc
+[adsFactory releaseMemory];//required
+[adsFactory release];
+adsFactory = nil;
+```
+
+----
+[ARC]:https://developer.apple.com/library/ios/documentation/Swift/Conceptual/Swift_Programming_Language/AutomaticReferenceCounting.html
 [link]:http://www.tutorialspoint.com/ios/ios_location_handling.htm
 [Smart ads server]:http://help.smartadserver.com/fr/Default.htm#../../../../specifications/Content/MobileSpecifications/Apps.htm
 [Mng-perf]:https://dashboard.mng-ads.com/sdk/mng-perf-sdk-integration-ios.html
