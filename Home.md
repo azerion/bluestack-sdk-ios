@@ -228,7 +228,7 @@ adsAdapter:nativeObjectDidFailWithError: will be called when all ads servers fai
 NSLog(@"%@",error);
 }
 ```
-#### Preferences Object
+### Preferences Object
 Preferences object is an optional parameter that allow you select ads by user info.
 informations that you can set are:
 
@@ -249,7 +249,7 @@ preference.location = [[CLLocation alloc]initWithLatitude:48.876 longitude:10.45
 ```
 `Note`: this [link] can help you to get device location.
 
-####Memory managment
+### Memory managment
 When you have finished your ads plant you must free the memory.
 
 When using [ARC] it will be done automatically. Otherwise you have to call "releaseMemory".
