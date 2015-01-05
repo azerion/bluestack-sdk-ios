@@ -7,6 +7,8 @@ MNG Ads provides functionalities for monetizing your mobile application: from pr
 - [Facebook Audience Network]
 - [Mng-perf]
 
+![mng-premium-state-diagram.png](https://bitbucket.org/repo/aen579/images/3919725884-mng-premium-state-diagram.png)
+
 It contains a dispacher that will select an ads server according to the priority and state.
 
 ## Version
