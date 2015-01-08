@@ -6,6 +6,7 @@ MNG Ads provides functionalities for monetizing your mobile application: from pr
 - [Google DFP]
 - [Facebook Audience Network]
 - [Mng-perf]
+- [appsfire]
 
 ![mng-premium-state-diagram.png](https://bitbucket.org/repo/aen579/images/3919725884-mng-premium-state-diagram.png)
 
@@ -276,4 +277,5 @@ adsFactory = nil;
 [Google DFP]:https://developers.google.com/mobile-ads-sdk/download#download
 [Facebook Audience Network]:https://developers.facebook.com/docs/ios?locale=fr_FR
 [MngAdsSDK.zip]:http://dispatcher.mng-ads.com/sdk/ios/MngAdsSDK.zip
- [MngAds sample app]:https://bitbucket.org/mngcorp/mngads-demo-ios/src
+[MngAds sample app]:https://bitbucket.org/mngcorp/mngads-demo-ios/src
+[appsfire]:https://github.com/appsfire/Appsfire-iOS-SDK
