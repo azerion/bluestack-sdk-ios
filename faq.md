@@ -7,9 +7,9 @@ This document answers the following frequently asked questions:
 ## What types of ad units are available? ##
 There are three ad units available to use in your app:
 
-Standard banner ads
-Interstitial ads
-Native ad API
+ - Standard banner ads
+ - Interstitial ads
+ - Native ad API
 
 ## How many placement IDs should I create? ##
 You need to create a different placement ID for any of the different ad formats (banner, interstitial and native) and each unique path that you implement within your app. 
