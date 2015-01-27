@@ -8,8 +8,7 @@ MNG Ads provides functionalities for monetizing your mobile application: from pr
 - [Google DFP]
 - [Mng-perf]
 
-
-![mng-ads-state-diagram.png](https://bitbucket.org/repo/aen579/images/3611103927-mng-ads-state-diagram.png)
+![mng-ads-state-diagram.png](https://bitbucket.org/repo/aen579/images/949359413-mng-ads-state-diagram.png)
 
 
 It contains a dispacher that will select an ads server according to the priority and state.
