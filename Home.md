@@ -17,6 +17,12 @@ It contains a dispacher that will select an ads server according to the priority
 ## Version
 1.0
 
+## Help and Troubleshooting
+
+[Help Center]
+Answers to frequently asked questions
+
+
 ## Manual Install
 
 - download [MngAdsSDK] from our demo project, **you must use version of  Ads servers's librairies in used on demo project.**
@@ -282,3 +288,4 @@ adsFactory = nil;
 [MngAdsSDK]:https://bitbucket.org/mngcorp/mngads-demo-ios/src/3a7eb1695c46/MNG-Ads-SDK/MngAds/?at=master
 [MngAds sample app]:https://bitbucket.org/mngcorp/mngads-demo-ios/src
 [appsfire]:https://github.com/appsfire/Appsfire-iOS-SDK
+[Help Center]:https://bitbucket.org/mngcorp/mngads-demo-ios/wiki/faq
