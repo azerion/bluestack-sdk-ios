@@ -3,10 +3,11 @@
 MNG Ads provides functionalities for monetizing your mobile application: from premium sales with reach media, video and innovative formats, it facilitates inserting native mobile ads as well all standard display formats. MngAds SDK is a library that allow you to handle the following Ads servers with the easy way :
 
 - [Smart ads server]
-- [Google DFP]
 - [Facebook Audience Network]
-- [Mng-perf]
 - [appsfire]
+- [Google DFP]
+- [Mng-perf]
+
 
 ![mng-ads-state-diagram.png](https://bitbucket.org/repo/aen579/images/3611103927-mng-ads-state-diagram.png)
 
@@ -18,14 +19,14 @@ It contains a dispacher that will select an ads server according to the priority
 
 ## Manual Install
 
-- download [MngAdsSDK] from our demo project
+- download [MngAdsSDK] from our demo project, **you must use version of  Ads servers's librairies in used on demo project.**
 - drag and drop it in your project
 - check that libMngAds.a existe in "Link Binary With Libraries"
 
 
 MngAds SDK needs, these libraries are in demo project :
 
-- libSmartAdServer.a
+- libSmartAdServer.a (use version >=5, in used on demo project.)
 - FBAudienceNetwork.framework
 - GoogleMobileAdsSdkiOS-6.12.2
 - libAppsfireSDK.a
@@ -278,7 +279,6 @@ adsFactory = nil;
 [Mng-perf]:https://dashboard.mng-ads.com/sdk/mng-perf-sdk-integration-ios.html
 [Google DFP]:https://developers.google.com/mobile-ads-sdk/download#download
 [Facebook Audience Network]:https://developers.facebook.com/docs/ios?locale=fr_FR
-[MngAdsSDK.zip]:http://dispatcher.mng-ads.com/sdk/ios/MngAdsSDK.zip
 [MngAdsSDK]:https://bitbucket.org/mngcorp/mngads-demo-ios/src/3a7eb1695c46/MNG-Ads-SDK/MngAds/?at=master
 [MngAds sample app]:https://bitbucket.org/mngcorp/mngads-demo-ios/src
 [appsfire]:https://github.com/appsfire/Appsfire-iOS-SDK
