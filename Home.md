@@ -8,7 +8,8 @@ MNG Ads provides functionalities for monetizing your mobile application: from pr
 - [Mng-perf]
 - [appsfire]
 
-![mng-premium-state-diagram.png](https://bitbucket.org/repo/aen579/images/3919725884-mng-premium-state-diagram.png)
+![mng-ads-state-diagram.png](https://bitbucket.org/repo/aen579/images/3611103927-mng-ads-state-diagram.png)
+
 
 It contains a dispacher that will select an ads server according to the priority and state.
 
@@ -22,11 +23,13 @@ It contains a dispacher that will select an ads server according to the priority
 - check that libMngAds.a existe in "Link Binary With Libraries"
 
 
-MngAds SDK needs:
+MngAds SDK needs, these libraries are in demo project :
 
 - libSmartAdServer.a
 - FBAudienceNetwork.framework
 - GoogleMobileAdsSdkiOS-6.12.2
+- libAppsfireSDK.a
+- libMng-perf.a
 - CoreGraphics.framework
 - QuartzCore.framework
 - SystemConfiguration.framework
