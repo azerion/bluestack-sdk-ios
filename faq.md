@@ -17,8 +17,8 @@ If you use native ads in feed and plan to show several units as the user scrolls
 ## What are "Native Ads ##
 Native ads allow you to customize the look and feel of ads to match that of your app. Native ads work by receiving the metadata for ads through MngAds.
 
-## How I hide the status bar on Interstitials ? ##
-Some adNetwork do not provide a *Interestitial view controller (presented modally)*. Therefore, in order to prevent  this issue, you must used : 
+## How do I hide the status bar on Interstitials ? ##
+Some Ads Network, provide an SDK where **ads are not presented modally by a view controller object**. Therefore, in order to prevent  this issue, you must used : 
 
 ```
 #!objective-c
