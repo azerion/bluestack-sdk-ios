@@ -38,7 +38,7 @@ Some Ads Network, provide an SDK where **ads are not presented modally by a view
 ```
 #!objective-c
 
-(void)adsAdapter:(MNGAdsAdapter )adsAdapter bannerDidLoad:(UIView )adView {
+(void)adsAdapter:(MNGAdsAdapter *)adsAdapter bannerDidLoad:(UIView *)adView {
     NSLog(@"MngAds Banner: did load ad");
     UIView *bannerView;
     bannerView = adView;
@@ -47,10 +47,9 @@ Some Ads Network, provide an SDK where **ads are not presented modally by a view
         frame.size.height = 70;
         bannerView.frame = frame;
     }
-    if (self.mngPerfBannerView.superview) {
-        [self.mngPerfBannerView removeFromSuperview];
-        self.mngPerfBannerView = nil;
-    }
+//.
+//.
+//.
     [self.currentVC.view addSubview:bannerView];
 }
 ```
