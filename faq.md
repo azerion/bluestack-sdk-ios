@@ -20,8 +20,6 @@ Native ads allow you to customize the look and feel of ads to match that of your
 ## How I hide the status bar on Interstitials ? ##
 Some adNetwork do not provide a *Interestitial view controller (presented modally)*. Therefore, in order to prevent  this issue, you must used : 
 
-
-
 ```
 #!objective-c
 
@@ -34,6 +32,29 @@ Some adNetwork do not provide a *Interestitial view controller (presented modall
     [self.currentVC dismissViewControllerAnimated:NO completion:nil];
 }
 ```
+## How do I resize banners ? ##
+
+
+```
+#!objective-c
+
+(void)adsAdapter:(MNGAdsAdapter )adsAdapter bannerDidLoad:(UIView )adView {
+    NSLog(@"MngAds Banner: did load ad");
+    UIView *bannerView;
+    bannerView = adView;
+    if ([bannerView isKindOfClass:[AFAdSDKSashimiView class]]) {
+        CGRect frame = bannerView.frame;
+        frame.size.height = 70;
+        bannerView.frame = frame;
+    }
+    if (self.mngPerfBannerView.superview) {
+        [self.mngPerfBannerView removeFromSuperview];
+        self.mngPerfBannerView = nil;
+    }
+    [self.currentVC.view addSubview:bannerView];
+}
+```
+
 
 # Publisher Application Process #
 # Support #
