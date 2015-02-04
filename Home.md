@@ -14,7 +14,7 @@ MNG Ads provides functionalities for monetizing your mobile application: from pr
 It contains a dispacher that will select an ads server according to the priority and state.
 
 ## Version
-1.0
+v1.0. See [Change Log]
 
 ## Help and Troubleshooting
 
@@ -288,3 +288,4 @@ adsFactory = nil;
 [MngAds sample app]:https://bitbucket.org/mngcorp/mngads-demo-ios/src
 [appsfire]:https://github.com/appsfire/Appsfire-iOS-SDK
 [Help Center]:https://bitbucket.org/mngcorp/mngads-demo-ios/wiki/faq
+[Change Log]:https://bitbucket.org/mngcorp/mngads-demo-ios/wiki/change-log
