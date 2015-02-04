@@ -6,6 +6,3 @@
 
  - Initial version
 
-## Version 1.1
-
-#### Release date: Febuary 4th, 2015
