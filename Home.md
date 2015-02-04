@@ -14,7 +14,7 @@ MNG Ads provides functionalities for monetizing your mobile application: from pr
 It contains a dispacher that will select an ads server according to the priority and state.
 
 ## Version
-v1.0. See [Change Log]
+v1.0. See [Change Log] and [Upgrade Guide].
 
 ## Help and Troubleshooting
 
@@ -31,11 +31,11 @@ Answers to frequently asked questions
 
 MngAds SDK needs, these libraries are in demo project :
 
-- libSmartAdServer.a (use version >=5, in used on demo project.)
-- FBAudienceNetwork.framework
-- GoogleMobileAdsSdkiOS-6.12.2
-- libAppsfireSDK.a
-- libMng-perf.a
+- [libSmartAdServer.a] (use version >=5, in used on demo project.)
+- [FBAudienceNetwork.framework]
+- [GoogleMobileAdsSdkiOS-6.12.2]
+- [libAppsfireSDK.a]
+- [libMng-perf.a]
 - CoreGraphics.framework
 - QuartzCore.framework
 - SystemConfiguration.framework
@@ -281,7 +281,7 @@ adsFactory = nil;
 [ARC]:https://developer.apple.com/library/ios/documentation/Swift/Conceptual/Swift_Programming_Language/AutomaticReferenceCounting.html
 [link]:http://www.tutorialspoint.com/ios/ios_location_handling.htm
 [Smart ads server]:http://help.smartadserver.com/fr/Default.htm#../../../../specifications/Content/MobileSpecifications/Apps.htm
-[Mng-perf]:https://dashboard.mng-ads.com/sdk/mng-perf-sdk-integration-ios.html
+[Mng-perf]:https://bitbucket.org/mngcorp/mngads-demo-ios/src/7e4ac6bb75989030fe5dd2cfd998cf5d4f3ea3bf/MNG-Ads-SDK/AdsSDKs/MngPerf/?at=master
 [Google DFP]:https://developers.google.com/mobile-ads-sdk/download#download
 [Facebook Audience Network]:https://developers.facebook.com/docs/ios?locale=fr_FR
 [MngAdsSDK]:https://bitbucket.org/mngcorp/mngads-demo-ios/src/3a7eb1695c46/MNG-Ads-SDK/MngAds/?at=master
@@ -289,3 +289,10 @@ adsFactory = nil;
 [appsfire]:https://github.com/appsfire/Appsfire-iOS-SDK
 [Help Center]:https://bitbucket.org/mngcorp/mngads-demo-ios/wiki/faq
 [Change Log]:https://bitbucket.org/mngcorp/mngads-demo-ios/wiki/change-log
+[Upgrade Guide]:https://bitbucket.org/mngcorp/mngads-demo-ios/wiki/upgrading
+
+[libSmartAdServer.a]:https://bitbucket.org/mngcorp/mngads-demo-ios/src/7e4ac6bb7598/MNG-Ads-SDK/AdsSDKs/SASsdk/?at=master
+[FBAudienceNetwork.framework]:https://bitbucket.org/mngcorp/mngads-demo-ios/src/7e4ac6bb75989030fe5dd2cfd998cf5d4f3ea3bf/MNG-Ads-SDK/AdsSDKs/FBAudienceNetwork.framework/?at=master
+[GoogleMobileAdsSdkiOS-6.12.2]:https://bitbucket.org/mngcorp/mngads-demo-ios/src/7e4ac6bb75989030fe5dd2cfd998cf5d4f3ea3bf/MNG-Ads-SDK/AdsSDKs/GoogleMobileAdsSdkiOS-6.12.2/?at=master
+[libAppsfireSDK.a]:https://bitbucket.org/mngcorp/mngads-demo-ios/src/7e4ac6bb75989030fe5dd2cfd998cf5d4f3ea3bf/MNG-Ads-SDK/AdsSDKs/AppsfireSDK/?at=master
+[libMng-perf.a]:https://bitbucket.org/mngcorp/mngads-demo-ios/src/7e4ac6bb75989030fe5dd2cfd998cf5d4f3ea3bf/MNG-Ads-SDK/AdsSDKs/MngPerf/?at=master
