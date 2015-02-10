@@ -2,7 +2,7 @@
 
 ## Upgrading from 1.0 to 1.1
 
-The following methods have been changed. You can use `preferredHeight` as height to have best display for banners
+The following methods have been changed. ```preferredHeight:(CGFloat)preferredHeight``` is now available to more easily resize banners.
 
 
 ```
