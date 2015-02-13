@@ -54,6 +54,27 @@ Some Ads Network, provide an SDK where **ads are not presented modally by a view
 }
 ```
 
+## What IDFA related options do I need to choose when submitting my iOS app to Apple for review?
+
+When you submit an iOS application on iTunes Connect, the service mobile developers use to distribute and update their applications on the iTunes App Store, Apple now explains how the Advertising Identifier (IDFA) can and cannot be used, and asks for developers’ compliance with these rules by checking a box.
+
+If you do not want your application to be rejected by Apple, here are simple steps and precautions to take when you use the MngAds, Facebook, Google, Appsfire and MngPerf iOS SDKs.
+
+
+ You must select the following options :
+
+ - Serve advertisements within the app
+ - Attribute this app installation to a previously served advertisement
+
+>We advise you to explicitly tell Apple you are using MngAds iOS SDK in your application, and to provide the link to this documentation page.
+
+
+MngAds uses following third party SDKs :
+
+ - http://help.smartadserver.com/iOS/V5.0/#IntegrationGuides/Checklist.htm?Highlight=idfa
+ - https://developers.facebook.com/docs/audience-network/faq?locale=fr_FR#a17
+ - http://docs.appsfire.com/sdk/ios/integration-reference/Requirements/Submit_An_App_With_Appsfire_iOS_SDK
+ - https://developers.google.com/mobile-ads-sdk/download#downloadios
 
 # Publisher Application Process #
 # Support #
