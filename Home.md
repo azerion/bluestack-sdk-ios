@@ -46,6 +46,7 @@ MngAds SDK needs, these libraries are in demo project :
 - AdSupport.framework
 - StoreKit.framework
 - CoreLocation.framework
+- Accelerate/Accelerate.h Framework
 
 ## Sample Application
 
