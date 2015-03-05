@@ -294,6 +294,6 @@ adsFactory = nil;
 
 [libSmartAdServer.a]:https://bitbucket.org/mngcorp/mngads-demo-ios/src/7e4ac6bb7598/MNG-Ads-SDK/AdsSDKs/SASsdk/?at=master
 [FBAudienceNetwork.framework]:https://bitbucket.org/mngcorp/mngads-demo-ios/src/7e4ac6bb75989030fe5dd2cfd998cf5d4f3ea3bf/MNG-Ads-SDK/AdsSDKs/FBAudienceNetwork.framework/?at=master
-[GoogleMobileAds.framework]:https://bitbucket.org/mngcorp/mngads-demo-ios/src/7e4ac6bb75989030fe5dd2cfd998cf5d4f3ea3bf/MNG-Ads-SDK/AdsSDKs/GoogleMobileAdsSdkiOS-6.12.2/?at=master
+[GoogleMobileAds.framework]:https://bitbucket.org/mngcorp/mngads-demo-ios/src/7db938f985bd1f2aee33fab26485f8e726f11922/MNG-Ads-SDK/AdsSDKs/GoogleMobileAdsSdkiOS-7.0.0/?at=master
 [libAppsfireSDK.a]:https://bitbucket.org/mngcorp/mngads-demo-ios/src/7e4ac6bb75989030fe5dd2cfd998cf5d4f3ea3bf/MNG-Ads-SDK/AdsSDKs/AppsfireSDK/?at=master
 [libMng-perf.a]:https://bitbucket.org/mngcorp/mngads-demo-ios/src/7e4ac6bb75989030fe5dd2cfd998cf5d4f3ea3bf/MNG-Ads-SDK/AdsSDKs/MngPerf/?at=master
