@@ -14,7 +14,7 @@ MNG Ads provides functionalities for monetizing your mobile application: from pr
 It contains a dispacher that will select an ads server according to the priority and state.
 
 ## Version
-v1.1. See [Change Log] and [Upgrade Guide].
+v1.1 See [Change Log] and [Upgrade Guide].
 
 ## Help and Troubleshooting
 
@@ -33,7 +33,7 @@ MngAds SDK needs, these libraries are in demo project :
 
 - [libSmartAdServer.a] (use version >=5, in used on demo project.)
 - [FBAudienceNetwork.framework]
-- [GoogleMobileAdsSdkiOS-6.12.2]
+- [GoogleMobileAds.framework] (use version >=7.0.0, in used on demo project.)
 - [libAppsfireSDK.a]
 - [libMng-perf.a]
 - CoreGraphics.framework
@@ -294,6 +294,6 @@ adsFactory = nil;
 
 [libSmartAdServer.a]:https://bitbucket.org/mngcorp/mngads-demo-ios/src/7e4ac6bb7598/MNG-Ads-SDK/AdsSDKs/SASsdk/?at=master
 [FBAudienceNetwork.framework]:https://bitbucket.org/mngcorp/mngads-demo-ios/src/7e4ac6bb75989030fe5dd2cfd998cf5d4f3ea3bf/MNG-Ads-SDK/AdsSDKs/FBAudienceNetwork.framework/?at=master
-[GoogleMobileAdsSdkiOS-6.12.2]:https://bitbucket.org/mngcorp/mngads-demo-ios/src/7e4ac6bb75989030fe5dd2cfd998cf5d4f3ea3bf/MNG-Ads-SDK/AdsSDKs/GoogleMobileAdsSdkiOS-6.12.2/?at=master
+[GoogleMobileAds.framework]:https://bitbucket.org/mngcorp/mngads-demo-ios/src/7e4ac6bb75989030fe5dd2cfd998cf5d4f3ea3bf/MNG-Ads-SDK/AdsSDKs/GoogleMobileAdsSdkiOS-6.12.2/?at=master
 [libAppsfireSDK.a]:https://bitbucket.org/mngcorp/mngads-demo-ios/src/7e4ac6bb75989030fe5dd2cfd998cf5d4f3ea3bf/MNG-Ads-SDK/AdsSDKs/AppsfireSDK/?at=master
 [libMng-perf.a]:https://bitbucket.org/mngcorp/mngads-demo-ios/src/7e4ac6bb75989030fe5dd2cfd998cf5d4f3ea3bf/MNG-Ads-SDK/AdsSDKs/MngPerf/?at=master
