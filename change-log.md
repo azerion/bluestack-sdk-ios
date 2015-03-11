@@ -1,5 +1,29 @@
 ## Change log and release notes for the MngAds SDK for iOS.
 
+## Version 1.1.3
+
+#### Release date: March 11th, 2015
+
+ - Refreshing of ads is now done by mng ads, improving capping functionality and adding debug more
+
+ - https://bitbucket.org/mngcorp/mngads-demo-ios/commits/tag/v1.1.3
+
+## Version 1.1.2
+
+#### Release date: March 6th, 2015
+
+ - Add support for badge view in native ads (appsfire)
+
+ - https://bitbucket.org/mngcorp/mngads-demo-ios/commits/tag/v1.1.2
+
+## Version 1.1.1
+
+#### Release date: March 5th, 2015
+
+ - Update Google Ads to 7.0.0 + Update FacebookAudienceNetwork to 3.23.1 + Removing Crashlytics
+
+ - https://bitbucket.org/mngcorp/mngads-demo-ios/commits/tag/v1.1.1
+
 ## Version 1.1
 
 #### Release date: Febuary 10th, 2015
