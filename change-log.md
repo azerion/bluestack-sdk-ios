@@ -1,5 +1,13 @@
 ## Change log and release notes for the MngAds SDK for iOS.
 
+## Version 1.1.4
+
+#### Release date: March 18th, 2015
+
+ - Update with latest cocoapods
+ - timeout improvements
+
+ - https://bitbucket.org/mngcorp/mngads-demo-ios/commits/tag/v1.1.4
 ## Version 1.1.3
 
 #### Release date: March 11th, 2015
