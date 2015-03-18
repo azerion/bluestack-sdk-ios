@@ -14,12 +14,17 @@ MNG Ads provides functionalities for monetizing your mobile application: from pr
 It contains a dispacher that will select an ads server according to the priority and state.
 
 ## Version
-v1.1 See [Change Log] and [Upgrade Guide].
+v1.1.4 See [Change Log] and [Upgrade Guide].
 
 ## Help and Troubleshooting
 
 [Help Center]
 Answers to frequently asked questions
+
+
+## Using CocoaPods
+
+The MngAds SDK is available through Cocoapods. see [Using CocoaPods] section.
 
 
 ## Manual Install
@@ -297,3 +302,4 @@ adsFactory = nil;
 [GoogleMobileAds.framework]:https://bitbucket.org/mngcorp/mngads-demo-ios/src/7db938f985bd1f2aee33fab26485f8e726f11922/MNG-Ads-SDK/AdsSDKs/GoogleMobileAdsSdkiOS-7.0.0/?at=master
 [libAppsfireSDK.a]:https://bitbucket.org/mngcorp/mngads-demo-ios/src/7e4ac6bb75989030fe5dd2cfd998cf5d4f3ea3bf/MNG-Ads-SDK/AdsSDKs/AppsfireSDK/?at=master
 [libMng-perf.a]:https://bitbucket.org/mngcorp/mngads-demo-ios/src/7e4ac6bb75989030fe5dd2cfd998cf5d4f3ea3bf/MNG-Ads-SDK/AdsSDKs/MngPerf/?at=master
+[Using CocoaPods]:https://bitbucket.org/mngcorp/mngads-demo-ios/wiki/Using%20CocoaPods
