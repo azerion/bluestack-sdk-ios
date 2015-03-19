@@ -26,5 +26,5 @@ contains the value ***$(inherited)***
 
 
 [Cocoapods]:http://cocoapods.org/
-[libSmartAdServer.a]:https://bitbucket.org/mngcorp/mngads-demo-ios/src/7e4ac6bb7598/MNG-Ads-SDK/AdsSDKs/SASsdk/?at=master
-[FBAudienceNetwork.framework]:https://bitbucket.org/mngcorp/mngads-demo-ios/src/7e4ac6bb75989030fe5dd2cfd998cf5d4f3ea3bf/MNG-Ads-SDK/AdsSDKs/FBAudienceNetwork.framework/?at=maste
+[libSmartAdServer.a]:https://bitbucket.org/mngcorp/mngads-demo-ios/src/HEAD/Demo/MNG-Ads-SDK/AdsSDKs/SASsdk/?at=master
+[FBAudienceNetwork.framework]:https://bitbucket.org/mngcorp/mngads-demo-ios/src/HEAD/Demo/MNG-Ads-SDK/AdsSDKs/FBAudienceNetwork.framework/?at=master
