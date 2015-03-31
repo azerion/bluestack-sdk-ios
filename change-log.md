@@ -1,5 +1,14 @@
 ## Change log and release notes for the MngAds SDK for iOS.
 
+## Version 1.1.5
+
+#### Release date: March 31th, 2015
+
+ - Timeout improvement
+ - Capping improvement (on placementId and not on MNGAdsFactory)
+ - Add keyword preferences
+ - Bug fix for non arc projects
+
 ## Version 1.1.4
 
 #### Release date: March 18th, 2015
