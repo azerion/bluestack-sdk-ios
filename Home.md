@@ -11,7 +11,7 @@ MNG Ads provides functionalities for monetizing your mobile application: from pr
 It contains a dispacher that will select an ads server according to the priority and state ([mngAds state diagram]).
 
 ## Version
-v1.1.4 See [Change Log] and [Upgrade Guide].
+v1.1.5 See [Change Log] and [Upgrade Guide].
 
 ## Help and Troubleshooting
 
@@ -250,6 +250,7 @@ informations that you can set are:
 - location : geographical position of the user. *Important:* your application can be rejected by Apple if you use the device's location *only* for advertising.
 - language : language of user (ISO code)
 - gender : gender of user
+- keyWord : Key word of targeting
 
 ```objc
 #import "MNGPreference.h"
@@ -257,6 +258,7 @@ informations that you can set are:
 MNGPreference * preference = [[MNGPreference alloc]init];
 preference.age = 25;
 preference.language = @"fr";
+preference.keyword = @"Tourisme";
 preference.gender = MNGGenderFemale;
 preference.location = [[CLLocation alloc]initWithLatitude:48.876 longitude:10.453];
 [bannerAdsFactory createBannerInFrame:CGRectMake(0, 0, 320, 50)withPreferences:preference];
