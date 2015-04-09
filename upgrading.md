@@ -1,6 +1,10 @@
 # upgrading SDK
 
-## Upgrading from 1.0 to 1.1
+## Upgrading to v1.2
+
+You must add **Appnexus** library.
+
+## Upgrading from v1.0 to v1.1
 
 The following methods have been changed. ```preferredHeight:(CGFloat)preferredHeight``` is now available to more easily resize banners.
 
