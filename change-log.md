@@ -1,5 +1,12 @@
 ## Change log and release notes for the MngAds SDK for iOS.
 
+## Version 1.2
+
+#### Release date: April 9th, 2015
+
+ - Adding AppNexus adNetwork
+ - nativeAd improvements
+
 ## Version 1.1.5
 
 #### Release date: March 31th, 2015
