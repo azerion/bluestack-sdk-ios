@@ -12,7 +12,7 @@ MNG Ads provides functionalities for monetizing your mobile application: from pr
 It contains a dispacher that will select an ads server according to the priority and state ([mngAds state diagram]).
 
 ## Version
-v1.1.5 See [Change Log] and [Upgrade Guide].
+v1.2 See [Change Log] and [Upgrade Guide].
 
 ## Help and Troubleshooting
 
@@ -68,6 +68,36 @@ You have to init the SDK in AppDelegate.m in application:didFinishLaunchingWithO
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
 [MNGAdsSDKFactory initWithAppId:@"YOUR_APP_ID"];
 ...
+}
+```
+###Initialisation Delegate
+
+MNGAds SDK is configured by server or from last configuration. So in first run after installation, initialisation take some time before be done .
+
+To check out if the SDK is initialized or not, you have to use `[MNGAdsSDKFactory isInitialized]`. To know when the SDK has finished Initializing you have to use MNGAdsSDKFactoryDelegate.
+
+```objc
+// AppDelegate.h
+#import "MNGAdsSDKFactory.h"
+
+@interface AppDelegate : UIResponder <UIApplicationDelegate,MNGAdsSDKFactoryDelegate>
+
+
+
+// AppDelegate.m
+...
+- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+	[MNGAdsSDKFactory initWithAppId:@"YOUR_APP_ID"];
+	if([MNGAdsSDKFactory isInitialized] == NO){
+		[MNGAdsSDKFactory setDelegate:self];
+	}
+	...
+}
+
+-(void)MNGAdsSDKFactoryDidFinishInitializing{
+    if (YOUR_APP_IS_READY_TO_SHOW_AD) {
+        INIT_FACTORIES_AND_USE_THEM_TO_SHOW_ADS;
+    }
 }
 ```
 #### Timeout
