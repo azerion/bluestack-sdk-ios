@@ -7,6 +7,7 @@ MNG Ads provides functionalities for monetizing your mobile application: from pr
 - [appsfire]
 - [Google DFP]
 - [Mng-perf]
+- [AppNexus]
 
 It contains a dispacher that will select an ads server according to the priority and state ([mngAds state diagram]).
 
@@ -38,6 +39,7 @@ MngAds SDK needs, these libraries are in demo project :
 - [GoogleMobileAds.framework] (use version >=7.0.0, in used on demo project.)
 - [libAppsfireSDK.a]
 - [libMng-perf.a]
+- [libANSDK.a]  (Appnexus)
 - CoreGraphics.framework
 - QuartzCore.framework
 - SystemConfiguration.framework
@@ -295,6 +297,8 @@ adsFactory = nil;
 [Help Center]:https://bitbucket.org/mngcorp/mngads-demo-ios/wiki/faq
 [Change Log]:https://bitbucket.org/mngcorp/mngads-demo-ios/wiki/change-log
 [Upgrade Guide]:https://bitbucket.org/mngcorp/mngads-demo-ios/wiki/upgrading
+[AppNexus]:http://www.appnexus.com/fr
+[libANSDK.a]:https://bitbucket.org/mngcorp/mngads-demo-ios/src/HEAD/Demo/MNG-Ads-SDK/AdsSDKs/ANSDK/?at=master
 
 [libSmartAdServer.a]:https://bitbucket.org/mngcorp/mngads-demo-ios/src/HEAD/Demo/MNG-Ads-SDK/AdsSDKs/SASsdk/?at=master
 [FBAudienceNetwork.framework]:https://bitbucket.org/mngcorp/mngads-demo-ios/src/HEAD/Demo/MNG-Ads-SDK/AdsSDKs/FBAudienceNetwork.framework/?at=master
