@@ -6,6 +6,7 @@
 
  - Adding AppNexus adNetwork
  - nativeAd improvements
+ - Adding [MNGAdsSDKFactory isInitialized]
 
 ## Version 1.1.5
 
