@@ -1,8 +1,12 @@
 # upgrading SDK
 
+## Upgrading to v1.2.1
+
+Bug preference.keyword, now allow empty value if location is setted.
+
 ## Upgrading to v1.2
 
-You must add **Appnexus** library.
+You must add **Appnexus** library. You must setpreference.keyword,if location is setted.(bug fix in v1.2.1)
 
 ## Upgrading from v1.0 to v1.1
 
