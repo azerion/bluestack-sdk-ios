@@ -12,7 +12,7 @@ MNG Ads provides functionalities for monetizing your mobile application: from pr
 It contains a dispacher that will select an ads server according to the priority and state ([mngAds state diagram]).
 
 ## Version
-v1.2 See [Change Log] and [Upgrade Guide].
+v1.2.1 See [Change Log] and [Upgrade Guide].
 
 ## Help and Troubleshooting
 
@@ -290,7 +290,7 @@ informations that you can set are:
 MNGPreference * preference = [[MNGPreference alloc]init];
 preference.age = 25;
 preference.language = @"fr";
-preference.keyword = @"Tourisme";
+preference.keyword = @"Tourisme";//Separator in case of multiple entries is ;
 preference.gender = MNGGenderFemale;
 preference.location = [[CLLocation alloc]initWithLatitude:48.876 longitude:10.453];
 [bannerAdsFactory createBannerInFrame:CGRectMake(0, 0, 320, 50)withPreferences:preference];
