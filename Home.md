@@ -282,7 +282,15 @@ informations that you can set are:
 - location : geographical position of the user. *Important:* your application can be rejected by Apple if you use the device's location *only* for advertising.
 - language : language of user (ISO code)
 - gender : gender of user
-- keyWord : Key word of targeting
+- keyWord : Use free-form key-values when you want to pass targeting values dynamically into an ad tag based on information you collect from your users. You can also use free-form key-values when there are too many possible values to define in advance. Separator in case of multiple entries is **;**. 
+
+
+```
+#!objective-c
+
+key=value;key2=value2
+```
+
 
 ```objc
 #import "MNGPreference.h"
@@ -290,7 +298,7 @@ informations that you can set are:
 MNGPreference * preference = [[MNGPreference alloc]init];
 preference.age = 25;
 preference.language = @"fr";
-preference.keyword = @"Tourisme";//Separator in case of multiple entries is ;
+reference.keyword = @"brand=myBrand;category=sport";//Separator in case of multiple entries is ; key=value
 preference.gender = MNGGenderFemale;
 preference.location = [[CLLocation alloc]initWithLatitude:48.876 longitude:10.453];
 [bannerAdsFactory createBannerInFrame:CGRectMake(0, 0, 320, 50)withPreferences:preference];
