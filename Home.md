@@ -298,7 +298,7 @@ key=value;key2=value2
 MNGPreference * preference = [[MNGPreference alloc]init];
 preference.age = 25;
 preference.language = @"fr";
-reference.keyword = @"brand=myBrand;category=sport";//Separator in case of multiple entries is ; key=value
+preference.keyword = @"brand=myBrand;category=sport";//Separator in case of multiple entries is ; key=value
 preference.gender = MNGGenderFemale;
 preference.location = [[CLLocation alloc]initWithLatitude:48.876 longitude:10.453];
 [bannerAdsFactory createBannerInFrame:CGRectMake(0, 0, 320, 50)withPreferences:preference];
