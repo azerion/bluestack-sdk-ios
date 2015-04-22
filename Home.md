@@ -12,7 +12,7 @@ MNG Ads provides functionalities for monetizing your mobile application: from pr
 It contains a dispacher that will select an ads server according to the priority and state ([mngAds state diagram]).
 
 ## Version
-v1.2.1 See [Change Log] and [Upgrade Guide].
+v1.2.2 See [Change Log] and [Upgrade Guide].
 
 ## Help and Troubleshooting
 
@@ -51,6 +51,8 @@ MngAds SDK needs, these libraries are in demo project :
 - StoreKit.framework
 - CoreLocation.framework
 - Accelerate/Accelerate.h Framework
+
+You can see [Installation guide for Swift]
 
 ## Sample Application
 
@@ -345,3 +347,4 @@ adsFactory = nil;
 [libMng-perf.a]:https://bitbucket.org/mngcorp/mngads-demo-ios/src/HEAD/Demo/Pods/Mng-perf/?at=master
 [Using CocoaPods]:https://bitbucket.org/mngcorp/mngads-demo-ios/wiki/Using%20CocoaPods
 [mngAds state diagram]:https://bitbucket.org/mngcorp/mngads-demo-ios/wiki/diagram
+[Installation guide for Swift]:https://bitbucket.org/mngcorp/mngads-demo-ios/wiki/Swift
