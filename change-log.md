@@ -1,5 +1,14 @@
 ## Change log and release notes for the MngAds SDK for iOS.
 
+## Version 1.2.2
+
+#### Release date: April 21th, 2015
+
+ - update appsfire SDK to 2.7.1 that use banner in 50pt
+ - Improvement of appsfire nativeAd
+ - Keywords are now available for all adNeworks with key/value system
+ - Added bridge file for swift compatibility
+
 ## Version 1.2.1
 
 #### Release date: April 10th, 2015
