@@ -1,3 +1,4 @@
+[TOC]
 # Best practice Mngads : optimized use case for several ad formats on one page
 
 When trying to display several ad formats on one page try to synchronize your requests instead of making multiple ones at the some time. By making the requests at the same time you are decreasing your chance of receving an Ad and you are making your app slow .You can check the number of MNGAdsFactory running a request by calling or use delegate like [FourInOneViewController.m](https://bitbucket.org/mngcorp/mngads-demo-ios/src/HEAD/Demo/MNG-Ads-SDK/FourInOneViewController.m?at=master) :
