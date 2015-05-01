@@ -1,5 +1,13 @@
 ## Change log and release notes for the MngAds SDK for iOS.
 
+## Version 1.2.3
+
+#### Release date: May 1st, 2015
+
+ - capping improvement
+ - solved smart banner impressions
+ - Add guidelines, https://bitbucket.org/mngcorp/mngads-demo-ios/wiki/guidelines
+
 ## Version 1.2.2
 
 #### Release date: April 21th, 2015
