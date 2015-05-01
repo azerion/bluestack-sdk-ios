@@ -12,7 +12,11 @@ MNG Ads provides functionalities for monetizing your mobile application: from pr
 It contains a dispacher that will select an ads server according to the priority and state ([mngAds state diagram]).
 
 ## Version
-v1.2.2 See [Change Log] and [Upgrade Guide].
+v1.2.3 See [Change Log] and [Upgrade Guide].
+
+## Guideline
+
+See [Design Guidelines and Best practices]
 
 ## Help and Troubleshooting
 
@@ -276,6 +280,52 @@ adsAdapter:nativeObjectDidFailWithError: will be called when all ads servers fai
 NSLog(@"%@",error);
 }
 ```
+###Native Collection
+Native collection ads give you the control to design the perfect ad carousel for your app.
+#####Init factory
+
+To create a nativeAd collection you have to init an object with type MNGAdsSDKFactory and set the nativeCollectionDelegate.
+
+```objc
+nativeCollectionAdsFactory = [[MNGAdsSDKFactory alloc]init];
+nativeCollectionAdsFactory.nativeCollectionDelegate = self;
+```
+You have also to set placementId (minimum one time)
+
+```objc
+nativeCollectionAdsFactory.placementId = @"/YOUR_APP_ID/PLACEMENT_ID";
+```
+#####Make a request
+To make a request you have to call '[createNativeCollection:NSUInteger requestedAdNumber]' with the number of native objects. this method return a bool value (canHandleRequest) 
+
+```objc
+if([nativeCollectionAdsFactory createNativeCollection:5]){
+//Wait callBack from delegate
+}else{
+//adsFactory can not handle your request
+}
+```
+
+#####Handle callBack from NativeCollectionDelegate
+adsAdapter:nativeCollectionDidLoad: will be called by the SDK when your nativeObject's array is ready. now you can create your own view.
+```objc
+- (void)adsAdapter:(MNGAdsAdapter *)adsAdapter nativeCollectionDidLoad:(NSArray *)nativeObjects{
+NSLog(@"adsAdapterNativeObjectDidLoad:");
+for (MNGNAtiveObject * nativeObject in nativeObjects){
+    self.titleLabel.text = nativeObject.title;
+    self.contextLabel.text = nativeObject.socialContext;
+    self.bodyLabel.text = nativeObject.body;
+...
+}
+```
+
+adsAdapter:nativeCollectionDidFailWithError: will be called when all ads servers fail. it will return the error of last called ads server.
+```objc
+- (void)adsAdapter:(MNGAdsAdapter *)adsAdapter nativeCollectionDidFailWithError:(NSError *)error{
+NSLog(@"%@",error);
+}
+```
+
 ### Preferences Object
 Preferences object is an optional parameter that allow you select ads by user info.
 informations that you can set are:
@@ -348,3 +398,4 @@ adsFactory = nil;
 [Using CocoaPods]:https://bitbucket.org/mngcorp/mngads-demo-ios/wiki/Using%20CocoaPods
 [mngAds state diagram]:https://bitbucket.org/mngcorp/mngads-demo-ios/wiki/diagram
 [Installation guide for Swift]:https://bitbucket.org/mngcorp/mngads-demo-ios/wiki/Swift
+[Design Guidelines and Best practices]:https://bitbucket.org/mngcorp/mngads-demo-ios/wiki/guidelines
