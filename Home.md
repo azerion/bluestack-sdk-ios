@@ -14,7 +14,7 @@ It contains a dispacher that will select an ads server according to the priority
 ## Version
 v1.2.3 See [Change Log] and [Upgrade Guide].
 
-## Guideline
+## Guidelines
 
 See [Design Guidelines and Best practices]
 
