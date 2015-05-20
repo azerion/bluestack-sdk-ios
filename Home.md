@@ -170,11 +170,11 @@ if([bannerAdsFactory createBannerInFrame:CGRectMake(0, 0, 320, 50)]){
 #####Handle callBack from BannerDelegate
 adsAdapter:bannerDidLoad: will be called by the SDK when your bannerView is ready. now you can add your bannerView to th ViewHierarchy.
 ```objc
--(void)adsAdapter:(MNGAdsAdapter *)adsAdapter bannerDidLoad:(UIView *)bannerView{
-NSLog(@"adsAdapterBannerDidLoad:");
-_bannerView = bannerView;
-_bannerView.frame = CGRectMake(0, 20, 320, 50);
-[self.view addSubview:_bannerView];
+-(void)adsAdapter:(MNGAdsAdapter  *)adsAdapter bannerDidLoad:(UIView  *)bannerView preferredHeight:(CGFloat)preferredHeight{
+	NSLog(@"adsAdapterBannerDidLoad:");
+	_bannerView = bannerView;
+	_bannerView.frame = CGRectMake(0, 20, 320, preferredHeight);
+	[self.view addSubview:_bannerView];
 }
 ```
 
