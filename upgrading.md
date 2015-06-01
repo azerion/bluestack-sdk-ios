@@ -4,13 +4,19 @@
 
 The call to the following methods 
 
--(BOOL)createInterstitialWithPreferences:(MNGPreference*)preferences autoDisplayed:(BOOL)autoDisplyed;
+```
+#!objective-c
+-(BOOL)createInterstitialWithPreferences:(MNGPreference*)preferences autoDisplayed:(BOOL)autoDisplyed;  
 -(BOOL)createInterstitialAutoDisplayed:(BOOL)autoDisplyed;
+```
 
 should be replaced by
 
+```
+#!objective-c
 -(BOOL)createInterstitialWithPreferences:(MNGPreference*)preferences;
 -(BOOL)createInterstitial;
+```
 
 ## Upgrading to v1.2.1
 
