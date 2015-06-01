@@ -2,6 +2,7 @@
 
 ## Version 1.3.2
 
+You must check [Upgrade Guide].
 #### Release date: June 1th, 2015
 
  - Manage dynamic size for DFP and appNexus banners
