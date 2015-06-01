@@ -1,5 +1,17 @@
 # upgrading SDK
 
+## Upgrading to v1.3.2
+
+The call to the following methods 
+
+-(BOOL)createInterstitialWithPreferences:(MNGPreference*)preferences autoDisplayed:(BOOL)autoDisplyed;
+-(BOOL)createInterstitialAutoDisplayed:(BOOL)autoDisplyed;
+
+should be replaced by
+
+-(BOOL)createInterstitialWithPreferences:(MNGPreference*)preferences;
+-(BOOL)createInterstitial;
+
 ## Upgrading to v1.2.1
 
 Bug preference.keyword, now allow empty value if location is setted.
