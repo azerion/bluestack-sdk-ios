@@ -1,5 +1,15 @@
 ## Change log and release notes for the MngAds SDK for iOS.
 
+## Version 1.3.1
+
+#### Release date: June 1th, 2015
+
+ - Manage dynamic size for DFP and appNexus banners
+ - Add remote debug mode
+ - Add ```@property MNGPriceType priceType;``` and ```@property NSString *localizedPrice;``` on MNGNAtiveObject (use for display "free" icon)
+ - Add [Best practice Mngads], optimized use case for several ad formats on one page
+ - Update [libAppsfireSDK.a], [libMng-perf.a] and [GoogleMobileAds.framework] librairies
+
 ## Version 1.2.3
 
 #### Release date: May 1st, 2015
@@ -76,20 +86,19 @@
 
 #### Release date: Febuary 10th, 2015
 
-[MngAdsSDK] 1.1 for IOS
-
-##### Added
-
  - Added ```preferredHeight:(CGFloat)preferredHeight``` to more easily resize banners.
 
-
----
-[Upgrade Guide]:https://bitbucket.org/mngcorp/mngads-demo-ios/wiki/upgrading
-[MngAdsSDK]:https://bitbucket.org/mngcorp/mngads-demo-ios/src/3a7eb1695c46/MNG-Ads-SDK/MngAds/?at=master
 
 ## Version 1.0
 
 #### Release date: December 23th, 2014
 
  - Initial version
+
+---
+[Upgrade Guide]:https://bitbucket.org/mngcorp/mngads-demo-ios/wiki/upgrading
+[GoogleMobileAds.framework]:https://bitbucket.org/mngcorp/mngads-demo-ios/src/HEAD/Demo/Pods/Google-Mobile-Ads-SDK/GoogleMobileAdsSdkiOS-7.0.0/?at=master
+[libAppsfireSDK.a]:https://bitbucket.org/mngcorp/mngads-demo-ios/src/HEAD/Demo/Pods/AppsfireSDK/?at=master
+[libMng-perf.a]:https://bitbucket.org/mngcorp/mngads-demo-ios/src/HEAD/Demo/Pods/Mng-perf/?at=master
+[Best practice Mngads]:https://bitbucket.org/mngcorp/mngads-demo-ios/wiki/guidelines
 
