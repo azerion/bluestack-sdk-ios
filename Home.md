@@ -55,6 +55,7 @@ MngAds SDK needs, these libraries are in demo project :
 - StoreKit.framework
 - CoreLocation.framework
 - Accelerate/Accelerate.h Framework
+- CoreMedia
 
 You can see [Installation guide for Swift]
 
