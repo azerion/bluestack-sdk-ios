@@ -1,9 +1,9 @@
 ## Change log and release notes for the MngAds SDK for iOS.
 
-## Version 1.3.2
+## Version 1.3.3
 
 You must check [Upgrade Guide].
-#### Release date: June 1th, 2015
+#### Release date: June 3th, 2015
 
  - Manage dynamic size for DFP and appNexus banners
  - Add remote debug mode
