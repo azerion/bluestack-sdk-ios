@@ -18,20 +18,56 @@ If you use native ads in feed and plan to show several units as the user scrolls
 Native ads allow you to customize the look and feel of ads to match that of your app. Native ads work by receiving the metadata for ads through MngAds.
 
 ## How do I hide the status bar on Interstitials ? ##
-Some Ads Network, provide an SDK where **ads are not presented modally by a view controller object**. Therefore, in order to prevent  this issue, you must used : 
+
+Since iOS8 you can manage the status bar appeareance on per screen basis.To change the status bar status you should change the property only on the screen that is taking the whole window.
+
+If you are using a navigation controller this is on the navigation controller that it should be done. You'll need to subclass you navigation controller and override the prefersStatusBarHidden so that it return the top view controller prefersStatusBarHidden value.
 
 ```
 #!objective-c
+@interface MyNavigationController : UINavigationController
 
--(void)adsAdapterInterstitialDisappear:(MNGAdsAdapter *)adsAdapter
-{
-    NSLog(@"MngAds adsAdapterInterstitialDisappear");
-    [[UIApplication sharedApplication] setStatusBarHidden:NO withAnimation:UIStatusBarAnimationSlide];
-    UIViewController *vc = [[UIViewController alloc] init];
-    [self.currentVC presentViewController:vc animated:NO completion:nil];
-    [self.currentVC dismissViewControllerAnimated:NO completion:nil];
+@end
+
+@implementation MyNavigationController
+
+-(BOOL)prefersStatusBarHidden{
+    return self.topViewController.prefersStatusBarHidden;
+}
+
+@end
+```
+
+On your view controller using the callbacks you can determine the style and appearance of the status bar and then call the setNeedsStatusBarAppearanceUpdate on your navigation controller
+
+```
+#!objective-c
+-(void)adsAdapterInterstitialDidLoad:(MNGAdsAdapter *)adsAdapter{
+    ...
+    [self setStatusBarHidden:YES];
+}
+
+-(void)adsAdapterInterstitialDisappear:(MNGAdsAdapter *)adsAdapter{
+    ...
+    [self setStatusBarHidden:NO];
+    
+}
+
+- (void)setStatusBarHidden:(BOOL)hidden {
+    self.statusBarHidden = hidden;
+    
+    [[UIApplication sharedApplication]setStatusBarHidden:hidden];
+    if ([self.navigationController respondsToSelector:@selector(setNeedsStatusBarAppearanceUpdate)]) {
+        [self.navigationController setNeedsStatusBarAppearanceUpdate];
+    }
+}
+
+-(BOOL)prefersStatusBarHidden{
+    return self.statusBarHidden;
 }
 ```
+
+
 ## How do I resize banners ? ##
 
 
