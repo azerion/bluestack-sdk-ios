@@ -9,7 +9,7 @@ You must check [Upgrade Guide].
  - Add remote debug mode
  - Add ```@property MNGPriceType priceType;``` and ```@property NSString *localizedPrice;``` on MNGNAtiveObject (use for display "free" icon)
  - Add [Best practice Mngads], optimized use case for several ad formats on one page
- - Update [libAppsfireSDK.a], [libMng-perf.a] and [GoogleMobileAds.framework] librairies
+ - Update [MngAdsSDK],[libAppsfireSDK.a], [libMng-perf.a] and [GoogleMobileAds.framework] librairies
 
 ## Version 1.2.3
 
@@ -102,4 +102,5 @@ You must check [Upgrade Guide].
 [libAppsfireSDK.a]:https://bitbucket.org/mngcorp/mngads-demo-ios/src/HEAD/Demo/Pods/AppsfireSDK/?at=master
 [libMng-perf.a]:https://bitbucket.org/mngcorp/mngads-demo-ios/src/HEAD/Demo/Pods/Mng-perf/?at=master
 [Best practice Mngads]:https://bitbucket.org/mngcorp/mngads-demo-ios/wiki/guidelines
+[MngAdsSDK]:https://bitbucket.org/mngcorp/mngads-demo-ios/src/HEAD/Demo/Pods/MNGAds/?at=master
 
