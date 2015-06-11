@@ -1,4 +1,9 @@
 ## Change log and release notes for the MngAds SDK for iOS.
+## Version 1.3.4
+
+#### Release date: June 11th, 2015
+
+ - AdRequest improvement
 
 ## Version 1.3.3
 
