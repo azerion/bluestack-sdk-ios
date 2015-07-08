@@ -1,4 +1,14 @@
 ## Change log and release notes for the MngAds SDK for iOS.
+
+## Version 1.3.6
+
+#### Release date: July 8th, 2015
+
+  - Manage keywords from mngads console
+  - mngperf Adserving improvement (geoloc)
+
+- Update [MngAdsSDK] and [libMng-perf.a] librairies
+
 ## Version 1.3.4
 
 #### Release date: June 11th, 2015
