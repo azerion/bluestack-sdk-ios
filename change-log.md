@@ -1,5 +1,13 @@
 ## Change log and release notes for the MngAds SDK for iOS.
 
+## Version 1.3.7
+
+#### Release date: July 21th, 2015
+
+  - Update mng perf to 5.1.1 (fix html interstitial issue)
+
+- Update [MngAdsSDK] and [libMng-perf.a] librairies
+
 ## Version 1.3.6
 
 #### Release date: July 8th, 2015
