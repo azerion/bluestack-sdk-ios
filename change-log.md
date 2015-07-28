@@ -1,5 +1,13 @@
 ## Change log and release notes for the MngAds SDK for iOS.
 
+## Version 1.3.8
+
+#### Release date: July 28th, 2015
+
+ - Fix memory issue with smart adapter
+
+Update [MngAdsSDK] librairy.
+
 ## Version 1.3.7
 
 #### Release date: July 21th, 2015
