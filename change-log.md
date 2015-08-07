@@ -1,12 +1,20 @@
 ## Change log and release notes for the MngAds SDK for iOS.
 
+## Version 1.3.9
+
+#### Release date: August 7th, 2015
+
+ - Update Facebook Audience Network library
+
+ - Update [MngAdsSDK] library.
+
 ## Version 1.3.8
 
 #### Release date: July 28th, 2015
 
  - Fix memory issue with smart adapter
 
-Update [MngAdsSDK] librairy.
+ - Update [MngAdsSDK] library.
 
 ## Version 1.3.7
 
