@@ -1,4 +1,4 @@
-#![MNG-Ads-1.png](https://bitbucket.org/repo/aen579/images/3739691856-MNG-Ads-1.png) for iOS
+#![MNG-Ads-1.png](https://bitbucket.org/repo/aen579/images/3739691856-MNG-Ads-1.png) for IOS
 
 MNG Ads provides functionalities for monetizing your mobile application: from premium sales with reach media, video and innovative formats, it facilitates inserting native mobile ads as well all standard display formats. MngAds SDK is a library that allow you to handle the following Ads servers with the easy way :
 
@@ -38,7 +38,7 @@ The MngAds SDK is available through Cocoapods. see [Using CocoaPods] section.
 
 MngAds SDK needs, these libraries are in demo project :
 
-- [libSmartAdServer.a] (use version >=5, in used on demo project.)
+- [libSmartAdServer.a] (use version >=6, in used on demo project.)
 - [FBAudienceNetwork.framework]
 - [GoogleMobileAds.framework] (use version >=7.0.0, in used on demo project.)
 - [libAppsfireSDK.a]
@@ -185,6 +185,14 @@ adsAdapter:bannerDidFailWithError: will be called when all ads servers fail. it 
 NSLog(@"%@",error);
 }
 ```
+Some Ad Network (like Smart ads server) allow user to expand and collapse ad.
+
+adsAdapter:bannerDidChangeFrame: will be called when ad did change size
+```objc
+-(void)adsAdapter:(MNGAdsAdapter *)adsAdapter bannerDidChangeFrame:(CGRect)frame{
+    ...
+}
+```
 
 ### Interstitial
 #####Init factory
@@ -324,6 +332,24 @@ adsAdapter:nativeCollectionDidFailWithError: will be called when all ads servers
 ```objc
 - (void)adsAdapter:(MNGAdsAdapter *)adsAdapter nativeCollectionDidFailWithError:(NSError *)error{
 NSLog(@"%@",error);
+}
+```
+
+### ClickDelegate
+The clickDelegate notify you when the ad has been clicked.
+
+```objc
+//.h
+@interface ViewController : UIViewController<MNGClickDelegate>
+
+//.m
+adsFactory.clickDelegate = self;
+
+...
+
+-(void)adsAdapterAdWasClicked:(MNGAdsAdapter *)adsAdapter{
+    NSLog(@"Ad Clicked");
+    ...
 }
 ```
 
