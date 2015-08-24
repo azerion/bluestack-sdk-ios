@@ -1,5 +1,17 @@
 ## Change log and release notes for the MngAds SDK for iOS.
 
+## Version 1.4
+
+#### Release date: August 25th, 2015
+
+- appNexus can be used download via our Cocoapods
+- New SmartAdServer-iOS-SDK-6.0 (dynamicAd, prefetch)
+- Add ClickDelegate, The clickDelegate notify you when the ad has been clicked.
+- Manage banner size (fixed or responsive) server side
+- nativeAd, now we support DFP for premium nativeAd
+- Bugs fixing (retain issue, ...)
+
+
 ## Version 1.3.9
 
 #### Release date: August 7th, 2015
