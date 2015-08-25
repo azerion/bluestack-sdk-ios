@@ -4,6 +4,8 @@
 
 #### Release date: August 25th, 2015
 
+You must check [Upgrade Guide].
+
 - appNexus can be used download via our Cocoapods
 - New SmartAdServer-iOS-SDK-6.0 (dynamicAd, prefetch)
 - Add ClickDelegate, The clickDelegate notify you when the ad has been clicked.
