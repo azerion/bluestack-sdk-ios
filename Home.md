@@ -43,7 +43,7 @@ MngAds SDK needs, these libraries are in demo project :
 - [GoogleMobileAds.framework] (use version >=7.0.0, in used on demo project.)
 - [libAppsfireSDK.a]
 - [libMng-perf.a]
-- [libANSDK.a]  (Appnexus)
+- [libANSDK] (Appnexus open source code)
 - CoreGraphics.framework
 - QuartzCore.framework
 - SystemConfiguration.framework
@@ -415,7 +415,7 @@ adsFactory = nil;
 [Change Log]:https://bitbucket.org/mngcorp/mngads-demo-ios/wiki/change-log
 [Upgrade Guide]:https://bitbucket.org/mngcorp/mngads-demo-ios/wiki/upgrading
 [AppNexus]:http://www.appnexus.com/fr
-[libANSDK.a]:https://bitbucket.org/mngcorp/mngads-demo-ios/src/HEAD/Demo/MNG-Ads-SDK/AdsSDKs/ANSDK/?at=master
+[libANSDK]:https://bitbucket.org/mngcorp/mngads-demo-ios/src/HEAD/Demo/Pods/AppNexusSDK/?at=master
 
 [libSmartAdServer.a]:https://bitbucket.org/mngcorp/mngads-demo-ios/src/HEAD/Demo/MNG-Ads-SDK/AdsSDKs/SASsdk/?at=master
 [FBAudienceNetwork.framework]:https://bitbucket.org/mngcorp/mngads-demo-ios/src/HEAD/Demo/MNG-Ads-SDK/AdsSDKs/FBAudienceNetwork.framework/?at=master
