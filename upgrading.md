@@ -1,5 +1,9 @@
 # upgrading SDK
 
+## Upgrading to v1.4
+
+Now appNexus is available on Cocoapods and pod generate libAppNexusSDK.a, you must remove libANSDK.a old librairy in order to avoid duplicate symbol.
+
 ## Upgrading to v1.3.2
 
 The call to the following methods 
