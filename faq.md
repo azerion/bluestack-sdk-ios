@@ -122,7 +122,7 @@ MngAds uses following third party SDKs :
 
 If you have those build errors: 
 ```
-Library not found for -lMNGAds
+Library not found for -lMNGAds or -lAppNexusSDK
 Header not found for ...
 ```
 
