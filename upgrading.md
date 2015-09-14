@@ -4,8 +4,8 @@
 
 iOS 9 introduces changes that are likely to impact your app and its MngAds integration.
 
-1. [Learn what's new in iOS 9 from Apple]
-2. One of the changes in iOS9 is a default setting that requires apps to make network connections only over SSL ([App Transport Security]). Therefore Whitelist Ads Servers for Network Requests, mngAds works under https but not all adNetworks on mediation (smartAdserver, appNexus, facebook, ...). if you want to release apps that build against iOS9, you will need to disable ATS in order to ensure all mediation works too.
+- **[Learn what's new in iOS 9 from Apple]**
+- **One of the changes in iOS9 is a default setting that requires apps to make network connections only over SSL ([App Transport Security]).** Therefore Whitelist Ads Servers for Network Requests, mngAds works under https but not all adNetworks on mediation (smartAdserver, appNexus, facebook, ...). if you want to release apps that build against iOS9, you will need to disable ATS in order to ensure all mediation works too.
 
 ```
 #!objective-c
@@ -21,7 +21,7 @@ You can also edit the plist by adding NSAppTransportSecurity key of dictionary t
 
 ![ats.png](https://bitbucket.org/repo/aen579/images/32376746-ats.png)
 
-3. v1.4.1 of the SDK supports bitcode. If you are using earlier versions, you must disable bitcode.
+- **v1.4.1 of the SDK supports bitcode**. If you are using earlier versions, you must disable bitcode.
 
 ## Upgrading to v1.4
 
