@@ -118,5 +118,21 @@ MngAds uses following third party SDKs :
  - http://docs.appsfire.com/sdk/ios/integration-reference/Requirements/Submit_An_App_With_Appsfire_iOS_SDK
  - https://developers.google.com/mobile-ads-sdk/download#downloadios
 
+## CocoaPods Troubleshooting
+
+If you have those build errors: 
+```
+Library not found for -lMNGAds
+Header not found for ...
+```
+
+You have to check if:
+- Header search paths
+- Framework search paths
+- Library search paths
+- Other linker Flags
+
+see http://guides.cocoapods.org/using/troubleshooting.html on .4
+
 # Publisher Application Process #
 # Support #
