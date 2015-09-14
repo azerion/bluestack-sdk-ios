@@ -3,6 +3,12 @@
 This document answers the following frequently asked questions:
 
 [TOC]
+# IOS9
+
+## Is bitcode supported?
+
+v1.4.1 of the SDK supports bitcode. If you are using earlier versions, you must disable bitcode.
+
 # Implementation #
 ## What types of ad units are available? ##
 There are three ad units available to use in your app:
