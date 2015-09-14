@@ -134,5 +134,7 @@ You have to check if:
 
 see http://guides.cocoapods.org/using/troubleshooting.html on .4
 
+or use `ONLY_ACTIVE_ARCH = NO;` 
+
 # Publisher Application Process #
 # Support #
