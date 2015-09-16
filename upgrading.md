@@ -21,7 +21,7 @@ You can also edit the plist by adding NSAppTransportSecurity key of dictionary t
 
 ![ats.png](https://bitbucket.org/repo/aen579/images/32376746-ats.png)
 
-- **v1.4.1 of the SDK supports bitcode**. If you are using earlier versions, you must disable bitcode.
+- **v1.4.1 of the SDK supports bitcode**. If you are using earlier versions, you must disable bitcode. **But for now GoogleMobileAds.framework do not support bitcode, therefore you must disable bitcode for your app**
 
 ## Upgrading to v1.4
 
