@@ -1,5 +1,13 @@
 ## Change log and release notes for the MngAds SDK for iOS.
 
+## Version 1.4.1
+
+#### Release date: September 16th, 2015
+
+You must check [Upgrade Guide].
+
+ - IOS9 support (need to disable ATS and disable bitcode (google SDK do not support it) )
+
 ## Version 1.4
 
 #### Release date: August 25th, 2015
