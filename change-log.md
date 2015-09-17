@@ -7,6 +7,7 @@
 You must check [Upgrade Guide].
 
  - IOS9 support (need to disable ATS and disable bitcode (google SDK do not support it) )
+ - We continue to use old version of Facebook, because lastest version with bitcode support introduce a bug for banners.
 
 ## Version 1.4
 
