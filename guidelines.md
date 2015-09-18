@@ -14,15 +14,15 @@ if([MNGAdsSDKFactory numberOfRunningFactory] <= MAX_ALLOWED_FACTORIES){
 # Design Guidelines for MNG Ads
 
 ## Banner
-Banner | Description| 
+Banner (50px or 90px | Description| 
 ------------- | ------------- |
-![IMG_0360.PNG](https://bitbucket.org/repo/aen579/images/1141966757-IMG_0360.PNG) | A banner is a small bar ad that appears at the bottom or top of your content. Usually sized 320 x 50. Only include one ad per page or show one ad at a time if scrolling.
+![IMG_0765-min.png](https://bitbucket.org/repo/aen579/images/4036275966-IMG_0765-min.png) | A banner is a small bar ad that appears at the bottom or top of your content. Usually sized 320 x 50. Only include one ad per page or show one ad at a time if scrolling. In all cases, **the banner width is flexible with a minimum of 320px.**. If you are building your app for iPad  consider using 90px and 50px for iphone.
 
-## Square
+## Square - Medium rectangle (300 x 250)
 
-Medium rectangle | Description| 
+Square - Medium rectangle (300 x 250) | Description| 
 ------------- | ------------- |
-![IMG_0764.png](https://bitbucket.org/repo/aen579/images/2977119250-IMG_0764.png) |Square banner also known as a "medium rectangle". This format can increase earnings when both text and image ads are enabled. Performs well when embedded within text content or at the end of articles.
+![IMG_0764-min.PNG](https://bitbucket.org/repo/aen579/images/3928827332-IMG_0764-min.PNG) |Square banner also known as a *medium rectangle* (300 x 250). This format can increase earnings when both text and image ads are enabled. Performs well when embedded within text content or at the end of articles.
 
 ## Interstitial
 Interstitial | Description| 
