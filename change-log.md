@@ -4,11 +4,13 @@
 
 #### Release date: September 18th, 2015
 
-You must check [Upgrade Guide].
+**You must check [Upgrade Guide].**
 
  - IOS9 support (need to disable ATS and disable bitcode (google SDK do not support it) )
 
-You must update [MngAdsSDK], [libMng-perf.a] , [libSmartAdServer.a] (not available from pod update), [FBAudienceNetwork.framework], [GoogleMobileAds.framework], [libAppsfireSDK.a] and [libANSDK]
+>GoogleMobileAdsSdkiOS-7.4.1/GoogleMobileAds.framework/GoogleMobileAds(GADGestureIdUtil.o)' does not contain bitcode. You must rebuild it with bitcode enabled (Xcode setting ENABLE_BITCODE), obtain an updated library from the vendor, or disable bitcode for this target.
+
+**You must update [MngAdsSDK], [libMng-perf.a] , [libSmartAdServer.a] (not available from pod update), [FBAudienceNetwork.framework], [GoogleMobileAds.framework], [libAppsfireSDK.a] and [libANSDK]**
 
 ## Version 1.4
 
