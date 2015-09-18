@@ -22,7 +22,7 @@ Banner | Description|
 
 Medium rectangle | Description| 
 ------------- | ------------- |
-![IMG_0359.PNG](https://bitbucket.org/repo/aen579/images/3935981572-IMG_0359.PNG) |Square banner also known as a "medium rectangle". This format can increase earnings when both text and image ads are enabled. Performs well when embedded within text content or at the end of articles.
+![IMG_0764.png](https://bitbucket.org/repo/aen579/images/2977119250-IMG_0764.png) |Square banner also known as a "medium rectangle". This format can increase earnings when both text and image ads are enabled. Performs well when embedded within text content or at the end of articles.
 
 ## Interstitial
 Interstitial | Description| 
