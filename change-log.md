@@ -12,7 +12,7 @@
 
 **You must update [MngAdsSDK], [libMng-perf.a] , [libSmartAdServer.a] (not available from pod update), [FBAudienceNetwork.framework], [GoogleMobileAds.framework], [libAppsfireSDK.a] and [libANSDK]**
 
-FBAudienceNetwork.framework and libSmartAdServer.a do not work with Xcode6.4 (duplicate symbol issue). Therefore, MngAds needs **Xcode7**.
+ - **FBAudienceNetwork.framework** and  **libSmartAdServer.a** do not work with **Xcode 6.4**. Therefore, MngAds needs **Xcode 7**.
 
 ## Version 1.4
 
