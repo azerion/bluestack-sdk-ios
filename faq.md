@@ -136,5 +136,6 @@ see http://guides.cocoapods.org/using/troubleshooting.html on .4
 
 or use `ONLY_ACTIVE_ARCH = NO;` 
 
-# Publisher Application Process #
-# Support #
+## duplicate symbol issue on Xcode 6.4
+
+**FBAudienceNetwork.framework** and **libSmartAdServer.a** do not work with **Xcode 6.4**. Therefore, MngAds needs **Xcode 7**.
