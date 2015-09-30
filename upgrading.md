@@ -25,6 +25,8 @@ You can also edit the plist by adding NSAppTransportSecurity key of dictionary t
 
 >GoogleMobileAdsSdkiOS-7.4.1/GoogleMobileAds.framework/GoogleMobileAds(GADGestureIdUtil.o)' does not contain bitcode. You must rebuild it with bitcode enabled (Xcode setting ENABLE_BITCODE), obtain an updated library from the vendor, or disable bitcode for this target.
 
+ - **FBAudienceNetwork.framework** and  libSmartAdServer.a do not work with **Xcode6.4**. Therefore, MngAds needs Xcode7.
+
 ## Upgrading to v1.4
 
 Now appNexus is available on Cocoapods and pod generate libAppNexusSDK.a, you must remove libANSDK.a old librairy in order to avoid duplicate symbol.
