@@ -139,3 +139,5 @@ or use `ONLY_ACTIVE_ARCH = NO;`
 ## duplicate symbol issue on Xcode 6.4
 
 **FBAudienceNetwork.framework** and **libSmartAdServer.a** do not work with **Xcode 6.4**. Therefore, MngAds needs **Xcode 7**.
+
+ - https://developers.facebook.com/bugs/752177668227984/
