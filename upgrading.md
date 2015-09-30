@@ -25,7 +25,7 @@ You can also edit the plist by adding NSAppTransportSecurity key of dictionary t
 
 >GoogleMobileAdsSdkiOS-7.4.1/GoogleMobileAds.framework/GoogleMobileAds(GADGestureIdUtil.o)' does not contain bitcode. You must rebuild it with bitcode enabled (Xcode setting ENABLE_BITCODE), obtain an updated library from the vendor, or disable bitcode for this target.
 
- - **FBAudienceNetwork.framework** and  libSmartAdServer.a do not work with **Xcode 6.4**. Therefore, MngAds needs **Xcode 7**.
+ - **FBAudienceNetwork.framework** and  **libSmartAdServer.a** do not work with **Xcode 6.4**. Therefore, MngAds needs **Xcode 7**.
 
 ## Upgrading to v1.4
 
