@@ -393,6 +393,7 @@ When using [ARC] it will be done automatically. Otherwise you have to call "rele
 [adsFactory releaseMemory];//optional
 adsFactory = nil;
 ```
+But we recommand to release memory in order to avoid **crashes with a "EXC_BAD_ACCESS" ** for some adNetworks.
 
 ######No ARC
 ```objc
