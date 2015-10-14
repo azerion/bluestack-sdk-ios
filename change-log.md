@@ -1,5 +1,7 @@
 ## Change log and release notes for the MngAds SDK for iOS.
 
+See [Wiki], [Design Guidelines and Best practices] and [Help Center]  for more detailed informations
+
 ## Version 1.4.1
 
 #### Release date: September 18th, 2015
@@ -176,4 +178,8 @@ You must check [Upgrade Guide].
 [libANSDK.a]:https://bitbucket.org/mngcorp/mngads-demo-ios/src/HEAD/Demo/MNG-Ads-SDK/AdsSDKs/ANSDK/?at=master
 [libANSDK]:https://bitbucket.org/mngcorp/mngads-demo-ios/src/HEAD/Demo/Pods/AppNexusSDK/?at=master
 [libAppsfireSDK.a]:https://bitbucket.org/mngcorp/mngads-demo-ios/src/HEAD/Demo/Pods/AppsfireSDK/?at=master
+
+[Design Guidelines and Best practices]:https://bitbucket.org/mngcorp/mngads-demo-ios/wiki/guidelines
+[Wiki]:https://bitbucket.org/mngcorp/mngads-demo-ios/wiki/
+[Help Center]:https://bitbucket.org/mngcorp/mngads-demo-ios/wiki/faq
 
