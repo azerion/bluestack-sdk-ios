@@ -10,7 +10,8 @@ See [Wiki], [Design Guidelines and Best practices] and [Help Center]  for more d
  - Fixed issue for Appsfire SDK
  - Interstitial improvement, now `isInterstitialShowen` is managed by SDK
 
-**You must update [MngAdsSDK], [libAppsfireSDK.a] and [FBAudienceNetwork.framework]
+**You must update [MngAdsSDK], [libAppsfireSDK.a] and [FBAudienceNetwork.framework]**
+
 ## Version 1.4.1
 
 #### Release date: September 18th, 2015
