@@ -2,6 +2,15 @@
 
 See [Wiki], [Design Guidelines and Best practices] and [Help Center]  for more detailed informations
 
+## Version 1.4.2
+
+#### Release date: October 16th, 2015
+
+ - use audienceNetwork pod (Facebook)
+ - Fixed issue for Appsfire SDK
+ - Interstitial improvement, now `isInterstitialShowen` is managed by SDK
+
+**You must update [MngAdsSDK], [libAppsfireSDK.a] and [FBAudienceNetwork.framework]
 ## Version 1.4.1
 
 #### Release date: September 18th, 2015
