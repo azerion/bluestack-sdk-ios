@@ -145,3 +145,11 @@ or use `ONLY_ACTIVE_ARCH = NO;`
 ## Missing close button on interstitials ?
 
 Do not avoid to add bundle of smart ( https://bitbucket.org/mngcorp/mngads-demo-ios/src/HEAD/Demo/MNG-Ads-SDK/AdsSDKs/sdk/sas.bundle/?at=master ).
+
+## Undifined symbol with pod
+
+SmartAdserver do not provide a pod, therefore you must add [libSmartAdServer.a] manually to your project 
+ - https://bitbucket.org/mngcorp/mngads-demo-ios/wiki/Using%20CocoaPods
+
+
+[libSmartAdServer.a]:https://bitbucket.org/mngcorp/mngads-demo-ios/src/HEAD/Demo/MNG-Ads-SDK/AdsSDKs/SASsdk/?at=master
