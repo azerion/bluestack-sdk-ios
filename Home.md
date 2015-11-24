@@ -390,7 +390,7 @@ When you have finished your ads plant you must free the memory.
 When using [ARC] it will be done automatically. Otherwise you have to call "releaseMemory".
 ######ARC
 ```objc
-[adsFactory releaseMemory];//optional
+[adsFactory releaseMemory];//required
 adsFactory = nil;
 ```
 But we recommand to release memory in order to avoid **crashes with a "EXC_BAD_ACCESS" ** for some adNetworks.
