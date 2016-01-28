@@ -1,13 +1,14 @@
-#![MNG-Ads-1.png](https://bitbucket.org/repo/aen579/images/3739691856-MNG-Ads-1.png) for IOS
+![MNG-Ads-1.png](https://bitbucket.org/repo/aen579/images/3739691856-MNG-Ads-1.png) for IOS
+
+[TOC]
 
 MNG Ads provides functionalities for monetizing your mobile application: from premium sales with reach media, video and innovative formats, it facilitates inserting native mobile ads as well all standard display formats. MngAds SDK is a library that allow you to handle the following Ads servers with the easy way :
 
 - [Smart ads server]
 - [Facebook Audience Network]
-- [appsfire]
+- [MNG Ad Server] (Mng Perf + AppsFire)
 - [Google DFP]
-- [Mng-perf]
-- [AppNexus]
+- [AppNexus] (Via Server)
 
 It contains a dispacher that will select an ads server according to the priority and state ([mngAds state diagram]).
 
@@ -33,17 +34,18 @@ The MngAds SDK is available through Cocoapods. see [Using CocoaPods] section.
 
 - download [MngAdsSDK] from our demo project, **you must use version of  Ads servers's librairies in used on demo project.**
 - drag and drop it in your project
-- check that libMngAds.a existe in "Link Binary With Libraries"
+- check that libMngAds.a exist in "Link Binary With Libraries"
 
 
 MngAds SDK needs, these libraries are in demo project :
 
-- [libSmartAdServer.a] (use version >=6, in used on demo project.)
+- [libSmartAdServer.a] (use version >=6.2, in used on demo project.)
 - [FBAudienceNetwork.framework]
-- [GoogleMobileAds.framework] (use version >=7.4.1, in used on demo project.)
-- [libAppsfireSDK.a]
-- [libMng-perf.a]
-- [libANSDK] (Appnexus open source code)
+- [GoogleMobileAds.framework] (use version >=7.6.0, in used on demo project.)
+- [AmazonAd.framework]
+- [LiveRailSDK.framework]
+- [libFlurryAds_7.3.0.a]
+- [libFlurry_7.3.0.a]
 - CoreGraphics.framework
 - QuartzCore.framework
 - SystemConfiguration.framework
@@ -61,7 +63,7 @@ You can see [Installation guide for Swift]
 
 ## Sample Application
 
-Included is a [MngAds sample app] to use as example and for help on MngAds integration. This basic application allows users to test our different format.
+Included is a [MngAds sample app] to use as example and for help on MngAds integration. This basic application allows users to test our differents formats.
 
 ## Start Integrating
 
@@ -187,6 +189,8 @@ NSLog(@"%@",error);
 ```
 Some Ad Network (like Smart ads server) allow user to expand and collapse ad.
 
+Even on refresh, banner can change the size.
+
 adsAdapter:bannerDidChangeFrame: will be called when ad did change size
 ```objc
 -(void)adsAdapter:(MNGAdsAdapter *)adsAdapter bannerDidChangeFrame:(CGRect)frame{
@@ -197,7 +201,7 @@ adsAdapter:bannerDidChangeFrame: will be called when ad did change size
 ### Interstitial
 #####Init factory
 
-To create a interstitial you have to init an object with type MNGAdsSDKFactory and set the interstitalDelegate and the viewController.
+To create an interstitial you must init an object with type MNGAdsSDKFactory and set the interstitalDelegate and the viewController.
 
 ```objc
 interstitialAdsFactory = [[MNGAdsSDKFactory alloc]init];
@@ -210,7 +214,7 @@ You have also to set placementId (minimum one time)
 interstitialAdsFactory.placementId = @"/YOUR_APP_ID/PLACEMENT_ID";
 ```
 #####Make a request
-To make a request you have to call 'createInterstitial'. this method return a bool value (canHandleRequest) 
+To make a request you must call 'createInterstitial'. this method return a bool value (canHandleRequest) 
 
 ```objc
 if([interstitialAdsFactory createInterstitial]){
@@ -279,6 +283,7 @@ NSLog(@"adsAdapterNativeObjectDidLoad:");
 self.titleLabel.text = nativeObject.title;
 self.contextLabel.text = nativeObject.socialContext;
 self.bodyLabel.text = nativeObject.body;
+[nativeObject setMediaContainer:self.container];
 ...
 }
 ```
@@ -286,51 +291,6 @@ self.bodyLabel.text = nativeObject.body;
 adsAdapter:nativeObjectDidFailWithError: will be called when all ads servers fail. it will return the error of last called ads server.
 ```objc
 -(void)adsAdapter:(MNGAdsAdapter *)adsAdapter nativeObjectDidFailWithError:(NSError *)error{
-NSLog(@"%@",error);
-}
-```
-###Native Collection
-Native collection ads give you the control to design the perfect ad carousel for your app.
-#####Init factory
-
-To create a nativeAd collection you have to init an object with type MNGAdsSDKFactory and set the nativeCollectionDelegate.
-
-```objc
-nativeCollectionAdsFactory = [[MNGAdsSDKFactory alloc]init];
-nativeCollectionAdsFactory.nativeCollectionDelegate = self;
-```
-You have also to set placementId (minimum one time)
-
-```objc
-nativeCollectionAdsFactory.placementId = @"/YOUR_APP_ID/PLACEMENT_ID";
-```
-#####Make a request
-To make a request you have to call '[createNativeCollection:NSUInteger requestedAdNumber]' with the number of native objects. this method return a bool value (canHandleRequest) 
-
-```objc
-if([nativeCollectionAdsFactory createNativeCollection:5]){
-//Wait callBack from delegate
-}else{
-//adsFactory can not handle your request
-}
-```
-
-#####Handle callBack from NativeCollectionDelegate
-adsAdapter:nativeCollectionDidLoad: will be called by the SDK when your nativeObject's array is ready. now you can create your own view.
-```objc
-- (void)adsAdapter:(MNGAdsAdapter *)adsAdapter nativeCollectionDidLoad:(NSArray *)nativeObjects{
-NSLog(@"adsAdapterNativeObjectDidLoad:");
-for (MNGNAtiveObject * nativeObject in nativeObjects){
-    self.titleLabel.text = nativeObject.title;
-    self.contextLabel.text = nativeObject.socialContext;
-    self.bodyLabel.text = nativeObject.body;
-...
-}
-```
-
-adsAdapter:nativeCollectionDidFailWithError: will be called when all ads servers fail. it will return the error of last called ads server.
-```objc
-- (void)adsAdapter:(MNGAdsAdapter *)adsAdapter nativeCollectionDidFailWithError:(NSError *)error{
 NSLog(@"%@",error);
 }
 ```
@@ -388,19 +348,139 @@ preference.location = [[CLLocation alloc]initWithLatitude:48.876 longitude:10.45
 When you have finished your ads plant you must free the memory.
 
 When using [ARC] it will be done automatically. Otherwise you have to call "releaseMemory".
-######ARC
+###### ARC
 ```objc
-[adsFactory releaseMemory];//required
+[adsFactory releaseMemory];//optional
 adsFactory = nil;
 ```
 But we recommand to release memory in order to avoid **crashes with a "EXC_BAD_ACCESS" ** for some adNetworks.
 
-######No ARC
+###### No ARC
 ```objc
 [adsFactory releaseMemory];//required
 [adsFactory release];
 adsFactory = nil;
 ```
+----
+# MNG AD SERVER
+
+MNG Ads provides also an adServer.
+## Start Integrating MNGAds Server
+
+### Banner
+
+```
+...
+#import "MNGBannerView.h"
+...
+
+// init banner view
+banner = [[MNGBannerView alloc]initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, 50)];
+    banner.publisherId = @"YOUR_PUBLISHER_ID";
+    banner.age = @"29";
+    banner.adSize = kMNGAdServerSizeBanner50;
+    banner.delegate = self;
+    banner.viewController = self;
+    
+```
+##### Ad size MNGAdSize
+```
+extern CGSize const kMNGAdServerSizeBanner50; //Small Banner screenWidth x 50
+extern CGSize const kMNGAdServerSizeLargeBanner100; //Large Banner screenWidth x 100
+extern CGSize const kMNGAdServerSizeFullBanner60; //Full Banner ipad screenWidth x 60
+extern CGSize const kMNGAdServerSizeLeaderboard90; //Landscape Banner ipad screenWidth x 90
+extern CGSize const kMNGAdServerSizeMediumRectangle; //Square Banner 300 x 250
+
+```
+
+##### Make a request
+To make a request you must call loadAd
+
+```
+[banner loadAd];
+```
+
+##### Handle callBack from MNGBannerViewDelegate
+```
+-(void)bannerViewDidLoad:(MNGBannerView *)bannerView{
+    NSLog(@"bannerView did load");
+    [self.container addSubview:bannerView];
+}
+
+-(void)bannerView:(MNGBannerView *)bannerView didFailWithError:(NSError *)error{
+    NSLog(@"bannerView did fail with error : %@",error);
+}
+
+-(void)bannerViewDidClicked:(MNGBannerView *)bannerView{
+    NSLog(@"bannerView did clicked");
+}
+```
+
+### Interstitial
+
+```objc
+    ...
+    #import "MNGInterstitialViewController.h"
+    ...
+    // init interstitial
+    interstitial = [[MNGInterstitialViewController alloc]init];
+    interstitial.publisherId = @"YOUR_PUBLISHER_ID";
+    interstitial.age = @"29";
+    interstitial.delegate = self;
+    interstitial.viewController = self;
+    
+```
+##### Make a request 
+To make a request you have to call loadAd 
+
+```
+     [interstitial loadAd];
+```
+##### Handle callBack from MNGInterstitialViewDelegate
+```objc
+#pragma mark - MNGInterstitialViewDelegate
+-(void)intertitialDidLoad:(nonnull MNGInterstitialViewController *)interstitialViewController{
+    NSLog(@"intertitial did load");
+}
+
+-(void)intertitial:(nonnull MNGInterstitialViewController *)interstitialViewController didFailWithError:(nullable NSError *)error{
+    NSLog(@"intertitial did fail with error : %@",error);
+    
+}
+-(void)intertitialWillDisappear:(nonnull MNGInterstitialViewController *)interstitialViewController{
+    NSLog(@"intertitial will disappear");
+}
+
+-(void)intertitialDidClicked:(MNGInterstitialViewController *)interstitialViewController{
+    NSLog(@"intertitial did clicked");
+}
+```
+
+##### Displaying interstitial
+```
+if([interstitial isReady]){
+    [interstitial present];
+}
+```
+#### Debug Mode
+
+To enable debug mode for interstitials or banners, you must use class method setDebugEnabled.
+
+```objc
+    [MNGInterstitialViewController setDebugEnabled:YES];
+    [MNGBannerView setDebugEnabled:YES];
+```
+
+#### Preferences 
+Preferences object is an optional parameter that allow you select ads by user info.
+informations that you can set are:
+
+- Age : user age
+- Location : user geographical position
+- Gender : user gender
+- Zip : user zip
+
+
 
 ----
 [ARC]:https://developer.apple.com/library/ios/documentation/Swift/Conceptual/Swift_Programming_Language/AutomaticReferenceCounting.html
