@@ -96,11 +96,11 @@ To check out if the SDK is initialized or not, you have to use `[MNGAdsSDKFactor
 // AppDelegate.m
 ...
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-	[MNGAdsSDKFactory initWithAppId:@"YOUR_APP_ID"];
-	if([MNGAdsSDKFactory isInitialized] == NO){
-		[MNGAdsSDKFactory setDelegate:self];
-	}
-	...
+    [MNGAdsSDKFactory initWithAppId:@"YOUR_APP_ID"];
+    if([MNGAdsSDKFactory isInitialized] == NO){
+        [MNGAdsSDKFactory setDelegate:self];
+    }
+    ...
 }
 
 -(void)MNGAdsSDKFactoryDidFinishInitializing{
@@ -109,7 +109,7 @@ To check out if the SDK is initialized or not, you have to use `[MNGAdsSDKFactor
     }
 }
 ```
-#### Timeout
+### Timeout
 The time given to the ad view to download the ad data. After this time, the dispacher stops the ad server running (with failure) and move to the next.
 
 the default timeout is 1s.
@@ -117,7 +117,7 @@ the default timeout is 1s.
 adsFactory = [[MNGAdsSDKFactory alloc]init];
 adsFactory.timeout = 3;
 ```
-#### isBusy
+### isBusy
 Before making a request you have to check that factory not busy (handling old request).
 
 Ads factory is busy means that it has not finished the previous request yet.
@@ -125,7 +125,7 @@ Ads factory is busy means that it has not finished the previous request yet.
 isBusy will be setted to true when factory start handling request.
 
 isBusy will be setted to false when factory finish handling request.
-##### example:
+**example:**
 ```objc
 if (bannerAdsFactory.isBusy) {
 NSLog(@"Ads Factory is busy");
@@ -139,7 +139,7 @@ NSLog(@"Ads Factory is busy");
 NSLog(@"Ads Factory is not busy");
 }
 ```
-######Log:
+**Log:**
 ```shell
 $Ads Factory is not busy
 $Ads Factory is busy
@@ -174,10 +174,10 @@ if([bannerAdsFactory createBannerInFrame:CGRectMake(0, 0, 320, 50)]){
 adsAdapter:bannerDidLoad: will be called by the SDK when your bannerView is ready. now you can add your bannerView to th ViewHierarchy.
 ```objc
 -(void)adsAdapter:(MNGAdsAdapter  *)adsAdapter bannerDidLoad:(UIView  *)bannerView preferredHeight:(CGFloat)preferredHeight{
-	NSLog(@"adsAdapterBannerDidLoad:");
-	_bannerView = bannerView;
-	_bannerView.frame = CGRectMake(0, 20, 320, preferredHeight);
-	[self.view addSubview:_bannerView];
+    NSLog(@"adsAdapterBannerDidLoad:");
+    _bannerView = bannerView;
+    _bannerView.frame = CGRectMake(0, 20, 320, preferredHeight);
+    [self.view addSubview:_bannerView];
 }
 ```
 
@@ -362,127 +362,7 @@ But we recommand to release memory in order to avoid **crashes with a "EXC_BAD_A
 adsFactory = nil;
 ```
 ----
-# MNG AD SERVER
 
-MNG Ads provides also an adServer.
-## Start Integrating MNGAds Server
-
-### Banner
-
-```
-...
-#import "MNGBannerView.h"
-...
-
-// init banner view
-banner = [[MNGBannerView alloc]initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, 50)];
-    banner.publisherId = @"YOUR_PUBLISHER_ID";
-    banner.age = @"29";
-    banner.adSize = kMNGAdServerSizeBanner50;
-    banner.delegate = self;
-    banner.viewController = self;
-    
-```
-##### Ad size MNGAdSize
-```
-extern CGSize const kMNGAdServerSizeBanner50; //Small Banner screenWidth x 50
-extern CGSize const kMNGAdServerSizeLargeBanner100; //Large Banner screenWidth x 100
-extern CGSize const kMNGAdServerSizeFullBanner60; //Full Banner ipad screenWidth x 60
-extern CGSize const kMNGAdServerSizeLeaderboard90; //Landscape Banner ipad screenWidth x 90
-extern CGSize const kMNGAdServerSizeMediumRectangle; //Square Banner 300 x 250
-
-```
-
-##### Make a request
-To make a request you must call loadAd
-
-```
-[banner loadAd];
-```
-
-##### Handle callBack from MNGBannerViewDelegate
-```
--(void)bannerViewDidLoad:(MNGBannerView *)bannerView{
-    NSLog(@"bannerView did load");
-    [self.container addSubview:bannerView];
-}
-
--(void)bannerView:(MNGBannerView *)bannerView didFailWithError:(NSError *)error{
-    NSLog(@"bannerView did fail with error : %@",error);
-}
-
--(void)bannerViewDidClicked:(MNGBannerView *)bannerView{
-    NSLog(@"bannerView did clicked");
-}
-```
-
-### Interstitial
-
-```objc
-    ...
-    #import "MNGInterstitialViewController.h"
-    ...
-    // init interstitial
-    interstitial = [[MNGInterstitialViewController alloc]init];
-    interstitial.publisherId = @"YOUR_PUBLISHER_ID";
-    interstitial.age = @"29";
-    interstitial.delegate = self;
-    interstitial.viewController = self;
-    
-```
-##### Make a request 
-To make a request you have to call loadAd 
-
-```
-     [interstitial loadAd];
-```
-##### Handle callBack from MNGInterstitialViewDelegate
-```objc
-#pragma mark - MNGInterstitialViewDelegate
--(void)intertitialDidLoad:(nonnull MNGInterstitialViewController *)interstitialViewController{
-    NSLog(@"intertitial did load");
-}
-
--(void)intertitial:(nonnull MNGInterstitialViewController *)interstitialViewController didFailWithError:(nullable NSError *)error{
-    NSLog(@"intertitial did fail with error : %@",error);
-    
-}
--(void)intertitialWillDisappear:(nonnull MNGInterstitialViewController *)interstitialViewController{
-    NSLog(@"intertitial will disappear");
-}
-
--(void)intertitialDidClicked:(MNGInterstitialViewController *)interstitialViewController{
-    NSLog(@"intertitial did clicked");
-}
-```
-
-##### Displaying interstitial
-```
-if([interstitial isReady]){
-    [interstitial present];
-}
-```
-#### Debug Mode
-
-To enable debug mode for interstitials or banners, you must use class method setDebugEnabled.
-
-```objc
-    [MNGInterstitialViewController setDebugEnabled:YES];
-    [MNGBannerView setDebugEnabled:YES];
-```
-
-#### Preferences 
-Preferences object is an optional parameter that allow you select ads by user info.
-informations that you can set are:
-
-- Age : user age
-- Location : user geographical position
-- Gender : user gender
-- Zip : user zip
-
-
-
-----
 [ARC]:https://developer.apple.com/library/ios/documentation/Swift/Conceptual/Swift_Programming_Language/AutomaticReferenceCounting.html
 [link]:http://www.tutorialspoint.com/ios/ios_location_handling.htm
 [Smart ads server]:http://help.smartadserver.com/fr/Default.htm#../../../../specifications/Content/MobileSpecifications/Apps.htm
@@ -500,10 +380,16 @@ informations that you can set are:
 
 [libSmartAdServer.a]:https://bitbucket.org/mngcorp/mngads-demo-ios/src/HEAD/Demo/MNG-Ads-SDK/AdsSDKs/sdk/libSmartAdServer.a?at=master
 [FBAudienceNetwork.framework]:https://bitbucket.org/mngcorp/mngads-demo-ios/src/HEAD/Demo/Pods/FBAudienceNetwork/?at=master
-[GoogleMobileAds.framework]:https://bitbucket.org/mngcorp/mngads-demo-ios/src/HEAD/Demo/Pods/Google-Mobile-Ads-SDK/GoogleMobileAdsSdkiOS-7.4.1/?at=master
+[GoogleMobileAds.framework]:https://bitbucket.org/mngcorp/mngads-demo-ios/src/HEAD/Demo/Pods/Google-Mobile-Ads-SDK/GoogleMobileAdsSdkiOS-7.6.0/?at=master
 [libAppsfireSDK.a]:https://bitbucket.org/mngcorp/mngads-demo-ios/src/HEAD/Demo/Pods/AppsfireSDK/?at=master
 [libMng-perf.a]:https://bitbucket.org/mngcorp/mngads-demo-ios/src/HEAD/Demo/Pods/Mng-perf/?at=master
 [Using CocoaPods]:https://bitbucket.org/mngcorp/mngads-demo-ios/wiki/Using%20CocoaPods
 [mngAds state diagram]:https://bitbucket.org/mngcorp/mngads-demo-ios/wiki/diagram
 [Installation guide for Swift]:https://bitbucket.org/mngcorp/mngads-demo-ios/wiki/Swift
 [Design Guidelines and Best practices]:https://bitbucket.org/mngcorp/mngads-demo-ios/wiki/guidelines
+
+
+[AmazonAd.framework]:https://bitbucket.org/mngcorp/mngads-demo-ios/src/HEAD/Demo/MNG-Ads-SDK/AdsSDKs/AmazonAd.framework/?at=master
+[LiveRailSDK.framework]:https://bitbucket.org/mngcorp/mngads-demo-ios/src/HEAD/Demo/MNG-Ads-SDK/AdsSDKs/LiveRailSDK.framework/?at=master
+[libFlurryAds_7.3.0.a]:https://bitbucket.org/mngcorp/mngads-demo-ios/src/HEAD/Demo/Pods/Flurry-iOS-SDK/?at=master
+[libFlurry_7.3.0.a]:https://bitbucket.org/mngcorp/mngads-demo-ios/src/HEAD/Demo/Pods/Flurry-iOS-SDK/?at=master
