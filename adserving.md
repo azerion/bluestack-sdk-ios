@@ -1,6 +1,12 @@
-# MNG AD SERVER
+![MNG-Ads-1.png](https://bitbucket.org/repo/aen579/images/3739691856-MNG-Ads-1.png) appsfire only
 
-MNG Ads provides also an adServer.
+![4193248577-af.png](https://bitbucket.org/repo/aen579/images/2031262448-4193248577-af.png)
+
+[TOC]
+
+MNG Ads can be used for appsfire nativeAds only.
+
+ - http://appsfire.com/
 ## Start Integrating MNGAds Server
 
 ### Banner
