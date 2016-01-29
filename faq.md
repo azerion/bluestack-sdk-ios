@@ -157,4 +157,4 @@ SmartAdserver do not provide a pod, therefore you must add [libSmartAdServer.a] 
 ## -Objc linker flag required:
 For manual installation without pod, do not forget to include the "-ObjC" linker flag in "Other Linker Flags" under "Build Settings" in the project file." in order to avoid some crashes.
 
-![imgpsh_fullsize (2).png](https://bitbucket.org/repo/aen579/images/3910744488-imgpsh_fullsize%20(2).png)
+![flag-xcode.png](https://bitbucket.org/repo/aen579/images/658800622-flag-xcode.png)
