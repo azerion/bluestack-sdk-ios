@@ -1,5 +1,54 @@
 # upgrading SDK
 
+## Upgrading to v2.0
+
+### adNetworks
+Removed:
+- Appsfire (now is integrated on MNGAds)
+- Mng Perf (now is integrated on MNGAds)
+- Appnexus (now is integrated on MNGAds)
+
+Added:
+- LiveRail
+- Flurry
+- Amazon
+
+### Integration
+
+MNGAds v2.0 allow you to choose which adNetworks you will use, the integration process has changed.
+
+##### Manual integration:
+
+libMNGAds.a is always required and with it you have only Mng Perf and Appsfire works.
+
+To add another adNetwork, you have to add to your project the lib[adNetworkAdapter].a and the adNetwork SDK.
+
+*Example:* To use Smart Ad Server you have to add:
+- libMNGAdsSASAdapter.a
+- libSmartAdServer.a
+
+**`Important :` If you add just lib[adNetworkAdapter].a, the dispatcher will not use it and if you just add the adNetwork SDK, you will have a compilation error:**
+ ```
+ References not found
+ ```
+
+##### CocoaPods integration
+
+see [Using CocoaPods]
+
+### MediaContainer
+
+With MNGAds v2.0 you can integrate video ads into your Native Ad experience by calling [MNGNAtiveObject setMediaContainer:(UIView *)mediaContainer] and the SDK will add the video or the cover image to your container
+
+```objc
+-(void)adsAdapter:(MNGAdsAdapter *)adsAdapter nativeObjectDidLoad:(MNGNAtiveObject *)nativeObject{
+    ...
+    [nativeObject setMediaContainer:self.container];
+    ...
+}
+```
+coverImageUrl still available but it can be `nil`.
+
 ## Upgrading to v1.4.1 (Building Against iOS9)
 
 iOS 9 introduces changes that are likely to impact your app and its MngAds integration.
