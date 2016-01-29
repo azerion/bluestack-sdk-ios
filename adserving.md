@@ -4,9 +4,17 @@
 
 [TOC]
 
+# Introduction
+
 MNG Ads can be used for appsfire nativeAds only.
 
  - http://appsfire.com/
+
+The Monetization features of Appsfire SDK allows you to display ads in your application:
+
+ 
+ - Interstitial ads, A full-screen native ad unit for iPhone & iPad, we call it the [Sushi].
+ - An in-stream native ad unit which allows you to deeply integrate our ads in your application's design, we call it [Sashimi]. 
 ## Start Integrating MNGAds Server
 
 ### Banner
@@ -121,3 +129,7 @@ informations that you can set are:
 - Location : user geographical position
 - Gender : user gender
 - Zip : user zip
+
+
+[Sushi]:http://docs.appsfire.com/sdk/ios/integration-reference/img/doc/sushi.mp4
+[Sashimi]:http://docs.appsfire.com/sdk/ios/integration-reference/img/doc/sashimi-extended-light.jpg
