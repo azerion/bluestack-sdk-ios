@@ -1,4 +1,4 @@
-![MNG-Ads-1.png](https://bitbucket.org/repo/aen579/images/3739691856-MNG-Ads-1.png) 
+![MNG-Ads-1.png](https://bitbucket.org/repo/aen579/images/3739691856-MNG-Ads-1.png) iOS for
 ![4193248577-af.png](https://bitbucket.org/repo/aen579/images/2031262448-4193248577-af.png) only
 
 
