@@ -4,14 +4,16 @@
 
 ### adNetworks
 Removed:
-- Appsfire (now is integrated on MNGAds)
-- Mng Perf (now is integrated on MNGAds)
-- Appnexus (now is integrated on MNGAds)
+
+- Appsfire (now is integrated on [MngAdsSDK])
+- Mng Perf (now is integrated on [MngAdsSDK])
+- Appnexus (now is integrated on [MngAdsSDK])
 
 Added:
-- LiveRail
-- Flurry
-- Amazon
+
+ - [AmazonAd.framework]
+ - [LiveRailSDK.framework] 
+ - [libFlurryAds_7.3.0.a], [libFlurry_7.3.0.a]
 
 ### Integration
 
@@ -132,6 +134,20 @@ instead of
 
  [Learn what's new in iOS 9 from Apple]:https://developer.apple.com/library/prerelease/ios/releasenotes/General/WhatsNewIniOS/Articles/iOS9.html
  [App Transport Security]:https://developer.apple.com/library/prerelease/ios/technotes/App-Transport-Security-Technote/
+
+
+
+[MngAdsSDK]:https://bitbucket.org/mngcorp/mngads-demo-ios/src/HEAD/Demo/Pods/MNGAds/?at=master
+[libSmartAdServer.a]:https://bitbucket.org/mngcorp/mngads-demo-ios/src/HEAD/Demo/MNG-Ads-SDK/AdsSDKs/sdk/libSmartAdServer.a?at=master
+[FBAudienceNetwork.framework]:https://bitbucket.org/mngcorp/mngads-demo-ios/src/HEAD/Demo/Pods/FBAudienceNetwork/?at=master
+[GoogleMobileAds.framework]:https://bitbucket.org/mngcorp/mngads-demo-ios/src/HEAD/Demo/Pods/Google-Mobile-Ads-SDK/GoogleMobileAdsSdkiOS-7.6.0/?at=master
+[Design Guidelines and Best practices]:https://bitbucket.org/mngcorp/mngads-demo-ios/wiki/guidelines
+[Wiki]:https://bitbucket.org/mngcorp/mngads-demo-ios/wiki/
+[Help Center]:https://bitbucket.org/mngcorp/mngads-demo-ios/wiki/faq
+[AmazonAd.framework]:https://bitbucket.org/mngcorp/mngads-demo-ios/src/HEAD/Demo/MNG-Ads-SDK/AdsSDKs/AmazonAd.framework/?at=master
+[LiveRailSDK.framework]:https://bitbucket.org/mngcorp/mngads-demo-ios/src/HEAD/Demo/MNG-Ads-SDK/AdsSDKs/LiveRailSDK.framework/?at=master
+[libFlurryAds_7.3.0.a]:https://bitbucket.org/mngcorp/mngads-demo-ios/src/HEAD/Demo/Pods/Flurry-iOS-SDK/?at=master
+[libFlurry_7.3.0.a]:https://bitbucket.org/mngcorp/mngads-demo-ios/src/HEAD/Demo/Pods/Flurry-iOS-SDK/?at=master
 
 
 
