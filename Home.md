@@ -67,6 +67,15 @@ Included is a [MngAds sample app] to use as example and for help on MngAds integ
 
 ## Start Integrating
 
+### Enable Debug Mode
+
+To enable debug mode you have to use class method **setDebugModeEnabled** :
+
+```
+ [MNGAdsSDKFactory setDebugModeEnabled:Yes];
+```
+Can you please remove debug mode on production.
+
 ### Initializing the SDK
 
 You have to init the SDK in AppDelegate.m in application:didFinishLaunchingWithOptions:
