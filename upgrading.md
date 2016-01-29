@@ -26,6 +26,7 @@ libMNGAds.a is always required and with it you have only Mng Perf and Appsfire w
 To add another adNetwork, you have to add to your project the lib[adNetworkAdapter].a and the adNetwork SDK.
 
 *Example:* To use Smart Ad Server you have to add:
+
 - libMNGAdsSASAdapter.a
 - libSmartAdServer.a
 
