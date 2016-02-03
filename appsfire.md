@@ -21,16 +21,19 @@ The Monetization features of Appsfire SDK allows you to display ads in your appl
 
 ```
 ...
-#import "MNGBannerView.h"
+#import "MNGHimonoBannerView"
+...
+MNGHimonoBannerView *himonoView;
 ...
 
 // init banner view
-banner = [[MNGBannerView alloc]initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, 50)];
-    banner.publisherId = @"YOUR_PUBLISHER_ID";
-    banner.age = @"29";
-    banner.adSize = kMNGAdServerSizeBanner50;
-    banner.delegate = self;
-    banner.viewController = self;
+himonoView = [[MNGHimonoBannerView alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, 50)];
+himonoView.delegate = self;
+himonoView.refreshAutomatically = YES;
+himonoView.refreshInterval = 30;
+self.bannerHeightConstraint.constant = himonoView.frame.size.height;
+self.bannerWidthConstraint.constant = himonoView.frame.size.width;
+[self.container addSubview:himonoView];
     
 ```
 ##### Ad size MNGAdSize
@@ -47,22 +50,22 @@ extern CGSize const kMNGAdServerSizeMediumRectangle; //Square Banner 300 x 250
 To make a request you must call loadAd
 
 ```
-[banner loadAd];
+[himonoView loadAd:@"YOUR_PUBLISHER_ID"];
 ```
 
-##### Handle callBack from MNGBannerViewDelegate
+##### Handle callBack from MNGHimonoBannerViewDelegate
 ```
--(void)bannerViewDidLoad:(MNGBannerView *)bannerView{
+- (void)himonoBannerViewDidLoadAd:(MNGHimonoBannerView *)himonoBannerView {
     NSLog(@"bannerView did load");
     [self.container addSubview:bannerView];
 }
 
--(void)bannerView:(MNGBannerView *)bannerView didFailWithError:(NSError *)error{
-    NSLog(@"bannerView did fail with error : %@",error);
+- (void)himonoBannerViewDidFailToLoadAd:(MNGHimonoBannerView *)himonoBannerView withError:(NSError *)error {
+    NSLog (@"himonoBannerViewDidFailToLoadAd");
 }
 
--(void)bannerViewDidClicked:(MNGBannerView *)bannerView{
-    NSLog(@"bannerView did clicked");
+- (void)himonoBannerViewDidRecordClick:(MNGHimonoBannerView *)himonoBannerView {
+    NSLog (@"himonoBannerViewDidRecordClick");
 }
 ```
 
@@ -70,30 +73,31 @@ To make a request you must call loadAd
 
 ```objc
     ...
-    #import "MNGInterstitialViewController.h"
-    ...
-    // init interstitial
-    interstitial = [[MNGInterstitialViewController alloc]init];
-    interstitial.publisherId = @"YOUR_PUBLISHER_ID";
-    interstitial.age = @"29";
-    interstitial.delegate = self;
-    interstitial.viewController = self;
+#import "MNGDisplayableNativeAd.h"
+#import "MNGSushiViewController.h"
+...
+MNGDisplayableNativeAd *interNativeAd;
+MNGSushiViewController *interViewController;
+
+// init interstitial
+interNativeAd = [[MNGDisplayableNativeAd alloc] init];
+interNativeAd.publisherId = @"YOUR_PUBLISHER_ID";
+interNativeAd.delegate = self;
     
 ```
 ##### Make a request 
 To make a request you have to call loadAd 
 
 ```
-     [interstitial loadAd];
+[interNativeAd loadAd];
 ```
-##### Handle callBack from MNGInterstitialViewDelegate
+##### Handle callBack from MNGNativeAdDelegate
 ```objc
-#pragma mark - MNGInterstitialViewDelegate
--(void)intertitialDidLoad:(nonnull MNGInterstitialViewController *)interstitialViewController{
+-(void)nativeAdDidLoad:(MNGNativeAd *)nativeAd {
     NSLog(@"intertitial did load");
 }
 
--(void)intertitial:(nonnull MNGInterstitialViewController *)interstitialViewController didFailWithError:(nullable NSError *)error{
+-(void)nativeAd:(MNGNativeAd *)nativeAd didFailWithError:(NSError *)error {
     NSLog(@"intertitial did fail with error : %@",error);
     
 }
@@ -108,27 +112,67 @@ To make a request you have to call loadAd
 
 ##### Displaying interstitial
 ```
-if([interstitial isReady]){
-    [interstitial present];
+if (interNativeAd != nil) {
+    interViewController = [interNativeAd getSushiViewController];
+    interViewController.viewController = myViewController;  // Present from your view controller
+    interViewController.delegate = self;
+    [interViewController present];
 }
 ```
-#### Debug Mode
 
-To enable debug mode for interstitials or banners, you must use class method setDebugEnabled.
+##### Handle callBack from MNGSushiViewDelegate
+
+-(void)interstitialDidAppear:(nonnull MNGSushiViewController *)sushiViewController {
+    NSLog (@"interstitialDidAppear");
+}
+
+-(void)interstitialWasClicked:(nonnull MNGSushiViewController *)sushiViewController {
+    NSLog (@"interstitialWasClicked");
+}
+
+-(void)interstitialWillDisappear:(nonnull MNGSushiViewController *)sushiViewController {
+    NSLog (@"interstitialWillDisappear");
+}
+
+### Mopub
+
+It is also possible to use the Mopub SDK and Mopub mediation to serve Appsfire ads using the mngads-server SDK.
+
+Preliminary steps:
+
+1. Add the mngads-server Mopub adapter sources (from the mopub-adapter folder) to your Xcode project 
+
+2. Create your app on the Mopub dashboard if that wasn't done already, and create inventory for fullscreen and native ads
+
+3. On your mopub dashboard, create a new order, set the type to network, and set the following class name for interstitials:
+MNGSushiInterstitialEvent
+
+Pick your app and select interstitials
+
+4. On your mopub dashboard, create a new order, set the type to network, and set the following class name for native ads:
+MNGNativeCustomEvent
+
+You do not need to set any other custom data on the dashboard.
+
+5. Initialize the publisher ID's for the MNG Appsfire placements
 
 ```objc
-    [MNGInterstitialViewController setDebugEnabled:YES];
-    [MNGBannerView setDebugEnabled:YES];
+#import "MNGNativeCustomEvent.h"
+#import "MNGSushiInterstitialEvent.h"
+...
+
+// If you use interstitials
+[MNGSushiInterstitialEvent setPublisherID:@"MY_INTER_PUBLISHER_ID"];
+
+// If you use native ads
+[MNGNativeCustomEvent setPublisherID:@"MY_NATIVEAD_PUBLISHER_ID"];
+
+7. Use Mopub as usual
+
+You may now use Mopub to show interstitials and native ads as usual. The adapter code and the setup you did on your Mopub dashboard will
+allow MNG Appsfire ads to be mediated and served.
 ```
 
-#### Preferences 
-Preferences object is an optional parameter that allow you select ads by user info.
-informations that you can set are:
-
-- Age : user age
-- Location : user geographical position
-- Gender : user gender
-- Zip : user zip
 
 
 [Sushi]:http://docs.appsfire.com/sdk/ios/integration-reference/img/doc/sushi.mp4
