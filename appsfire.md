@@ -15,7 +15,7 @@ The Monetization features of Appsfire SDK allows you to display ads in your appl
  
  - Interstitial ads, A full-screen native ad unit for iPhone & iPad, we call it the [Sushi].
  - An in-stream native ad unit which allows you to deeply integrate our ads in your application's design, we call it [Sashimi]. 
-## Start Integrating MNGAds Server
+## Start Integrating appsfire
 
 ### Banner
 
