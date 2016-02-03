@@ -134,7 +134,7 @@ if (interNativeAd != nil) {
     NSLog (@"interstitialWillDisappear");
 }
 
-### Mopub
+## Mopub
 
 It is also possible to use the Mopub SDK and Mopub mediation to serve Appsfire ads using the mngads-server SDK.
 
