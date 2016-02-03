@@ -2,6 +2,12 @@
 
 See [Wiki], [Design Guidelines and Best practices] and [Help Center]  for more detailed informations
 
+## Version 2.0.1
+#### Release date: February 3th, 2016
+You need to keep all Ad Network jars up to date.
+
+ - Fix compilation errors on simulator
+
 ## Version 2.0
 #### Release date: January 28th, 2016
 
@@ -193,7 +199,7 @@ You must check [Upgrade Guide].
 
 ## Version 1.1
 
-#### Release date: Febuary 10th, 2015
+#### Release date: February 10th, 2015
 
  - Added ```preferredHeight:(CGFloat)preferredHeight``` to more easily resize banners.
 
