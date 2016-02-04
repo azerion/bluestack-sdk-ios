@@ -140,21 +140,23 @@ It is also possible to use the Mopub SDK and Mopub mediation to serve Appsfire a
 
 Preliminary steps:
 
-1. Add the [mngads-server Mopub adapter sources] (from the mopub-adapter folder) to your Xcode project 
+1. Add the [MNGAds SDK for appsfire] to your Xcode project
 
-2. Create your app on the Mopub dashboard if that wasn't done already, and create inventory for fullscreen and native ads
+2. Add the [mngads-server Mopub adapter sources] (from the mopub-adapter folder) to your Xcode project 
 
-3. On your mopub dashboard, create a new order, set the type to network, and set the following class name for interstitials:
+3. Create your app on the Mopub dashboard if that wasn't done already, and create inventory for fullscreen and native ads
+
+4. On your mopub dashboard, create a new order, set the type to network, and set the following class name for interstitials:
 MNGSushiInterstitialEvent
 
 Pick your app and select interstitials
 
-4. On your mopub dashboard, create a new order, set the type to network, and set the following class name for native ads:
+5. On your mopub dashboard, create a new order, set the type to network, and set the following class name for native ads:
 MNGNativeCustomEvent
 
 You do not need to set any other custom data on the dashboard.
 
-5. Initialize the publisher ID's for the MNG Appsfire placements
+6. Initialize the publisher ID's for the MNG Appsfire placements
 
 ```objc
 #import "MNGNativeCustomEvent.h"
@@ -178,3 +180,4 @@ allow MNG Appsfire ads to be mediated and served.
 [Sushi]:http://docs.appsfire.com/sdk/ios/integration-reference/img/doc/sushi.mp4
 [Sashimi]:http://docs.appsfire.com/sdk/ios/integration-reference/img/doc/sashimi-extended-light.jpg
 [mngads-server Mopub adapter sources]:https://bitbucket.org/mngcorp/mngads-demo-ios/src/HEAD/mopub-adapter/?at=master
+[MNGAds SDK for appsfire]:https://bitbucket.org/mngcorp/mngads-demo-ios/src/HEAD/Demo/Pods/MNGAds/MNGAds/?at=master
