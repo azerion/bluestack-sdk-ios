@@ -87,7 +87,7 @@ callToAction=nativeObject.callToAction;
 ```
 ## 3. Native Ad Implementation
 
-![MNGNativeAds_ios_Methods.png](../MNGNativeAds.png)
+
 
 
 ## 4. v2.0 or above
