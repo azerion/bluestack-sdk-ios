@@ -140,25 +140,25 @@ It is also possible to use the Mopub SDK and Mopub mediation to serve Appsfire a
 
 Preliminary steps:
 
-1. Add the [MNGAds SDK for appsfire] to your Xcode project
+- Add the [MNGAds SDK for appsfire] to your Xcode project
 
-2. Add the [mngads-server Mopub adapter sources] (from the mopub-adapter folder) to your Xcode project 
+- Add the [mngads-server Mopub adapter sources] (from the mopub-adapter folder) to your Xcode project 
 
-3. Create your app on the Mopub dashboard if that wasn't done already, and create inventory for fullscreen and native ads
+- Create your app on the Mopub dashboard if that wasn't done already, and create inventory for fullscreen and native ads
 
-4. On your mopub dashboard, create a new order, set the type to network, and set the following class name   for interstitials:
+- On your mopub dashboard, create a new order, set the type to network, and set the following class name   for interstitials:
 MNGSushiInterstitialEvent
 
 Pick your app and select interstitials
 
-5. On your mopub dashboard, create a new order, set the type to network, and set the following class name   
+- On your mopub dashboard, create a new order, set the type to network, and set the following class name   
 
    for native ads:
    MNGNativeCustomEvent
 
    You do not need to set any other custom data on the dashboard.
 
-6. Initialize the publisher ID's for the MNG Appsfire placements
+- Initialize the publisher ID's for the MNG Appsfire placements
 
 ```objc
    #import "MNGNativeCustomEvent.h"
@@ -171,7 +171,7 @@ Pick your app and select interstitials
   // If you use native ads
   [MNGNativeCustomEvent setPublisherID:@"MY_NATIVEAD_PUBLISHER_ID"];
 ```
-7. Use Mopub as usual
+- Use Mopub as usual
 
 You may now use Mopub to show interstitials and native ads as usual. The adapter code and the setup you did on your Mopub dashboard will
 allow MNG Appsfire ads to be mediated and served.
