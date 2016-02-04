@@ -97,3 +97,5 @@ You can also integrate video ads into your Native Ad experience. To enable video
 ```objc
 [nativeObject setMediaContainer:self.container];
 ```
+
+![Capture d’écran 2016-02-04 à 12.46.24 PM.png](https://bitbucket.org/repo/aen579/images/2619653194-Capture%20d%E2%80%99e%CC%81cran%202016-02-04%20a%CC%80%2012.46.24%20PM.png)
