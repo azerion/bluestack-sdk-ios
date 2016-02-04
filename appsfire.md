@@ -15,6 +15,39 @@ The Monetization features of Appsfire SDK allows you to display ads in your appl
  
  - Interstitial ads, A full-screen native ad unit for iPhone & iPad, we call it the [Sushi].
  - An in-stream native ad unit which allows you to deeply integrate our ads in your application's design, we call it [Sashimi]. 
+
+## Using CocoaPods
+
+The MngAds SDK is available through [Cocoapods], a popular dependency management system for Objective-C projects.
+
+To download and incorporate the MngAds SDK into your project using Cocoapods, add the following line to your project's podfile:
+
+```ruby
+pod "MNGAds" 
+```
+
+## Manual Install
+
+- download [MNGAds SDK for appsfire] from our demo project, **you must use version of  Ads servers's librairies in used on demo project.**
+- drag and drop it in your project
+- check that libMngAds.a exist in "Link Binary With Libraries"
+
+
+MngAds SDK needs, these libraries are in demo project :
+
+
+- CoreGraphics.framework
+- QuartzCore.framework
+- SystemConfiguration.framework
+- MediaPlayer.framework
+- CoreMotion.framework
+- EventKitUI.framework
+- EventKit.framework
+- AdSupport.framework
+- StoreKit.framework
+- CoreLocation.framework
+- Accelerate/Accelerate.h Framework
+- CoreMedia
 ## Start Integrating appsfire
 
 ### Banner
@@ -229,3 +262,4 @@ allow MNG Appsfire ads to be mediated and served.
 [Sashimi]:http://docs.appsfire.com/sdk/ios/integration-reference/img/doc/sashimi-extended-light.jpg
 [mngads-server Mopub adapter sources]:https://bitbucket.org/mngcorp/mngads-demo-ios/src/HEAD/mopub-adapter/?at=master
 [MNGAds SDK for appsfire]:https://bitbucket.org/mngcorp/mngads-demo-ios/src/HEAD/Demo/Pods/MNGAds/MNGAds/?at=master
+[Cocoapods]:http://cocoapods.org/
