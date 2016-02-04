@@ -1,4 +1,5 @@
 # Native ads
+[TOC]
 
 MNG Ads supports native ads, that allow you to retrieve the metadata of ad campaigns and present the ads yourself, within the context of your app, using your own art style. You are fully responsible
 for rendering the ad views using the information we supply. Native ads however offer methods to help you register impressions and clicks on your custom view.
