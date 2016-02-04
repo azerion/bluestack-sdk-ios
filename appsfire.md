@@ -134,6 +134,52 @@ if (interNativeAd != nil) {
     NSLog (@"interstitialWillDisappear");
 }
 
+### Getting native ads metadata
+
+```objc
+...
+#import "MNGNativeAd.h"
+...
+MNGNativeAd *nativeAd;
+
+// init nativeAd
+nativeAd = [[MNGNativeAd alloc] init];
+nativeAd.publisherId = @"YOUR_PUBLISHER_ID";
+nativeAd.delegate = self;
+    
+```
+##### Make a request 
+To make a request you have to call loadAd 
+
+```
+[nativeAd loadAd];
+```
+
+##### Handle callBack from MNGNativeAdDelegate
+```objc
+-(void)nativeAdDidLoad:(MNGNativeAd *)nativeAd {
+    NSLog(@"nativeAd did load");
+
+    // You can now pull information from the nativeAd
+    NSLog(@"app name: %@", [nativeAd title]);
+    // etc
+
+
+    // Once you create a view, "self.nativeView", to display your native ad, you can register it for impressions and click management
+    [nativeAd registerViewForInteraction:self.nativeView withClickableView:self.nativeView];
+}
+
+-(void)nativeAd:(MNGNativeAd *)nativeAd didFailWithError:(NSError *)error {
+    NSLog(@"nativeAd did fail with error : %@",error);    
+}
+
+-(void)nativeAdWasClicked:(MNGNativeAd *)nativeAd {
+    // Called if you linked your view with registerViewForInteraction and the ad is clicked
+    NSLog(@"nativeAd was clicked");
+}
+
+```
+
 ## Mopub
 
 It is also possible to use the Mopub SDK and Mopub mediation to serve Appsfire ads using the mngads-server SDK.
