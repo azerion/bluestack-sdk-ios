@@ -160,7 +160,7 @@ Pick your app and select interstitials
 
 6. Initialize the publisher ID's for the MNG Appsfire placements
 
-  ```objc
+```objc
    #import "MNGNativeCustomEvent.h"
   #import "MNGSushiInterstitialEvent.h"
   ...
@@ -170,12 +170,12 @@ Pick your app and select interstitials
 
   // If you use native ads
   [MNGNativeCustomEvent setPublisherID:@"MY_NATIVEAD_PUBLISHER_ID"];
-
+```
 7. Use Mopub as usual
 
 You may now use Mopub to show interstitials and native ads as usual. The adapter code and the setup you did on your Mopub dashboard will
 allow MNG Appsfire ads to be mediated and served.
-```
+
 
 
 
