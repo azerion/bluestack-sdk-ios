@@ -140,7 +140,7 @@ It is also possible to use the Mopub SDK and Mopub mediation to serve Appsfire a
 
 Preliminary steps:
 
-1. Add the mngads-server Mopub adapter sources (from the mopub-adapter folder) to your Xcode project 
+1. Add the [mngads-server Mopub adapter sources] (from the mopub-adapter folder) to your Xcode project 
 
 2. Create your app on the Mopub dashboard if that wasn't done already, and create inventory for fullscreen and native ads
 
@@ -177,3 +177,4 @@ allow MNG Appsfire ads to be mediated and served.
 
 [Sushi]:http://docs.appsfire.com/sdk/ios/integration-reference/img/doc/sushi.mp4
 [Sashimi]:http://docs.appsfire.com/sdk/ios/integration-reference/img/doc/sashimi-extended-light.jpg
+[mngads-server Mopub adapter sources]:https://bitbucket.org/mngcorp/mngads-demo-ios/src/HEAD/mopub-adapter/?at=master
