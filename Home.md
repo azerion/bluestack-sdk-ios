@@ -6,7 +6,7 @@ MNG Ads provides functionalities for monetizing your mobile application: from pr
 
 - [Smart ads server]
 - [Facebook Audience Network]
-- [MNG Ad Server] (Mng Perf + AppsFire)
+- [MNG Ad Server] (Mng + AppsFire)
 - [Google DFP]
 - [AppNexus] (Via Server)
 
@@ -396,7 +396,7 @@ adsFactory = nil;
 [mngAds state diagram]:https://bitbucket.org/mngcorp/mngads-demo-ios/wiki/diagram
 [Installation guide for Swift]:https://bitbucket.org/mngcorp/mngads-demo-ios/wiki/Swift
 [Design Guidelines and Best practices]:https://bitbucket.org/mngcorp/mngads-demo-ios/wiki/guidelines
-
+[MNG Ad Server]:https://bitbucket.org/mngcorp/mngads-demo-ios/src/HEAD/Demo/Pods/MNGAds/MNGAds/?at=master
 
 [AmazonAd.framework]:https://bitbucket.org/mngcorp/mngads-demo-ios/src/HEAD/Demo/MNG-Ads-SDK/AdsSDKs/AmazonAd.framework/?at=master
 [LiveRailSDK.framework]:https://bitbucket.org/mngcorp/mngads-demo-ios/src/HEAD/Demo/MNG-Ads-SDK/AdsSDKs/LiveRailSDK.framework/?at=master
