@@ -304,6 +304,8 @@ NSLog(@"%@",error);
 }
 ```
 
+See [Native Ads guidelines]
+
 ### ClickDelegate
 The clickDelegate notify you when the ad has been clicked.
 
@@ -402,3 +404,4 @@ adsFactory = nil;
 [LiveRailSDK.framework]:https://bitbucket.org/mngcorp/mngads-demo-ios/src/HEAD/Demo/MNG-Ads-SDK/AdsSDKs/LiveRailSDK.framework/?at=master
 [libFlurryAds_7.3.0.a]:https://bitbucket.org/mngcorp/mngads-demo-ios/src/HEAD/Demo/Pods/Flurry-iOS-SDK/?at=master
 [libFlurry_7.3.0.a]:https://bitbucket.org/mngcorp/mngads-demo-ios/src/HEAD/Demo/Pods/Flurry-iOS-SDK/?at=master
+[Native Ads guidelines]:https://bitbucket.org/mngcorp/mngads-demo-ios/wiki/nativead
