@@ -88,7 +88,7 @@ callToAction=nativeObject.callToAction;
 ```
 ## 3. Native Ad Implementation
 
-
+![cap.png](https://bitbucket.org/repo/aen579/images/1942639669-cap.png)
 
 
 ## 4. v2.0 or above
