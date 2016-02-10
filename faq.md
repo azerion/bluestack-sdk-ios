@@ -158,3 +158,24 @@ SmartAdserver do not provide a pod, therefore you must add [libSmartAdServer.a] 
 For manual installation without pod, do not forget to include the "-ObjC" linker flag in "Other Linker Flags" under "Build Settings" in the project file." in order to avoid some crashes.
 
 ![flag-xcode.png](https://bitbucket.org/repo/aen579/images/658800622-flag-xcode.png)
+
+## `MNGAds/MNGAdsFull` required by `Podfile`
+
+if on pod install there is following error
+
+
+```
+#!ruby
+
+`MNGAds/MNGAdsFull` required by `Podfile`
+```
+
+try 
+
+
+```
+#!ruby
+
+sudo rm -fr ~/Library/Caches/CocoaPods/
+sudo rm -fr ~/.cocoapods/repos/master/
+```
