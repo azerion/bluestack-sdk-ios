@@ -87,8 +87,7 @@ callToAction=nativeObject.callToAction;
 [_nativeObject registerViewForInteraction:container withViewController:vc withClickableView:self.callToActionButton];
 ```
 ## 3. Native Ad Implementation
-
-![cap.png](https://bitbucket.org/repo/aen579/images/1942639669-cap.png)
+![nativead.png](https://bitbucket.org/repo/aen579/images/3520501048-nativead.png)
 
 
 ## 4. v2.0 or above
