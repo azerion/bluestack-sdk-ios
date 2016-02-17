@@ -23,7 +23,9 @@ If you use native ads in feed and plan to show several units as the user scrolls
 ## What are "Native Ads ##
 Native ads allow you to customize the look and feel of ads to match that of your app. Native ads work by receiving the metadata for ads through MngAds.
 
-## How do I hide the status bar on Interstitials ? ##
+## How do I hide the status bar on Interstitials ? (for sdk version < 2.0.3) ##
+
+**Only if you are using mngads < 2.0.3**
 
 Since iOS8 you can manage the status bar appeareance on per screen basis.To change the status bar status you should change the property only on the screen that is taking the whole window.
 
