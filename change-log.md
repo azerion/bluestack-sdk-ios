@@ -2,16 +2,25 @@
 
 See [Wiki], [Design Guidelines and Best practices] and [Help Center]  for more detailed informations
 
+## Version 2.0.3
+#### Release date: February 17th, 2016
+You need to keep all Ad Network librairies up to date.
+
+ -  Automatic Status bar management (to avoid https://bitbucket.org/mngcorp/mngads-demo-ios/wiki/faq#markdown-header-how-do-i-hide-the-status-bar-on-interstitials-for-sdk-version-203)
+ - fix issue for flurry interstitials
+ - bug fixes
+
+
 ## Version 2.0.1
 #### Release date: February 3th, 2016
-You need to keep all Ad Network jars up to date.
+You need to keep all Ad Network librairies up to date.
 
  - Fix compilation errors on simulator
 
 ## Version 2.0
 #### Release date: January 28th, 2016
 
-you mus check [Upgrade Guide]. You need to keep all Ad Network jars up to date.
+you mus check [Upgrade Guide]. You need to keep all Ad Network librairies up to date.
 
  - [libAppsfireSDK.a], [libANSDK] and [libMng-perf.a] libraries have been merged on [MngAdsSDK] SDK for better performance and reduce librairies number
  - We have added [AmazonAd.framework], [LiveRailSDK.framework] , [libFlurryAds_7.3.0.a] to mngads mediation in order to increase fill rate and revenus
