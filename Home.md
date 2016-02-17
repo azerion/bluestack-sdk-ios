@@ -372,6 +372,27 @@ But we recommand to release memory in order to avoid **crashes with a "EXC_BAD_A
 [adsFactory release];
 adsFactory = nil;
 ```
+
+Some adNetwork does not using **A**utomatic **R**eference **C**ounting, so you have to mange MNGAdsFactory pointer specially fo interstitial.
+
+you have to call releaseMemory before removing pointer from current instance.
+
+The simplest way is:
+- Calling releaseMemory before setting your property:
+
+```objc
+    [intersFactory releaseMemory];
+    intersFactory = otherFactory;// Or
+    intersFactory = [[MNGAdsFactory alloc]init];// Or
+    intersFactory = nil;
+```
+- Calling releaseMemory at the dealloc of delegate
+```objc
+    -(void)dealloc{
+        [intersFactory releaseMemory];
+        intersFactory = nil;
+    }
+```
 ----
 
 [ARC]:https://developer.apple.com/library/ios/documentation/Swift/Conceptual/Swift_Programming_Language/AutomaticReferenceCounting.html
