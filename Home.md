@@ -208,6 +208,8 @@ adsAdapter:bannerDidChangeFrame: will be called when ad did change size
 ```
 
 ### Interstitial
+
+**On info.plist view-controller-based-status-bar must be setted to YES**
 #####Init factory
 
 To create an interstitial you must init an object with type MNGAdsSDKFactory and set the interstitalDelegate and the viewController.
