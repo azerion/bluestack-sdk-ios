@@ -256,9 +256,9 @@ You may now use Mopub to show interstitials and native ads as usual. The adapter
 allow MNG Appsfire ads to be mediated and served.
 
 
-## Admob
+## Admob Mediation (certified)
 
-You may also use the Admob SDK and Admob mediation to serve Appsfire ads using the mngads-server SDK.
+You may also use the Admob SDK and [Admob mediation] to serve Appsfire ads using the mngads-server SDK.
 
 Preliminary steps:
 
@@ -285,6 +285,28 @@ Preliminary steps:
 
 You may now use Admob to show interstitials as usual. The adapter code and the setup you did on your Admob dashboard will allow MNG Appsfire ads to be mediated and served.
 
+Interstitial example for Admob (not specific to MNG/Appsfire):
+
+```objc
+// Admob interstitial
+GADInterstitial *interstitial;
+
+...
+
+// Load interstitial
+// If the mediation is configured as such, this will load an MNG Appsfire ad
+
+self.interstitial = [[GADInterstitial alloc] initWithAdUnitID:ADMOB_ADUNIT_ID];
+self.interstitial.delegate = self;
+[self.interstitial loadRequest:[GADRequest request]];
+
+...
+// Show interstitial
+
+if ([self.interstitial isReady])
+[self.interstitial presentFromRootViewController:self];
+```
+
 
 
 [Sushi]:http://docs.appsfire.com/sdk/ios/integration-reference/img/doc/sushi.mp4
@@ -292,3 +314,4 @@ You may now use Admob to show interstitials as usual. The adapter code and the s
 [mngads-server Mopub adapter sources]:https://bitbucket.org/mngcorp/mngads-demo-ios/src/HEAD/mopub-adapter/?at=master
 [MNGAds SDK for appsfire]:https://bitbucket.org/mngcorp/mngads-demo-ios/src/HEAD/Demo/Pods/MNGAds/MNGAds/?at=master
 [Cocoapods]:http://cocoapods.org/
+[Admob mediation]:https://developers.google.com/admob/android/mediation-networks#supported-ad-networks
