@@ -3,7 +3,7 @@ The MngAds SDK is available through [Cocoapods], a popular dependency management
 
 To download and incorporate the MngAds SDK into your project using Cocoapods, add the following line to your project's podfile:
 
-- To add all adNetworks
+- To add all adNetworks, **You must add all adapters in order to increase fillrate/revenues**
 ```ruby
 pod "MNGAds/MNGAdsFull"
 ```
