@@ -59,6 +59,17 @@ MngAds SDK needs, these libraries are in demo project :
 - Accelerate/Accelerate.h Framework
 - CoreMedia
 
+### adNetworkAdapter
+
+**You must add to your project  lib[adNetworkAdapter].a and the adNetwork SDK. You must add all adapters in order to increase fillrate/revenues**
+
+ - [libMNGAdsDFPAdapter.a]
+ - [libMNGAdsFacebookAdapter.a]
+ - [libMNGAdsSASAdapter.a]
+ - [libMNGAmazonAdapter.a]
+ - [libMNGFlurryAdapter.a]
+ - [libMNGLiveRailAdapter.a]
+
 You can see [Installation guide for Swift]
 
 ## Sample Application
@@ -433,3 +444,9 @@ The simplest way is:
 [libFlurryAds_7.3.0.a]:https://bitbucket.org/mngcorp/mngads-demo-ios/src/HEAD/Demo/Pods/Flurry-iOS-SDK/?at=master
 [libFlurry_7.3.0.a]:https://bitbucket.org/mngcorp/mngads-demo-ios/src/HEAD/Demo/Pods/Flurry-iOS-SDK/?at=master
 [Native Ads guidelines]:https://bitbucket.org/mngcorp/mngads-demo-ios/wiki/nativead
+[libMNGAdsDFPAdapter.a]:https://bitbucket.org/mngcorp/mngads-demo-ios/src/HEAD/MNGAds/libMNGAdsDFPAdapter.a?at=master&fileviewer=file-view-default
+[libMNGAdsFacebookAdapter.a]:https://bitbucket.org/mngcorp/mngads-demo-ios/src/HEAD/MNGAds/libMNGAdsFacebookAdapter.a?at=master&fileviewer=file-view-default
+[libMNGAdsSASAdapter.a]:https://bitbucket.org/mngcorp/mngads-demo-ios/src/HEAD/MNGAds/libMNGAdsSASAdapter.a?at=master&fileviewer=file-view-default
+[libMNGAmazonAdapter.a]:https://bitbucket.org/mngcorp/mngads-demo-ios/src/HEAD/MNGAds/libMNGAmazonAdapter.a?at=master&fileviewer=file-view-default
+[libMNGFlurryAdapter.a]:https://bitbucket.org/mngcorp/mngads-demo-ios/src/HEAD/MNGAds/libMNGFlurryAdapter.a?at=master&fileviewer=file-view-default
+[libMNGLiveRailAdapter.a]:https://bitbucket.org/mngcorp/mngads-demo-ios/src/HEAD/MNGAds/libMNGLiveRailAdapter.a?at=master&fileviewer=file-view-default
