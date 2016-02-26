@@ -1,6 +1,6 @@
 # upgrading SDK
 
-## Upgrading to v2.0
+## Upgrading to v2.x
 
 ### adNetworks
 Removed:
@@ -14,10 +14,16 @@ Added:
  - [AmazonAd.framework]
  - [LiveRailSDK.framework] 
  - [libFlurryAds_7.3.0.a], [libFlurry_7.3.0.a]
+ - [libMNGAdsDFPAdapter.a]
+ - [libMNGAdsFacebookAdapter.a]
+ - [libMNGAdsSASAdapter.a]
+ - [libMNGAmazonAdapter.a]
+ - [libMNGFlurryAdapter.a]
+ - [libMNGLiveRailAdapter.a]
 
 ### Integration
 
-MNGAds v2.0 allow you to choose which adNetworks you will use, the integration process has changed.
+MNGAds v2.0 allow you to choose which adNetworks you will use, the integration process has changed. By default you must add all adapters in order to increase fillrate/revenues
 
 ##### Manual integration:
 
@@ -149,6 +155,11 @@ instead of
 [LiveRailSDK.framework]:https://bitbucket.org/mngcorp/mngads-demo-ios/src/HEAD/Demo/MNG-Ads-SDK/AdsSDKs/LiveRailSDK.framework/?at=master
 [libFlurryAds_7.3.0.a]:https://bitbucket.org/mngcorp/mngads-demo-ios/src/HEAD/Demo/Pods/Flurry-iOS-SDK/?at=master
 [libFlurry_7.3.0.a]:https://bitbucket.org/mngcorp/mngads-demo-ios/src/HEAD/Demo/Pods/Flurry-iOS-SDK/?at=master
-
+[libMNGAdsDFPAdapter.a]:https://bitbucket.org/mngcorp/mngads-demo-ios/src/HEAD/MNGAds/libMNGAdsDFPAdapter.a?at=master&fileviewer=file-view-default
+[libMNGAdsFacebookAdapter.a]:https://bitbucket.org/mngcorp/mngads-demo-ios/src/HEAD/MNGAds/libMNGAdsFacebookAdapter.a?at=master&fileviewer=file-view-default
+[libMNGAdsSASAdapter.a]:https://bitbucket.org/mngcorp/mngads-demo-ios/src/HEAD/MNGAds/libMNGAdsSASAdapter.a?at=master&fileviewer=file-view-default
+[libMNGAmazonAdapter.a]:https://bitbucket.org/mngcorp/mngads-demo-ios/src/HEAD/MNGAds/libMNGAmazonAdapter.a?at=master&fileviewer=file-view-default
+[libMNGFlurryAdapter.a]:https://bitbucket.org/mngcorp/mngads-demo-ios/src/HEAD/MNGAds/libMNGFlurryAdapter.a?at=master&fileviewer=file-view-default
+[libMNGLiveRailAdapter.a]:https://bitbucket.org/mngcorp/mngads-demo-ios/src/HEAD/MNGAds/libMNGLiveRailAdapter.a?at=master&fileviewer=file-view-default
 
 
