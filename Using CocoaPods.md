@@ -18,7 +18,9 @@ pod "MNGAds/Amazon" // to add Amazon
 pod "MNGAds/Flurry" // to add Flurry
 
 ```
-After running pod install (if you’re setting up Cocoapods for the first time) or pod update (if you’re adding MNGAds to an existing Cocoapods project),you must add [libSmartAdServer.a](if you added MNGAdsFull or SmartAdsServer), [AmazonAd.framework](if you added MNGAdsFull or Amazon) and [LiveRailSDK.framework] (if you added MNGAdsFull or LiveRail) manually to your project and it will be ready to use the base MngAds SDK.
+
+**After running pod install (if you’re setting up Cocoapods for the first time) or pod update (if you’re adding MNGAds to an existing Cocoapods project),you must add [libSmartAdServer.a](if you added MNGAdsFull or SmartAdsServer), [AmazonAd.framework](if you added MNGAdsFull or Amazon) and [LiveRailSDK.framework] (if you added MNGAdsFull or LiveRail) manually to your project and it will be ready to use the base MngAds SDK.**
+
 ###Troubleshooting
 
  - http://guides.cocoapods.org/using/troubleshooting.html
