@@ -72,6 +72,33 @@ MngAds SDK needs, these libraries are in demo project :
 
 You can see [Installation guide for Swift]
 
+## Building Against iOS9
+
+iOS 9 introduces changes that are likely to impact your app and its MngAds integration.
+
+- **[Learn what's new in iOS 9 from Apple]**
+- **One of the changes in iOS9 is a default setting that requires apps to make network connections only over SSL ([App Transport Security]).** Therefore Whitelist Ads Servers for Network Requests, mngAds works under https but not all adNetworks on mediation (smartAdserver, appNexus, facebook, ...). if you want to release apps that build against iOS9, you will need to disable ATS in order to ensure all mediation works too.
+
+```
+#!objective-c
+<key>NSAppTransportSecurity</key>
+    <dict>
+        <key>NSAllowsArbitraryLoads</key>
+        <true/>
+    </dict>
+
+```
+
+You can also edit the plist by adding NSAppTransportSecurity key of dictionary type with a dictionary element of NSAllowsArbitraryLoads of boolean type set to “Yes”.
+
+![ats.png](https://bitbucket.org/repo/aen579/images/32376746-ats.png)
+
+- **The SDK supports bitcode**. If you are using earlier versions, you must disable bitcode. **But for now GoogleMobileAds.framework do not support bitcode, therefore you must disable bitcode for your app**
+
+>GoogleMobileAdsSdkiOS-7.4.1/GoogleMobileAds.framework/GoogleMobileAds(GADGestureIdUtil.o)' does not contain bitcode. You must rebuild it with bitcode enabled (Xcode setting ENABLE_BITCODE), obtain an updated library from the vendor, or disable bitcode for this target.
+
+ - **FBAudienceNetwork.framework** and  **libSmartAdServer.a** do not work with **Xcode 6.4**. Therefore, MngAds needs **Xcode 7**.
+
 ## Sample Application
 
 Included is a [MngAds sample app] to use as example and for help on MngAds integration. This basic application allows users to test our differents formats.
