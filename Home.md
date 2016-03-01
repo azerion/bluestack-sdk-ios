@@ -39,9 +39,9 @@ The MngAds SDK is available through Cocoapods. see [Using CocoaPods] section.
 
 MngAds SDK needs, these libraries are in demo project :
 
-- [libSmartAdServer.a] (use version >=6.2, in used on demo project.)
+- [libSmartAdServer.a], use version >=6.2, in used on demo project.
 - [FBAudienceNetwork.framework]
-- [GoogleMobileAds.framework] (use version >=7.6.0, in used on demo project.)
+- [GoogleMobileAds.framework], use version >=7.6.0, in used on demo project.
 - [AmazonAd.framework]
 - [LiveRailSDK.framework]
 - [libFlurryAds_7.3.0.a]
