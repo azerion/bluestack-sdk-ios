@@ -1,13 +1,13 @@
 ##Using CocoaPods
 The MngAds SDK is available through [Cocoapods], a popular dependency management system for Objective-C projects.
 
-1. To download and incorporate the MngAds SDK into your project using Cocoapods, add the following line to your project's podfile:
+ - To download and incorporate the MngAds SDK into your project using Cocoapods, add the following line to your project's podfile:
 
 ```ruby
 pod "MNGAds/MNGAdsFull"
 ```
 
-2. Following libs/frameworks ** do not yet own a pod. Therefore, you must add these libs/frameworks  manually to your project**
+ - Following libs/frameworks ** do not yet own a pod. Therefore, you must add these libs/frameworks  manually to your project**
 
   - [libSmartAdServer.a]
   - [AmazonAd.framework]
