@@ -2,6 +2,12 @@
 
 See [Wiki], [Design Guidelines and Best practices] and [Help Center]  for more detailed informations
 
+
+## Version 2.0.4
+#### Release date: March 7th, 2016
+ - Separate between request and display (see [Interstital implementation])
+ - bug fixes
+
 ## Version 2.0.3
 #### Release date: February 17th, 2016
 You need to keep all Ad Network librairies up to date.
@@ -232,3 +238,4 @@ You must check [Upgrade Guide].
 [LiveRailSDK.framework]:https://bitbucket.org/mngcorp/mngads-demo-ios/src/HEAD/Demo/MNG-Ads-SDK/AdsSDKs/LiveRailSDK.framework/?at=master
 [libFlurryAds_7.3.0.a]:https://bitbucket.org/mngcorp/mngads-demo-ios/src/HEAD/Demo/Pods/Flurry-iOS-SDK/?at=master
 [libFlurry_7.3.0.a]:https://bitbucket.org/mngcorp/mngads-demo-ios/src/HEAD/Demo/Pods/Flurry-iOS-SDK/?at=master
+[Interstital implementation]:https://bitbucket.org/mngcorp/mngads-demo-ios/wiki/Home#markdown-header-interstitial
