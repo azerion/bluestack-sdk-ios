@@ -5,9 +5,6 @@ Thanks for taking a look at mngAds! We take pride in having an easy-to-use, flex
 
 You can find integration documentation on our [wiki] and additional help documentation on our [developer help site].
 
-
-You can find integration documentation on our [wiki] and additional help documentation on our [developer help site].
-
 ##Using CocoaPods
 The MngAds SDK is available through [Cocoapods], a popular dependency management system for Objective-C projects.
 
