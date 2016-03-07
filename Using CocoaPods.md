@@ -1,3 +1,13 @@
+![MNG-Ads-1.png](https://bitbucket.org/repo/aen579/images/3739691856-MNG-Ads-1.png) for IOS
+Thanks for taking a look at mngAds! We take pride in having an easy-to-use, flexible monetization solution.
+
+## Need Help?
+
+You can find integration documentation on our [wiki] and additional help documentation on our [developer help site].
+
+
+You can find integration documentation on our [wiki] and additional help documentation on our [developer help site].
+
 ##Using CocoaPods
 The MngAds SDK is available through [Cocoapods], a popular dependency management system for Objective-C projects.
 
@@ -46,7 +56,8 @@ pod "MNGAds/Amazon" // to add Amazon
 pod "MNGAds/Flurry" // to add Flurry
 
 ```
-
+[wiki]:https://bitbucket.org/mngcorp/mngads-demo-ios/wiki/Home
+[developer help site]:https://bitbucket.org/mngcorp/mngads-demo-ios/wiki/faq
 [Cocoapods]:http://cocoapods.org/
 [libSmartAdServer.a]:https://bitbucket.org/mngcorp/mngads-demo-ios/src/HEAD/Demo/MNG-Ads-SDK/AdsSDKs/sdk/libSmartAdServer.a?at=master&fileviewer=file-view-default
 [FBAudienceNetwork.framework]:https://bitbucket.org/mngcorp/mngads-demo-ios/src/HEAD/Demo/MNG-Ads-SDK/AdsSDKs/FBAudienceNetwork.framework/?at=master
