@@ -87,7 +87,7 @@ To make a request you must call loadAd
 ```
 
 ##### Handle callBack from MNGHimonoBannerViewDelegate
-```
+```objc
 - (void)himonoBannerViewDidLoadAd:(MNGHimonoBannerView *)himonoBannerView {
     NSLog(@"bannerView did load");
     [self.container addSubview:bannerView];
@@ -144,7 +144,7 @@ To make a request you have to call loadAd
 ```
 
 ##### Displaying interstitial
-```
+```objc
 if (interNativeAd != nil) {
     interViewController = [interNativeAd getSushiViewController];
     interViewController.viewController = myViewController;  // Present from your view controller
@@ -154,7 +154,7 @@ if (interNativeAd != nil) {
 ```
 
 ##### Handle callBack from MNGSushiViewDelegate
-
+```objc
 -(void)interstitialDidAppear:(nonnull MNGSushiViewController *)sushiViewController {
     NSLog (@"interstitialDidAppear");
 }
@@ -166,7 +166,7 @@ if (interNativeAd != nil) {
 -(void)interstitialWillDisappear:(nonnull MNGSushiViewController *)sushiViewController {
     NSLog (@"interstitialWillDisappear");
 }
-
+```
 ### Getting native ads metadata
 
 ```objc
