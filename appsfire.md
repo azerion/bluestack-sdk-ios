@@ -312,6 +312,6 @@ if ([self.interstitial isReady])
 [Sushi]:http://docs.appsfire.com/sdk/ios/integration-reference/img/doc/sushi.mp4
 [Sashimi]:http://docs.appsfire.com/sdk/ios/integration-reference/img/doc/sashimi-extended-light.jpg
 [mngads-server Mopub adapter sources]:https://bitbucket.org/mngcorp/mngads-demo-ios/src/HEAD/mopub-adapter/?at=master
-[MNGAds SDK for appsfire]:https://bitbucket.org/mngcorp/mngads-demo-ios/src/HEAD/Demo/Pods/MNGAds/MNGAds/?at=master
+[MNGAds SDK for appsfire]:https://bitbucket.org/mngcorp/mngads-demo-ios/src/HEAD/Demo/Pods/MNGAds/MNGAds/libMngAds.a?at=master&fileviewer=file-view-default
 [Cocoapods]:http://cocoapods.org/
 [Admob mediation]:https://developers.google.com/admob/android/mediation-networks#supported-ad-networks
