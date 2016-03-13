@@ -5,7 +5,7 @@ See [Wiki], [Design Guidelines and Best practices] and [Help Center]  for more d
 ## Version 2.0.5
 #### Release date: March 13th, 2016
 
-**You must update [MngAdsSDK]**
+**You must update [MngAdsSDK] lib and [mnAds Adapters]**
 
  - Optimisation appsfire
  - bug fixes (liverail)
@@ -246,3 +246,4 @@ You must check [Upgrade Guide].
 [libFlurryAds_7.3.0.a]:https://bitbucket.org/mngcorp/mngads-demo-ios/src/HEAD/Demo/Pods/Flurry-iOS-SDK/?at=master
 [libFlurry_7.3.0.a]:https://bitbucket.org/mngcorp/mngads-demo-ios/src/HEAD/Demo/Pods/Flurry-iOS-SDK/?at=master
 [Interstital implementation]:https://bitbucket.org/mngcorp/mngads-demo-ios/wiki/Home#markdown-header-interstitial
+[mnAds Adapters]:https://bitbucket.org/mngcorp/mngads-demo-ios/src/HEAD/Demo/Pods/MNGAds/MNGAds/?at=master
