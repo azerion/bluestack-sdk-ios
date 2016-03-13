@@ -464,7 +464,7 @@ The simplest way is:
 [Mng-perf]:https://bitbucket.org/mngcorp/mngperf-demo-ios
 [Google DFP]:https://developers.google.com/mobile-ads-sdk/download#download
 [Facebook Audience Network]:https://developers.facebook.com/docs/ios?locale=fr_FR
-[MngAdsSDK]:https://bitbucket.org/mngcorp/mngads-demo-ios/src/HEAD/Demo/Pods/MNGAds/MNGAds/?at=master
+[MngAdsSDK]:https://bitbucket.org/mngcorp/mngads-demo-ios/src/HEAD/Demo/Pods/MNGAds/MNGAds/libMngAds.a?at=master&fileviewer=file-view-default
 [MngAds sample app]:https://bitbucket.org/mngcorp/mngads-demo-ios/src/HEAD?at=master
 [appsfire]:https://github.com/appsfire/Appsfire-iOS-SDK
 [Help Center]:https://bitbucket.org/mngcorp/mngads-demo-ios/wiki/faq
