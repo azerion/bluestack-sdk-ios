@@ -5,7 +5,8 @@ See [Wiki], [Design Guidelines and Best practices] and [Help Center]  for more d
 ## Version 2.0.5
 #### Release date: March 13th, 2016
 
-**You must update [MngAdsSDK]
+**You must update [MngAdsSDK]**
+
  - Optimisation appsfire
  - bug fixes (liverail)
 
