@@ -2,6 +2,10 @@
 
 See [Wiki], [Design Guidelines and Best practices] and [Help Center]  for more detailed informations
 
+## Version 2.0.5
+#### Release date: March 13th, 2016
+ - Optimisation appsfire
+ - bug fixes (liverail)
 
 ## Version 2.0.4
 #### Release date: March 7th, 2016
