@@ -2,6 +2,14 @@
 
 See [Wiki], [Design Guidelines and Best practices] and [Help Center]  for more detailed informations
 
+## Version 2.0.6
+#### Release date: March 17th, 2016
+
+**You must update [MngAdsSDK] lib and [mnAds Adapters]**
+
+ - upgrade [LiveRailSDK.framework], 
+ - bug fixes IOS7 [FBAudienceNetwork.framework], [MngAdsSDK]
+
 ## Version 2.0.5
 #### Release date: March 13th, 2016
 
