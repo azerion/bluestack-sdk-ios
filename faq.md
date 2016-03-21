@@ -182,7 +182,7 @@ sudo rm -fr ~/Library/Caches/CocoaPods/
 sudo rm -fr ~/.cocoapods/repos/master/
 ```
 
-### Memory managment
+## Memory managment
 When you have finished your ads plant you must free the memory.
 
 When using [ARC] it will be done automatically. Otherwise you have to call "releaseMemory".
