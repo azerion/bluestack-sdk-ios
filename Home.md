@@ -440,7 +440,9 @@ adsFactory = nil;
 
 Some adNetwork does not using **A**utomatic **R**eference **C**ounting, so you have to mange MNGAdsFactory pointer specially fo interstitial.
 
-you have to call releaseMemory before removing pointer from current instance.
+ - **Do not call releaseMemory on viewDidDisappear**
+
+ - you have to call releaseMemory before removing pointer from current instance.
 
 The simplest way is:
 
