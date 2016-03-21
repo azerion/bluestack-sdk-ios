@@ -441,6 +441,7 @@ Some adNetwork does not using **A**utomatic **R**eference **C**ounting, so you h
 you have to call releaseMemory before removing pointer from current instance.
 
 The simplest way is:
+
 - Calling releaseMemory before setting your property:
 
 ```objc
