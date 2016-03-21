@@ -436,6 +436,8 @@ But we recommand to release memory in order to avoid **crashes with a "EXC_BAD_A
 adsFactory = nil;
 ```
 
+###### Avoid crashes
+
 Some adNetwork does not using **A**utomatic **R**eference **C**ounting, so you have to mange MNGAdsFactory pointer specially fo interstitial.
 
 you have to call releaseMemory before removing pointer from current instance.
