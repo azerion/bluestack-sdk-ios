@@ -181,3 +181,40 @@ try
 sudo rm -fr ~/Library/Caches/CocoaPods/
 sudo rm -fr ~/.cocoapods/repos/master/
 ```
+
+### Memory managment
+When you have finished your ads plant you must free the memory.
+
+When using [ARC] it will be done automatically. Otherwise you have to call "releaseMemory".
+ - ARC
+```objc
+[adsFactory releaseMemory];//optional
+adsFactory = nil;
+```
+
+ - Avoid crashes
+
+Some adNetwork does not using **A**utomatic **R**eference **C**ounting, so you have to mange MNGAdsFactory pointer specially fo interstitial.
+
+ - **Do not call releaseMemory on viewDidDisappear**
+
+ - you have to call releaseMemory before removing pointer from current instance.
+
+The simplest way is:
+
+- Calling releaseMemory before setting your property:
+
+```objc
+    [intersFactory releaseMemory];
+    intersFactory = otherFactory;// Or
+    intersFactory = [[MNGAdsFactory alloc]init];// Or
+    intersFactory = nil;
+```
+- Calling releaseMemory at the dealloc of delegate
+```objc
+    -(void)dealloc{
+        [intersFactory releaseMemory];
+        intersFactory = nil;
+    }
+```
+----
