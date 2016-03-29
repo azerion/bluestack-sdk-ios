@@ -23,7 +23,7 @@ The MngAds SDK is available through [Cocoapods], a popular dependency management
 To download and incorporate the MngAds SDK into your project using Cocoapods, add the following line to your project's podfile:
 
 ```ruby
-pod "MNGAds" 
+pod "MNGAds/AppsFire"
 ```
 
 ## Manual Install
