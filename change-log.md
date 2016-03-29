@@ -2,6 +2,14 @@
 
 See [Wiki], [Design Guidelines and Best practices] and [Help Center]  for more detailed informations
 
+## Version 2.0.7
+#### Release date: March 29th, 2016
+
+**You must update [MngAdsSDK] lib and [mnAds Adapters]**
+
+ - upgrade [MngAdsSDK], now appsfire banner allow UIViewAutoresizingFlexibleWidth;, 
+ - change default_subspec for cocoapods in order to avoid pod update without adapaters (new architecture of v2)
+
 ## Version 2.0.6
 #### Release date: March 17th, 2016
 
