@@ -10,7 +10,10 @@ You can find integration documentation on our [wiki] and additional help documen
 The MngAds SDK is available through [Cocoapods], a popular dependency management system for Objective-C projects.
 
 To download and incorporate the MngAds SDK into your project using Cocoapods, add the following line to your project's podfile:
-
+```ruby
+pod "MNGAds"
+```
+Or:
 ```ruby
 pod "MNGAds/MNGAdsFull"
 ```
@@ -45,7 +48,8 @@ contains the value ***$(inherited)***
 To add specifics adNetwork.
 
 ```ruby
-pod "MNGAds" //to add Only MNG ADSERVER
+pod "MNGAds/MNGAdsStandalone" //to add Only MNG ADSERVER + AppsFire
+pod "MNGAds/AppsFire" //to add Only MNG ADSERVER + AppsFire
 pod "MNGAds/Facebook" // to add Facebook Audience Network
 pod "MNGAds/DFP" // to add DFP
 pod "MNGAds/SmartAdsServer" // to add SAS
