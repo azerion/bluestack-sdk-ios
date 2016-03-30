@@ -7,7 +7,8 @@ See [Wiki], [Design Guidelines and Best practices] and [Help Center]  for more d
 
 **You must update [MngAdsSDK] lib and [mnAds Adapters]**
 
- - upgrade [MngAdsSDK], now appsfire banner allow UIViewAutoresizingFlexibleWidth;, 
+ - upgrade [MngAdsSDK], now appsfire banner allow UIViewAutoresizingFlexibleWidth;
+ - now mngAds ignores createInterstial 5 secondes after disappear event to avoid overlaping
  - change default_subspec for cocoapods in order to avoid pod update without adapaters (new architecture of v2)
 
 ## Version 2.0.6
