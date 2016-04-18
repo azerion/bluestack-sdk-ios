@@ -129,6 +129,7 @@ Header not found for ...
 ```
 
 You have to check if:
+
 - Header search paths
 - Framework search paths
 - Library search paths
