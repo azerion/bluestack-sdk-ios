@@ -219,3 +219,33 @@ The simplest way is:
     }
 ```
 ----
+
+## Delegate not called
+
+
+**Don't use factory as local variable.**
+
+```objc
+-(BOOL)showInterstitial
+{
+    MNGAdsSDKFactory *interstitialAdsFactory = [[MNGAdsSDKFactory alloc]init];
+    interstitialAdsFactory.interstitialDelegate = self;
+    ...
+    //at the end of this methode interstitialAdsFactory will be deallocated
+}
+```
+
+If you do it, the factory will be deallocated in no time (so the request will be stopped). So you have to use property or global variable.
+
+```objc
+@implementation YOUR_CLASS{
+    MNGAdsSDKFactory *_interstitialAdsFactory;
+}
+
+-(BOOL)showInterstitial
+{
+    _interstitialAdsFactory = [[MNGAdsSDKFactory alloc]init];
+    _interstitialAdsFactory.interstitialDelegate = self;
+    ...
+}
+```
