@@ -15,6 +15,7 @@ See [Wiki], [Design Guidelines and Best practices] and [Help Center]  for more d
 #### Release date: March 29th, 2016
 
 **You must update [MngAdsSDK] lib and [mnAds Adapters]**
+
  - bug fixes IOS7 [FBAudienceNetwork.framework], [MngAdsSDK]
  - upgrade [MngAdsSDK], now appsfire banner allow UIViewAutoresizingFlexibleWidth;
  - now mngAds ignores createInterstial 5 secondes after disappear event to avoid overlaping
