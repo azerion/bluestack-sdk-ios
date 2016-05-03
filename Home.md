@@ -255,7 +255,7 @@ adsAdapter:bannerDidChangeFrame: will be called when ad did change size
 
 #####Init factory
 
-To create an interstitial you must init an object with type MNGAdsSDKFactory and set the interstitalDelegate and the viewController.
+To create an interstitial you must init an object with type MNGAdsSDKFactory and set the interstitalDelegate and the viewController (Activity)  [more details about instance on our FAQ]
 
 ```objc
 interstitialAdsFactory = [[MNGAdsSDKFactory alloc]init];
@@ -500,3 +500,4 @@ The simplest way is:
 [libMNGAmazonAdapter.a]:https://bitbucket.org/mngcorp/mngads-demo-ios/src/HEAD/MNGAds/libMNGAmazonAdapter.a?at=master&fileviewer=file-view-default
 [libMNGFlurryAdapter.a]:https://bitbucket.org/mngcorp/mngads-demo-ios/src/HEAD/MNGAds/libMNGFlurryAdapter.a?at=master&fileviewer=file-view-default
 [libMNGLiveRailAdapter.a]:https://bitbucket.org/mngcorp/mngads-demo-ios/src/HEAD/MNGAds/libMNGLiveRailAdapter.a?at=master&fileviewer=file-view-default
+[more details about instance on our FAQ]:https://bitbucket.org/mngcorp/mngads-demo-android/wiki/faq#markdown-header-interstitial-did-load-callback-without-display
