@@ -21,7 +21,6 @@ MngAds maintains adapters for several third party networks. A number of them are
 
   - [libSmartAdServer.a]
   - [AmazonAd.framework]
-  - [LiveRailSDK.framework]
 
 After running `pod install` (if you’re setting up Cocoapods for the first time) or `pod update` (if you’re adding MNGAds to an existing Cocoapods project), it will be ready to use the base MngAds SDK. » 
 
@@ -53,7 +52,6 @@ pod "MNGAds/AppsFire" //to add Only MNG ADSERVER + AppsFire
 pod "MNGAds/Facebook" // to add Facebook Audience Network
 pod "MNGAds/DFP" // to add DFP
 pod "MNGAds/SmartAdsServer" // to add SAS
-pod "MNGAds/LiveRail" // to add LiveRail
 pod "MNGAds/Amazon" // to add Amazon
 pod "MNGAds/Flurry" // to add Flurry
 
