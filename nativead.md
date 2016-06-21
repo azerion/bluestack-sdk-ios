@@ -1,5 +1,4 @@
 # Native ads
-[TOC]
 
 MNG Ads supports native ads, that allow you to retrieve the metadata of ad campaigns and present the ads yourself, within the context of your app, using your own art style. You are fully responsible
 for rendering the ad views using the information we supply. Native ads however offer methods to help you register impressions and clicks on your custom view.
@@ -62,17 +61,17 @@ title=nativeObject.title;
 // Get the app description (tagline)
 body=nativeObject.body;
 
-// Get the app social context
-socialContext=nativeObject.socialContext;
+// Get the "Ad" badge view. You must show this view on your ad view to denote an ad
+if(nativeObject.badgeView){
+	badge=nativeObject.badgeView;
+	...
+}
 
-// Get the "Ad" badge view. You must show this bitmap on your ad view to denote an ad
-badge=nativeObject.badgeView;
-
-// Check whether the app PriceType MNGPriceTypeFree,MNGPriceTypePayable or MNGPriceTypeUnknown
-pricetype=nativeObject.priceType
-
-// Get the app purchase price
-price=nativeObject.localizedPrice;
+// Get the "AdChoice" badge view. You must show this view on your ad view to denote an ad
+if(nativeObject.adChoiceBadgeView){
+	adChoiceBadge=nativeObject.adChoiceBadgeView;
+	...
+}
 
 // Get the localized text to print on the call to action button, such as "DOWNLOAD , LEARNE MORE ..."
 callToAction=nativeObject.callToAction;
@@ -87,7 +86,8 @@ callToAction=nativeObject.callToAction;
 [_nativeObject registerViewForInteraction:container withViewController:vc withClickableView:self.callToActionButton];
 ```
 ## 3. Native Ad Implementation
-![nativead.png](https://bitbucket.org/repo/aen579/images/3520501048-nativead.png)
+
+![native-ios.png](https://bitbucket.org/repo/aen579/images/1393323123-native-ios.png)
 
 
 ## 4. v2.0 or above
@@ -97,5 +97,3 @@ You can also integrate video ads into your Native Ad experience. To enable video
 ```objc
 [nativeObject setMediaContainer:self.container];
 ```
-
-![Capture d’écran 2016-02-04 à 12.46.24 PM.png](https://bitbucket.org/repo/aen579/images/2619653194-Capture%20d%E2%80%99e%CC%81cran%202016-02-04%20a%CC%80%2012.46.24%20PM.png)
