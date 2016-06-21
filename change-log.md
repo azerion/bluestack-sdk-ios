@@ -2,6 +2,23 @@
 
 See [Wiki], [Design Guidelines and Best practices] and [Help Center]  for more detailed informations
 
+## Version 2.1
+#### Release date: June 21th, 2016
+
+ - Native Ad, add the "AdChoice" badge view for Google/Adx certification in addition to Ad" badge view.
+ - Add Smart [In-Feed Ad format] (Parallax or Video)
+ - Fixes for smart crashes (ARC
+ - Improve mng adserving (interstitial capping, keywords)
+ - Improve logging system
+ - Add listener for refresh event
+ - Remove [LiveRailSDK.framework]
+ - Don't forget to update following librairies :
+    - [MngAdsSDK]
+    - [FBAudienceNetwork.framework]
+    - [AmazonAd.framework]
+    - [libFlurry], [libFlurryAds]
+    - [libSmartAdServer.a](SDK has been converted to ARC for better memory management)
+
 ## Version 2.0.8
 #### Release date: April 6th, 2016
 
@@ -270,7 +287,7 @@ You must check [Upgrade Guide].
 [Help Center]:https://bitbucket.org/mngcorp/mngads-demo-ios/wiki/faq
 [AmazonAd.framework]:https://bitbucket.org/mngcorp/mngads-demo-ios/src/HEAD/Demo/MNG-Ads-SDK/AdsSDKs/AmazonAd.framework/?at=master
 [LiveRailSDK.framework]:https://bitbucket.org/mngcorp/mngads-demo-ios/src/HEAD/Demo/MNG-Ads-SDK/AdsSDKs/LiveRailSDK.framework/?at=master
-[libFlurryAds_7.3.0.a]:https://bitbucket.org/mngcorp/mngads-demo-ios/src/HEAD/Demo/Pods/Flurry-iOS-SDK/?at=master
-[libFlurry_7.3.0.a]:https://bitbucket.org/mngcorp/mngads-demo-ios/src/HEAD/Demo/Pods/Flurry-iOS-SDK/?at=master
+[libFlurryAds]:https://bitbucket.org/mngcorp/mngads-demo-ios/src/HEAD/Demo/Pods/Flurry-iOS-SDK/?at=master
+[libFlurry]:https://bitbucket.org/mngcorp/mngads-demo-ios/src/HEAD/Demo/Pods/Flurry-iOS-SDK/?at=master
 [Interstital implementation]:https://bitbucket.org/mngcorp/mngads-demo-ios/wiki/Home#markdown-header-interstitial
 [mnAds Adapters]:https://bitbucket.org/mngcorp/mngads-demo-ios/src/HEAD/Demo/Pods/MNGAds/MNGAds/?at=master
