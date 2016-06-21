@@ -1,5 +1,29 @@
 # upgrading SDK
 
+## Upgrading to 2.1
+### New features
+
+Now you can create an [In-Feed Ad format]
+
+```objc
+-(BOOL)createInfeedInFrame:(CGRect)frame withPreferences:(MNGPreference*)preferences;
+-(BOOL)createInfeedInFrame:(CGRect)frame ;
+```
+
+### Librairies
+
+ - The following librairies are not required anymore for the sdk
+
+     - Remove [LiveRailSDK.framework]
+
+
+ - Don't forget to update following librairies :
+    - [MngAdsSDK]
+    - [FBAudienceNetwork.framework]
+    - [AmazonAd.framework]
+    - [libFlurry], [libFlurryAds]
+    - [libSmartAdServer.a](SDK has been converted to ARC for better memory management)
+
 ## Upgrading to v2.x
 
 ### adNetworks
@@ -162,5 +186,5 @@ instead of
 [libMNGFlurryAdapter.a]:https://bitbucket.org/mngcorp/mngads-demo-ios/src/HEAD/MNGAds/libMNGFlurryAdapter.a?at=master&fileviewer=file-view-default
 [libMNGLiveRailAdapter.a]:https://bitbucket.org/mngcorp/mngads-demo-ios/src/HEAD/MNGAds/libMNGLiveRailAdapter.a?at=master&fileviewer=file-view-default
 [Using CocoaPods]:https://bitbucket.org/mngcorp/mngads-demo-ios/wiki/Using%20CocoaPods
-
+[In-Feed Ad format]:https://bitbucket.org/mngcorp/mngads-demo-ios/wiki/Home#markdown-header-infeed
 
