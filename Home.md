@@ -9,6 +9,8 @@ MNG Ads provides functionalities for monetizing your mobile application: from pr
 - [MNG Ad Server] (Mng + AppsFire)
 - [Google DFP]
 - [AppNexus] (Via Server)
+- [Amazon]
+- [Flurry]
 
 It contains a dispacher that will select an ads server according to the priority and state ([mngAds state diagram]).
 
@@ -39,11 +41,10 @@ The MngAds SDK is available through Cocoapods. see [Using CocoaPods] section.
 
 MngAds SDK needs, these libraries are in demo project :
 
-- [libSmartAdServer.a], use version >=6.2, in used on demo project.
+- [libSmartAdServer.a], use version >=6.3, in used on demo project.
 - [FBAudienceNetwork.framework]
-- [GoogleMobileAds.framework], use version >=7.6.0, in used on demo project.
+- [GoogleMobileAds.framework], use version >=7.8.1, in used on demo project.
 - [AmazonAd.framework]
-- [LiveRailSDK.framework]
 - [libFlurryAds_7.3.0.a]
 - [libFlurry_7.3.0.a]
 - CoreGraphics.framework
@@ -68,7 +69,6 @@ MngAds SDK needs, these libraries are in demo project :
  - [libMNGAdsSASAdapter.a]
  - [libMNGAmazonAdapter.a]
  - [libMNGFlurryAdapter.a]
- - [libMNGLiveRailAdapter.a]
 
 You can see [Installation guide for Swift]
 
@@ -126,7 +126,7 @@ You have to init the SDK in AppDelegate.m in application:didFinishLaunchingWithO
 ...
 }
 ```
-###Initialisation Delegate
+### Initialisation Delegate
 
 MNGAds SDK is configured by server or from last configuration. So in first run after installation, initialisation take some time before be done .
 
@@ -192,7 +192,7 @@ $Ads Factory is not busy
 $Ads Factory is busy
 ```
 ### Banner
-#####Init factory
+##### Init factory
 
 To create a banner you have to init an object with type MNGAdsSDKFactory and set the bannerDelegate and the viewController.
 
@@ -206,7 +206,7 @@ You have also to set placementId (minimum one time)
 ```objc
 bannerAdsFactory.placementId = @"/YOUR_APP_ID/PLACEMENT_ID";
 ```
-#####Make a request
+##### Make a request
 To make a request you have to call 'createBannerInFrame'. this method return a bool value (canHandleRequest) 
 
 ```objc
@@ -217,7 +217,7 @@ if([bannerAdsFactory createBannerInFrame:CGRectMake(0, 0, 320, 50)]){
 }
 ```
 
-#####Handle callBack from BannerDelegate
+##### Handle callBack from BannerDelegate
 adsAdapter:bannerDidLoad: will be called by the SDK when your bannerView is ready. now you can add your bannerView to th ViewHierarchy.
 ```objc
 -(void)adsAdapter:(MNGAdsAdapter  *)adsAdapter bannerDidLoad:(UIView  *)bannerView preferredHeight:(CGFloat)preferredHeight{
@@ -245,6 +245,72 @@ adsAdapter:bannerDidChangeFrame: will be called when ad did change size
 }
 ```
 
+##### Handle callBack from RefreshDelegate
+If you want tobe notified on refresh, you have to set refresh delegate
+```objc
+bannerAdsFactory.refreshDelegate = self;
+```
+On banner refresh, the SDK invoke the calback
+```objc
+-(void)adsAdapterBannerDidRefresh:(MNGAdsAdapter *)adsAdapter{
+    ...
+}
+```
+
+On banner fail to refresh, the SDK invoke the calback
+```objc
+-(void)adsAdapterBannerDidRefresh:(MNGAdsAdapter *)adsAdapter{
+    ...
+}
+```
+
+### Infeed
+##### Init factory
+
+To create an **In-Feed** Ad format ( the ads that show up in the middle of the stream as you scroll through your content), you must init an object with type MNGAdsSDKFactory and set the infeedDelegate and the viewController.
+
+```objc
+infeedAdsFactory = [[MNGAdsSDKFactory alloc]init];
+infeedAdsFactory.infeedDelegate = self;
+infeedAdsFactory.viewController = self;
+```
+You have also to set placementId (minimum one time)
+
+```objc
+infeedAdsFactory.placementId = @"/YOUR_APP_ID/PLACEMENT_ID";
+```
+##### Make a request
+To make a request you have to call 'createInfeedInFrame'. this method return a bool value (canHandleRequest) 
+
+```objc
+if([infeedAdsFactory createInfeedInFrame:CGRectMake(0, 0, 320, 50)]){
+//Wait callBack from delegate
+}else{
+//adsFactory can not handle your request
+}
+```
+
+##### Handle callBack from InfeedDelegate
+adsAdapter:infeedDidLoad: will be called by the SDK when your bannerView is ready. now you can add your bannerView to th ViewHierarchy.
+```objc
+-(void)adsAdapter:(MNGAdsAdapter  *)adsAdapter infeedDidLoad:(UIView  *)bannerView{
+    NSLog(@"adsAdapterInfeedDidLoad:");
+    [self.view addSubview:_bannerView];
+}
+```
+
+adsAdapter:infeedDidFailWithError: will be called when all ads servers fail. it will return the error of last called ads server.
+```objc
+-(void)adsAdapter:(MNGAdsAdapter *)adsAdapter infeedDidFailWithError:(NSError *)error{
+NSLog(@"%@",error);
+}
+```
+##### Handle callBack from RefreshDelegate
+If you want tobe notified on refresh, you have to set refresh delegate (same as banner)
+```objc
+infeedAdsFactory.refreshDelegate = self;
+```
+
 ### Interstitial
 
 **On info.plist if you are using view-controller-based-status-bar, it must be setted to YES**
@@ -253,7 +319,7 @@ adsAdapter:bannerDidChangeFrame: will be called when ad did change size
 ![statusbar.png](https://bitbucket.org/repo/aen579/images/4293410302-statusbar.png)
 
 
-#####Init factory
+##### Init factory
 
 To create an interstitial you must init an object with type MNGAdsSDKFactory and set the interstitalDelegate and the viewController.
 
@@ -267,7 +333,7 @@ You have also to set placementId (minimum one time)
 ```objc
 interstitialAdsFactory.placementId = @"/YOUR_APP_ID/PLACEMENT_ID";
 ```
-#####Make a request
+##### Make a request
 To make a request you must call 'createInterstitial'. this method return a bool value (canHandleRequest) 
 
 ```objc
@@ -278,7 +344,7 @@ if([interstitialAdsFactory createInterstitial]){
 }
 ```
 
-#####Handle callBack from InterstitialDelegate
+##### Handle callBack from InterstitialDelegate
 adsAdapterInterstitialDidLoad: will be called by the SDK when your Interstitial is ready. Interstitial will be showen.
 ```objc
 -(void)adsAdapterInterstitialDidLoad:(MNGAdsAdapter *)adsAdapter{
@@ -323,7 +389,7 @@ ___info:___ To test auto-displayin disabled on demo, you have to go to the page 
 
 ### Native Ads
 Native ads give you the control to design the perfect ad units for your app. With our Native Ad API, you can determine the look and feel, size and location of your ads. Because you decide how the ads are formatted, ads can fit seamlessly in your application.
-#####Init factory
+##### Init factory
 
 To create a nativeAd  you have to init an object with type MNGAdsSDKFactory and set the nativeDelegate.
 
@@ -336,7 +402,7 @@ You have also to set placementId (minimum one time)
 ```objc
 nativeAdsFactory.placementId = @"/YOUR_APP_ID/PLACEMENT_ID";
 ```
-#####Make a request
+##### Make a request
 To make a request you have to call 'createNative'. this method return a bool value (canHandleRequest) 
 
 ```objc
@@ -347,7 +413,7 @@ if([nativeAdsFactory createNative]){
 }
 ```
 
-#####Handle callBack from NativeDelegate
+##### Handle callBack from NativeDelegate
 adsAdapter:nativeObjectDidLoad: will be called by the SDK when your nativeObject is ready. now you can create your own view.
 ```objc
 -(void)adsAdapter:(MNGAdsAdapter *)adsAdapter nativeObjectDidLoad:(MNGNAtiveObject *)nativeObject{
