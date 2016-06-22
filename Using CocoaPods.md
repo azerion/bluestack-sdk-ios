@@ -19,7 +19,6 @@ pod "MNGAds/MNGAdsFull"
 ```
 MngAds maintains adapters for several third party networks. A number of them are available through our Cocoapod spec that provides a simple integration experience. However, following libs/frameworks ** do not yet own a pod. Therefore, you must add these libs/frameworks  manually to your project**
 
-  - [libSmartAdServer.a]
   - [AmazonAd.framework]
 
 After running `pod install` (if you’re setting up Cocoapods for the first time) or `pod update` (if you’re adding MNGAds to an existing Cocoapods project), it will be ready to use the base MngAds SDK. » 
