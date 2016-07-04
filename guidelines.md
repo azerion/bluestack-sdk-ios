@@ -13,10 +13,10 @@ if([MNGAdsSDKFactory numberOfRunningFactory] <= MAX_ALLOWED_FACTORIES){
 
 # Design Guidelines for MNG Ads
 
-## Banner -  (50px or 90px)
-Banner -  (50px or 90px) | Description| 
+## Banner -  (50pt or 90pt)
+Banner -  (50pt or 90pt) | Description| 
 ------------- | ------------- |
-![IMG_0765-min.png](https://bitbucket.org/repo/aen579/images/4036275966-IMG_0765-min.png) | A banner is a small bar ad that appears at the bottom or top of your content. Usually sized 320 x 50. Only include one ad per page or show one ad at a time if scrolling. In all cases, **the banner width is flexible with a minimum of 320px.**. If you are building your app for iPad  consider using 90px and 50px for iphone.
+![IMG_0765-min.png](https://bitbucket.org/repo/aen579/images/4036275966-IMG_0765-min.png) | A banner is a small bar ad that appears at the bottom or top of your content. Usually sized 320 x 50. Only include one ad per page or show one ad at a time if scrolling. In all cases, **the banner width is flexible with a minimum of 320pt.**. If you are building your app for iPad  consider using 90px and 50px for iphone.
 
 ## Square - Medium rectangle (300 x 250)
 
