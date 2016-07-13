@@ -2,6 +2,24 @@
 
 See [Wiki], [Design Guidelines and Best practices] and [Help Center]  for more detailed informations
 
+## Version 2.1.1
+#### Release date: July 13th, 2016
+
+ - Use lastest smart Adserver and Facebook version
+ - Now Amazon available with cocoapods (**If you are using cocoapods, you must remove AmazonAd.framework, it will be auto-downloaded by cocoapods**)
+ - Now you can use new predifined sizes 
+```objc
+extern MNGAdSize const kMNGAdSizeDynamicBanner; //Small Banner Screen width x 50
+extern MNGAdSize const kMNGAdSizeDynamicLeaderboard; //Landscape Banner ipad Screen width x 90
+```
+
+Don't forget to update following librairies :
+
+ - [MngAdsSDK]
+ - [FBAudienceNetwork.framework]
+ - [libFlurry], [libFlurryAds]
+ - [libSmartAdServer.a]
+
 ## Version 2.1
 #### Release date: June 21th, 2016
 
