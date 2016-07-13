@@ -5,6 +5,9 @@ See [Wiki], [Design Guidelines and Best practices] and [Help Center]  for more d
 ## Version 2.1.1
 #### Release date: July 13th, 2016
 
+
+you must check [Upgrade Guide].
+
  - Use lastest smart Adserver and Facebook version
  - Now Amazon available with cocoapods (**If you are using cocoapods, you must remove AmazonAd.framework, it will be auto-downloaded by cocoapods**)
  - Now you can use new predifined sizes 
@@ -95,7 +98,7 @@ You need to keep all Ad Network librairies up to date.
 ## Version 2.0
 #### Release date: January 28th, 2016
 
-you mus check [Upgrade Guide]. You need to keep all Ad Network librairies up to date.
+you must check [Upgrade Guide]. You need to keep all Ad Network librairies up to date.
 
  - [libAppsfireSDK.a], [libANSDK] and [libMng-perf.a] libraries have been merged on [MngAdsSDK] SDK for better performance and reduce librairies number
  - We have added [AmazonAd.framework], [LiveRailSDK.framework] , [libFlurryAds_7.3.0.a] to mngads mediation in order to increase fill rate and revenus
