@@ -9,7 +9,7 @@ extern MNGAdSize const kMNGAdSizeDynamicLeaderboard; //Landscape Banner ipad Scr
 ```
 Librairies
 
-**If you are using cocoapods, you have to remove AmazonAd.framework, it will be auto-downloaded by cocoapods**
+**If you are using cocoapods, you must remove AmazonAd.framework, it will be auto-downloaded by cocoapods**
 
 Don't forget to update following librairies :
 
