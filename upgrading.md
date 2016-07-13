@@ -1,6 +1,6 @@
 # upgrading SDK
 
-## Upgrading to 2.1
+## Upgrading to 2.1.1
 ### New features
 Now you can use new predifined sizes 
 ```objc
