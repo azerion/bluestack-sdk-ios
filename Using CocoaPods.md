@@ -47,7 +47,7 @@ pod "MNGAds/MNGAdsStandalone" //to add Only MNG ADSERVER + AppsFire
 pod "MNGAds/AppsFire" //to add Only MNG ADSERVER + AppsFire
 pod "MNGAds/Facebook" // to add Facebook Audience Network
 pod "MNGAds/DFP" // to add DFP
-pod "MNGAds/SmartAdsServer" // to add SAS
+pod "MNGAds/SmartAdServer" // to add SmartAdServer (SAS)
 pod "MNGAds/Amazon" // to add Amazon
 pod "MNGAds/Flurry" // to add Flurry
 
