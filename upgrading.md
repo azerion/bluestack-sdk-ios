@@ -2,6 +2,24 @@
 
 ## Upgrading to 2.1
 ### New features
+Now you can use new predifined sizes 
+```objc
+extern MNGAdSize const kMNGAdSizeDynamicBanner; //Small Banner Screen width x 50
+extern MNGAdSize const kMNGAdSizeDynamicLeaderboard; //Landscape Banner ipad Screen width x 90
+```
+Librairies
+
+**If you are using cocoapods, you have to remove AmazonAd.framework, it will be auto-downloaded by cocoapods**
+
+Don't forget to update following librairies :
+
+ - [MngAdsSDK]
+ - [FBAudienceNetwork.framework]
+ - [libFlurry], [libFlurryAds]
+ - [libSmartAdServer.a]
+
+## Upgrading to 2.1
+### New features
 
 Now you can create an [In-Feed Ad format]
 
