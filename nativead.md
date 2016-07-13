@@ -52,6 +52,53 @@ NSLog(@"%@",error);
 
 Once a native ad is loaded, you may retrieve its metadata with the following methods:
 
+###**Main Image**
+
+ - 1200x627px image, 
+ - Wide aspect ratio main image.
+ - asset name : **nativeObject.coverImageUrl**
+ 
+ 
+###**Icon Image**
+
+ - 82x82 max
+ - asset name : **nativeObject.photoUrl**
+ 
+ 
+###**Ad Title**
+
+ - 50 maximum character length string of ad headline
+ - Provide enough space to display the entire length of the Ad Title
+ - asset name : **nativeObject.title**
+ 
+ 
+###**Ad Text**
+
+ - 150 maximum character length string of ad text
+ - Provide enough space to display the entire length of the Ad Text
+ - asset name : **nativeObject.body**
+ 
+###**CTA Text**
+
+ - Text for a button
+ - 12 characters maximum
+ - asset name : **nativeObject.callToAction**
+ 
+ 
+###**Sponsored Marker**
+
+ - Badge view (an icon)
+ - change according ad network
+ - must be inserted on top right
+ - asset name : **nativeObject.adChoiceBadgeView**
+ 
+###**Distinguishable Ad**
+
+ - “Ad” (can be localized)
+ - Badge that says “AD” and is at least 15x15px (can be localized)
+ - change according ad network
+ - must be inserted on top left
+ - asset name : **ativeObject.badgeView**
 
 ```objc
 
