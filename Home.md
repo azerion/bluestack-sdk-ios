@@ -210,7 +210,7 @@ bannerAdsFactory.placementId = @"/YOUR_APP_ID/PLACEMENT_ID";
 To make a request you have to call 'createBannerInFrame'. this method return a bool value (canHandleRequest) 
 
 ```objc
-if([bannerAdsFactory createBannerInFrame:CGRectMake(0, 0, 320, 50)]){
+if([bannerAdsFactory createBannerInFrame:kMNGAdSizeDynamicBanner]){
 //Wait callBack from delegate
 }else{
 //adsFactory can not handle your request
@@ -262,6 +262,35 @@ On banner fail to refresh, the SDK invoke the calback
 -(void)adsAdapterBannerDidRefresh:(MNGAdsAdapter *)adsAdapter{
     ...
 }
+```
+
+### MNGAdSize
+Mng ads provides variant pre-defined sizes ( example below).
+```objc
+/**
+ MNGAdSize the same of CGRect
+ */
+typedef CGRect MNGAdSize;
+
+extern MNGAdSize const kMNGAdSizeBanner; //Small Banner 320 x 50
+extern MNGAdSize const kMNGAdSizeDynamicBanner; //Small Banner Screen width x 50
+extern MNGAdSize const kMNGAdSizeLargeBanner; //Large Banner 320 x 100
+extern MNGAdSize const kMNGAdSizeFullBanner; //Full Banner ipad 468 x 60
+extern MNGAdSize const kMNGAdSizeLeaderboard; //Landscape Banner ipad 728 x 90
+extern MNGAdSize const kMNGAdSizeDynamicLeaderboard; //Landscape Banner ipad Screen width x 90
+extern MNGAdSize const kMNGAdSizeMediumRectangle; //Square Banner 300 x 250
+```
+Example:
+
+```objc
+    MNGAdSize size;
+    if (isSquare) {
+        size = kMNGAdSizeMediumRectangle;
+    }else{
+        BOOL isIPAD = ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPad);
+        size = (isIPAD)?kMNGAdSizeDynamicLeaderboard:kMNGAdSizeDynamicBanner;
+    }
+    [bannerAdsFactory createBannerInFrame:size];
 ```
 
 ### Infeed
