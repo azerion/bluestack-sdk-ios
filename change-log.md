@@ -1,6 +1,10 @@
 ## Change log and release notes for the MngAds SDK for iOS.
 
 See [Wiki], [Design Guidelines and Best practices] and [Help Center]  for more detailed informations
+## Version 2.1.2
+#### Release date: July 22th, 2016
+
+no changes, just fix wrong [libSmartAdServer.a] lib on cocoapods.org if pod update has been done on 2016-07-13.
 
 ## Version 2.1.1
 #### Release date: July 13th, 2016
