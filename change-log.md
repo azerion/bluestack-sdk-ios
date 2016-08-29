@@ -1,6 +1,18 @@
 ## Change log and release notes for the MngAds SDK for iOS.
 
 See [Wiki], [Design Guidelines and Best practices] and [Help Center]  for more detailed informations
+## Version 2.2
+#### Release date: August 29th, 2016
+
+ - HTTPS support
+ - New appsfire template for banner, medium rectangle and interstitial
+ - New Google DFP librairie
+
+Don't forget to update following librairies or use **pod update** :
+
+ - [MngAdsSDK]
+ - [GoogleMobileAds.framework]
+
 ## Version 2.1.2
 #### Release date: July 22th, 2016
 
