@@ -144,4 +144,9 @@ You can also integrate video ads into your Native Ad experience. To enable video
  -  You have to call [setMediaContainer:(UIView*)] then the sdk will handle the rendering process ( displaying)  the image cover or the media video inside the view group that depends on the ad network result
 ```objc
 [nativeObject setMediaContainer:self.container];
+
 ```
+
+## 4. cache
+
+Ad metadata that you receive can be cached and re-used for up to 3 hours. If you plan to use the metadata after this time period, make a call to load a new ad.
