@@ -1,6 +1,18 @@
 ## Change log and release notes for the MngAds SDK for iOS.
 
 See [Wiki], [Design Guidelines and Best practices] and [Help Center]  for more detailed informations
+
+## Version 2.2.1
+#### Release date: September 9th, 2016
+ -  iOS 10 support, with Limit Ad Tracking changes (in this case we are using vendorId)
+ - Now appsfire support videos for square, nativeAds and interstitials
+ - Don't forget to update following librairies or use **pod update** :
+
+    - [MngAdsSDK]
+    - [FBAudienceNetwork.framework]
+    - [AmazonAd.framework] (>= IOS8)
+    - [libSmartAdServer.a]
+
 ## Version 2.2
 #### Release date: August 29th, 2016
 
