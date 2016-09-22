@@ -3,6 +3,20 @@
 This document answers the following frequently asked questions:
 
 [TOC]
+# IOS10
+
+## NSCalendarsUsageDescription
+
+On iOS 10+, the App Store’s [privacy policy] requires apps to provide a usage description when attempting to access privacy-sensitive data,sush as a user’s calendar. Info.plist must contain an NSCalendarsUsageDescription key with a string value explaining to the user how the app uses this data according to [Apple's guideline].
+
+```
+#!objective-c
+<key>NSCalendarsUsageDescription</key>
+<string>Some ad content may access calendar</string>
+```
+
+Other privacy-sensitive data are NSBluetoothPeripheralUsageDescription, NSCameraUsageDescription, NSContactsUsageDescription, NSHealthShareUsageDescription, see [Apple's guideline]
+
 # IOS9
 
 ## Is bitcode supported?
@@ -249,3 +263,5 @@ If you do it, the factory will be deallocated in no time (so the request will be
     ...
 }
 ```
+[vprivacy policy]:https://developer.apple.com/app-store/review/guidelines/#privacy
+[Apple's guideline]:https://developer.apple.com/library/prerelease/content/documentation/General/Reference/InfoPlistKeyReference/Articles/CocoaKeys.html#//apple_ref/doc/uid/TP40009251-SW15
