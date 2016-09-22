@@ -263,5 +263,5 @@ If you do it, the factory will be deallocated in no time (so the request will be
     ...
 }
 ```
-[vprivacy policy]:https://developer.apple.com/app-store/review/guidelines/#privacy
+[privacy policy]:https://developer.apple.com/app-store/review/guidelines/#privacy
 [Apple's guideline]:https://developer.apple.com/library/prerelease/content/documentation/General/Reference/InfoPlistKeyReference/Articles/CocoaKeys.html#//apple_ref/doc/uid/TP40009251-SW15
