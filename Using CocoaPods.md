@@ -1,4 +1,4 @@
-# ![MNG-Ads-1.png](https://bitbucket.org/repo/aen579/images/3739691856-MNG-Ads-1.png) for IOS
+# ![MNG-Ads-1.png](https://bitbucket.org/repo/aen579/images/3739691856-MNG-Ads-1.png) for IOS by ![madvertise_city_logo-min.jpg](https://bitbucket.org/repo/aen579/images/2653598869-madvertise_city_logo-min.jpg)
 
 Thanks for taking a look at mngAds! We take pride in having an easy-to-use, flexible monetization solution.
 
