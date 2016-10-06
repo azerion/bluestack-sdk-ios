@@ -1,4 +1,4 @@
-![MNG-Ads-1.png](https://bitbucket.org/repo/aen579/images/3739691856-MNG-Ads-1.png) for IOS by ![madvertise_city_logo-min.jpg](https://bitbucket.org/repo/aen579/images/2653598869-madvertise_city_logo-min.jpg)
+![mad_AdNetworkMediation_rgb_small.png](https://bitbucket.org/repo/GyRXRR/images/3981639300-mad_AdNetworkMediation_rgb_small.png) for IOS
 
 [TOC]
 
