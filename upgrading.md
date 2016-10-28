@@ -38,6 +38,7 @@ To access to beacon you have to use the MAdvertiseBeacon singleton. To initialis
     //
 }
 ```
+
 ### handleNotificationWithUserInfo
 To handle beacon local notification, firstable you have to cheack if it is a beacon notification and let MAdvertiseBeacon handle it.
 
@@ -49,8 +50,7 @@ To handle beacon local notification, firstable you have to cheack if it is a bea
         //
     }
 }
-
-
+```
 
 
 Don't forget to update following librairies :
