@@ -2,6 +2,73 @@
 
 See [Wiki], [Design Guidelines and Best practices] and [Help Center]  for more detailed informations
 
+## Version 2.3
+#### Release date: October 28th, 2016
+
+ - Now MNGADS becomes MADVERTISE MEDIATION and MADVERTISE ADSERVING
+ - VAST 2 /VPAID 1 support for MADVERTISE ADSERVING
+ - Upgrading MADVERTISE MEDIATION librairies
+ - Improve Native Ad assets management with 
+```objc
+__weak NativeAdViewController *weakSelf = self;
+    [nativeObject downloadAssetWithType:MAdvertiseAssetTypeAppIcon completition:^(UIImage *image) {
+        dispatch_async(dispatch_get_main_queue(), ^{
+            if (!weakSelf) {
+                return;
+            }
+            __strong NativeAdViewController *strongSelf = weakSelf;
+            strongSelf.iconeImage.image = image;
+            strongSelf.nativeView.hidden = NO;
+        });
+    }];
+```
+ - Cache Optimisations
+ - Bugs fixes
+
+Now you can add beacon for store:
+
+- Get Ebeacon technology to propose to the advertisers to target the users inside the point of sale. 
+- An installation base of 12,500 ebeacons ready to track the users.
+- An exclusive format in Push notification to the users inside a tabacco shop, press shop, pharmay or mall.
+
+### Initializing Beacons
+You have to add libMAdvertiseB4SAdapter.a, BeaconForStoreSDK.framework and BeaconForStoreStorage.bundle to your project.
+
+
+
+To access to beacon you have to use the MAdvertiseBeacon singleton. To initialise it you have to call the method initBeacon at application:didFinishLaunchingWithOptions:
+
+```objc
+#import <MAdvertiseBeacon.h>
+- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+    [MNGAdsSDKFactory initWithAppId:MNG_ADS_APP_ID];
+    [[MAdvertiseBeacon singleton]initBeacon];
+    //
+}
+```
+
+### handleNotificationWithUserInfo
+To handle beacon local notification, firstable you have to cheack if it is a beacon notification and let MAdvertiseBeacon handle it.
+
+```objc
+-(void)application:(UIApplication *)application didReceiveLocalNotification:(UILocalNotification *)notification{
+    if ([[MAdvertiseBeacon singleton]userInfoIsBeaconNotification:notification.userInfo]) {
+        [[MAdvertiseBeacon singleton]handleNotificationWithUserInfo:notification.userInfo];
+    }else{
+        //
+    }
+}
+```
+
+
+Don't forget to update following librairies :
+
+- [MngAdsSDK]
+- [FBAudienceNetwork.framework]
+- [libFlurry], [libFlurryAds]
+- [libSmartAdServer.a]
+- [GoogleMobileAds.framework]
+
 ## Version 2.2.1
 #### Release date: September 9th, 2016
  -  iOS 10 support, with Limit Ad Tracking changes (in this case we are using vendorId)
