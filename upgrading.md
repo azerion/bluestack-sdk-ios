@@ -2,6 +2,7 @@
 ## Upgrading to 2.3
 ### New features
 Now you can get assets from MNGNativeObject
+
 ```objc
 __weak NativeAdViewController *weakSelf = self;
     [nativeObject downloadAssetWithType:MAdvertiseAssetTypeAppIcon completition:^(UIImage *image) {
@@ -28,6 +29,7 @@ You have to add libMAdvertiseB4SAdapter.a, BeaconForStoreSDK.framework and Beaco
 
 
 To access to beacon you have to use the MAdvertiseBeacon singleton. To initialise it you have to call the method initBeacon at application:didFinishLaunchingWithOptions:
+
 ```objc
 #import <MAdvertiseBeacon.h>
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
@@ -38,6 +40,7 @@ To access to beacon you have to use the MAdvertiseBeacon singleton. To initialis
 ```
 ### handleNotificationWithUserInfo
 To handle beacon local notification, firstable you have to cheack if it is a beacon notification and let MAdvertiseBeacon handle it.
+
 ```objc
 -(void)application:(UIApplication *)application didReceiveLocalNotification:(UILocalNotification *)notification{
     if ([[MAdvertiseBeacon singleton]userInfoIsBeaconNotification:notification.userInfo]) {
@@ -61,6 +64,7 @@ Don't forget to update following librairies :
 ## Upgrading to 2.1.1
 ### New features
 Now you can use new predifined sizes 
+
 ```objc
 extern MNGAdSize const kMNGAdSizeDynamicBanner; //Small Banner Screen width x 50
 extern MNGAdSize const kMNGAdSizeDynamicLeaderboard; //Landscape Banner ipad Screen width x 90
