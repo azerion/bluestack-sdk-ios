@@ -24,6 +24,7 @@ __weak NativeAdViewController *weakSelf = self;
 ```
  - Cache Optimisations
  - Bugs fixes
+ - Memory leak fix for banner
 
 Now you can add beacon for store:
 
