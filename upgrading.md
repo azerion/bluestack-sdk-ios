@@ -1,8 +1,9 @@
 # upgrading SDK
 ## Upgrading to 2.3
-### New features
-Now you can get assets from MNGNativeObject
-
+ - Now MNGADS becomes MADVERTISE MEDIATION and MADVERTISE ADSERVING
+ - VAST 2 /VPAID 1 support for MADVERTISE ADSERVING
+ - Upgrading MADVERTISE MEDIATION librairies
+ - Improve Native Ad assets management with 
 ```objc
 __weak NativeAdViewController *weakSelf = self;
     [nativeObject downloadAssetWithType:MAdvertiseAssetTypeAppIcon completition:^(UIImage *image) {
@@ -16,6 +17,8 @@ __weak NativeAdViewController *weakSelf = self;
         });
     }];
 ```
+ - Cache Optimisations
+ - Bugs fixes
 
 Now you can add beacon for store:
 
