@@ -11,6 +11,7 @@ MNG Ads provides functionalities for monetizing your mobile application: from pr
 - [AppNexus] (Via Server)
 - [Amazon]
 - [Flurry]
+- [Beacon For Store]
 
 It contains a dispacher that will select an ads server according to the priority and state ([mngAds state diagram]).
 
@@ -47,15 +48,16 @@ MngAds SDK needs, these libraries are in demo project :
 - [FBAudienceNetwork.framework]
 - [GoogleMobileAds.framework], use version >=7.8.1, in used on demo project.
 - [AmazonAd.framework]
-- [libFlurryAds_7.3.0.a]
-- [libFlurry_7.3.0.a]
+- [libFlurryAds.a]
+- [libFlurry.a]
+- [BeaconForStoreSDK.framework]
+- [BeaconForStoreStorage.bundle]
 - CoreGraphics.framework
 - QuartzCore.framework
 - SystemConfiguration.framework
 - MediaPlayer.framework
 - CoreMotion.framework
-- EventKitUI.framework
-- EventKit.framework
+- JavaCore.framework
 - AdSupport.framework
 - StoreKit.framework
 - CoreLocation.framework
@@ -71,6 +73,7 @@ MngAds SDK needs, these libraries are in demo project :
  - [libMNGAdsSASAdapter.a]
  - [libMNGAmazonAdapter.a]
  - [libMNGFlurryAdapter.a]
+ - [libMAdvertiseB4SAdapter.a]
 
 You can see [Installation guide for Swift]
 
@@ -91,7 +94,7 @@ iOS 9 introduces changes that are likely to impact your app and its MngAds integ
 
 ```
 
-You can also edit the plist by adding NSAppTransportSecurity key of dictionary type with a dictionary element of NSAllowsArbitraryLoads of boolean type set to “Yes”.
+You can also edit the plist by adding NSAppTransportSecurity key of dictionary type with a dictionary element of NSAllowsArbitraryLoads of boolean type set to �Yes�.
 
 ![ats.png](https://bitbucket.org/repo/aen579/images/32376746-ats.png)
 
@@ -158,6 +161,35 @@ To check out if the SDK is initialized or not, you have to use `[MNGAdsSDKFactor
     }
 }
 ```
+### MAdvertiseBeacon
+
+- Get Ebeacon technology to propose to the advertisers to target the users inside the point of sale. 
+- An installation base of 12,500 ebeacons ready to track the users.
+- An exclusive format in Push notification to the users inside a tabacco shop, press shop, pharmay or mall.
+
+### Initializing Beacons
+To access to beacon you have to use the MAdvertiseBeacon singleton. To initialise it you have to call the method initBeacon at application:didFinishLaunchingWithOptions:
+```objc
+#import <MAdvertiseBeacon.h>
+- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+    [MNGAdsSDKFactory initWithAppId:MNG_ADS_APP_ID];
+    [[MAdvertiseBeacon singleton]initBeacon];
+    //
+}
+```
+### handleNotificationWithUserInfo
+To handle beacon local notification, firstable you have to cheack if it is a beacon notification and let MAdvertiseBeacon handle it.
+```objc
+-(void)application:(UIApplication *)application didReceiveLocalNotification:(UILocalNotification *)notification{
+    if ([[MAdvertiseBeacon singleton]userInfoIsBeaconNotification:notification.userInfo]) {
+        [[MAdvertiseBeacon singleton]handleNotificationWithUserInfo:notification.userInfo];
+    }else{
+        //
+    }
+}
+
+```
+
 ### Timeout
 The time given to the ad view to download the ad data. After this time, the dispacher stops the ad server running (with failure) and move to the next.
 
@@ -330,6 +362,22 @@ adsAdapter:infeedDidLoad: will be called by the SDK when your bannerView is read
 }
 ```
 
+`NB:` infeed does not return preferredHeight like banner because infeed height depends of width so you can use one the standard ration:
+- 5:3 (called also 15:9) : the one used in our demo
+- 16:9 : is the international standard format of HDTV
+```objc
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
+    if (indexPath.row == INFEED_ROW) {
+        if (_infeedView) {
+            return self.view.frame.size.width * (3./5.);
+        }
+        return 0;
+    }else{
+        return OTHER_CELL_ROW_HEIGHT;
+    }
+}
+```
+
 adsAdapter:infeedDidFailWithError: will be called when all ads servers fail. it will return the error of last called ads server.
 ```objc
 -(void)adsAdapter:(MNGAdsAdapter *)adsAdapter infeedDidFailWithError:(NSError *)error{
@@ -484,6 +532,31 @@ adsFactory.clickDelegate = self;
 }
 ```
 
+If you show an interstitial at the didEnterForeground, you can use click delegate to check up if the application enter background by user or after an ad click.
+
+```objc
+- (void)applicationDidEnterBackground:(UIApplication *)application {
+    if ([self.lastClickDate timeIntervalSinceNow] >= -10.) {
+        _isAdClicked = YES;
+        NSLog(@"Next enter background will be ignored");
+    }
+    
+}
+
+- (void)applicationDidBecomeActive:(UIApplication *)application {
+    if ([MNGAdsSDKFactory isInitialized] && !_isAdClicked) {
+        NSLog(@"applicationDidBecomeActive");
+        [self displayInters];
+    }
+    _isAdClicked = NO;
+}
+
+-(void)adsAdapterAdWasClicked:(MNGAdsAdapter *)adsAdapter{
+    NSLog(@"Banner clicked");
+    [((AppDelegate*)[[UIApplication sharedApplication]delegate])setLastClickDate:[NSDate date]];
+}
+
+```
 ### Preferences Object
 Preferences object is an optional parameter that allow you select ads by user info.
 informations that you can set are:
@@ -575,7 +648,7 @@ The simplest way is:
 [AppNexus]:http://www.appnexus.com/fr
 [libANSDK]:https://bitbucket.org/mngcorp/mngads-demo-ios/src/HEAD/Demo/Pods/AppNexusSDK/?at=master
 
-[libSmartAdServer.a]:https://bitbucket.org/mngcorp/mngads-demo-ios/src/HEAD/Demo/MNG-Ads-SDK/AdsSDKs/sdk/libSmartAdServer.a?at=master
+[libSmartAdServer.a]:https://bitbucket.org/mngcorp/mngads-demo-ios/src/HEAD/Demo/Pods/SmartAdServer-DisplaySDK/SmartAdServer/sdk/?at=master
 [FBAudienceNetwork.framework]:https://bitbucket.org/mngcorp/mngads-demo-ios/src/HEAD/Demo/Pods/FBAudienceNetwork/?at=master
 [GoogleMobileAds.framework]:https://bitbucket.org/mngcorp/mngads-demo-ios/src/HEAD/Demo/Pods/Google-Mobile-Ads-SDK/?at=master
 [libAppsfireSDK.a]:https://bitbucket.org/mngcorp/mngads-demo-ios/src/HEAD/Demo/Pods/AppsfireSDK/?at=master
@@ -588,8 +661,8 @@ The simplest way is:
 
 [AmazonAd.framework]:https://bitbucket.org/mngcorp/mngads-demo-ios/src/HEAD/Demo/MNG-Ads-SDK/AdsSDKs/AmazonAd.framework/?at=master
 [LiveRailSDK.framework]:https://bitbucket.org/mngcorp/mngads-demo-ios/src/HEAD/Demo/MNG-Ads-SDK/AdsSDKs/LiveRailSDK.framework/?at=master
-[libFlurryAds_7.3.0.a]:https://bitbucket.org/mngcorp/mngads-demo-ios/src/HEAD/Demo/Pods/Flurry-iOS-SDK/?at=master
-[libFlurry_7.3.0.a]:https://bitbucket.org/mngcorp/mngads-demo-ios/src/HEAD/Demo/Pods/Flurry-iOS-SDK/?at=master
+[libFlurryAds.a]:https://bitbucket.org/mngcorp/mngads-demo-ios/src/HEAD/Demo/Pods/Flurry-iOS-SDK/?at=master
+[libFlurry.a]:https://bitbucket.org/mngcorp/mngads-demo-ios/src/HEAD/Demo/Pods/Flurry-iOS-SDK/?at=master
 [Native Ads guidelines]:https://bitbucket.org/mngcorp/mngads-demo-ios/wiki/nativead
 [libMNGAdsDFPAdapter.a]:https://bitbucket.org/mngcorp/mngads-demo-ios/src/HEAD/MNGAds/libMNGAdsDFPAdapter.a?at=master&fileviewer=file-view-default
 [libMNGAdsFacebookAdapter.a]:https://bitbucket.org/mngcorp/mngads-demo-ios/src/HEAD/MNGAds/libMNGAdsFacebookAdapter.a?at=master&fileviewer=file-view-default
@@ -598,3 +671,7 @@ The simplest way is:
 [libMNGFlurryAdapter.a]:https://bitbucket.org/mngcorp/mngads-demo-ios/src/HEAD/MNGAds/libMNGFlurryAdapter.a?at=master&fileviewer=file-view-default
 [libMNGLiveRailAdapter.a]:https://bitbucket.org/mngcorp/mngads-demo-ios/src/HEAD/MNGAds/libMNGLiveRailAdapter.a?at=master&fileviewer=file-view-default
 [see our Faq]:https://bitbucket.org/mngcorp/mngads-demo-ios/wiki/faq#markdown-header--objc-linker-flag-required
+
+[libMAdvertiseB4SAdapter.a]:https://bitbucket.org/mngcorp/mngads-demo-ios/src/HEAD/MNGAds/libMAdvertiseB4SAdapter.a?at=master&fileviewer=file-view-default
+[BeaconForStoreSDK.framework]:https://bitbucket.org/mngcorp/mngads-demo-ios/src/d41507a6c8eac3829efd9b05247acac1fcc51f8f/Demo/MNG-Ads-SDK/BeaconForStoreSDK.framework/?at=master
+[BeaconForStoreStorage.bundle]:https://bitbucket.org/mngcorp/mngads-demo-ios/src/HEAD/Demo/MNG-Ads-SDK/BeaconForStoreStorage.bundle/?at=master
