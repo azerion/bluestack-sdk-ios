@@ -150,3 +150,22 @@ You can also integrate video ads into your Native Ad experience. To enable video
 ## 4. cache
 
 Ad metadata that you receive can be cached and re-used for up to 3 hours. If you plan to use the metadata after this time period, make a call to load a new ad.
+
+
+## 5. Assets download
+
+we provide method to download assets.
+
+```objc
+__weak NativeAdViewController *weakSelf = self;
+    [nativeObject downloadAssetWithType:MAdvertiseAssetTypeAppIcon completition:^(UIImage *image) {
+        dispatch_async(dispatch_get_main_queue(), ^{
+            if (!weakSelf) {
+                return;
+            }
+            __strong NativeAdViewController *strongSelf = weakSelf;
+            strongSelf.iconeImage.image = image;
+            strongSelf.nativeView.hidden = NO;
+        });
+    }];
+```
