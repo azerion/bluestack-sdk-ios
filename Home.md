@@ -363,8 +363,10 @@ adsAdapter:infeedDidLoad: will be called by the SDK when your bannerView is read
 ```
 
 `NB:` infeed does not return preferredHeight like banner because infeed height depends of width so you can use one the standard ration:
+
 - 5:3 (called also 15:9) : the one used in our demo
 - 16:9 : is the international standard format of HDTV
+
 ```objc
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
     if (indexPath.row == INFEED_ROW) {
@@ -379,6 +381,7 @@ adsAdapter:infeedDidLoad: will be called by the SDK when your bannerView is read
 ```
 
 adsAdapter:infeedDidFailWithError: will be called when all ads servers fail. it will return the error of last called ads server.
+
 ```objc
 -(void)adsAdapter:(MNGAdsAdapter *)adsAdapter infeedDidFailWithError:(NSError *)error{
 NSLog(@"%@",error);
