@@ -26,7 +26,7 @@ To use Ebeacon you have to add
 pod "MNGAds/MAdvertiseBeacon"
 ```
 
-And add manually [BeaconForStoreSDK.framework] and [BeaconForStoreStorage.bundle] to your project.
+And add manually [BeaconForStoreSDK.framework] and [BeaconForStoreStorage.bundle] to your project. This SDK uses geographical position of the user.
 
 
 ### Troubleshooting
