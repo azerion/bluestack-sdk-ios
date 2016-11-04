@@ -50,8 +50,8 @@ MngAds SDK needs, these libraries are in demo project :
 - [AmazonAd.framework]
 - [libFlurryAds.a]
 - [libFlurry.a]
-- [BeaconForStoreSDK.framework]
-- [BeaconForStoreStorage.bundle]
+- [BeaconForStoreSDK.framework] (use geographical position of the user)
+- [BeaconForStoreStorage.bundle] (use geographical position of the user)
 - CoreGraphics.framework
 - QuartzCore.framework
 - SystemConfiguration.framework
@@ -73,7 +73,7 @@ MngAds SDK needs, these libraries are in demo project :
  - [libMNGAdsSASAdapter.a]
  - [libMNGAmazonAdapter.a]
  - [libMNGFlurryAdapter.a]
- - [libMAdvertiseB4SAdapter.a]
+ - [libMAdvertiseB4SAdapter.a] (use geographical position of the user)
 
 You can see [Installation guide for Swift]
 
