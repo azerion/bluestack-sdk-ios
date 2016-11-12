@@ -2,6 +2,20 @@
 
 See [Wiki], [Design Guidelines and Best practices] and [Help Center]  for more detailed informations
 
+
+## Version 2.3.1
+#### Release date: November 11th, 2016
+
+ - core optimization (dispatcher)
+ - use new SmartAdServer 6.5 version [libSmartAdServer.a]
+ - Remove NSCalendarsUsageDescription permission
+
+Don't forget to update following librairies :
+
+
+- [MngAdsSDK]
+- [libSmartAdServer.a]
+
 ## Version 2.3
 #### Release date: October 28th, 2016
 
