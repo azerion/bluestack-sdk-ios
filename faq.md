@@ -263,5 +263,14 @@ If you do it, the factory will be deallocated in no time (so the request will be
     ...
 }
 ```
+
+## May slow down your iPhone popup
+
+If you have a popup "May slow down your iPhone" that mean that your app did not support arch 64bit, so you have to add arm64 to Build settings -> valid architectures even if you put Build Valid Architecture Only NO.
+
+![slow.png](https://bitbucket.org/repo/aen579/images/3334494345-slow.png)
+
+
+
 [privacy policy]:https://developer.apple.com/app-store/review/guidelines/#privacy
 [Apple's guideline]:https://developer.apple.com/library/prerelease/content/documentation/General/Reference/InfoPlistKeyReference/Articles/CocoaKeys.html#//apple_ref/doc/uid/TP40009251-SW15
