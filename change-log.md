@@ -24,7 +24,7 @@ If you must make an exception for a reason, we recommend that you minimize it by
 ```
 
 - new template interstitial and square (Appsfire)
-- add pod dependency for B4S
+- add pod dependency for B4S (If you are using cocoapods, you must remove BeaconForStoreSDK.framework/BeaconForStoreSDK, it will be auto-downloaded by cocoapods)
 - use new AdNetworks version:
 - use new FBAudienceNetwork 4.18.0 version [FBAudienceNetwork.framework]
 - use new DFP 7.16.0 version [GoogleMobileAds.framework]
