@@ -80,7 +80,7 @@ You can see [Installation guide for Swift]
 ## App Transport Security Settings
 [App Transport Security] improves privacy and data integrity by ensuring your app’s network connections employ only industry-standard protocols and ciphers without known weaknesses. This helps instill user trust that your app does not accidentally leak transmitted data to malicious parties.
 
-MNGAds SDK and its midiated adNetwork SDK are ATS compliant, but a small percentage of creatives (near to zero) not directly hosted on our platform are not.
+MNGAds SDK (with Mediation) are now ATS-compliant, but a small percentage of creatives (near to zero) not directly hosted on our platform are not.
 
 If you must make an exception for a reason, we recommend that you minimize it by only setting the NSAllowsArbitraryLoadsInWebContent and NSAllowsArbitraryLoadsForMedia keys,
 ```xml
