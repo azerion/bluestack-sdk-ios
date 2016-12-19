@@ -1,4 +1,35 @@
 # upgrading SDK
+
+## Upgrading to 2.3.2
+
+
+**This version is ATS-compliant ([App Transport Security]), If you push you submit an app after 1th January 2017, you must use this version.**
+
+MNGAds SDK (with Mediation) are now ATS-compliant, but a small percentage of creatives (near to zero) not directly hosted on our platform are not.
+
+If you must make an exception for a reason, we recommend that you minimize it by only setting the NSAllowsArbitraryLoadsInWebContent and NSAllowsArbitraryLoadsForMedia keys,
+```xml
+<key>NSAppTransportSecurity</key>
+    <dict>
+        <key>NSAllowsArbitraryLoadsForMedia</key>
+            <true/>
+        <key>NSAllowsArbitraryLoadsInWebContent</key>
+            <true/>
+    </dict>
+```
+
+- add pod dependency for B4S (If you are using cocoapods, you must remove BeaconForStoreSDK.framework/BeaconForStoreSDK, it will be auto-downloaded by cocoapods)
+
+Don't forget to update following librairies :
+
+
+- [MngAdsSDK]
+- [FBAudienceNetwork.framework]
+- [GoogleMobileAds.framework]
+- [libFlurry_7.8.2.a] [libFlurryAds_7.8.2.a]
+- [BeaconForStoreSDK.framework]
+
+
 ## Upgrading to 2.3
 Now you can get assets from MNGNativeObject
 
@@ -265,4 +296,5 @@ instead of
 [libMNGLiveRailAdapter.a]:https://bitbucket.org/mngcorp/mngads-demo-ios/src/HEAD/MNGAds/libMNGLiveRailAdapter.a?at=master&fileviewer=file-view-default
 [Using CocoaPods]:https://bitbucket.org/mngcorp/mngads-demo-ios/wiki/Using%20CocoaPods
 [In-Feed Ad format]:https://bitbucket.org/mngcorp/mngads-demo-ios/wiki/Home#markdown-header-infeed
+[App Transport Security]:https://developer.apple.com/library/content/documentation/General/Reference/InfoPlistKeyReference/Articles/CocoaKeys.html#//apple_ref/doc/uid/TP40009251-SW60
 
