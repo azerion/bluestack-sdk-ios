@@ -3,6 +3,44 @@
 See [Wiki], [Design Guidelines and Best practices] and [Help Center]  for more detailed informations
 
 
+## Version 2.3.2
+#### Release date: December 19th, 2016
+
+**This version is ATS-compliant, If you push you submit an app after 1th January 2017, you must use this version.**
+
+[App Transport Security] improves privacy and data integrity by ensuring your app’s network connections employ only industry-standard protocols and ciphers without known weaknesses. This helps instill user trust that your app does not accidentally leak transmitted data to malicious parties.
+
+MNGAds SDK (with Mediation) are now ATS-compliant, but a small percentage of creatives (near to zero) not directly hosted on our platform are not.
+
+If you must make an exception for a reason, we recommend that you minimize it by only setting the NSAllowsArbitraryLoadsInWebContent and NSAllowsArbitraryLoadsForMedia keys,
+```xml
+<key>NSAppTransportSecurity</key>
+    <dict>
+        <key>NSAllowsArbitraryLoadsForMedia</key>
+            <true/>
+        <key>NSAllowsArbitraryLoadsInWebContent</key>
+            <true/>
+    </dict>
+```
+
+- new template interstitial and square (Appsfire)
+- add pod dependency for B4S
+- use new AdNetworks version:
+- use new FBAudienceNetwork 4.18.0 version [FBAudienceNetwork.framework]
+- use new DFP 7.16.0 version [GoogleMobileAds.framework]
+- use new Flurry 7.8.2 version [libFlurry_7.8.2.a] [libFlurryAds_7.8.2.a]
+- use new BeaconForStore 2.0.14 version [BeaconForStoreSDK.framework]
+
+Don't forget to update following librairies :
+
+
+- [MngAdsSDK]
+- [FBAudienceNetwork.framework]
+- [GoogleMobileAds.framework]
+- [libFlurry_7.8.2.a] [libFlurryAds_7.8.2.a]
+- [BeaconForStoreSDK.framework]
+
+
 ## Version 2.3.1
 #### Release date: November 11th, 2016
 
@@ -423,3 +461,4 @@ You must check [Upgrade Guide].
 [Interstital implementation]:https://bitbucket.org/mngcorp/mngads-demo-ios/wiki/Home#markdown-header-interstitial
 [mnAds Adapters]:https://bitbucket.org/mngcorp/mngads-demo-ios/src/HEAD/Demo/Pods/MNGAds/MNGAds/?at=master
 [In-Feed Ad format]:https://bitbucket.org/mngcorp/mngads-demo-ios/wiki/Home#markdown-header-infeed
+[App Transport Security]:https://developer.apple.com/library/content/documentation/General/Reference/InfoPlistKeyReference/Articles/CocoaKeys.html#//apple_ref/doc/uid/TP40009251-SW60
