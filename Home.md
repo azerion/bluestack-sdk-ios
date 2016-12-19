@@ -77,6 +77,22 @@ MngAds SDK needs, these libraries are in demo project :
 
 You can see [Installation guide for Swift]
 
+## App Transport Security Settings
+[App Transport Security] improves privacy and data integrity by ensuring your app’s network connections employ only industry-standard protocols and ciphers without known weaknesses. This helps instill user trust that your app does not accidentally leak transmitted data to malicious parties.
+
+MNGAds SDK and its midiated adNetwork SDK are ATS compliant, but a small percentage of creatives (near to zero) not directly hosted on our platform are not.
+
+If you must make an exception for a reason, we recommend that you minimize it by only setting the NSAllowsArbitraryLoadsInWebContent and NSAllowsArbitraryLoadsForMedia keys,
+```xml
+<key>NSAppTransportSecurity</key>
+    <dict>
+        <key>NSAllowsArbitraryLoadsForMedia</key>
+            <true/>
+        <key>NSAllowsArbitraryLoadsInWebContent</key>
+            <true/>
+    </dict>
+```
+
 ## Building Against iOS9
 
 iOS 9 introduces changes that are likely to impact your app and its MngAds integration.
@@ -93,6 +109,7 @@ iOS 9 introduces changes that are likely to impact your app and its MngAds integ
     </dict>
 
 ```
+
 
 You can also edit the plist by adding NSAppTransportSecurity key of dictionary type with a dictionary element of NSAllowsArbitraryLoads of boolean type set to �Yes�.
 
@@ -678,3 +695,5 @@ The simplest way is:
 [libMAdvertiseB4SAdapter.a]:https://bitbucket.org/mngcorp/mngads-demo-ios/src/HEAD/MNGAds/libMAdvertiseB4SAdapter.a?at=master&fileviewer=file-view-default
 [BeaconForStoreSDK.framework]:https://bitbucket.org/mngcorp/mngads-demo-ios/src/d41507a6c8eac3829efd9b05247acac1fcc51f8f/Demo/MNG-Ads-SDK/BeaconForStoreSDK.framework/?at=master
 [BeaconForStoreStorage.bundle]:https://bitbucket.org/mngcorp/mngads-demo-ios/src/HEAD/Demo/MNG-Ads-SDK/BeaconForStoreStorage.bundle/?at=master
+
+[App Transport Security]:https://developer.apple.com/library/content/documentation/General/Reference/InfoPlistKeyReference/Articles/CocoaKeys.html#//apple_ref/doc/uid/TP40009251-SW60
