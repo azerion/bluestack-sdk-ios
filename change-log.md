@@ -2,6 +2,10 @@
 
 See [Wiki], [Design Guidelines and Best practices] and [Help Center]  for more detailed informations
 
+## Version 2.3.3
+#### Release date: December 21th, 2016
+
+ - use new SmartAdServer 6.6 version [libSmartAdServer.a]
 
 ## Version 2.3.2
 #### Release date: December 19th, 2016
