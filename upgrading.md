@@ -2,6 +2,10 @@
 
 ## Upgrading to 2.3.2
 
+ - use new SmartAdServer 6.6 version [libSmartAdServer.a]
+
+## Upgrading to 2.3.2
+
 
 **This version is ATS-compliant ([App Transport Security]), If you push you submit an app after 1th January 2017, you must use this version.**
 
