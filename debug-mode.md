@@ -19,8 +19,7 @@ Or see with Madvertise team in order to allow Debug Mode server side from Madver
 
 You'll now be able to shake your phone while in your app to bring up Madvertise Debug menu.
 
-![debug-menu.PNG](https://bitbucket.org/repo/aen579/images/3383047658-debug-menu.PNG)
-
+![debug-menu.PNG](https://bitbucket.org/repo/aen579/images/1392529032-debug-menu.PNG)
 
 ### 2.1 Madvertise Mediation Settings
 
