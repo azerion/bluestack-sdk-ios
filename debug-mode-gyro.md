@@ -1,5 +1,7 @@
 # Debug Mode with Gyroscope Sensor
 
+Require MngAdsSDK >= 2.3.4
+
 [TOC]
 
 
