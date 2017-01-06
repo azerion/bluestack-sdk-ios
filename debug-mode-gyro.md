@@ -1,4 +1,4 @@
-# Debug Mode
+# Debug Mode with Gyroscope Sensor
 
 [TOC]
 
