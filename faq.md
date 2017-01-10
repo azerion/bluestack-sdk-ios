@@ -3,6 +3,37 @@
 This document answers the following frequently asked questions:
 
 [TOC]
+# ATS
+
+## App Transport Security Settings
+[App Transport Security] improves privacy and data integrity by ensuring your app’s network connections employ only industry-standard protocols and ciphers without known weaknesses. This helps instill user trust that your app does not accidentally leak transmitted data to malicious parties.
+
+MNGAds SDK (with Mediation) are now ATS-compliant, but a small percentage of creatives (near to zero) not directly hosted on our platform are not.
+
+If you must make an exception for a reason, we recommend that you minimize it by only setting the NSAllowsArbitraryLoadsInWebContent and NSAllowsArbitraryLoadsForMedia keys,
+```xml
+<key>NSAppTransportSecurity</key>
+    <dict>
+        <key>NSAllowsArbitraryLoadsForMedia</key>
+            <true/>
+        <key>NSAllowsArbitraryLoadsInWebContent</key>
+            <true/>
+    </dict>
+```
+
+On December 21st, Apple announced that they have [extended the ATS deadline]. Previously, the deadline was January 1, 2017. The new deadline has not yet been announced.
+Set up the following keys in your app’s info.plist:
+
+
+
+```
+#!objective-c
+<key>NSAppTransportSecurity</key>
+    <dict>
+        <key>NSAllowsArbitraryLoads</key>
+        <true/>
+    </dict>
+```
 # IOS10
 
 ## NSCalendarsUsageDescription
@@ -274,3 +305,5 @@ If you have a popup "May slow down your iPhone" that mean that your app did not 
 
 [privacy policy]:https://developer.apple.com/app-store/review/guidelines/#privacy
 [Apple's guideline]:https://developer.apple.com/library/prerelease/content/documentation/General/Reference/InfoPlistKeyReference/Articles/CocoaKeys.html#//apple_ref/doc/uid/TP40009251-SW15
+[App Transport Security]:https://developer.apple.com/library/content/documentation/General/Reference/InfoPlistKeyReference/Articles/CocoaKeys.html#//apple_ref/doc/uid/TP40009251-SW60
+[extended the ATS deadline]:https://developer.apple.com/news/?id=12212016b&1482372961
