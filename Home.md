@@ -93,6 +93,20 @@ If you must make an exception for a reason, we recommend that you minimize it by
     </dict>
 ```
 
+On December 21st, Apple announced that they have [extended the ATS deadline]. Previously, the deadline was January 1, 2017. The new deadline has not yet been announced.
+Set up the following keys in your app’s info.plist:
+
+
+
+```
+#!objective-c
+<key>NSAppTransportSecurity</key>
+    <dict>
+        <key>NSAllowsArbitraryLoads</key>
+        <true/>
+    </dict>
+```
+
 ## Building Against iOS9
 
 iOS 9 introduces changes that are likely to impact your app and its MngAds integration.
@@ -697,3 +711,4 @@ The simplest way is:
 [BeaconForStoreStorage.bundle]:https://bitbucket.org/mngcorp/mngads-demo-ios/src/HEAD/Demo/MNG-Ads-SDK/BeaconForStoreStorage.bundle/?at=master
 
 [App Transport Security]:https://developer.apple.com/library/content/documentation/General/Reference/InfoPlistKeyReference/Articles/CocoaKeys.html#//apple_ref/doc/uid/TP40009251-SW60
+[extended the ATS deadline]:https://developer.apple.com/news/?id=12212016b&1482372961
