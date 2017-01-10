@@ -24,7 +24,7 @@ If you must make an exception for a reason, we recommend that you minimize it by
 
 - add pod dependency for B4S (If you are using cocoapods, you must remove BeaconForStoreSDK.framework/BeaconForStoreSDK, it will be auto-downloaded by cocoapods)
 
-Don't forget to update following librairies :
+Don't forget to update following libraries :
 
 
 - [MngAdsSDK]
@@ -86,7 +86,7 @@ To handle beacon local notification, firstable you have to cheack if it is a bea
 }
 
 
-Don't forget to update following librairies :
+Don't forget to update following libraries :
 
 - [MngAdsSDK]
 - [FBAudienceNetwork.framework]
@@ -102,11 +102,11 @@ Now you can use new predifined sizes
 extern MNGAdSize const kMNGAdSizeDynamicBanner; //Small Banner Screen width x 50
 extern MNGAdSize const kMNGAdSizeDynamicLeaderboard; //Landscape Banner ipad Screen width x 90
 ```
-Librairies
+libraries
 
 **If you are using cocoapods, you must remove AmazonAd.framework, it will be auto-downloaded by cocoapods**
 
-Don't forget to update following librairies :
+Don't forget to update following libraries :
 
  - [MngAdsSDK]
  - [FBAudienceNetwork.framework]
@@ -123,14 +123,14 @@ Now you can create an [In-Feed Ad format]
 -(BOOL)createInfeedInFrame:(CGRect)frame ;
 ```
 
-### Librairies
+### libraries
 
- - The following librairies are not required anymore for the sdk
+ - The following libraries are not required anymore for the sdk
 
      - Remove [LiveRailSDK.framework]
 
 
- - Don't forget to update following librairies :
+ - Don't forget to update following libraries :
     - [MngAdsSDK]
     - [FBAudienceNetwork.framework]
     - [AmazonAd.framework]
@@ -301,4 +301,3 @@ instead of
 [Using CocoaPods]:https://bitbucket.org/mngcorp/mngads-demo-ios/wiki/Using%20CocoaPods
 [In-Feed Ad format]:https://bitbucket.org/mngcorp/mngads-demo-ios/wiki/Home#markdown-header-infeed
 [App Transport Security]:https://developer.apple.com/library/content/documentation/General/Reference/InfoPlistKeyReference/Articles/CocoaKeys.html#//apple_ref/doc/uid/TP40009251-SW60
-
