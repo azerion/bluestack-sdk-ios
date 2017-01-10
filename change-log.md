@@ -35,7 +35,7 @@ If you must make an exception for a reason, we recommend that you minimize it by
 - use new Flurry 7.8.2 version [libFlurry_7.8.2.a] [libFlurryAds_7.8.2.a]
 - use new BeaconForStore 2.0.14 version [BeaconForStoreSDK.framework]
 
-Don't forget to update following librairies :
+Don't forget to update following libraries :
 
 
 - [MngAdsSDK]
@@ -52,7 +52,7 @@ Don't forget to update following librairies :
  - use new SmartAdServer 6.5 version [libSmartAdServer.a]
  - Remove NSCalendarsUsageDescription permission
 
-Don't forget to update following librairies :
+Don't forget to update following libraries :
 
 
 - [MngAdsSDK]
@@ -63,7 +63,7 @@ Don't forget to update following librairies :
 
  - Now MNGADS becomes MADVERTISE MEDIATION and MADVERTISE ADSERVING
  - VAST 2 /VPAID 1 support for MADVERTISE ADSERVING
- - Upgrading MADVERTISE MEDIATION librairies
+ - Upgrading MADVERTISE MEDIATION libraries
  - Improve Native Ad assets management with 
 ```objc
 __weak NativeAdViewController *weakSelf = self;
@@ -118,7 +118,7 @@ To handle beacon local notification, firstable you have to cheack if it is a bea
 ```
 
 
-Don't forget to update following librairies :
+Don't forget to update following libraries :
 
 - [MngAdsSDK]
 - [FBAudienceNetwork.framework]
@@ -130,7 +130,7 @@ Don't forget to update following librairies :
 #### Release date: September 9th, 2016
  -  iOS 10 support, with Limit Ad Tracking changes (in this case we are using vendorId)
  - Now appsfire support videos for square, nativeAds and interstitials
- - Don't forget to update following librairies or use **pod update** :
+ - Don't forget to update following libraries or use **pod update** :
 
     - [MngAdsSDK]
     - [FBAudienceNetwork.framework]
@@ -144,7 +144,7 @@ Don't forget to update following librairies :
  - New appsfire template for banner, medium rectangle and interstitial
  - New Google DFP librairie
 
-Don't forget to update following librairies or use **pod update** :
+Don't forget to update following libraries or use **pod update** :
 
  - [MngAdsSDK]
  - [GoogleMobileAds.framework]
@@ -168,7 +168,7 @@ extern MNGAdSize const kMNGAdSizeDynamicBanner; //Small Banner Screen width x 50
 extern MNGAdSize const kMNGAdSizeDynamicLeaderboard; //Landscape Banner ipad Screen width x 90
 ```
 
-Don't forget to update following librairies :
+Don't forget to update following libraries :
 
  - [MngAdsSDK]
  - [FBAudienceNetwork.framework]
@@ -185,7 +185,7 @@ Don't forget to update following librairies :
  - Improve logging system
  - Add listener for refresh event
  - Remove [LiveRailSDK.framework]
- - Don't forget to update following librairies :
+ - Don't forget to update following libraries :
     - [MngAdsSDK]
     - [FBAudienceNetwork.framework]
     - [AmazonAd.framework]
@@ -234,7 +234,7 @@ Don't forget to update following librairies :
 
 ## Version 2.0.3
 #### Release date: February 17th, 2016
-You need to keep all Ad Network librairies up to date.
+You need to keep all Ad Network libraries up to date.
 
  -  Automatic Status bar management (to avoid https://bitbucket.org/mngcorp/mngads-demo-ios/wiki/faq#markdown-header-how-do-i-hide-the-status-bar-on-interstitials-for-sdk-version-203)
  - fix issue for flurry interstitials
@@ -243,16 +243,16 @@ You need to keep all Ad Network librairies up to date.
 
 ## Version 2.0.1
 #### Release date: February 3th, 2016
-You need to keep all Ad Network librairies up to date.
+You need to keep all Ad Network libraries up to date.
 
  - Fix compilation errors on simulator
 
 ## Version 2.0
 #### Release date: January 28th, 2016
 
-you must check [Upgrade Guide]. You need to keep all Ad Network librairies up to date.
+you must check [Upgrade Guide]. You need to keep all Ad Network libraries up to date.
 
- - [libAppsfireSDK.a], [libANSDK] and [libMng-perf.a] libraries have been merged on [MngAdsSDK] SDK for better performance and reduce librairies number
+ - [libAppsfireSDK.a], [libANSDK] and [libMng-perf.a] libraries have been merged on [MngAdsSDK] SDK for better performance and reduce libraries number
  - We have added [AmazonAd.framework], [LiveRailSDK.framework] , [libFlurryAds_7.3.0.a] to mngads mediation in order to increase fill rate and revenus
 
 
@@ -336,7 +336,7 @@ You must update [MngAdsSDK], [libSmartAdServer.a] (not available from pod update
 
   - Update mng perf to 5.1.1 (fix html interstitial issue)
 
-- Update [MngAdsSDK] and [libMng-perf.a] librairies
+- Update [MngAdsSDK] and [libMng-perf.a] libraries
 
 ## Version 1.3.6
 
@@ -345,7 +345,7 @@ You must update [MngAdsSDK], [libSmartAdServer.a] (not available from pod update
   - Manage keywords from mngads console
   - mngperf Adserving improvement (geoloc)
 
-- Update [MngAdsSDK] and [libMng-perf.a] librairies
+- Update [MngAdsSDK] and [libMng-perf.a] libraries
 
 ## Version 1.3.4
 
@@ -362,7 +362,7 @@ You must check [Upgrade Guide].
  - Add remote debug mode
  - Add ```@property MNGPriceType priceType;``` and ```@property NSString *localizedPrice;``` on MNGNAtiveObject (use for display "free" icon)
  - Add [Best practice Mngads], optimized use case for several ad formats on one page
- - Update [MngAdsSDK],[libAppsfireSDK.a], [libMng-perf.a] and [GoogleMobileAds.framework] librairies
+ - Update [MngAdsSDK],[libAppsfireSDK.a], [libMng-perf.a] and [GoogleMobileAds.framework] libraries
 
 ## Version 1.2.3
 
