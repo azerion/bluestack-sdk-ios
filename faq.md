@@ -302,6 +302,20 @@ If you have a popup "May slow down your iPhone" that mean that your app did not 
 ![slow.png](https://bitbucket.org/repo/aen579/images/3334494345-slow.png)
 
 
+## cocoapod ld: library not found for 
+
+In this case, can you please check : 
+
+ - http://guides.cocoapods.org/using/troubleshooting.html
+
+If Xcode complains when linking, e.g. Library not found for -lPods, it doesn't detect the implicit dependencies:
+
+Go to Product > Edit Scheme
+Click on Build
+Add the Pods static library, and make sure it's at the top of the list
+Clean and build again
+
+
 
 [privacy policy]:https://developer.apple.com/app-store/review/guidelines/#privacy
 [Apple's guideline]:https://developer.apple.com/library/prerelease/content/documentation/General/Reference/InfoPlistKeyReference/Articles/CocoaKeys.html#//apple_ref/doc/uid/TP40009251-SW15
