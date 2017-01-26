@@ -10,12 +10,7 @@ Require MngAdsSDK >= 2.3.4
 
 ## 1. Enable Debug Mode
 
-To enable debug mode you must use class method **setDebugModeEnabled** :
-
-```
- [MNGAdsSDKFactory setDebugModeEnabled:Yes];
-```
-Or see with Madvertise team in order to allow Debug Mode server side from Madvertise Console.
+See with Madvertise team in order to allow Debug Mode server side from Madvertise Console.
 
 ![screenshot-console.mng-ads.com 2017-01-06 09-38-10.png](https://bitbucket.org/repo/aen579/images/1429524612-screenshot-console.mng-ads.com%202017-01-06%2009-38-10.png)
 
