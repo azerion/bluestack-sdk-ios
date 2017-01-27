@@ -3,7 +3,7 @@
 ## Upgrading to 2.3.4
 
 - use new B4S 6.6 version [BeaconForStoreSDK.framework]
-- use new Flurry 7.9.2 version [libFlurryAds][libFlurry]
+- use new Flurry 7.9.2 version [libFlurryAds] , [libFlurry]
 
 
 ## Upgrading to 2.3.3
