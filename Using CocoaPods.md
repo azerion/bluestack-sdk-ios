@@ -55,8 +55,7 @@ If you must make an exception for a reason, we recommend that you minimize it by
 
 On December 21st, Apple announced that they have extended the ATS deadline. Previously, the deadline was January 1, 2017. The new deadline has not yet been announced. Set up the following keys in your app’s info.plist:
 
-```
-#!objective-c
+```xml
 <key>NSAppTransportSecurity</key>
     <dict>
         <key>NSAllowsArbitraryLoads</key>
