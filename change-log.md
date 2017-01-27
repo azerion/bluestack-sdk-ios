@@ -2,6 +2,20 @@
 
 See [Wiki], [Design Guidelines and Best practices] and [Help Center]  for more detailed informations
 
+## Version 2.3.4
+#### Release date: January 27th, 2017
+
+- use new B4S 6.6 version [BeaconForStoreSDK.framework]
+- use new Flurry 7.9.2 version [libFlurry] [libFlurryAds]
+- improve AppsFire cache managment
+- add *Shake To Debug* system, [debug-mode-gyro]
+- add support contentURL for DFP
+- improve Demo:
+    - add pager sample: contains infeed page and a native ad page, https://bitbucket.org/mngcorp/mngads-demo-ios/src/HEAD/Demo/MNG-Ads-SDK/PagerViewController.m?at=master&fileviewer=file-view-default
+    - improve InfeedViewController: add a native parallax imageView and custom parallax navigationBar
+    - improve SwiftViewController: now the sample contains all formats, https://bitbucket.org/mngcorp/mngads-demo-ios/src/HEAD/Demo/MNG-Ads-SDK/SwiftViewController.swift?at=master&fileviewer=file-view-default
+
+
 ## Version 2.3.3
 #### Release date: December 21th, 2016
 
@@ -466,3 +480,4 @@ You must check [Upgrade Guide].
 [mnAds Adapters]:https://bitbucket.org/mngcorp/mngads-demo-ios/src/HEAD/Demo/Pods/MNGAds/MNGAds/?at=master
 [In-Feed Ad format]:https://bitbucket.org/mngcorp/mngads-demo-ios/wiki/Home#markdown-header-infeed
 [App Transport Security]:https://developer.apple.com/library/content/documentation/General/Reference/InfoPlistKeyReference/Articles/CocoaKeys.html#//apple_ref/doc/uid/TP40009251-SW60
+[debug-mode-gyro]:https://bitbucket.org/mngcorp/mngads-demo-ios/wiki/debug-mode-gyro
