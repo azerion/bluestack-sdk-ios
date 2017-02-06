@@ -426,7 +426,7 @@ infeedAdsFactory.refreshDelegate = self;
 
 ### Interstitial
 
-**On info.plist if you are using "View controller-based status bar appearance", it must be setted to YES**
+**On info.plist if you are using "View controller-based status bar appearance" (UIViewControllerBasedStatusBarAppearance), it must be setted to YES**
 
 
 ![statusbar.png](https://bitbucket.org/repo/aen579/images/4293410302-statusbar.png)
