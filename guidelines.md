@@ -1,5 +1,5 @@
 [TOC]
-# Best practice Mngads : optimized use case for several ad formats on one page
+# Best practices Mngads : optimized use case for several ad formats on one page
 
 mngAds| Description| 
 ------------- | ------------- |
