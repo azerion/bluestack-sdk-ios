@@ -1,5 +1,7 @@
 # Targeting Audiences
 
+[TOC]
+
 In order to take advantage of our targeting campaign, you must use our **Preferences object**.
 
 
