@@ -1,5 +1,13 @@
 # upgrading SDK
 
+## Upgrading to 2.4
+
+- use new SmartAdServer 6.6.1 version [libSmartAdServer.a]
+- use new Flurry 7.10.0 version [libFlurryAds] , [libFlurry]
+- use new B4S 2.1.10 version [BeaconForStoreSDK.framework]
+- use new Google-Mobile-Ads-SDK 7.18.0 version [GoogleMobileAds.framework]
+- use new FBAudienceNetwork 4.20.0 version [FBAudienceNetwork.framework]
+
 ## Upgrading to 2.3.4
 
 - use new B4S 6.6 version [BeaconForStoreSDK.framework]
