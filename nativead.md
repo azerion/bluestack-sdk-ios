@@ -169,3 +169,14 @@ __weak NativeAdViewController *weakSelf = self;
         });
     }];
 ```
+
+## 6. customizable Badge
+
+badge in the nativeAd is customizable now using the method:
+
+```
+    [_nativeObject updateBadgeTitle:@"newBadgeTitle"];
+
+```
+
+>note that the new method returns a BOOL indicating if the update was successful or not.
