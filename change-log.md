@@ -2,6 +2,28 @@
 
 See [Wiki], [Design Guidelines and Best practices] and [Help Center]  for more detailed informations
 
+## Version 2.4
+#### Release date: March 10th, 2017
+
+- use new SmartAdServer 6.6.1 version [libSmartAdServer.a]
+- use new Flurry 7.10.0 version [libFlurryAds] , [libFlurry]
+- use new B4S 2.1.10 version [BeaconForStoreSDK.framework]
+- use new Google-Mobile-Ads-SDK 7.18.0 version [GoogleMobileAds.framework]
+- use new FBAudienceNetwork 4.20.0 version [FBAudienceNetwork.framework]
+- improve AppsFire cache managment
+- add support for vast inline
+- new Interstitiel management pattern: once you have an interstitiel loaded all new requests to create a new one (w/ same placement and viewController) will hand out the already loaded interstitiel instead of creating a new request.
+- new inall targetting
+- badge in the nativeAd is customizable now using the method:
+    ```
+    [_nativeObject updateBadgeTitle:@"newBadgeTitle"];
+    ```
+    *note that the new method returns a BOOL indicating if the update was successful or not.
+- contentUrl: new attribut in MNGPreference : now you can pass to the sdk an URL for content related to your app (url must be a string which length do not exceed 512 characters)
+- persistent capping : capping is now managed on cache.
+- memory management improvement.
+- fix minor bugs.
+
 ## Version 2.3.4
 #### Release date: January 27th, 2017
 
