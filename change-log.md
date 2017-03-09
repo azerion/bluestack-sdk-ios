@@ -15,10 +15,14 @@ See [Wiki], [Design Guidelines and Best practices] and [Help Center]  for more d
 - new Interstitiel management pattern: once you have an interstitiel loaded all new requests to create a new one (w/ same placement and viewController) will hand out the already loaded interstitiel instead of creating a new request.
 - new inall targetting
 - badge in the nativeAd is customizable now using the method:
-    ```
+
+```
     [_nativeObject updateBadgeTitle:@"newBadgeTitle"];
-    ```
-    *note that the new method returns a BOOL indicating if the update was successful or not.
+
+```
+
+>note that the new method returns a BOOL indicating if the update was successful or not.
+
 - contentUrl: new attribut in MNGPreference : now you can pass to the sdk an URL for content related to your app (url must be a string which length do not exceed 512 characters)
 - persistent capping : capping is now managed on cache.
 - memory management improvement.
