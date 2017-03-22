@@ -2,6 +2,15 @@
 
 See [Wiki], [Design Guidelines and Best practices] and [Help Center]  for more detailed informations
 
+## Version 2.4.1
+#### Release date: March 22th, 2017
+
+ - fix crash for appsfire banner
+
+Don't forget to update following libraries :
+
+- [MngAdsSDK]
+
 ## Version 2.4
 #### Release date: March 10th, 2017
 
