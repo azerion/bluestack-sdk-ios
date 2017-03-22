@@ -315,6 +315,34 @@ Click on Build
 Add the Pods static library, and make sure it's at the top of the list
 Clean and build again
 
+## Adapter not found after pod install
+
+```
+#!objective-c
+
+
+sudo rm -rf "${HOME}/Library/Caches/CocoaPods" //pour vider le cache du cocoapod
+gem uninstall cocoapods 
+gem install cocoapods
+rm -rf ~/Library/Developer/Xcode/DerivedData
+```
+
+
+then
+ 
+
+```
+#!objective-c
+
+use_frameworks!
+pod "MNGAds" 
+pod install
+```
+
+
+
+
+
 
 
 [privacy policy]:https://developer.apple.com/app-store/review/guidelines/#privacy
