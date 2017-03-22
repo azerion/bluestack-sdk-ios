@@ -321,7 +321,7 @@ Clean and build again
 #!objective-c
 
 
-sudo rm -rf "${HOME}/Library/Caches/CocoaPods" //pour vider le cache du cocoapod
+sudo rm -rf "${HOME}/Library/Caches/CocoaPods" //clean cache
 gem uninstall cocoapods 
 gem install cocoapods
 rm -rf ~/Library/Developer/Xcode/DerivedData
