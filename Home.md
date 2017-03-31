@@ -104,10 +104,6 @@ Set up the following keys in your app’s info.plist:
     <dict>
         <key>NSAllowsArbitraryLoads</key>
             <true/>
-        <key>NSAllowsArbitraryLoadsForMedia</key>
-            <true/>
-        <key>NSAllowsArbitraryLoadsInWebContent</key>
-            <true/>
     </dict>
 ```
 
