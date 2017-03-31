@@ -103,7 +103,11 @@ Set up the following keys in your app’s info.plist:
 <key>NSAppTransportSecurity</key>
     <dict>
         <key>NSAllowsArbitraryLoads</key>
-        <true/>
+            <true/>
+        <key>NSAllowsArbitraryLoadsForMedia</key>
+            <true/>
+        <key>NSAllowsArbitraryLoadsInWebContent</key>
+            <true/>
     </dict>
 ```
 
