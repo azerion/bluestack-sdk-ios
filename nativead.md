@@ -181,6 +181,6 @@ badge in the nativeAd is customizable now using the method:
 
 >note that the new method returns a BOOL indicating if the update was successful or not.
 
-## 7. clicks - registerViewForInteraction
+## 7. click - registerViewForInteraction
 
 It's **HIGHLY** recommended to only register ONE and ONLY one view for interaction , because some of the AdNetworks only accept one view and if you try to assign more than one then probably none of the views you assign will be responsive.
