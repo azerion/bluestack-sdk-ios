@@ -42,6 +42,9 @@ Keywords allow you to target certain ad requests with user data. Keywords are us
 
 To add keyword targeting, you will need to pass these keywords up through the application (They should be formatted as key/value pairs) :
 
+ - Characters per key: 20
+ - Characters per value: 40
+
 ```
 #!objective-c
 
