@@ -2,6 +2,40 @@
 
 See [Wiki], [Design Guidelines and Best practices] and [Help Center]  for more detailed informations
 
+## Version 2.5
+#### Release date: Avril 14th, 2017
+
+ - Some methods in MNGAdsFactory are now deprecated and will be removed in next version:
+
+| Depecated method | New method |
+| --- | --- |
+| createBanner() | loadBanner() |
+| createBanner(MNGFrame frame) | loadBanner(MNGFrame frame)  |
+|createBanner(MNGPreference preference)|loadBanner(MNGPreference preference)   |
+|createBanner(MNGFrame frame, MNGPreference preference)|loadBanner(MNGFrame frame, MNGPreference preference) |
+|createInterstitial()|loadInterstitial()   |
+|createInterstitial(boolean autoDisplay)|loadInterstitial(boolean autoDisplay)  |
+|createInterstitial(MNGPreference preference)|loadInterstitial(MNGPreference preference)   |
+|createInterstitial(MNGPreference preference, boolean autoDisplay)|loadInterstitial(MNGPreference preference, boolean autoDisplay)   |
+|createNative()|loadNative()   |
+|createNative(MNGPreference preference)|loadNative(MNGPreference preference)   |
+|createNativeCollection(int requestedAdNumber)|loadNativeCollection(int requestedAdNumber)  |
+|createNativeCollection(int requestedAdNumber, MNGPreference preference)|loadNativeCollection(int requestedAdNumber, MNGPreference preference)   |
+|createInfeed()|loadInfeed() |
+|createInfeed(MNGFrame frame)|loadInfeed(MNGFrame frame) |
+|createInfeed(MNGPreference preference)|loadInfeed(MNGPreference preference) |
+|createInfeed(MNGFrame frame, MNGPreference preference)|loadInfeed(MNGFrame frame, MNGPreference preference) |
+
+- MAdvertiseError : in case of fail, the didFail delegate method will be invoked with an MAdvertiseError, you want to check which error was invoked by checking its code and description and matching it with the predefined MAdvertiseErrors (see Error Handling in the documentation for more info).
+- persisent seenAd : seenAd is now managed in the sdk cache without life time.
+- native ad adChoice : adserver can return an adchoice view for native ad.
+- clarify doc about native ad registerViewForInterraction.
+- add crashlitycs in MngAdsDemo. 
+ - Fixed bugs:
+   - Null values in Request : don't send the parameter to the adNetwork if it is null or empty.
+   - Inall : fix dfp custom targetting and key words.
+
+
 ## Version 2.4.1
 #### Release date: March 22th, 2017
 
