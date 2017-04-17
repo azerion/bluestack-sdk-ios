@@ -2,6 +2,7 @@
 
 ## Upgrading to 2.5
 Dont forget to change your implementation, don't use deprecated methods. 
+
 |Depecated method|New method|
 | --- | --- |
 |createBanner|loadBanner |
