@@ -1,5 +1,26 @@
 # upgrading SDK
 
+## Upgrading to 2.5
+Dont forget to change your implementation, don't use deprecated methods. 
+|Depecated method|New method|
+| --- | --- |
+|createBanner|loadBanner |
+|createBannerInFrame:|loadBannerInFrame:  |
+|createBannerInFrame: withPreferences:|loadBannerInFrame: withPreferences:   |
+|createInterstitial|loadInterstitial   |
+|createInterstitialAutoDisplayed:|loadInterstitialAutoDisplayed:  |
+|createInterstitialWithPreferences:|loadInterstitialWithPreferences:   |
+|createInterstitialWithPreferences: autoDisplayed:|loadInterstitialWithPreferences: autoDisplayed:   |
+|createNative|loadNative   |
+|createNativeWithPreferences:|loadNativeWithPreferences:   |
+|createInfeedInFrame:|loadInfeedInFrame: |
+|createInfeedInFrame: withPreferences:|loadInfeedInFrame:(CGRect)frame withPreferences: |
+
+- use new SmartAdServer 6.6.2 version [libSmartAdServer.a]
+- use new B4S 2.2.2 version [BeaconForStoreSDK.framework]
+- use new Google-Mobile-Ads-SDK 7.19.1 version [GoogleMobileAds.framework]
+- use new FBAudienceNetwork 4.21.0 version [FBAudienceNetwork.framework]
+
 ## Upgrading to 2.4
 
 - use new SmartAdServer 6.6.1 version [libSmartAdServer.a]
