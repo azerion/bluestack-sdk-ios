@@ -103,7 +103,7 @@ Set up the following keys in your app’s info.plist:
 <key>NSAppTransportSecurity</key>
     <dict>
         <key>NSAllowsArbitraryLoads</key>
-            <true/>
+        <true/>
     </dict>
 ```
 
@@ -244,7 +244,7 @@ NSLog(@"Ads Factory is busy");
 }else{
 NSLog(@"Ads Factory is not busy");
 }
-[bannerAdsFactory createBannerInFrame:CGRectMake(0, 0, 320, 50)]
+[bannerAdsFactory loadBannerInFrame:CGRectMake(0, 0, 320, 50)]
 if (bannerAdsFactory.isBusy) {
 NSLog(@"Ads Factory is busy");
 }else{
@@ -272,14 +272,10 @@ You have also to set placementId (minimum one time)
 bannerAdsFactory.placementId = @"/YOUR_APP_ID/PLACEMENT_ID";
 ```
 ##### Make a request
-To make a request you have to call 'createBannerInFrame'. this method return a bool value (canHandleRequest) 
+To make a request you have to call 'loadBannerInFrame'.
 
 ```objc
-if([bannerAdsFactory createBannerInFrame:kMNGAdSizeDynamicBanner]){
-//Wait callBack from delegate
-}else{
-//adsFactory can not handle your request
-}
+[bannerAdsFactory loadBannerInFrame:kMNGAdSizeDynamicBanner]
 ```
 
 ##### Handle callBack from BannerDelegate
@@ -355,7 +351,7 @@ Example:
         BOOL isIPAD = ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPad);
         size = (isIPAD)?kMNGAdSizeDynamicLeaderboard:kMNGAdSizeDynamicBanner;
     }
-    [bannerAdsFactory createBannerInFrame:size];
+    [bannerAdsFactory loadBannerInFrame:size];
 ```
 
 ### Infeed
@@ -374,14 +370,10 @@ You have also to set placementId (minimum one time)
 infeedAdsFactory.placementId = @"/YOUR_APP_ID/PLACEMENT_ID";
 ```
 ##### Make a request
-To make a request you have to call 'createInfeedInFrame'. this method return a bool value (canHandleRequest) 
+To make a request you have to call 'loadInfeedInFrame'.
 
 ```objc
-if([infeedAdsFactory createInfeedInFrame:CGRectMake(0, 0, 320, 50)]){
-//Wait callBack from delegate
-}else{
-//adsFactory can not handle your request
-}
+[infeedAdsFactory loadInfeedInFrame:CGRectMake(0, 0, 320, 50)]
 ```
 
 ##### Handle callBack from InfeedDelegate
@@ -447,14 +439,10 @@ You have also to set placementId (minimum one time)
 interstitialAdsFactory.placementId = @"/YOUR_APP_ID/PLACEMENT_ID";
 ```
 ##### Make a request
-To make a request you must call 'createInterstitial'. this method return a bool value (canHandleRequest) 
+To make a request you must call 'loadInterstitial'. 
 
 ```objc
-if([interstitialAdsFactory createInterstitial]){
-//Wait callBack from delegate
-}else{
-//adsFactory can not handle your request
-}
+[interstitialAdsFactory loadInterstitial];
 ```
 
 ##### Handle callBack from InterstitialDelegate
@@ -486,7 +474,7 @@ HomeViewController *home =  [[HomeViewController alloc]init];
 With v2.0.4 you can disable auto-displaying.
 
 ```objc
-[interstitialAdsFactory createInterstitialWithPreferences:preferences autoDisplayed:NO];
+[interstitialAdsFactory loadInterstitialWithPreferences:preferences autoDisplayed:NO];
 ```
 To show the interstitial after succes you have call [displayInterstitial].
 
@@ -516,14 +504,10 @@ You have also to set placementId (minimum one time)
 nativeAdsFactory.placementId = @"/YOUR_APP_ID/PLACEMENT_ID";
 ```
 ##### Make a request
-To make a request you have to call 'createNative'. this method return a bool value (canHandleRequest) 
+To make a request you have to call 'loadNative'. 
 
 ```objc
-if([nativeAdsFactory createNative]){
-//Wait callBack from delegate
-}else{
-//adsFactory can not handle your request
-}
+[nativeAdsFactory loadNative]
 ```
 
 ##### Handle callBack from NativeDelegate
@@ -623,9 +607,29 @@ preference.keyword = @"brand=myBrand;category=sport";//Separator in case of mult
 preference.gender = MNGGenderFemale;
 preference.location = [[CLLocation alloc]initWithLatitude:48.876 longitude:10.453];
 [preference setContentUrl:@"your content url"];
-[bannerAdsFactory createBannerInFrame:CGRectMake(0, 0, 320, 50)withPreferences:preference];
+[bannerAdsFactory loadBannerInFrame:CGRectMake(0, 0, 320, 50)withPreferences:preference];
 ```
 `Note`: this [link] can help you to get device location.
+
+### Error Handling
+@available v2.5
+Whenever an Ad fails to load, its correspondent delegate would be invoked providing an NSError object describing what went wrong, what s new in v2.5 and later versions is that we added a new Enum representing the codes of different errors along with a clear description , the different types of error can be found in top of MNGAdsSDKFactory header file :
+
+![MAdvertiseError.png](https://bitbucket.org/repo/aen579/images/3273016750-MAdvertiseError.png)
+
+the different errors are pretty much self explanatory , and here s and example use just to remove any ambiguity there might be on how to use it :
+
+```objc
+
+-(void)adsAdapter:(MNGAdsAdapter *)adsAdapter nativeObjectDidFailWithError:(NSError *)error{
+    NSLog(@"%@",error.localizedDescription); //will log the error's description
+    if (error.code == MAdvertiseErrorWrongPlacement) {
+        myFactory.placementId = @"Insert the correct placement";
+        [myFactory loadNative];
+    }
+}
+
+```
 
 ### Memory managment
 When you have finished your ads plant you must free the memory.
