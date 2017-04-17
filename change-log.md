@@ -3,7 +3,7 @@
 See [Wiki], [Design Guidelines and Best practices] and [Help Center]  for more detailed informations
 
 ## Version 2.5
-#### Release date: Avril 14th, 2017
+#### Release date: Avril 17th, 2017
 
  - Some methods in MNGAdsFactory are now deprecated and will be removed in next version:
 
