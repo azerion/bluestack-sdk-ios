@@ -2,6 +2,13 @@
 
 See [Wiki], [Design Guidelines and Best practices] and [Help Center]  for more detailed informations
 
+
+## Version 2.5.1
+#### Release date: Avril 19th, 2017
+
+- use new FBAudienceNetwork v4.22.0 version [FBAudienceNetwork.framework] (Fixed a critical bug that the image ad content is not rendered in FBMediaView.)
+
+
 ## Version 2.5
 #### Release date: Avril 17th, 2017
 
@@ -35,6 +42,12 @@ See [Wiki], [Design Guidelines and Best practices] and [Help Center]  for more d
    - Null values in Request : don't send the parameter to the adNetwork if it is null or empty.
    - Inall : fix dfp custom targetting and key words.
 
+Don't forget to update following libraries :
+
+- [MngAdsSDK]
+- [FBAudienceNetwork.framework]
+- [GoogleMobileAds.framework]
+- [BeaconForStoreSDK.framework]
 
 ## Version 2.4.1
 #### Release date: March 22th, 2017
