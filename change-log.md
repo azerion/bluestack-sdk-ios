@@ -3,14 +3,22 @@
 See [Wiki], [Design Guidelines and Best practices] and [Help Center]  for more detailed informations
 
 
+## Version 2.5.3
+#### Release date: April 24th, 2017
+
+- fix supported architectures issue where you get differents warnings about different adapters not supporting some architectures,in some cases it goes as far as saying that some adapters cannot be found during runtime.
+
+- use new Flurry 8.0.1 version [libFlurryAds] , [libFlurry]
+
+
 ## Version 2.5.1
-#### Release date: Avril 19th, 2017
+#### Release date: April 19th, 2017
 
 - use new FBAudienceNetwork v4.22.0 version [FBAudienceNetwork.framework] (Fixed a critical bug that the image ad content is not rendered in FBMediaView.)
 
 
 ## Version 2.5
-#### Release date: Avril 17th, 2017
+#### Release date: April 17th, 2017
 
  - Some methods in MNGAdsFactory are now deprecated and will be removed in next version:
 
