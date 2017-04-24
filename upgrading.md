@@ -1,5 +1,9 @@
 # upgrading SDK
 
+## Upgrading to 2.5.3
+
+- use new Flurry 8.0.1 version [libFlurryAds] , [libFlurry]
+
 ## Upgrading to 2.5
 Dont forget to change your implementation, don't use deprecated methods. 
 
