@@ -15,6 +15,19 @@ MNG Ads provides functionalities for monetizing your mobile application: from pr
 
 It contains a dispacher that will select an ads server according to the priority and state ([mngAds state diagram]).
 
+## requirements
+
+Requires **Xcode 8**.
+Requires **git lfs**.
+
+
+```
+#!unix
+
+$ git lfs install —force
+```
+
+
 ## Version
 See [Change Log] and [Upgrade Guide].
 
