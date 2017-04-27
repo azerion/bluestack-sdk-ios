@@ -15,12 +15,12 @@ MNG Ads provides functionalities for monetizing your mobile application: from pr
 
 It contains a dispacher that will select an ads server according to the priority and state ([mngAds state diagram]).
 
-## requirements
+## Requirements
 
 Requires **Xcode 8**.
 Requires **git lfs**.
-###First Download and install the [git-lfs command line client](https://git-lfs.github.com)
-###Then install the Git LFS filters:
+##### First Download and install the [git-lfs command line client](https://git-lfs.github.com)
+##### Then install the Git LFS filters:
 ```
 #!unix
 
