@@ -6,6 +6,9 @@ Thanks for taking a look at mngAds! We take pride in having an easy-to-use, flex
 
 You can find integration documentation on our [wiki] and additional help documentation on our [developer help site].
 
+##Requirements:
+make sure you have met the necessary [requirements](https://bitbucket.org/mngcorp/mngads-demo-ios/wiki/Home#markdown-header-requirements) before installing MNGAds using Cocoapods.
+
 ##Using CocoaPods
 The MngAds SDK is available through [Cocoapods], a popular dependency management system for Objective-C projects.
 
