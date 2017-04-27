@@ -19,8 +19,8 @@ It contains a dispacher that will select an ads server according to the priority
 
 Requires **Xcode 8**.
 Requires **git lfs**.
-#First Download and install the [git-lfs command line client](https://git-lfs.github.com)
-#Then install the Git LFS filters:
+###First Download and install the [git-lfs command line client](https://git-lfs.github.com)
+###Then install the Git LFS filters:
 ```
 #!unix
 
