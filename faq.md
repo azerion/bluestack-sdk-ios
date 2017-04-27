@@ -340,14 +340,15 @@ pod install
 ```
 ## Missing Architectures after pod update/install
 
-If you used a previous MNGAds version and you intend you update it first you need to clear cocoapods's cache with this command :
+- First make sure you have [git LFS](https://bitbucket.org/mngcorp/mngads-demo-ios/wiki/Home#markdown-header-requirements) installed on your machine
+- you need to clear cocoapods's cache with this command :
 
 
 ```
 #!objective-c
 sudo rm -rf "${HOME}/Library/Caches/CocoaPods" 
 ```
-then remove MNGAds from your pod file , do a pod install so it deletes your current version of MNGAds , finally go back to the pod file and add MNGAds again and do a new pod install so it brings you a new version of MNGAds with the git lfs files.(this needs to be done just once)
+afterwards remove MNGAds from your pod file , do a pod install so it deletes your current version of MNGAds , finally go back to the pod file and add MNGAds again and do a new pod install so it brings you a new version of MNGAds with the git lfs files.(this needs to be done just once)
 
 
 
