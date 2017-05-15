@@ -6,10 +6,19 @@ Thanks for taking a look at mngAds! We take pride in having an easy-to-use, flex
 
 You can find integration documentation on our [wiki] and additional help documentation on our [developer help site].
 
-##Requirements:
-make sure you have met the necessary [requirements](https://bitbucket.org/mngcorp/mngads-demo-ios/wiki/Home#markdown-header-requirements) before installing MNGAds using Cocoapods.
+## Requirements:
+Requires **Xcode 8**.
+Requires **git lfs**.
 
-##Using CocoaPods
+- First Download and install the [git-lfs command line client](https://git-lfs.github.com)
+- Then install the Git LFS filters:
+```
+$ git lfs install —force
+```
+For more about installing git LFS go to:
+https://git-lfs.github.com
+
+## Using CocoaPods
 The MngAds SDK is available through [Cocoapods], a popular dependency management system for Objective-C projects.
 
 To download and incorporate the MngAds SDK into your project using Cocoapods, add the following line to your project's podfile:
@@ -21,12 +30,12 @@ Or:
 pod "MNGAds/MNGAdsFull"
 ```
 
-After running `pod install` (if you’re setting up Cocoapods for the first time) or `pod update` (if you’re adding MNGAds to an existing Cocoapods project), it will be ready to use the base MngAds SDK. » 
+After running `pod install` (if you’re setting up Cocoapods for the first time) or `pod update` (if you’re adding MNGAds to an existing Cocoapods project), it will be ready to use the base MngAds SDK. »
 
 ### Troubleshooting
 
 - http://guides.cocoapods.org/using/troubleshooting.html
-If you have those build errors: 
+If you have those build errors:
 ```
 Library not found for -lMNGAds
 Header not found for ...
