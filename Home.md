@@ -72,7 +72,8 @@ MngAds SDK needs, these libraries are in demo project :
 - SystemConfiguration.framework
 - MediaPlayer.framework
 - CoreMotion.framework
-- JavaCore.framework
+- GLKit framework
+- JavaScriptCore 
 - AdSupport.framework
 - StoreKit.framework
 - CoreLocation.framework
