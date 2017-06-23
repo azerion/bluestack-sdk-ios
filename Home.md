@@ -67,6 +67,7 @@ MngAds SDK needs, these libraries are in demo project :
 - [libFlurry.a]
 - [BeaconForStoreSDK.framework] (use geographical position of the user)
 - [BeaconForStoreStorage.bundle] (use geographical position of the user)
+- [umoove.framework],  (mandatory, eyes tracking solution for MAS, need camera permission)
 - CoreGraphics.framework
 - QuartzCore.framework
 - SystemConfiguration.framework
@@ -737,3 +738,5 @@ The simplest way is:
 
 [App Transport Security]:https://developer.apple.com/library/content/documentation/General/Reference/InfoPlistKeyReference/Articles/CocoaKeys.html#//apple_ref/doc/uid/TP40009251-SW60
 [extended the ATS deadline]:https://developer.apple.com/news/?id=12212016b&1482372961
+
+[umoove.framework]:https://bitbucket.org/mngcorp/mngads-demo-ios/src/HEAD/Demo/Umoove.framework/?at=master
