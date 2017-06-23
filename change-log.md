@@ -8,7 +8,7 @@ you must check [Upgrade Guide]. You need to keep all Ad Network jars up to date.
 ## Version 2.6
 #### Release date: June 23th, 2017
 
-- Implemented new feature in MAdvertiseAdserver (MAS) that tracks the user's face to determine if he is really watching the ad or not , and for how long. You need to include [umoove.framework] in your project
+- Implemented new **eyes tracking** feature in MAdvertiseAdserver (MAS) that tracks the user's face to determine if he is really watching the ad or not , and for how long. You need to include [umoove.framework] in your project
 - New infeed ad format in mngadserver (MAS).
 - New features in debug gyro.
 - Disable scroll in some banners.
