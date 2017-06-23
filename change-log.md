@@ -8,7 +8,7 @@ you must check [Upgrade Guide]. You need to keep all Ad Network jars up to date.
 ## Version 2.6
 #### Release date: June 23th, 2017
 
-- Implemented new feature in MAdvertiseAdserver (MAS) that tracks the user's face to determine if he is really watching the ad or not , and for how long.
+- Implemented new feature in MAdvertiseAdserver (MAS) that tracks the user's face to determine if he is really watching the ad or not , and for how long. You need to include [umoove.framework] in your project
 - New infeed ad format in mngadserver (MAS).
 - New features in debug gyro.
 - Disable scroll in some banners.
@@ -588,3 +588,4 @@ You must update [MngAdsSDK], [libSmartAdServer.a] (not available from pod update
 [App Transport Security]:https://developer.apple.com/library/content/documentation/General/Reference/InfoPlistKeyReference/Articles/CocoaKeys.html#//apple_ref/doc/uid/TP40009251-SW60
 [debug-mode-gyro]:https://bitbucket.org/mngcorp/mngads-demo-ios/wiki/debug-mode-gyro
 [BeaconForStoreSDK.framework]:https://bitbucket.org/mngcorp/mngads-demo-ios/src/d41507a6c8eac3829efd9b05247acac1fcc51f8f/Demo/MNG-Ads-SDK/BeaconForStoreSDK.framework/?at=master
+[umoove.framework]:https://bitbucket.org/mngcorp/mngads-demo-ios/src/HEAD/Demo/Umoove.framework/?at=master
