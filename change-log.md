@@ -2,6 +2,25 @@
 
 See [Wiki], [Design Guidelines and Best practices] and [Help Center]  for more detailed informations
 
+## Version 2.6
+#### Release date: June 23th, 2017
+
+- Implemented new feature in MAdvertiseAdserver (MAS) that tracks the user's face to determine if he is really watching the ad or not , and for how long.
+- New infeed ad format in mngadserver (MAS).
+- New features in debug gyro.
+- Disable scroll in some banners.
+- Fix possible bug where the cascade would be blocked without returning a valid ad nor a fail error.
+- Edit impression requirements.
+- Fix banner size bug.
+- Fix clickUrl issue.
+- Remove spaces from keywords.
+
+
+- use new FacebookAudience 4.23.0 version [FBAudienceNetwork.framework]
+- use new GoogleMobileAds 7.20.0 version [GoogleMobileAds.framework]
+- use new Flurry 8.1.0 version [libFlurryAds] , [libFlurry]
+- use new BeaconForStoreSDK 2.2.8 version [BeaconForStoreSDK.framework]
+
 
 ## Version 2.5.3
 #### Release date: April 24th, 2017
