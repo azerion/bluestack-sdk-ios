@@ -1,6 +1,9 @@
 ## Change log and release notes for the MngAds SDK for iOS.
 
-See [Wiki], [Design Guidelines and Best practices] and [Help Center]  for more detailed informations
+See [Wiki], [Design Guidelines and Best practices] and [Help Center]  for more detailed informations.
+
+
+you must check [Upgrade Guide]. You need to keep all Ad Network jars up to date. 
 
 ## Version 2.6
 #### Release date: June 23th, 2017
@@ -281,8 +284,6 @@ no changes, just fix wrong [libSmartAdServer.a] lib on cocoapods.org if pod upda
 #### Release date: July 13th, 2016
 
 
-you must check [Upgrade Guide].
-
  - Use lastest smart Adserver and Facebook version
  - Now Amazon available with cocoapods (**If you are using cocoapods, you must remove AmazonAd.framework, it will be auto-downloaded by cocoapods**)
  - Now you can use new predifined sizes 
@@ -373,7 +374,6 @@ You need to keep all Ad Network libraries up to date.
 ## Version 2.0
 #### Release date: January 28th, 2016
 
-you must check [Upgrade Guide]. You need to keep all Ad Network libraries up to date.
 
  - [libAppsfireSDK.a], [libANSDK] and [libMng-perf.a] libraries have been merged on [MngAdsSDK] SDK for better performance and reduce libraries number
  - We have added [AmazonAd.framework], [LiveRailSDK.framework] , [libFlurryAds_7.3.0.a] to mngads mediation in order to increase fill rate and revenus
@@ -412,7 +412,6 @@ you must check [Upgrade Guide]. You need to keep all Ad Network libraries up to 
 
 #### Release date: September 18th, 2015
 
-**You must check [Upgrade Guide].**
 
  - IOS9 support (need to disable ATS and disable bitcode (google SDK do not support it) )
 
@@ -426,7 +425,6 @@ you must check [Upgrade Guide]. You need to keep all Ad Network libraries up to 
 
 #### Release date: August 25th, 2015
 
-You must check [Upgrade Guide].
 
 - appNexus can be used download via our Cocoapods
 - New SmartAdServer-iOS-SDK-6.0 (dynamicAd, prefetch)
@@ -478,7 +476,6 @@ You must update [MngAdsSDK], [libSmartAdServer.a] (not available from pod update
 
 ## Version 1.3.3
 
-You must check [Upgrade Guide].
 #### Release date: June 3th, 2015
 
  - Manage dynamic size for DFP and appNexus banners
