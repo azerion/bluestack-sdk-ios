@@ -628,7 +628,7 @@ preference.location = [[CLLocation alloc]initWithLatitude:48.876 longitude:10.45
 `Note`: this [link] can help you to get device location.
 
 ### Error Handling
-available v2.5
+@available v2.5
 Whenever an Ad fails to load, its correspondent delegate would be invoked providing an NSError object describing what went wrong, what s new in v2.5 and later versions is that we added a new Enum representing the codes of different errors along with a clear description , the different types of error can be found in top of MNGAdsSDKFactory header file :
 
 ![MAdvertiseError.png](https://bitbucket.org/repo/aen579/images/3273016750-MAdvertiseError.png)
