@@ -1,5 +1,17 @@
 # upgrading SDK
 
+
+## Upgrading to 2.6
+
+- Implemented new feature in MAdveriseAdserver (MAS) that tracks the user's face to determine if he is really watching an ad (all formats except for native ad) or not , and for how long; this feature is optional, however to enable it, you need to include [umoove.framework] in your project , also you should notice that umoove is a dynamic library so you need to make sure that it s included in **"Embedded Binaries"** as well as **"Linked Frameworks and Librairies"**. Keep in mind that in order to track the user's face, the app will require the use of the device's camera , so dont forget to include **NSCameraUsageDescription** in your info.plist.
+
+
+###### if you are not using cocoapods to install MNGAds then you should consider upgrading these libraries/frameworks:
+- use new FacebookAudience 4.23.0 version [FBAudienceNetwork.framework]
+- use new GoogleMobileAds 7.20.0 version [GoogleMobileAds.framework]
+- use new Flurry 8.1.0 version [libFlurryAds] , [libFlurry]
+- use new BeaconForStoreSDK 2.2.8 version [BeaconForStoreSDK.framework]
+
 ## Upgrading to 2.5.3
 
 - use new Flurry 8.0.1 version [libFlurryAds] , [libFlurry]
@@ -342,3 +354,5 @@ instead of
 [In-Feed Ad format]:https://bitbucket.org/mngcorp/mngads-demo-ios/wiki/Home#markdown-header-infeed
 [App Transport Security]:https://developer.apple.com/library/content/documentation/General/Reference/InfoPlistKeyReference/Articles/CocoaKeys.html#//apple_ref/doc/uid/TP40009251-SW60
 [BeaconForStoreSDK.framework]:https://bitbucket.org/mngcorp/mngads-demo-ios/src/d41507a6c8eac3829efd9b05247acac1fcc51f8f/Demo/MNG-Ads-SDK/BeaconForStoreSDK.framework/?at=master
+
+[umoove.framework]:https://bitbucket.org/mngcorp/mngads-demo-ios/src/HEAD/Demo/Umoove.framework/?at=master
