@@ -7,9 +7,9 @@ Thanks for taking a look at mngAds! We take pride in having an easy-to-use, flex
 You can find integration documentation on our [wiki] and additional help documentation on our [developer help site].
 
 ## Requirements:
-Requires **cocoapods 1.2.1**
-Requires **Xcode 8**.
-Requires **git lfs**.
+ - Requires **cocoapods 1.2.1**
+ - Requires **Xcode 8**.
+ - Requires **git lfs**.
 
 - First Download and install the [git-lfs command line client](https://git-lfs.github.com)
 - Then install the Git LFS filters:
