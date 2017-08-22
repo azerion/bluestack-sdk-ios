@@ -1,6 +1,9 @@
 # ![MNG-Ads-1.png](https://bitbucket.org/repo/aen579/images/3739691856-MNG-Ads-1.png) for IOS
 
+
 Thanks for taking a look at mngAds! We take pride in having an easy-to-use, flexible monetization solution.
+
+[TOC]
 
 ## Need Help?
 
@@ -82,6 +85,17 @@ To add specifics adNetwork.
 ```ruby
 pod "MNGAds",:subspecs => ["AppsFire","Facebook","DFP","SmartAdServer","Amazon","Flurry","B4S"]
 ```
+
+#### MAdvertiseBeacon
+
+Get Ebeacon technology to propose to the advertisers to target the users inside the point of sale. An installation base of 12,500 ebeacons ready to track the users.
+
+```ruby
+pod "MNGAds",:subspecs => ["MNGAdsFull", "B4S"]
+```
+
+
+
 [wiki]:https://bitbucket.org/mngcorp/mngads-demo-ios/wiki/Home
 [developer help site]:https://bitbucket.org/mngcorp/mngads-demo-ios/wiki/faq
 [Cocoapods]:http://cocoapods.org/
