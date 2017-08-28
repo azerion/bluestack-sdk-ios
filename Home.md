@@ -18,10 +18,13 @@ It contains a dispacher that will select an ads server according to the priority
 ## Requirements
 
 Requires **Xcode 8**.
-Requires **git lfs**.
+#### Legacy
+for versions under v2.7 installing the sdk require **git lfs**.
+
 
 - First Download and install the [git-lfs command line client](https://git-lfs.github.com)
 - Then install the Git LFS filters:
+
 ```
 #!unix
 
@@ -50,7 +53,7 @@ The MngAds SDK is available through Cocoapods. see [Using CocoaPods] section.
 
 ## Manual Install
 
-- download [MngAdsSDK] from our demo project, **you must use version of  Ads servers's librairies in used on demo project.**
+- download [MngAdsSDK], **you must use the according versions of  Ads servers's librairies.**
 - drag and drop it in your project
 - check that libMngAds.a exist in "Link Binary With Libraries"
 
@@ -74,7 +77,7 @@ MngAds SDK needs, these libraries are in demo project :
 - MediaPlayer.framework
 - CoreMotion.framework
 - GLKit framework
-- JavaScriptCore 
+- JavaScriptCore
 - AdSupport.framework
 - StoreKit.framework
 - CoreLocation.framework
@@ -155,6 +158,8 @@ You can also edit the plist by adding NSAppTransportSecurity key of dictionary t
 ## Sample Application
 
 Included is a [MngAds sample app] to use as example and for help on MngAds integration. This basic application allows users to test our differents formats.
+#### Important note:
+just run pod install after cloning the demo
 
 ## Start Integrating
 
@@ -211,7 +216,7 @@ To check out if the SDK is initialized or not, you have to use `[MNGAdsSDKFactor
 ```
 ### MAdvertiseBeacon
 
-- Get Ebeacon technology to propose to the advertisers to target the users inside the point of sale. 
+- Get Ebeacon technology to propose to the advertisers to target the users inside the point of sale.
 - An installation base of 12,500 ebeacons ready to track the users.
 - An exclusive format in Push notification to the users inside a tabacco shop, press shop, pharmay or mall.
 
@@ -456,7 +461,7 @@ You have also to set placementId (minimum one time)
 interstitialAdsFactory.placementId = @"/YOUR_APP_ID/PLACEMENT_ID";
 ```
 ##### Make a request
-To make a request you must call 'loadInterstitial'. 
+To make a request you must call 'loadInterstitial'.
 
 ```objc
 [interstitialAdsFactory loadInterstitial];
@@ -487,7 +492,7 @@ HomeViewController *home =  [[HomeViewController alloc]init];
 }
 ```
 
-##### Disable auto-displaying 
+##### Disable auto-displaying
 With v2.0.4 you can disable auto-displaying.
 
 ```objc
@@ -521,7 +526,7 @@ You have also to set placementId (minimum one time)
 nativeAdsFactory.placementId = @"/YOUR_APP_ID/PLACEMENT_ID";
 ```
 ##### Make a request
-To make a request you have to call 'loadNative'. 
+To make a request you have to call 'loadNative'.
 
 ```objc
 [nativeAdsFactory loadNative]
@@ -536,7 +541,7 @@ self.titleLabel.text = nativeObject.title;
 self.contextLabel.text = nativeObject.socialContext;
 self.bodyLabel.text = nativeObject.body;
 //possibility to customize the badge title
-[nativeObject updateBadgeTitle:@"Publicité"]; 
+[nativeObject updateBadgeTitle:@"Publicité"];
 badgeView = nativeObject.badgeView;
 [nativeObject setMediaContainer:self.container];
 ...
@@ -578,7 +583,7 @@ If you show an interstitial at the didEnterForeground, you can use click delegat
         _isAdClicked = YES;
         NSLog(@"Next enter background will be ignored");
     }
-    
+
 }
 
 - (void)applicationDidBecomeActive:(UIApplication *)application {
@@ -603,7 +608,7 @@ informations that you can set are:
 - location : geographical position of the user. *Important:* your application can be rejected by Apple if you use the device's location *only* for advertising.
 - language : language of user (ISO code)
 - gender : gender of user
-- keyWord : Use free-form key-values when you want to pass targeting values dynamically into an ad tag based on information you collect from your users. You can also use free-form key-values when there are too many possible values to define in advance. Separator in case of multiple entries is **;**. 
+- keyWord : Use free-form key-values when you want to pass targeting values dynamically into an ad tag based on information you collect from your users. You can also use free-form key-values when there are too many possible values to define in advance. Separator in case of multiple entries is **;**.
 - content url : URL for content related to your app (url must be a string which length not exceed 512 caracters).
 
 
@@ -707,7 +712,7 @@ The simplest way is:
 [Mng-perf]:https://bitbucket.org/mngcorp/mngperf-demo-ios
 [Google DFP]:https://developers.google.com/mobile-ads-sdk/download#download
 [Facebook Audience Network]:https://developers.facebook.com/docs/ios?locale=fr_FR
-[MngAdsSDK]:https://bitbucket.org/mngcorp/mngads-demo-ios/src/HEAD/Demo/Pods/MNGAds/MNGAds/libMngAds.a?at=master&fileviewer=file-view-default
+[MngAdsSDK]:https://bitbucket.org/mngcorp/madvertise-ios-sdk/src/HEAD/MNGAds
 [MngAds sample app]:https://bitbucket.org/mngcorp/mngads-demo-ios/src/HEAD?at=master
 [appsfire]:https://github.com/appsfire/Appsfire-iOS-SDK
 [Help Center]:https://bitbucket.org/mngcorp/mngads-demo-ios/wiki/faq
@@ -716,33 +721,33 @@ The simplest way is:
 [AppNexus]:http://www.appnexus.com/fr
 [libANSDK]:https://bitbucket.org/mngcorp/mngads-demo-ios/src/HEAD/Demo/Pods/AppNexusSDK/?at=master
 
-[libSmartAdServer.a]:https://bitbucket.org/mngcorp/mngads-demo-ios/src/HEAD/Demo/Pods/SmartAdServer-DisplaySDK/SmartAdServer/sdk/?at=master
-[FBAudienceNetwork.framework]:https://bitbucket.org/mngcorp/mngads-demo-ios/src/HEAD/Demo/Pods/FBAudienceNetwork/?at=master
-[GoogleMobileAds.framework]:https://bitbucket.org/mngcorp/mngads-demo-ios/src/HEAD/Demo/Pods/Google-Mobile-Ads-SDK/?at=master
+[libSmartAdServer.a]:http://help.smartadserver.com/en/#../../../../specifications/Content/MobileSpecifications/Apps.htm
+[FBAudienceNetwork.framework]:https://developers.facebook.com/docs/ios/downloads
+[GoogleMobileAds.framework]:https://developers.google.com/mobile-ads-sdk/docs/dfp/ios/download
 [libAppsfireSDK.a]:https://bitbucket.org/mngcorp/mngads-demo-ios/src/HEAD/Demo/Pods/AppsfireSDK/?at=master
 [libMng-perf.a]:https://bitbucket.org/mngcorp/mngads-demo-ios/src/HEAD/Demo/Pods/Mng-perf/?at=master
 [Using CocoaPods]:https://bitbucket.org/mngcorp/mngads-demo-ios/wiki/Using%20CocoaPods
 [mngAds state diagram]:https://bitbucket.org/mngcorp/mngads-demo-ios/wiki/diagram
 [Installation guide for Swift]:https://bitbucket.org/mngcorp/mngads-demo-ios/wiki/Swift
 [Design Guidelines and Best practices]:https://bitbucket.org/mngcorp/mngads-demo-ios/wiki/guidelines
-[MNG Ad Server]:https://bitbucket.org/mngcorp/mngads-demo-ios/src/HEAD/Demo/Pods/MNGAds/MNGAds/?at=master
+[MNG Ad Server]:https://bitbucket.org/mngcorp/madvertise-ios-sdk/src/HEAD/MNGAds/
 
-[AmazonAd.framework]:https://bitbucket.org/mngcorp/mngads-demo-ios/src/HEAD/Demo/MNG-Ads-SDK/AdsSDKs/AmazonAd.framework/?at=master
+[AmazonAd.framework]:https://developer.amazon.com/sdk-download
 [LiveRailSDK.framework]:https://bitbucket.org/mngcorp/mngads-demo-ios/src/HEAD/Demo/MNG-Ads-SDK/AdsSDKs/LiveRailSDK.framework/?at=master
-[libFlurryAds.a]:https://bitbucket.org/mngcorp/mngads-demo-ios/src/HEAD/Demo/Pods/Flurry-iOS-SDK/?at=master
-[libFlurry.a]:https://bitbucket.org/mngcorp/mngads-demo-ios/src/HEAD/Demo/Pods/Flurry-iOS-SDK/?at=master
+[libFlurryAds.a]:https://github.com/flurry/ios-AdIntegrationSamples/tree/master/Pods/Flurry-iOS-SDK
+[libFlurry.a]:https://github.com/flurry/ios-AdIntegrationSamples/tree/master/Pods/Flurry-iOS-SDK
 [Native Ads guidelines]:https://bitbucket.org/mngcorp/mngads-demo-ios/wiki/nativead
-[libMNGAdsDFPAdapter.a]:https://bitbucket.org/mngcorp/mngads-demo-ios/src/HEAD/MNGAds/libMNGAdsDFPAdapter.a?at=master&fileviewer=file-view-default
-[libMNGAdsFacebookAdapter.a]:https://bitbucket.org/mngcorp/mngads-demo-ios/src/HEAD/MNGAds/libMNGAdsFacebookAdapter.a?at=master&fileviewer=file-view-default
-[libMNGAdsSASAdapter.a]:https://bitbucket.org/mngcorp/mngads-demo-ios/src/HEAD/MNGAds/libMNGAdsSASAdapter.a?at=master&fileviewer=file-view-default
-[libMNGAmazonAdapter.a]:https://bitbucket.org/mngcorp/mngads-demo-ios/src/HEAD/MNGAds/libMNGAmazonAdapter.a?at=master&fileviewer=file-view-default
-[libMNGFlurryAdapter.a]:https://bitbucket.org/mngcorp/mngads-demo-ios/src/HEAD/MNGAds/libMNGFlurryAdapter.a?at=master&fileviewer=file-view-default
+[libMNGAdsDFPAdapter.a]:https://bitbucket.org/mngcorp/madvertise-ios-sdk/src/HEAD/MNGAds
+[libMNGAdsFacebookAdapter.a]:https://bitbucket.org/mngcorp/madvertise-ios-sdk/src/HEAD/MNGAds
+[libMNGAdsSASAdapter.a]:https://bitbucket.org/mngcorp/madvertise-ios-sdk/src/HEAD/MNGAds
+[libMNGAmazonAdapter.a]:https://bitbucket.org/mngcorp/madvertise-ios-sdk/src/HEAD/MNGAds
+[libMNGFlurryAdapter.a]:https://bitbucket.org/mngcorp/madvertise-ios-sdk/src/HEAD/MNGAds
 [libMNGLiveRailAdapter.a]:https://bitbucket.org/mngcorp/mngads-demo-ios/src/HEAD/MNGAds/libMNGLiveRailAdapter.a?at=master&fileviewer=file-view-default
 [see our Faq]:https://bitbucket.org/mngcorp/mngads-demo-ios/wiki/faq#markdown-header--objc-linker-flag-required
 
 [libMAdvertiseB4SAdapter.a]:https://bitbucket.org/mngcorp/mngads-demo-ios/src/HEAD/MNGAds/libMAdvertiseB4SAdapter.a?at=master&fileviewer=file-view-default
-[BeaconForStoreSDK.framework]:https://bitbucket.org/mngcorp/mngads-demo-ios/src/d41507a6c8eac3829efd9b05247acac1fcc51f8f/Demo/MNG-Ads-SDK/BeaconForStoreSDK.framework/?at=master
-[BeaconForStoreStorage.bundle]:https://bitbucket.org/mngcorp/mngads-demo-ios/src/HEAD/Demo/MNG-Ads-SDK/BeaconForStoreStorage.bundle/?at=master
+[BeaconForStoreSDK.framework]:https://github.com/ezeeworld/B4S-iOS-SDK/releases
+[BeaconForStoreStorage.bundle]:https://github.com/ezeeworld/B4S-iOS-SDK/releases
 
 [App Transport Security]:https://developer.apple.com/library/content/documentation/General/Reference/InfoPlistKeyReference/Articles/CocoaKeys.html#//apple_ref/doc/uid/TP40009251-SW60
 [extended the ATS deadline]:https://developer.apple.com/news/?id=12212016b&1482372961
