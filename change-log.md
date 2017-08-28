@@ -6,7 +6,7 @@ See [Wiki], [Design Guidelines and Best practices] and [Help Center]  for more d
 you must check [Upgrade Guide]. You need to keep all Ad Network jars up to date. 
 
 ## Version 2.7
-#### Release date: July 28th, 2017
+#### Release date: August 28th, 2017
 
 - Migrate from using UIWebView to MKWebView , although UIWebView still available for iOS7 users.
 - BeaconForStoreSDK isnt available by default when installing from cocoapods, to install it you will need to specify its subspec :
