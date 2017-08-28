@@ -5,6 +5,26 @@ See [Wiki], [Design Guidelines and Best practices] and [Help Center]  for more d
 
 you must check [Upgrade Guide]. You need to keep all Ad Network jars up to date. 
 
+## Version 2.7
+#### Release date: July 28th, 2017
+
+- Migrate from using UIWebView to MKWebView , although UIWebView still available for iOS7 users.
+- BeaconForStoreSDK isnt available by default when installing from cocoapods, to install it you will need to specify its subspec :
+
+```
+pod "MNGAds",:subspecs => ["MNGAdsFull", "B4S"]
+```
+- New menu in the demo showing how to use our MoPub adapter.
+- New menu in the demo to try out only appsfire ads.
+- AdChoice view available in all formats.
+- Implementing new methodology to track impressions using impression script along side impression url.
+- Fix minor bugs , including the muted sound issue.
+
+- use new FacebookAudience 4.25.0 version 
+- use new GoogleMobileAds 7.22.0 version 
+- - use new SmartAdServer 6.7.1 version 
+- use new BeaconForStoreSDK 2.2.9 version 
+
 ## Version 2.6
 #### Release date: June 23th, 2017
 
