@@ -22,7 +22,7 @@ pod "MNGAds",:subspecs => ["MNGAdsFull", "B4S"]
 
 - use new FacebookAudience 4.25.0 version 
 - use new GoogleMobileAds 7.22.0 version 
-- - use new SmartAdServer 6.7.1 version 
+- use new SmartAdServer 6.7.1 version 
 - use new BeaconForStoreSDK 2.2.9 version 
 
 ## Version 2.6
