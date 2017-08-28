@@ -1,5 +1,30 @@
 # upgrading SDK
 
+## Upgrading to 2.7
+
+- Since BeaconForStoreSDK isnt available by default while using cocoapods, you will need to change mngads's pod line to this:
+```
+pod "MNGAds",:subspecs => ["MNGAdsFull", "B4S"]
+```
+
+- Recently some ads have caused some audio issues: where after the ad is dismissed the entire app becomes muted, and after a thorough investigation we discovered that the issue comes from an adnetwork we currently use and until they fix the issue on their end here s a workaround : what causes the issue is that when a video ad loads it may change the category of AVAudioSession's shared instance, so to avoid this issue you only need to revert (after the ad is dismissed) to the category you initially set, for example :
+
+
+```
+#!objective-c
+-(void)adsAdapterInterstitialDisappear:(MNGAdsAdapter *)adsAdapter{
+
+  [[AVAudioSession sharedInstance] setCategory:AVAudioSessionCategoryPlayback error:nil];
+  [[AVAudioSession sharedInstance] setActive: YES error: nil];
+
+}
+```
+###### if you are not using cocoapods to install MNGAds then you should consider upgrading these libraries/frameworks:
+- use new FacebookAudience 4.25.0 version 
+- use new GoogleMobileAds 7.22.0 version
+- use new SmartAdServer 6.7.1 version
+- use new BeaconForStoreSDK 2.2.9 version
+
 
 ## Upgrading to 2.6
 
