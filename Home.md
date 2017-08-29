@@ -127,6 +127,22 @@ Set up the following keys in your app’s info.plist:
     </dict>
 ```
 
+## Muted sound
+
+Recently some ads have caused some audio issues: where after the ad is dismissed the entire app becomes muted, and after a thourough investigation we discovered that the issue comes from an adnetwork we currently use and until they fix the issue on their end here s a workaround : what causes the issue is that when a video ad loads it may change the category of AVAudioSession's shared instance, so to avoid this issue you only need to revert (after the ad is dismissed) to the category you initially set, for example :
+
+
+```
+#!objective-c
+-(void)adsAdapterInterstitialDisappear:(MNGAdsAdapter *)adsAdapter{
+
+  [[AVAudioSession sharedInstance] setCategory:AVAudioSessionCategoryPlayback error:nil];
+  [[AVAudioSession sharedInstance] setActive: YES error: nil];
+
+}
+```
+
+
 ## Building Against iOS9
 
 iOS 9 introduces changes that are likely to impact your app and its MngAds integration.
