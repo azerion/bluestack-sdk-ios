@@ -1,5 +1,6 @@
 # ![MNG-Ads-1.png](https://bitbucket.org/repo/aen579/images/3739691856-MNG-Ads-1.png) for IOS
 
+[TOC]
 Thanks for taking a look at mngAds! We take pride in having an easy-to-use, flexible monetization solution.
 
 ## Need Help?
@@ -10,7 +11,7 @@ You can find integration documentation on our [wiki] and additional help documen
  - Requires **cocoapods 1.2.1**
  - Requires **Xcode 8**.
 
- #### Legacy
+#### Legacy
  for versions under v2.7 installing the sdk require **git lfs**.
 
 - First Download and install the [git-lfs command line client](https://git-lfs.github.com)
