@@ -127,21 +127,6 @@ Set up the following keys in your app’s info.plist:
     </dict>
 ```
 
-## Muted sound
-
-Recently some ads have caused some audio issues: where after the ad is dismissed the entire app becomes muted, and after a thourough investigation we discovered that the issue comes from an adnetwork we currently use and until they fix the issue on their end here s a workaround : what causes the issue is that when a video ad loads it may change the category of AVAudioSession's shared instance, so to avoid this issue you only need to revert (after the ad is dismissed) to the category you initially set, for example :
-
-
-```
-#!objective-c
--(void)adsAdapterInterstitialDisappear:(MNGAdsAdapter *)adsAdapter{
-
-  [[AVAudioSession sharedInstance] setCategory:AVAudioSessionCategoryPlayback error:nil];
-  [[AVAudioSession sharedInstance] setActive: YES error: nil];
-
-}
-```
-
 
 ## Building Against iOS9
 
@@ -525,6 +510,23 @@ if ([interstitialAdsFactory isInterstitialReady]) {
 ```
 
 ___info:___ To test auto-displayin disabled on demo, you have to go to the page interstitial. others interstitials (return background, when change from page to page...) are with auto-displaying.
+
+#### Muted sound
+
+Recently some Interstitials have caused some audio issues: where after the ad is dismissed the entire app becomes muted, and after a thourough investigation we discovered that the issue comes from an adnetwork we currently use and until they fix the issue on their end here s a workaround : what causes the issue is that when a video ad loads it may change the category of AVAudioSession's shared instance, so to avoid this issue you only need to revert (after the ad is dismissed) to the category you initially set, for example :
+
+
+```
+#!objective-c
+-(void)adsAdapterInterstitialDisappear:(MNGAdsAdapter *)adsAdapter{
+
+  [[AVAudioSession sharedInstance] setCategory:AVAudioSessionCategoryPlayback error:nil];
+  [[AVAudioSession sharedInstance] setActive: YES error: nil];
+
+}
+```
+
+___info:___ this can occur with other ads formats.
 
 ### Native Ads
 Native ads give you the control to design the perfect ad units for your app. With our Native Ad API, you can determine the look and feel, size and location of your ads. Because you decide how the ads are formatted, ads can fit seamlessly in your application.
