@@ -5,6 +5,18 @@ See [Wiki], [Design Guidelines and Best practices] and [Help Center]  for more d
 
 you must check [Upgrade Guide]. You need to keep all Ad Network jars up to date. 
 
+
+## Version 2.7.1
+#### Release date: September 18th, 2017
+
+- New feature: Implementing the new eyes detection feature in Mraid ads.
+- Edit Vast ads selecting mediaUrl algorithm to prioritize videos(mp4/3gpp) over vpaid ads.
+- use new GoogleMobileAds 7.23.0 version [GoogleMobileAds.framework]
+- use new Flurry 8.2.1 version [libFlurryAds] , [libFlurry]
+- use new BeaconForStoreSDK 2.2.12 version [BeaconForStoreSDK.framework]
+
+
+
 ## Version 2.7
 #### Release date: August 28th, 2017
 
