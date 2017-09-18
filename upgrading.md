@@ -1,5 +1,6 @@
 # upgrading SDK
 
+See [Wiki], [Design Guidelines and Best practices] and [Help Center]  for more detailed informations. you must check [Change Log] .
 
 ## Upgrading to 2.7.1
 
@@ -388,3 +389,5 @@ instead of
 [BeaconForStoreSDK.framework]:https://bitbucket.org/mngcorp/mngads-demo-ios/src/d41507a6c8eac3829efd9b05247acac1fcc51f8f/Demo/MNG-Ads-SDK/BeaconForStoreSDK.framework/?at=master
 
 [umoove.framework]:https://bitbucket.org/mngcorp/mngads-demo-ios/src/HEAD/Demo/Umoove.framework/?at=master
+[Help Center]:https://bitbucket.org/mngcorp/mngads-demo-ios/wiki/faq
+[Change Log]:https://bitbucket.org/mngcorp/mngads-demo-ios/wiki/change-log
