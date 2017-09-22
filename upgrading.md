@@ -2,6 +2,11 @@
 
 See [Wiki], [Design Guidelines and Best practices] and [Help Center]  for more detailed informations. you must check [Change Log] .
 
+
+## Upgrading to 2.7.2
+
+- No upgrading necessary.
+
 ## Upgrading to 2.7.1
 
 - use new GoogleMobileAds 7.23.0 version [GoogleMobileAds.framework]
