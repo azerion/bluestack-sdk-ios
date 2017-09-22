@@ -5,13 +5,14 @@ See [Wiki], [Design Guidelines and Best practices] and [Help Center]  for more d
 
 ## Upgrading to 2.7.2
 
-- No upgrading necessary.
+- use new [MngAdsSDK]
 
 ## Upgrading to 2.7.1
 
 - use new GoogleMobileAds 7.23.0 version [GoogleMobileAds.framework]
 - use new Flurry 8.2.1 version [libFlurryAds] , [libFlurry]
 - use new BeaconForStoreSDK 2.2.12 version [BeaconForStoreSDK.framework]
+- use new [MngAdsSDK]
 
 ## Upgrading to 2.7
 
