@@ -3,7 +3,13 @@
 See [Wiki], [Design Guidelines and Best practices] and [Help Center]  for more detailed informations.
 
 
-you must check [Upgrade Guide]. You need to keep all Ad Network jars up to date. 
+you must check [Upgrade Guide]. You need to keep all Ad Network libs up to date. 
+
+## Version 2.7.2
+#### Release date: September 18th, 2017
+
+- Fix crash with WKWebView's handler delegate.
+- use new [MngAdsSDK]
 
 
 ## Version 2.7.1
@@ -603,7 +609,7 @@ You must update [MngAdsSDK], [libSmartAdServer.a] (not available from pod update
 
 ---
 [Upgrade Guide]:https://bitbucket.org/mngcorp/mngads-demo-ios/wiki/upgrading
-[MngAdsSDK]:https://bitbucket.org/mngcorp/mngads-demo-ios/src/HEAD/Demo/Pods/MNGAds/MNGAds/libMngAds.a?at=master&fileviewer=file-view-default
+[MngAdsSDK]:https://bitbucket.org/mngcorp/madvertise-ios-sdk/src/HEAD/MNGAds
 [libSmartAdServer.a]:https://bitbucket.org/mngcorp/mngads-demo-ios/src/HEAD/Demo/Pods/SmartAdServer-DisplaySDK/SmartAdServer/sdk/?at=master
 [FBAudienceNetwork.framework]:https://bitbucket.org/mngcorp/mngads-demo-ios/src/HEAD/Demo/Pods/FBAudienceNetwork/?at=master
 [GoogleMobileAds.framework]:https://bitbucket.org/mngcorp/mngads-demo-ios/src/HEAD/Demo/Pods/Google-Mobile-Ads-SDK/?at=master
