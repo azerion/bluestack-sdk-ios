@@ -722,7 +722,6 @@ The simplest way is:
 - the face tracking feature was implemented to determine wether the user is watching the ad or not , and for how long (in ms). this feature is optional and disabled by default, to enable it you need to include [umoove.framework] in your project , also you should notice that umoove is a dynamic library so you need to make sure that it s included in **"Embedded Binaries"** as well as **"Linked Frameworks and Librairies"**. Keep in mind that in order to track the user's face, the app will require the use of the device's camera , so dont forget to include **NSCameraUsageDescription** in your info.plist.
 
 ----
-----
 
 [ARC]:https://developer.apple.com/library/ios/documentation/Swift/Conceptual/Swift_Programming_Language/AutomaticReferenceCounting.html
 [link]:http://www.tutorialspoint.com/ios/ios_location_handling.htm
