@@ -1,4 +1,4 @@
-# MAdvertiseRewardedVideoAd
+# MAdvertiseRewardedVideoAd for Ios
 
 [TOC]
 
