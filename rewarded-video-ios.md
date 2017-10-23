@@ -10,7 +10,7 @@ Require MngAdsSDK >= 2.8
 
 
 
-#### Implementation:
+## Implementation:
 
 In your View Controller header file, import the 2 Reward Video Ad headers, declare that you implement the MAdvertiseAdapterRewardedVideoAdDelegate protocol and add an instance variable for the rewarded video ad :
 
