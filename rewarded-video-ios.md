@@ -71,11 +71,15 @@ For example :
 - (void)adsAdapter:(MNGAdsAdapter *)adsAdapter rewardedVideoAdDidFailWithError:(NSError *)error;
 ```
 
+
+
 - Once the Video has been loaded, you will need to present it whenever you see fit using the following method :
 
 ```
+#!objective-c
 -(void)showAdFromRootViewController:(UIViewController*)rootViewController animated:(BOOL)flag;
 ```
+
 
 
 But the most important callBack has to be :
