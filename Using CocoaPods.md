@@ -95,6 +95,19 @@ Get Ebeacon technology to propose to the advertisers to target the users inside 
 pod "MNGAds",:subspecs => ["MNGAdsFull", "B4S"]
 ```
 
+#### Eyes tracking
+>available v2.6
+
+- the face tracking feature was implemented to determine wether the user is watching the ad or not , and for how long (in ms). this feature is optional and disabled by default, to enable it you need to include Umoove either using CocoaPods:
+```
+pod 'umooveV2framework', :git => 'https://umoove@bitbucket.org/umoove/umooveV2framework.git', :branch =>'master'
+```
+
+or manually:
+- download [umoove.framework] in your project , also you should notice that umoove is a dynamic library so you need to make sure that it s included in **"Embedded Binaries"** as well as **"Linked Frameworks and Librairies"**.
+
+Keep in mind that in order to track the user's face, the app will require the use of the device's camera , so dont forget to include **NSCameraUsageDescription** in your info.plist.
+
 
 [wiki]:https://bitbucket.org/mngcorp/mngads-demo-ios/wiki/Home
 [developer help site]:https://bitbucket.org/mngcorp/mngads-demo-ios/wiki/faq
@@ -108,3 +121,4 @@ pod "MNGAds",:subspecs => ["MNGAdsFull", "B4S"]
 [BeaconForStoreSDK.framework]:https://bitbucket.org/mngcorp/mngads-demo-ios/src/d41507a6c8eac3829efd9b05247acac1fcc51f8f/Demo/MNG-Ads-SDK/BeaconForStoreSDK.framework/?at=master
 [BeaconForStoreStorage.bundle]:https://bitbucket.org/mngcorp/mngads-demo-ios/src/HEAD/Demo/MNG-Ads-SDK/BeaconForStoreStorage.bundle/?at=master
 [App Transport Security]:https://developer.apple.com/library/content/documentation/General/Reference/InfoPlistKeyReference/Articles/CocoaKeys.html#//apple_ref/doc/uid/TP40009251-SW33
+[umoove.framework]:https://bitbucket.org/mngcorp/mngads-demo-ios/src/HEAD/Demo/Umoove.framework/?at=master
