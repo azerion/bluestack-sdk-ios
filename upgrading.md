@@ -2,6 +2,12 @@
 
 See [Wiki], [Design Guidelines and Best practices] and [Help Center]  for more detailed informations. you must check [Change Log] .
 
+## Upgrading to 2.8.0
+
+- use new GoogleMobileAds 7.26.0 version [GoogleMobileAds.framework]
+- use new Flurry 8.3.1 version [libFlurryAds] , [libFlurry]
+- use new SmartAdServer 6.7.2 version [libSmartAdServer.a]
+- use new [MngAdsSDK]
 
 ## Upgrading to 2.7.2
 
