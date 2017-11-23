@@ -6,7 +6,7 @@ See [Wiki], [Design Guidelines and Best practices] and [Help Center]  for more d
 you must check [Upgrade Guide]. You need to keep all Ad Network libs up to date. 
 
 
-## Version 2.8.0
+## Version 2.8
 #### Release date: November 23th, 2017
 - **Features**
     - Support iPhone X.
