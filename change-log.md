@@ -19,8 +19,10 @@ you must check [Upgrade Guide]. You need to keep all Ad Network libs up to date.
     - Eyes tracking Optimizations
 
 
+
 - **Bug Fixes**
     - manage WKWebView or UIWebView server side to avoid clicks issues
+
 
 - **Ad Network Mediation Updates**
     - use new GoogleMobileAds 7.26.0 version [GoogleMobileAds.framework]
