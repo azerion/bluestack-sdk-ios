@@ -12,7 +12,7 @@ you must check [Upgrade Guide]. You need to keep all Ad Network libs up to date.
 - Support iPhone X.
 - Full support for ios11 and xcode 9.
 - Implemented new preferredHeight logic for banner ads and MAS.
-- New [MAdvertiseRewardedVideoAd].
+- New [Rewarded Video for iOS].
 - New reset SDK button in debug gyro.
 - Fix minor bugs.
 - manage WKWebView or UIWebView server side.
@@ -646,4 +646,4 @@ You must update [MngAdsSDK], [libSmartAdServer.a] (not available from pod update
 [debug-mode-gyro]:https://bitbucket.org/mngcorp/mngads-demo-ios/wiki/debug-mode-gyro
 [BeaconForStoreSDK.framework]:https://bitbucket.org/mngcorp/mngads-demo-ios/src/d41507a6c8eac3829efd9b05247acac1fcc51f8f/Demo/MNG-Ads-SDK/BeaconForStoreSDK.framework/?at=master
 [umoove.framework]:https://bitbucket.org/mngcorp/mngads-demo-ios/src/HEAD/Demo/Umoove.framework/?at=master
-[MAdvertiseRewardedVideoAd]:https://bitbucket.org/mngcorp/mngads-demo-ios/wiki/rewarded-video-ios
+[Rewarded Video for iOS]:https://bitbucket.org/mngcorp/mngads-demo-ios/wiki/rewarded-video-ios
