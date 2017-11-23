@@ -8,21 +8,25 @@ you must check [Upgrade Guide]. You need to keep all Ad Network libs up to date.
 
 ## Version 2.8.0
 #### Release date: November 23th, 2017
+- **Features**
+    - Support iPhone X.
+    - Full support for ios11 and xcode 9.
+    - Implemented new preferredHeight logic for banner ads and MAS.
+    - New [Rewarded Video for iOS].
+    - New reset SDK button in debug gyro.
+    - now MAS support video and vast format for infeed, interstitial and medium rectangle
+    - New blurry background for video ads (multiple formats).
+    - Eyes tracking Optimizations
 
-- Support iPhone X.
-- Full support for ios11 and xcode 9.
-- Implemented new preferredHeight logic for banner ads and MAS.
-- New [Rewarded Video for iOS].
-- New reset SDK button in debug gyro.
-- Fix minor bugs.
-- manage WKWebView or UIWebView server side.
-- now MAS support video and vast format for infeed, interstitial and medium rectangle
-- New blurry background for video ads (multiple formats).
 
-- use new GoogleMobileAds 7.26.0 version [GoogleMobileAds.framework]
-- use new Flurry 8.3.1 version [libFlurryAds] , [libFlurry]
-- use new SmartAdServer 6.7.2 version [libSmartAdServer.a]
-- use new [MngAdsSDK]
+- **Bug Fixes**
+    - manage WKWebView or UIWebView server side to avoid clicks issues
+
+- **Ad Network Mediation Updates**
+    - use new GoogleMobileAds 7.26.0 version [GoogleMobileAds.framework]
+    - use new Flurry 8.3.1 version [libFlurryAds] , [libFlurry]
+    - use new SmartAdServer 6.7.2 version [libSmartAdServer.a]
+    - use new [MngAdsSDK]
 
 ## Version 2.7.2
 #### Release date: September 18th, 2017
