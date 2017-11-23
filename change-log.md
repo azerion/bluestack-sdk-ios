@@ -5,6 +5,25 @@ See [Wiki], [Design Guidelines and Best practices] and [Help Center]  for more d
 
 you must check [Upgrade Guide]. You need to keep all Ad Network libs up to date. 
 
+
+## Version 2.8.0
+#### Release date: November 23th, 2017
+
+- Support iPhone X.
+- Full support for ios11 and xcode 9.
+- Implemented new preferredHeight logic for banner ads and MAS.
+- New [MAdvertiseRewardedVideoAd].
+- New reset SDK button in debug gyro.
+- Fix minor bugs.
+- manage WKWebView or UIWebView server side.
+- now MAS support video and vast format for infeed, interstitial and medium rectangle
+- New blurry background for video ads (multiple formats).
+
+- use new GoogleMobileAds 7.26.0 version [GoogleMobileAds.framework]
+- use new Flurry 8.3.1 version [libFlurryAds] , [libFlurry]
+- use new SmartAdServer 6.7.2 version [libSmartAdServer.a]
+- use new [MngAdsSDK]
+
 ## Version 2.7.2
 #### Release date: September 18th, 2017
 
@@ -627,3 +646,4 @@ You must update [MngAdsSDK], [libSmartAdServer.a] (not available from pod update
 [debug-mode-gyro]:https://bitbucket.org/mngcorp/mngads-demo-ios/wiki/debug-mode-gyro
 [BeaconForStoreSDK.framework]:https://bitbucket.org/mngcorp/mngads-demo-ios/src/d41507a6c8eac3829efd9b05247acac1fcc51f8f/Demo/MNG-Ads-SDK/BeaconForStoreSDK.framework/?at=master
 [umoove.framework]:https://bitbucket.org/mngcorp/mngads-demo-ios/src/HEAD/Demo/Umoove.framework/?at=master
+[MAdvertiseRewardedVideoAd]:https://bitbucket.org/mngcorp/mngads-demo-ios/wiki/rewarded-video-ios
