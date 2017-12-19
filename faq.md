@@ -3,6 +3,25 @@
 This document answers the following frequently asked questions:
 
 [TOC]
+
+# IOS11
+
+## iphone x and safe area
+
+```
+#!objective-c
+
+adView.frame = CGRectMake(0, 0, width, preferredHeight); //O by default
+if (@available(iOS 11.0, *)) {
+if ([UIApplication sharedApplication].keyWindow.safeAreaInsets.top > 0.0) {
+// iphone X and safe area
+CGFloat safeAreaTopInset =[UIApplication sharedApplication].keyWindow.safeAreaInsets.top;
+adView.frame = CGRectMake(0, safeAreaTopInset, width, preferredHeight);
+}
+}
+```
+
+
 # ATS
 
 ## App Transport Security Settings
