@@ -2,6 +2,13 @@
 
 See [Wiki], [Design Guidelines and Best practices] and [Help Center]  for more detailed informations. you must check [Change Log] .
 
+
+## Upgrading to 2.8.1
+
+- use new Flurry 8.3.4 version [libFlurryAds] , [libFlurry]
+- use new AmazonAd SDK 2.2.15.1 version [AmazonAd.framework]
+- use new [MngAdsSDK]
+
 ## Upgrading to 2.8
 
 - use new GoogleMobileAds 7.26.0 version [GoogleMobileAds.framework]
