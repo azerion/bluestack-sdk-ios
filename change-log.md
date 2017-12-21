@@ -24,7 +24,7 @@ you must check [Upgrade Guide]. You need to keep all Ad Network libs up to date.
 
     - Use new Flurry 8.3.4 version [libFlurryAds] , [libFlurry]
     - Use new AmazonAd SDK 2.2.15.1 version [AmazonAd.framework]
-    - Use new [MngAdsSDK]
+    - Use new [MngAdsSDK] + *Adapter.a
 
 
 
