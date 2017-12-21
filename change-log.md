@@ -3,7 +3,29 @@
 See [Wiki], [Design Guidelines and Best practices] and [Help Center]  for more detailed informations.
 
 
-you must check [Upgrade Guide]. You need to keep all Ad Network libs up to date. 
+you must check [Upgrade Guide]. You need to keep all Ad Network libs up to date.
+
+## Version 2.8.1
+#### Release date: December 21th, 2017
+
+- **Features**
+
+     - Use Browser user-agent for headers of all requests.
+     - Support iPhone X and IOS11 for banner (UIScrollViewContentInsetAdjustmentNever, useful in full screen applications.)
+
+- **Bug Fixes**
+
+    - Fix mraid rendering and click on MAS ads.
+    - Fix the the category issue of the AVAudioSession
+    - Fix DFP's adchoice misposition issue on [nativead format].
+    - Fix RewardedVideoAd delegate methods where in some scenarios didFail was not called.
+
+- **Ad Network Mediation Updates**
+
+    - Use new Flurry 8.3.4 version [libFlurryAds] , [libFlurry]
+    - Use new AmazonAd SDK 2.2.15.1 version [AmazonAd.framework]
+    - Use new [MngAdsSDK]
+
 
 
 ## Version 2.8
@@ -653,3 +675,4 @@ You must update [MngAdsSDK], [libSmartAdServer.a] (not available from pod update
 [BeaconForStoreSDK.framework]:https://bitbucket.org/mngcorp/mngads-demo-ios/src/d41507a6c8eac3829efd9b05247acac1fcc51f8f/Demo/MNG-Ads-SDK/BeaconForStoreSDK.framework/?at=master
 [umoove.framework]:https://bitbucket.org/mngcorp/mngads-demo-ios/src/HEAD/Demo/Umoove.framework/?at=master
 [Rewarded Video for iOS]:https://bitbucket.org/mngcorp/mngads-demo-ios/wiki/rewarded-video-ios
+[nativead format]:https://bitbucket.org/mngcorp/mngads-demo-ios/wiki/nativead
