@@ -657,13 +657,10 @@ You must update [MngAdsSDK], [libSmartAdServer.a] (not available from pod update
 ---
 [Upgrade Guide]:https://bitbucket.org/mngcorp/mngads-demo-ios/wiki/upgrading
 [MngAdsSDK]:https://bitbucket.org/mngcorp/madvertise-ios-sdk/src/HEAD/MNGAds
-[libSmartAdServer.a]:https://bitbucket.org/mngcorp/mngads-demo-ios/src/HEAD/Demo/Pods/SmartAdServer-DisplaySDK/SmartAdServer/sdk/?at=master
-[FBAudienceNetwork.framework]:https://bitbucket.org/mngcorp/mngads-demo-ios/src/HEAD/Demo/Pods/FBAudienceNetwork/?at=master
 [GoogleMobileAds.framework]:https://bitbucket.org/mngcorp/mngads-demo-ios/src/HEAD/Demo/Pods/Google-Mobile-Ads-SDK/?at=master
 [Design Guidelines and Best practices]:https://bitbucket.org/mngcorp/mngads-demo-ios/wiki/guidelines
 [Wiki]:https://bitbucket.org/mngcorp/mngads-demo-ios/wiki/
 [Help Center]:https://bitbucket.org/mngcorp/mngads-demo-ios/wiki/faq
-[AmazonAd.framework]:https://bitbucket.org/mngcorp/mngads-demo-ios/src/HEAD/Demo/MNG-Ads-SDK/AdsSDKs/AmazonAd.framework/?at=master
 [LiveRailSDK.framework]:https://bitbucket.org/mngcorp/mngads-demo-ios/src/HEAD/Demo/MNG-Ads-SDK/AdsSDKs/LiveRailSDK.framework/?at=master
 [libFlurryAds]:https://bitbucket.org/mngcorp/mngads-demo-ios/src/HEAD/Demo/Pods/Flurry-iOS-SDK/?at=master
 [libFlurry]:https://bitbucket.org/mngcorp/mngads-demo-ios/src/HEAD/Demo/Pods/Flurry-iOS-SDK/?at=master
@@ -676,3 +673,10 @@ You must update [MngAdsSDK], [libSmartAdServer.a] (not available from pod update
 [umoove.framework]:https://bitbucket.org/mngcorp/mngads-demo-ios/src/HEAD/Demo/Umoove.framework/?at=master
 [Rewarded Video for iOS]:https://bitbucket.org/mngcorp/mngads-demo-ios/wiki/rewarded-video-ios
 [nativead format]:https://bitbucket.org/mngcorp/mngads-demo-ios/wiki/nativead
+
+[libSmartAdServer.a]:http://help.smartadserver.com/en/#../../../../specifications/Content/MobileSpecifications/Apps.htm
+[FBAudienceNetwork.framework]:https://developers.facebook.com/docs/ios/downloads
+[GoogleMobileAds.framework]:https://developers.google.com/mobile-ads-sdk/docs/dfp/ios/download
+[AmazonAd.framework]:https://developer.amazon.com/sdk-download
+[libFlurryAds.a]:https://github.com/flurry/ios-AdIntegrationSamples/tree/master/Pods/Flurry-iOS-SDK
+[libFlurry.a]:https://github.com/flurry/ios-AdIntegrationSamples/tree/master/Pods/Flurry-iOS-SDK
