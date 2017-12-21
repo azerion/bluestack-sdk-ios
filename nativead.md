@@ -184,23 +184,3 @@ badge in the nativeAd is customizable now using the method:
 ## 7. click - registerViewForInteraction
 
 It's **HIGHLY** recommended to only register ONE and ONLY one view for interaction , because some of the AdNetworks only accept one view and if you try to assign more than one then probably none of the views you assign will be responsive.
-
-## 8. AdChoice
-
-
-most of the nativeads return an AdChoice view , which can be retrieved from MNGNAtiveObject within it s attribute badgeView, once retrieved you can use this view freely to place it wherever you see fit , change it s frame ...
-However some adnetworks does not offer this kind of freedom to manipulate its adchoice view, however they chose to place it automatically itself, in some cases, the position varies from one ad to another even if both comes from the same adnetwork, for example DFP. Understandably as publisher you want to give your application a uniformal appearance, so solve this "random" adchoice postioning in some cases here we provide a workaround:
-First you would want to add a UIButton covering the entire nativead content, and so not to block the user interactions you would want to make it s UserInteractionEnabled to false, now you will find a new property returned within the factory you used to load the nativead called loadedAdNetworkd which indicates from which adnetwork the native ad was loaded, and in the case of DFP, you would want to passe that new clear button as the callToAction instead of the your regular callToAction button, here s an example:
-```
-#!objective-c
-if ([nativeAdsFactory.loadedAdNetworkd.class.description isEqualToString:@"MNGDFPAdapter"]) {
-        [_nativeObject registerViewForInteraction:self.nativeView withViewController:Your_ViewController withClickableView:self.dfpCallToAction];
-    }else{
-        [_nativeObject registerViewForInteraction:self.nativeView withViewController:Your_ViewController withClickableView:self.regularCallToActionButton];
-    }
-
-```
-
-
-obviously this would make the entire nativeAd clickable instead of just your regular callToAction button.
-See our demo for more detailed informations and a complete example.
