@@ -138,7 +138,7 @@ callToAction=nativeObject.callToAction;
 ![native-ios.png](https://bitbucket.org/repo/aen579/images/1393323123-native-ios.png)
 
 
-## 4. v2.0 or above
+## 4. Video
 You can also integrate video ads into your Native Ad experience. To enable video you must complete the following steps:
  - Have SDK version 2.0 or later
  -  You have to call [setMediaContainer:(UIView*)] then the sdk will handle the rendering process ( displaying)  the image cover or the media video inside the view group that depends on the ad network result
