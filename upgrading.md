@@ -2,6 +2,32 @@
 
 See [Wiki], [Design Guidelines and Best practices] and [Help Center]  for more detailed informations. you must check [Change Log] .
 
+## Upgrading to 2.9
+
+ - new delegate method to notify the publisher if the sdk fails its initialization :
+
+```objc
+-(void)MNGAdsSDKFactoryDidFailInitializationWithError:(NSError *)error {
+    NSLog(@"MNGAds failed initialization");
+}
+```
+
+- [nativead format], using MNGPreference you can set the preferred adchoices position , although you need to keep in mind that in some cases it might not position it where mentioned since some of the adnetworks won't take this parameter into consideration , so preferably set the preferred position here as well in the didLoad once the request succeeds.
+
+Finally to execute the request you have to call '[loadNativeWithPreferences]'.
+
+```objc
+MNGPreference *preferences = MNGPreference *preferences = [[MNGPreference alloc]init];
+preferences.preferredAdChoicesPosition = MAdvertiseAdChoiceTopLeft;
+[nativeAdsFactory loadNativeWithPreferences:preferences];
+```
+
+- Use new GoogleMobileAds 7.27.0 version [GoogleMobileAds.framework]
+- Use new FacebookAudience 4.27.2 version
+- Use new BeaconForStoreSDK 2.2.13 version
+- Use new [MngAdsSDK] + *Adapter.a
+
+
 
 ## Upgrading to 2.8.1
 
@@ -410,3 +436,4 @@ instead of
 [umoove.framework]:https://bitbucket.org/mngcorp/mngads-demo-ios/src/HEAD/Demo/Umoove.framework/?at=master
 [Help Center]:https://bitbucket.org/mngcorp/mngads-demo-ios/wiki/faq
 [Change Log]:https://bitbucket.org/mngcorp/mngads-demo-ios/wiki/change-log
+[nativead format]:https://bitbucket.org/mngcorp/mngads-demo-ios/wiki/nativead
