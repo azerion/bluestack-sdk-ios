@@ -5,6 +5,31 @@ See [Wiki], [Design Guidelines and Best practices] and [Help Center]  for more d
 
 you must check [Upgrade Guide]. You need to keep all Ad Network libs up to date.
 
+## Version 2.9
+#### Release date: January 6th, 2018
+
+- **Features**
+
+     - The SDK can now handle multiple App_IDs in the same app without causing any issues.
+     - Eyes tracking feature extended to include native ads as well.
+     - New delegate method to notify the publisher if the sdk fails its initialization.
+     - Improve dispatcher Ad Network tracking for MAT (adrequest-adn).
+     - New attribute in MNGPreference to set the preferred position for the adChoices.
+     - Support native video ads provided by smartAdserver.
+
+- **Bug Fixes**
+
+    - Fix nil value for [MNGAdsSDKFactory isInitialized] right after running the app, now it will always contain the correct value.
+    - Fix null version and app_id for the adrequest api.
+    - Fix amazon banner ad size (**important**).
+
+- **Ad Network Mediation Updates**
+
+    - Use new GoogleMobileAds 7.27.0 version [GoogleMobileAds.framework]
+    - Use new FacebookAudience 4.27.2 version [FBAudienceNetwork.framework]
+    - Use new BeaconForStoreSDK 2.2.13 version
+    - Use new [MngAdsSDK] + *Adapter.a
+
 ## Version 2.8.1
 #### Release date: December 21th, 2017
 
@@ -675,7 +700,7 @@ You must update [MngAdsSDK], [libSmartAdServer.a] (not available from pod update
 [nativead format]:https://bitbucket.org/mngcorp/mngads-demo-ios/wiki/nativead
 
 [libSmartAdServer.a]:http://help.smartadserver.com/en/#../../../../specifications/Content/MobileSpecifications/Apps.htm
-[FBAudienceNetwork.framework]:https://developers.facebook.com/docs/ios/downloads
+[FBAudienceNetwork.framework]:https://developers.facebook.com/docs/audience-network/download
 [GoogleMobileAds.framework]:https://developers.google.com/mobile-ads-sdk/docs/dfp/ios/download
 [AmazonAd.framework]:https://developer.amazon.com/sdk-download
 [libFlurryAds.a]:https://github.com/flurry/ios-AdIntegrationSamples/tree/master/Pods/Flurry-iOS-SDK
