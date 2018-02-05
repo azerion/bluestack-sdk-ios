@@ -6,7 +6,7 @@ See [Wiki], [Design Guidelines and Best practices] and [Help Center]  for more d
 you must check [Upgrade Guide]. You need to keep all Ad Network libs up to date.
 
 ## Version 2.9
-#### Release date: January 6th, 2018
+#### Release date: February 6th, 2018
 
 - **Features**
 
