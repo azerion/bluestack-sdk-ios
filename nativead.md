@@ -6,6 +6,13 @@ for rendering the ad views using the information we supply. Native ads however o
 
 ## 1. Requesting a native ad
 
+##### Import the necessary classes
+
+```objc
+#import "MNGNAtiveObject.h"
+#import "MNGAdsSDKFactory.h"
+```
+
 ##### Init factory
 
 To create a nativeAd  you have to init an object with type MNGAdsSDKFactory and set the nativeDelegate.
@@ -20,15 +27,16 @@ You have also to set placementId (minimum one time)
 nativeAdsFactory.placementId = @"/YOUR_APP_ID/PLACEMENT_ID";
 ```
 ##### Make a request for native ad
-To make a request you have to call '[createNative]'. this method return a bool value (canHandleRequest) 
+Using MNGPreference you can set the preferred adchoices position , although you need to keep in mind that in some cases it might not position it where mentioned since some of the adnetworks wont take this parameter into consideration , so preferably set the preferred position here as well in the didLoad once the request succeeds.
+
+Finally to execute the request you have to call '[loadNativeWithPreferences]'.
 
 ```objc
-if([nativeAdsFactory createNative]){
-//Wait callBack from delegate
-}else{
-//adsFactory can not handle your request
-}
+MNGPreference *preferences = MNGPreference *preferences = [[MNGPreference alloc]init];
+preferences.preferredAdChoicesPosition = MAdvertiseAdChoiceTopLeft;
+[nativeAdsFactory loadNativeWithPreferences:preferences];
 ```
+
 ##### Handle callBack from NativeDelegate
 [adsAdapter:nativeObjectDidLoad:] will be called by the SDK when your nativeObject is ready. now you can create your own view.
 ```objc
@@ -55,44 +63,44 @@ Once a native ad is loaded, you may retrieve its metadata with the following met
 
 ###**Main Image**
 
- - 1200x627px image, 
+ - 1200x627px image,
  - Wide aspect ratio main image.
  - asset name : **nativeObject.coverImageUrl**
- 
- 
+
+
 ###**Icon Image**
 
  - 128x128 max
  - asset name : **nativeObject.photoUrl**
- 
- 
+
+
 ###**Ad Title**
 
  - 50 maximum character length string of ad headline
  - Provide enough space to display the entire length of the Ad Title
  - asset name : **nativeObject.title**
- 
- 
+
+
 ###**Ad Text**
 
  - 150 maximum character length string of ad text
  - Provide enough space to display the entire length of the Ad Text
  - asset name : **nativeObject.body**
- 
+
 ###**CTA Text**
 
  - Text for a button
  - 12 characters maximum
  - asset name : **nativeObject.callToAction**
- 
- 
+
+
 ###**Sponsored Marker**
 
  - Badge view (an icon)
  - change according ad network
  - must be inserted on top right
  - asset name : **nativeObject.adChoiceBadgeView**
- 
+
 ###**Distinguishable Ad**
 
  - “Ad” (can be localized)
