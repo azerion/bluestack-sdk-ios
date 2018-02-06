@@ -21,10 +21,9 @@ MNGPreference *preferences = MNGPreference *preferences = [[MNGPreference alloc]
 preferences.preferredAdChoicesPosition = MAdvertiseAdChoiceTopLeft;
 [nativeAdsFactory loadNativeWithPreferences:preferences];
 ```
-
+- **Add new MoPub 4.15.0 version, [MoPub Marketplace] + [libMAdvertiseMoPubAdapter.a]**
 - Use new GoogleMobileAds 7.27.0 version [GoogleMobileAds.framework]
 - Use new FacebookAudience 4.27.2 version
-- Use new BeaconForStoreSDK 2.2.13 version
 - Use new [MngAdsSDK] + *Adapter.a
 
 
@@ -437,3 +436,5 @@ instead of
 [Help Center]:https://bitbucket.org/mngcorp/mngads-demo-ios/wiki/faq
 [Change Log]:https://bitbucket.org/mngcorp/mngads-demo-ios/wiki/change-log
 [nativead format]:https://bitbucket.org/mngcorp/mngads-demo-ios/wiki/nativead
+[MoPub Marketplace]: https://github.com/mopub/mopub-ios-sdk
+[libMAdvertiseMoPubAdapter.a]:https://bitbucket.org/mngcorp/madvertise-ios-sdk/src/HEAD/MNGAds
