@@ -14,7 +14,7 @@ you must check [Upgrade Guide]. You need to keep all Ad Network libs up to date.
      - Eyes tracking feature extended to include native ads as well.
      - New delegate method to notify the publisher if the sdk fails its initialization.
      - Improve dispatcher Ad Network tracking for MAT (adrequest-adn).
-     - New attribute in MNGPreference to set the preferred position for the adChoices.
+     - New attribute in MNGPreference to set [Native Ad Choice position]s.
      - Support native video ads provided by smartAdserver.
 
 - **Bug Fixes**
@@ -708,3 +708,4 @@ You must update [MngAdsSDK], [libSmartAdServer.a] (not available from pod update
 [libFlurry.a]:https://github.com/flurry/ios-AdIntegrationSamples/tree/master/Pods/Flurry-iOS-SDK
 [MoPub Marketplace]: https://github.com/mopub/mopub-ios-sdk
 [libMAdvertiseMoPubAdapter.a]:https://bitbucket.org/mngcorp/madvertise-ios-sdk/src/HEAD/MNGAds
+[Native Ad Choice position]:https://bitbucket.org/mngcorp/mngads-demo-ios/wiki/nativead#markdown-header-native-ad-adchoice
