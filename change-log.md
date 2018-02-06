@@ -25,6 +25,7 @@ you must check [Upgrade Guide]. You need to keep all Ad Network libs up to date.
 
 - **Ad Network Mediation Updates**
 
+    - **Add new MoPub 4.15.0 version, [MoPub Marketplace] + [libMAdvertiseMoPubAdapter.a]**
     - Use new GoogleMobileAds 7.27.0 version [GoogleMobileAds.framework]
     - Use new FacebookAudience 4.27.2 version [FBAudienceNetwork.framework]
     - Use new BeaconForStoreSDK 2.2.13 version
@@ -705,3 +706,5 @@ You must update [MngAdsSDK], [libSmartAdServer.a] (not available from pod update
 [AmazonAd.framework]:https://developer.amazon.com/sdk-download
 [libFlurryAds.a]:https://github.com/flurry/ios-AdIntegrationSamples/tree/master/Pods/Flurry-iOS-SDK
 [libFlurry.a]:https://github.com/flurry/ios-AdIntegrationSamples/tree/master/Pods/Flurry-iOS-SDK
+[MoPub Marketplace]: https://github.com/mopub/mopub-ios-sdk
+[libMAdvertiseMoPubAdapter.a]:https://bitbucket.org/mngcorp/madvertise-ios-sdk/src/HEAD/MNGAds
