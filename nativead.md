@@ -29,6 +29,8 @@ nativeAdsFactory.placementId = @"/YOUR_APP_ID/PLACEMENT_ID";
 ##### Make a request for native ad
 Using MNGPreference you can set the preferred adchoices position , although you need to keep in mind that in some cases it might not position it where mentioned since some of the adnetworks wont take this parameter into consideration , so preferably set the preferred position here as well in the didLoad once the request succeeds.
 
+###### Native Ad AdChoice
+
 Finally to execute the request you have to call '[loadNativeWithPreferences]'.
 
 ```objc
