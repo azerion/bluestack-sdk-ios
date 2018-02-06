@@ -12,6 +12,7 @@ MNG Ads provides functionalities for monetizing your mobile application: from pr
 - [Amazon]
 - [Flurry]
 - [Beacon For Store]
+- [MoPub Marketplace]
 
 It contains a dispacher that will select an ads server according to the priority and state ([mngAds state diagram]).
 
@@ -68,6 +69,7 @@ MngAds SDK needs, these libraries are in demo project :
 - [AmazonAd.framework]
 - [libFlurryAds.a]
 - [libFlurry.a]
+- [MoPub Marketplace]
 - [BeaconForStoreSDK.framework] (use geographical position of the user)
 - [BeaconForStoreStorage.bundle] (use geographical position of the user)
 - [umoove.framework],  (mandatory, eyes tracking solution for MAS, need camera permission)
@@ -93,6 +95,7 @@ MngAds SDK needs, these libraries are in demo project :
  - [libMNGAdsSASAdapter.a]
  - [libMNGAmazonAdapter.a]
  - [libMNGFlurryAdapter.a]
+ - [libMAdvertiseMoPubAdapter.a]
  - [libMAdvertiseB4SAdapter.a] (use geographical position of the user)
 
 You can see [Installation guide for Swift]
@@ -213,6 +216,10 @@ To check out if the SDK is initialized or not, you have to use `[MNGAdsSDKFactor
     if (YOUR_APP_IS_READY_TO_SHOW_AD) {
         INIT_FACTORIES_AND_USE_THEM_TO_SHOW_ADS;
     }
+}
+
+-(void)MNGAdsSDKFactoryDidFailInitializationWithError:(NSError *)error {
+    NSLog(@"MNGAds failed initialization");
 }
 ```
 ### MAdvertiseBeacon
@@ -586,6 +593,7 @@ informations that you can set are:
 - gender : gender of user
 - keyWord : Use free-form key-values when you want to pass targeting values dynamically into an ad tag based on information you collect from your users. You can also use free-form key-values when there are too many possible values to define in advance. Separator in case of multiple entries is **;**.
 - content url : URL for content related to your app (url must be a string which length not exceed 512 caracters).
+- preferredAdChoicesPosition : set the preferred adchoices position , although you need to keep in mind that in some cases it might not position it where mentioned since some of the adnetworks wont take this parameter into consideration , so preferably set the preferred position here as well in the didLoad once the request succeeds.
 
 
 ```
@@ -726,6 +734,7 @@ Keep in mind that in order to track the user's face, the app will require the us
 [libMNGAmazonAdapter.a]:https://bitbucket.org/mngcorp/madvertise-ios-sdk/src/HEAD/MNGAds
 [libMNGFlurryAdapter.a]:https://bitbucket.org/mngcorp/madvertise-ios-sdk/src/HEAD/MNGAds
 [libMNGLiveRailAdapter.a]:https://bitbucket.org/mngcorp/mngads-demo-ios/src/HEAD/MNGAds/libMNGLiveRailAdapter.a?at=master&fileviewer=file-view-default
+[libMAdvertiseMoPubAdapter.a]:https://bitbucket.org/mngcorp/madvertise-ios-sdk/src/HEAD/MNGAds
 [see our Faq]:https://bitbucket.org/mngcorp/mngads-demo-ios/wiki/faq#markdown-header--objc-linker-flag-required
 
 [libMAdvertiseB4SAdapter.a]:https://bitbucket.org/mngcorp/mngads-demo-ios/src/HEAD/MNGAds/libMAdvertiseB4SAdapter.a?at=master&fileviewer=file-view-default
@@ -737,3 +746,5 @@ Keep in mind that in order to track the user's face, the app will require the us
 
 [umoove.framework]:https://bitbucket.org/mngcorp/mngads-demo-ios/src/HEAD/Demo/Umoove.framework/?at=master
 [MAdvertiseBeacon guide]:https://bitbucket.org/mngcorp/mngads-demo-ios/wiki/MAdvertiseBeacon
+
+[MoPub Marketplace]: https://github.com/mopub/mopub-ios-sdk
