@@ -2,6 +2,15 @@
 
 See [Wiki], [Design Guidelines and Best practices] and [Help Center]  for more detailed informations. you must check [Change Log] .
 
+
+## Upgrading to 2.9.1
+
+- Use new Flurry 8.4.0 version [libFlurryAds] , [libFlurry]
+- Use new MoPub 4.20.1 version, [MoPub Marketplace]
+- Use new GoogleMobileAds 7.29.0 version [GoogleMobileAds.framework]
+- Use new FacebookAudience 4.28.0 version [FBAudienceNetwork.framework]
+- Use new [MngAdsSDK]
+
 ## Upgrading to 2.9
 
  - new delegate method to notify the publisher if the sdk fails its initialization :
