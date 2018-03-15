@@ -5,6 +5,32 @@ See [Wiki], [Design Guidelines and Best practices] and [Help Center]  for more d
 
 you must check [Upgrade Guide]. You need to keep all Ad Network libs up to date.
 
+## Version 2.9.1
+#### Release date: March 15th, 2018
+
+- **Features**
+
+     - Support transparent interstitials (smartAdserver + MAS).
+     - Implement a new way to track clicks on ads.
+     - Improve pixel impression tracking.
+     - Edit c_facedetection = 0 if the user refuses to grant permission to use the camera (Eyes Tracking).
+     - Support native ad video and vast (MAS).
+
+- **Bug Fixes**
+
+    - fix (null) inall bug.
+    - Fix custom close button on mraid interstitials.
+    - Fix high cpu usage bug when app goes to background.
+
+- **Ad Network Mediation Updates**
+
+    - **Add new MoPub 4.20.1 version, [MoPub Marketplace] + [libMAdvertiseMoPubAdapter.a]**
+    - Use new GoogleMobileAds 7.29.0 version [GoogleMobileAds.framework]
+    - Use new FacebookAudience 4.28.0 version [FBAudienceNetwork.framework]
+    - Use new BeaconForStoreSDK 2.2.14 version
+    - Use new Flurry 8.4.0 version [libFlurryAds] , [libFlurry]
+    - Use new [MngAdsSDK] + *Adapter.a
+
 ## Version 2.9
 #### Release date: February 6th, 2018
 
