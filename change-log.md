@@ -32,6 +32,8 @@ you must check [Upgrade Guide]. You need to keep all Ad Network libs up to date.
     - Use new SmartAdServer 6.9 version [libSmartAdServer.a]
     - Use new [MngAdsSDK] + *Adapter.a
 
+All *Adapter.a available on https://bitbucket.org/mngcorp/mngads-demo-ios/downloads/MNGAds-v2.10.zip
+
 ## Version 2.9.1
 #### Release date: March 15th, 2018
 
