@@ -2,6 +2,27 @@
 
 See [Wiki], [Design Guidelines and Best practices] and [Help Center]  for more detailed informations. you must check [Change Log] .
 
+## Upgrading to 2.10
+
+- GDPR: a new class has been introduced to facilitate complying with GDPR MAdvertiseConsent, you will need to create an instance of this new class and pass it to the sdk using the class method setConsentInformation , eg :
+
+```objc
+
+MAdvertiseConsent *consent = [[MAdvertiseConsent alloc]initWithGDPRScope:true.on andConsentStrings:@{@"IAB":"BONlRnIONlRnIAAABAENAAAAAAAAoAA"}];
+[MAdvertiseConsent setConsentInformation:consent]
+
+```
+
+for more details check out the header of the new class it s fully documented.
+
+- **Add new AdColony 3.3.0 version, [AdColony.framework]**
+- **Add new Vectaury 1.5.2 version, [Vectaury.framework] :**
+- Use new Flurry 8.5.0 version [libFlurryAds] , [libFlurry]
+- Use new GoogleMobileAds 7.30.0 version [GoogleMobileAds.framework]
+- Use new FacebookAudience 4.28.1 version [FBAudienceNetwork.framework]
+- Use new SmartAdServer 6.9 version [libSmartAdServer.a]
+- Use new [MngAdsSDK]
+
 
 ## Upgrading to 2.9.1
 
@@ -447,3 +468,5 @@ instead of
 [nativead format]:https://bitbucket.org/mngcorp/mngads-demo-ios/wiki/nativead
 [MoPub Marketplace]: https://github.com/mopub/mopub-ios-sdk
 [libMAdvertiseMoPubAdapter.a]:https://bitbucket.org/mngcorp/madvertise-ios-sdk/src/HEAD/MNGAds
+[Vectaury.framework]:https://cdn.vectaury.io/static/sdk/
+[AdColony.framework]:https://github.com/AdColony/AdColony-iOS-SDK-3
