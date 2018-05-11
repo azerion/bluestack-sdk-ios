@@ -5,6 +5,33 @@ See [Wiki], [Design Guidelines and Best practices] and [Help Center]  for more d
 
 you must check [Upgrade Guide]. You need to keep all Ad Network libs up to date.
 
+## Version 2.10
+#### Release date: May 11th, 2018
+
+- **Features**
+
+     - Support window.open to track clicks.
+     - Mediation: added support for AdColony.
+     - Mediation: added support for Vectaury (tracking).
+     - Eyes detection feature now support landscape mode.
+     - GDPR compliance.
+
+
+- **Bug Fixes**
+
+    - fix scrollable interstitials.
+    - fix minor bugs.
+
+- **Ad Network Mediation Updates**
+
+    - **Add new AdColony 3.3.0 version, [AdColony.framework]**
+    - **Add new Vectaury 1.5.2 version, [Vectaury.framework]**
+    - Use new GoogleMobileAds 7.30.0 version [GoogleMobileAds.framework]
+    - Use new FacebookAudience 4.28.1 version [FBAudienceNetwork.framework]
+    - Use new Flurry 8.5.0 version [libFlurryAds] , [libFlurry]
+    - Use new SmartAdServer 6.9 version [libSmartAdServer.a]
+    - Use new [MngAdsSDK] + *Adapter.a
+
 ## Version 2.9.1
 #### Release date: March 15th, 2018
 
@@ -708,7 +735,7 @@ You must update [MngAdsSDK], [libSmartAdServer.a] (not available from pod update
 
 ---
 [Upgrade Guide]:https://bitbucket.org/mngcorp/mngads-demo-ios/wiki/upgrading
-[MngAdsSDK]:https://bitbucket.org/mngcorp/madvertise-ios-sdk/src/HEAD/MNGAds
+[MngAdsSDK]:https://bitbucket.org/mngcorp/mngads-demo-ios/downloads/
 [GoogleMobileAds.framework]:https://bitbucket.org/mngcorp/mngads-demo-ios/src/HEAD/Demo/Pods/Google-Mobile-Ads-SDK/?at=master
 [Design Guidelines and Best practices]:https://bitbucket.org/mngcorp/mngads-demo-ios/wiki/guidelines
 [Wiki]:https://bitbucket.org/mngcorp/mngads-demo-ios/wiki/
@@ -735,3 +762,6 @@ You must update [MngAdsSDK], [libSmartAdServer.a] (not available from pod update
 [MoPub Marketplace]: https://github.com/mopub/mopub-ios-sdk
 [libMAdvertiseMoPubAdapter.a]:https://bitbucket.org/mngcorp/madvertise-ios-sdk/src/HEAD/MNGAds
 [Native Ad Choice position]:https://bitbucket.org/mngcorp/mngads-demo-ios/wiki/nativead#markdown-header-native-ad-adchoice
+[Vectaury.framework]:https://cdn.vectaury.io/static/sdk/
+[AdColony.framework]:https://github.com/AdColony/AdColony-iOS-SDK-3
+[libSmartAdServer.a]:https://bitbucket.org/mngcorp/mngads-demo-ios/downloads/
