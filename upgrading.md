@@ -440,13 +440,13 @@ instead of
 
 
 
-[MngAdsSDK]:https://bitbucket.org/mngcorp/madvertise-ios-sdk/src/HEAD/MNGAds
+[MngAdsSDK]:https://bitbucket.org/mngcorp/mngads-demo-ios/downloads/
 [libSmartAdServer.a]:https://bitbucket.org/mngcorp/mngads-demo-ios/src/HEAD/Demo/Pods/SmartAdServer-DisplaySDK/SmartAdServer/sdk/?at=master
 [FBAudienceNetwork.framework]:https://bitbucket.org/mngcorp/mngads-demo-ios/src/HEAD/Demo/Pods/FBAudienceNetwork/?at=master
 [GoogleMobileAds.framework]:https://bitbucket.org/mngcorp/mngads-demo-ios/src/HEAD/Demo/Pods/Google-Mobile-Ads-SDK/?at=master
 [Design Guidelines and Best practices]:https://bitbucket.org/mngcorp/mngads-demo-ios/wiki/guidelines
 [Wiki]:https://bitbucket.org/mngcorp/mngads-demo-ios/wiki/
-[Help Center]:https://bitbucket.org/mngcorp/mngads-demo-ios/wiki/faq
+[Help Center]:https://bitbucket.org/mngcorp/mngads-demo-ios/wiki/faqhttps://bitbucket.org/mngcorp/mngads-demo-ios/downloads/
 [AmazonAd.framework]:https://bitbucket.org/mngcorp/mngads-demo-ios/src/HEAD/Demo/MNG-Ads-SDK/AdsSDKs/AmazonAd.framework/?at=master
 [LiveRailSDK.framework]:https://bitbucket.org/mngcorp/mngads-demo-ios/src/HEAD/Demo/MNG-Ads-SDK/AdsSDKs/LiveRailSDK.framework/?at=master
 [libFlurryAds]:https://bitbucket.org/mngcorp/mngads-demo-ios/src/HEAD/Demo/Pods/Flurry-iOS-SDK/?at=master
@@ -467,6 +467,6 @@ instead of
 [Change Log]:https://bitbucket.org/mngcorp/mngads-demo-ios/wiki/change-log
 [nativead format]:https://bitbucket.org/mngcorp/mngads-demo-ios/wiki/nativead
 [MoPub Marketplace]: https://github.com/mopub/mopub-ios-sdk
-[libMAdvertiseMoPubAdapter.a]:https://bitbucket.org/mngcorp/madvertise-ios-sdk/src/HEAD/MNGAds
+[libMAdvertiseMoPubAdapter.a]:https://bitbucket.org/mngcorp/mngads-demo-ios/downloads/
 [Vectaury.framework]:https://cdn.vectaury.io/static/sdk/
 [AdColony.framework]:https://github.com/AdColony/AdColony-iOS-SDK-3
