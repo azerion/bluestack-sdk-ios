@@ -13,7 +13,7 @@ MAdvertiseConsent *consent = [[MAdvertiseConsent alloc]initWithGDPRScope:true.on
 
 ```
 
-for more details check out the header of the new class it s fully documented.
+for more details check out the header of the new class it s fully documented and [GDPR] doc.
 
 - **Add new AdColony 3.3.0 version, [AdColony.framework]**
 - **Add new Vectaury 1.5.2 version, [Vectaury.framework] :**
@@ -470,3 +470,4 @@ instead of
 [libMAdvertiseMoPubAdapter.a]:https://bitbucket.org/mngcorp/mngads-demo-ios/downloads/
 [Vectaury.framework]:https://cdn.vectaury.io/static/sdk/
 [AdColony.framework]:https://github.com/AdColony/AdColony-iOS-SDK-3
+[GDPR]:https://bitbucket.org/mngcorp/mngads-demo-ios/wiki/gdpr
