@@ -96,6 +96,8 @@ MngAds SDK needs, these libraries are in demo project :
  - [libMNGAmazonAdapter.a]
  - [libMNGFlurryAdapter.a]
  - [libMAdvertiseMoPubAdapter.a]
+ - [libMAdvertiseAdColonyAdapter.a]
+ - [libMAdvertiseVectauryAdapter.a]
  - [libMAdvertiseB4SAdapter.a] (use geographical position of the user)
 
 You can see [Installation guide for Swift]
@@ -721,30 +723,31 @@ Keep in mind that in order to track the user's face, the app will require the us
 [mngAds state diagram]:https://bitbucket.org/mngcorp/mngads-demo-ios/wiki/diagram
 [Installation guide for Swift]:https://bitbucket.org/mngcorp/mngads-demo-ios/wiki/Swift
 [Design Guidelines and Best practices]:https://bitbucket.org/mngcorp/mngads-demo-ios/wiki/guidelines
-[MNG Ad Server]:https://bitbucket.org/mngcorp/madvertise-ios-sdk/src/HEAD/MNGAds/
+[MNG Ad Server]:https://bitbucket.org/mngcorp/mngads-demo-ios/downloads/
 
 [AmazonAd.framework]:https://developer.amazon.com/sdk-download
 [LiveRailSDK.framework]:https://bitbucket.org/mngcorp/mngads-demo-ios/src/HEAD/Demo/MNG-Ads-SDK/AdsSDKs/LiveRailSDK.framework/?at=master
 [libFlurryAds.a]:https://github.com/flurry/ios-AdIntegrationSamples/tree/master/Pods/Flurry-iOS-SDK
 [libFlurry.a]:https://github.com/flurry/ios-AdIntegrationSamples/tree/master/Pods/Flurry-iOS-SDK
 [Native Ads guidelines]:https://bitbucket.org/mngcorp/mngads-demo-ios/wiki/nativead
-[libMNGAdsDFPAdapter.a]:https://bitbucket.org/mngcorp/madvertise-ios-sdk/src/HEAD/MNGAds
-[libMNGAdsFacebookAdapter.a]:https://bitbucket.org/mngcorp/madvertise-ios-sdk/src/HEAD/MNGAds
-[libMNGAdsSASAdapter.a]:https://bitbucket.org/mngcorp/madvertise-ios-sdk/src/HEAD/MNGAds
-[libMNGAmazonAdapter.a]:https://bitbucket.org/mngcorp/madvertise-ios-sdk/src/HEAD/MNGAds
-[libMNGFlurryAdapter.a]:https://bitbucket.org/mngcorp/madvertise-ios-sdk/src/HEAD/MNGAds
-[libMNGLiveRailAdapter.a]:https://bitbucket.org/mngcorp/mngads-demo-ios/src/HEAD/MNGAds/libMNGLiveRailAdapter.a?at=master&fileviewer=file-view-default
-[libMAdvertiseMoPubAdapter.a]:https://bitbucket.org/mngcorp/madvertise-ios-sdk/src/HEAD/MNGAds
+[libMNGAdsDFPAdapter.a]:https://bitbucket.org/mngcorp/mngads-demo-ios/downloads/
+[libMNGAdsFacebookAdapter.a]:https://bitbucket.org/mngcorp/mngads-demo-ios/downloads/
+[libMNGAdsSASAdapter.a]:https://bitbucket.org/mngcorp/mngads-demo-ios/downloads/
+[libMNGAmazonAdapter.a]:https://bitbucket.org/mngcorp/mngads-demo-ios/downloads/
+[libMNGFlurryAdapter.a]:https://bitbucket.org/mngcorp/mngads-demo-ios/downloads/
+[libMAdvertiseAdColonyAdapter.a]:https://bitbucket.org/mngcorp/mngads-demo-ios/downloads/
+[libMAdvertiseVectauryAdapter.a]:https://bitbucket.org/mngcorp/mngads-demo-ios/downloads/
+[libMAdvertiseMoPubAdapter.a]:https://bitbucket.org/mngcorp/mngads-demo-ios/downloads/
 [see our Faq]:https://bitbucket.org/mngcorp/mngads-demo-ios/wiki/faq#markdown-header--objc-linker-flag-required
 
-[libMAdvertiseB4SAdapter.a]:https://bitbucket.org/mngcorp/mngads-demo-ios/src/HEAD/MNGAds/libMAdvertiseB4SAdapter.a?at=master&fileviewer=file-view-default
+[libMAdvertiseB4SAdapter.a]:https://bitbucket.org/mngcorp/mngads-demo-ios/downloads/
 [BeaconForStoreSDK.framework]:https://github.com/ezeeworld/B4S-iOS-SDK/releases
 [BeaconForStoreStorage.bundle]:https://github.com/ezeeworld/B4S-iOS-SDK/releases
 
 [App Transport Security]:https://developer.apple.com/library/content/documentation/General/Reference/InfoPlistKeyReference/Articles/CocoaKeys.html#//apple_ref/doc/uid/TP40009251-SW60
 [extended the ATS deadline]:https://developer.apple.com/news/?id=12212016b&1482372961
 
-[umoove.framework]:https://bitbucket.org/mngcorp/mngads-demo-ios/src/HEAD/Demo/Umoove.framework/?at=master
+[umoove.framework]:https://bitbucket.org/mngcorp/mngads-demo-ios/downloads/
 [MAdvertiseBeacon guide]:https://bitbucket.org/mngcorp/mngads-demo-ios/wiki/MAdvertiseBeacon
 
 [MoPub Marketplace]: https://github.com/mopub/mopub-ios-sdk
