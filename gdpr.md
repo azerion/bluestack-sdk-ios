@@ -15,9 +15,12 @@ Apps should provide wether they are in the GDPR scope, and if so the consent str
 More informations in the [GDPR Consent Demo]).
 
 Usage example of MAdvertiseConsent
-```java
+```objc
 
+MAdvertiseConsent *consent = [[MAdvertiseConsent alloc]initWithGDPRScope:true.on andConsentStrings:@{@"IAB":"BONlRnIONlRnIAAABAENAAAAAAAAoAA"}];
+[MAdvertiseConsent setConsentInformation:consent]
 ```
+
 `Notes`:  For now, end user consent string must be passed with key name IAB. Anything else will be ignored.
 
 [GDPR Consent Demo]:https://quantcast.mgr.consensu.org/index.html](https://quantcast.mgr.consensu.org/index.html
