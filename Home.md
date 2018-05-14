@@ -705,7 +705,7 @@ Keep in mind that in order to track the user's face, the app will require the us
 [Mng-perf]:https://bitbucket.org/mngcorp/mngperf-demo-ios
 [Google DFP]:https://developers.google.com/mobile-ads-sdk/download#download
 [Facebook Audience Network]:https://developers.facebook.com/docs/ios?locale=fr_FR
-[MngAdsSDK]:https://bitbucket.org/mngcorp/madvertise-ios-sdk/src/HEAD/MNGAds
+[MngAdsSDK]:https://bitbucket.org/mngcorp/mngads-demo-ios/downloads/
 [MngAds sample app]:https://bitbucket.org/mngcorp/mngads-demo-ios/src/HEAD?at=master
 [appsfire]:https://github.com/appsfire/Appsfire-iOS-SDK
 [Help Center]:https://bitbucket.org/mngcorp/mngads-demo-ios/wiki/faq
