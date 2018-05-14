@@ -12,7 +12,7 @@ you must check [Upgrade Guide]. You need to keep all Ad Network libs up to date.
 
      - Support window.open to track clicks.
      - Mediation: added support for AdColony.
-     - Mediation: added support for Vectaury (tracking).
+     - Mediation: added support for Vectaury ([MAdvertiseVectaury]).
      - Eyes detection feature now support landscape mode.
      - According to the General Data Protection Regulation, we now have the option to provide the consent strings to MAdvertise. See [GDPR] doc.
 
@@ -768,3 +768,4 @@ You must update [MngAdsSDK], [libSmartAdServer.a] (not available from pod update
 [AdColony.framework]:https://github.com/AdColony/AdColony-iOS-SDK-3
 [libSmartAdServer.a]:https://bitbucket.org/mngcorp/mngads-demo-ios/downloads/
 [GDPR]:https://bitbucket.org/mngcorp/mngads-demo-ios/wiki/gdpr
+[MAdvertiseVectaury]:https://bitbucket.org/mngcorp/mngads-demo-ios/wiki/MAdvertiseVectaury
