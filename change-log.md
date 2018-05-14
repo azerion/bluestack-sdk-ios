@@ -743,8 +743,8 @@ You must update [MngAdsSDK], [libSmartAdServer.a] (not available from pod update
 [Wiki]:https://bitbucket.org/mngcorp/mngads-demo-ios/wiki/
 [Help Center]:https://bitbucket.org/mngcorp/mngads-demo-ios/wiki/faq
 [LiveRailSDK.framework]:https://bitbucket.org/mngcorp/mngads-demo-ios/src/HEAD/Demo/MNG-Ads-SDK/AdsSDKs/LiveRailSDK.framework/?at=master
-[libFlurryAds]:https://bitbucket.org/mngcorp/mngads-demo-ios/src/HEAD/Demo/Pods/Flurry-iOS-SDK/?at=master
-[libFlurry]:https://bitbucket.org/mngcorp/mngads-demo-ios/src/HEAD/Demo/Pods/Flurry-iOS-SDK/?at=master
+[libFlurryAds]:https://github.com/flurry/ios-AdIntegrationSamples/tree/master/Pods/Flurry-iOS-SDK
+[libFlurry]:https://github.com/flurry/ios-AdIntegrationSamples/tree/master/Pods/Flurry-iOS-SDK
 [Interstital implementation]:https://bitbucket.org/mngcorp/mngads-demo-ios/wiki/Home#markdown-header-interstitial
 [mnAds Adapters]:https://bitbucket.org/mngcorp/mngads-demo-ios/src/HEAD/Demo/Pods/MNGAds/MNGAds/?at=master
 [In-Feed Ad format]:https://bitbucket.org/mngcorp/mngads-demo-ios/wiki/Home#markdown-header-infeed
@@ -762,10 +762,10 @@ You must update [MngAdsSDK], [libSmartAdServer.a] (not available from pod update
 [libFlurryAds.a]:https://github.com/flurry/ios-AdIntegrationSamples/tree/master/Pods/Flurry-iOS-SDK
 [libFlurry.a]:https://github.com/flurry/ios-AdIntegrationSamples/tree/master/Pods/Flurry-iOS-SDK
 [MoPub Marketplace]: https://github.com/mopub/mopub-ios-sdk
-[libMAdvertiseMoPubAdapter.a]:https://bitbucket.org/mngcorp/madvertise-ios-sdk/src/HEAD/MNGAds
+[libMAdvertiseMoPubAdapter.a]:https://bitbucket.org/mngcorp/mngads-demo-ios/downloads/
 [Native Ad Choice position]:https://bitbucket.org/mngcorp/mngads-demo-ios/wiki/nativead#markdown-header-native-ad-adchoice
 [Vectaury.framework]:https://cdn.vectaury.io/static/sdk/
 [AdColony.framework]:https://github.com/AdColony/AdColony-iOS-SDK-3
-[libSmartAdServer.a]:https://bitbucket.org/mngcorp/mngads-demo-ios/downloads/
+[libSmartAdServer.a]:http://help.smartadserver.com/en/#../../../../specifications/Content/MobileSpecifications/Apps.htm
 [GDPR]:https://bitbucket.org/mngcorp/mngads-demo-ios/wiki/gdpr
 [MAdvertiseVectaury]:https://bitbucket.org/mngcorp/mngads-demo-ios/wiki/MAdvertiseVectaury
