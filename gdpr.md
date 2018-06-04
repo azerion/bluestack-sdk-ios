@@ -11,8 +11,7 @@ MAdvertise provides a method with which the publisher will determine whether GDP
 
 Publishers are free to implement or develop the CMP of their choice as long as the consent management is based on the IAB Transparency & Consent Framework. [Here] is the list of currently available registered CMPs.
 
-Apps should provide wether they are in the GDPR scope, and if so the consent strings.
-More informations in the [GDPR Consent Demo]).
+We have developed our [Madvertise CMP]
 
 Usage example of MAdvertiseConsent
 ```objc
@@ -28,3 +27,4 @@ MAdvertiseConsent *consent = [[MAdvertiseConsent alloc]initWithGDPRScope:true.on
 [IAB EU Transparency Consent Framework]: http://advertisingconsent.eu/
 [Here]: http://advertisingconsent.eu/iab-europe-transparency-consent-framework-list-of-registered-cmps/
 [IAB Europe’s Transparency & Consent Framework.]:http://advertisingconsent.eu/transparency-consent-framework-global-vendor-list/
+[Madvertise CMP]:https://bitbucket.org/mngcorp/madvertise-gdpr-cmp-ios/src
