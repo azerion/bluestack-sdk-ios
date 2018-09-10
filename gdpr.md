@@ -16,7 +16,7 @@ We have developed our [Madvertise CMP]
 Usage example of MAdvertiseConsent
 ```objc
 
-MAdvertiseConsent *consent = [[MAdvertiseConsent alloc]initWithGDPRScope:true.on andConsentStrings:@{@"IAB":"BONlRnIONlRnIAAABAENAAAAAAAAoAA"}];
+MAdvertiseConsent *consent = [[MAdvertiseConsent alloc]initWithGDPRScope:true.on andConsentStrings:@{@"IAB":"BOTjwMuOTjwMuAsABAFRBj-AAAAXAAOQRZiKRoAC0NYBwAADAK4AAAQAAAAALQgAQAYCAEAiAAAAAAAAAAAAAAAAAAg"}];
 [MAdvertiseConsent setConsentInformation:consent];
 // please check out the MAdvertiseConsent header file more information
 ```
