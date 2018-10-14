@@ -3,7 +3,7 @@
 See [Wiki], [Design Guidelines and Best practices] and [Help Center]  for more detailed informations. you must check [Change Log] .
 
 ## Upgrading to 2.11
-
+ - Add preferredHeight to infeed https://bitbucket.org/mngcorp/mngads-demo-ios/src/master/Demo/MNG-Ads-SDK/InfeedViewController.m
  - Use new AdColony 3.3.4 version, [AdColony.framework]
  - Use new Vectaury 1.6.3 version, [Vectaury.framework]
  - Use new GoogleMobileAds 7.30.0 version [GoogleMobileAds.framework]
