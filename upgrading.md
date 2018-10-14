@@ -2,6 +2,20 @@
 
 See [Wiki], [Design Guidelines and Best practices] and [Help Center]  for more detailed informations. you must check [Change Log] .
 
+## Upgrading to 2.11
+
+    - Use new AdColony 3.3.4 version, [AdColony.framework]
+    - Use new Vectaury 1.6.3 version, [Vectaury.framework]
+    - Use new GoogleMobileAds 7.30.0 version [GoogleMobileAds.framework]
+    - Use new FacebookAudience 4.28.1 version [FBAudienceNetwork.framework]
+    - Use new Flurry 9.0 version [libFlurryAds] , [libFlurry]
+    - Use new SmartAdServer 6.10 version [libSmartAdServer.a]
+    - Use new AmazonAd SDK 2.2.17.0 version [AmazonAd.framework]
+    - Use new MoPub 5.3.0 version, [MoPub Marketplace] + [libMAdvertiseMoPubAdapter.a]
+    - Use new [MngAdsSDK] + *Adapter.a
+
+All *Adapter.a available on https://bitbucket.org/mngcorp/mngads-demo-ios/downloads/MNGAds-v2.11.zip
+
 ## Upgrading to 2.10
 
 - GDPR: a new class has been introduced to facilitate complying with GDPR MAdvertiseConsent, you will need to create an instance of this new class and pass it to the sdk using the class method setConsentInformation , eg :
