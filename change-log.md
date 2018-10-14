@@ -10,7 +10,7 @@ you must check [Upgrade Guide]. You need to keep all Ad Network libs up to date.
 
 - **Features**
 
-     - GDPR compliant.
+     - GDPR compliant, retrieve consent string from CMP
      - IAB Open Measurement compliant (viewability https://iabtechlab.com/technology-compliant-companies/#)
      - preferredHeight for infeed.
      - Support iOS 12.
@@ -24,13 +24,14 @@ you must check [Upgrade Guide]. You need to keep all Ad Network libs up to date.
 
 - **Ad Network Mediation Updates**
 
-    - **Add new AdColony 3.3.4 version, [AdColony.framework]**
-    - **Add new Vectaury 1.6.3 version, [Vectaury.framework]**
+    - Use new AdColony 3.3.4 version, [AdColony.framework]
+    - Use new Vectaury 1.6.3 version, [Vectaury.framework]
     - Use new GoogleMobileAds 7.30.0 version [GoogleMobileAds.framework]
     - Use new FacebookAudience 4.28.1 version [FBAudienceNetwork.framework]
     - Use new Flurry 9.0 version [libFlurryAds] , [libFlurry]
     - Use new SmartAdServer 6.10 version [libSmartAdServer.a]
     - Use new AmazonAd SDK 2.2.17.0 version [AmazonAd.framework]
+    - Use new MoPub 5.3.0 version, [MoPub Marketplace] + [libMAdvertiseMoPubAdapter.a]
     - Use new [MngAdsSDK] + *Adapter.a
 
 All *Adapter.a available on https://bitbucket.org/mngcorp/mngads-demo-ios/downloads/MNGAds-v2.11.zip
