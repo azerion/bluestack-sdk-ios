@@ -21,6 +21,7 @@ you must check [Upgrade Guide]. You need to keep all Ad Network libs up to date.
     - fix adrequest-adn bug where it was only sent in debug mode.
     - fix issue where the ad was requested twice.
     - fix minor bugs.
+    - Updated sound management on video ads.
 
 - **Ad Network Mediation Updates**
 
