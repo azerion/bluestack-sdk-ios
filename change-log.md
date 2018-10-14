@@ -30,6 +30,7 @@ you must check [Upgrade Guide]. You need to keep all Ad Network libs up to date.
     - Use new FacebookAudience 4.28.1 version [FBAudienceNetwork.framework]
     - Use new Flurry 9.0 version [libFlurryAds] , [libFlurry]
     - Use new SmartAdServer 6.10 version [libSmartAdServer.a]
+    - Use new AmazonAd SDK 2.2.17.0 version [AmazonAd.framework]
     - Use new [MngAdsSDK] + *Adapter.a
 
 All *Adapter.a available on https://bitbucket.org/mngcorp/mngads-demo-ios/downloads/MNGAds-v2.11.zip
