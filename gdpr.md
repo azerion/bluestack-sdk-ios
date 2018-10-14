@@ -13,13 +13,6 @@ Publishers are free to implement or develop the CMP of their choice as long as t
 
 We have developed our [Madvertise CMP]
 
-Usage example of MAdvertiseConsent
-```objc
-
-MAdvertiseConsent *consent = [[MAdvertiseConsent alloc]initWithGDPRScope:true.on andConsentStrings:@{@"IAB":"BOTjwMuOTjwMuAsABAFRBj-AAAAXAAOQRZiKRoAC0NYBwAADAK4AAAQAAAAALQgAQAYCAEAiAAAAAAAAAAAAAAAAAAg"}];
-[MAdvertiseConsent setConsentInformation:consent];
-// please check out the MAdvertiseConsent header file more information
-```
 
 `Notes`:  For now, end user consent string must be passed with key name IAB. Anything else will be ignored.
 
