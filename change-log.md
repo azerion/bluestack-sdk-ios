@@ -5,6 +5,35 @@ See [Wiki], [Design Guidelines and Best practices] and [Help Center]  for more d
 
 you must check [Upgrade Guide]. You need to keep all Ad Network libs up to date.
 
+## Version 2.11
+#### Release date: October 12th, 2018
+
+- **Features**
+
+     - GDPR compliant.
+     - IAB Open Measurement compliant (viewability https://iabtechlab.com/technology-compliant-companies/#)
+     - preferredHeight for infeed.
+     - Support iOS 12.
+
+
+- **Bug Fixes**
+
+    - fix adrequest-adn bug where it was only sent in debug mode.
+    - fix issue where the ad was requested twice.
+    - fix minor bugs.
+
+- **Ad Network Mediation Updates**
+
+    - **Add new AdColony 3.3.4 version, [AdColony.framework]**
+    - **Add new Vectaury 1.6.3 version, [Vectaury.framework]**
+    - Use new GoogleMobileAds 7.30.0 version [GoogleMobileAds.framework]
+    - Use new FacebookAudience 4.28.1 version [FBAudienceNetwork.framework]
+    - Use new Flurry 9.0 version [libFlurryAds] , [libFlurry]
+    - Use new SmartAdServer 6.10 version [libSmartAdServer.a]
+    - Use new [MngAdsSDK] + *Adapter.a
+
+All *Adapter.a available on https://bitbucket.org/mngcorp/mngads-demo-ios/downloads/MNGAds-v2.11.zip
+
 ## Version 2.10
 #### Release date: May 11th, 2018
 
