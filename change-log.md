@@ -11,7 +11,7 @@ you must check [Upgrade Guide]. You need to keep all Ad Network libs up to date.
 - **Features**
 
      - GDPR compliant, retrieve consent string from CMP
-     - IAB Open Measurement compliant (viewability https://iabtechlab.com/technology-compliant-companies/#)
+     - ![omsdk.png](https://bitbucket.org/repo/GyRXRR/images/3400517277-omsdk.png) IAB Open Measurement compliant (viewability https://iabtechlab.com/technology-compliant-companies/#)
      - preferredHeight for infeed.
      - Support iOS 12.
 
