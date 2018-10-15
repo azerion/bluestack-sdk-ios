@@ -37,7 +37,7 @@ you must check [Upgrade Guide]. You need to keep all Ad Network libs up to date.
 
 All *Adapter.a available on https://bitbucket.org/mngcorp/mngads-demo-ios/downloads/MNGAds-v2.11.zip
 
-and https://bitbucket.org/mngcorp/mngads-demo-ios/downloads/OMSDK_Madvertise-1.2.4.framework.zip for viewability
+and [OMSDK_Madvertise-x.framework]
 
 ## Version 2.10
 #### Release date: May 11th, 2018
@@ -803,3 +803,4 @@ You must update [MngAdsSDK], [libSmartAdServer.a] (not available from pod update
 [libSmartAdServer.a]:http://help.smartadserver.com/en/#../../../../specifications/Content/MobileSpecifications/Apps.htm
 [GDPR]:https://bitbucket.org/mngcorp/mngads-demo-ios/wiki/gdpr
 [MAdvertiseVectaury]:https://bitbucket.org/mngcorp/mngads-demo-ios/wiki/MAdvertiseVectaury
+[OMSDK_Madvertise-x.framework]:https://bitbucket.org/mngcorp/mngads-demo-ios/downloads/OMSDK_Madvertise-1.2.4.framework.zip framework
