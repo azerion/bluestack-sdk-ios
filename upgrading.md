@@ -3,6 +3,7 @@
 See [Wiki], [Design Guidelines and Best practices] and [Help Center]  for more detailed informations. you must check [Change Log] .
 
 ## Upgrading to 2.11
+ - Add [OMSDK_Madvertise-x.framework] for IAB viewability
  - Add preferredHeight to infeed https://bitbucket.org/mngcorp/mngads-demo-ios/src/master/Demo/MNG-Ads-SDK/InfeedViewController.m
  - Use new AdColony 3.3.4 version, [AdColony.framework]
  - Use new Vectaury 1.6.3 version, [Vectaury.framework]
@@ -485,3 +486,4 @@ instead of
 [Vectaury.framework]:https://cdn.vectaury.io/static/sdk/
 [AdColony.framework]:https://github.com/AdColony/AdColony-iOS-SDK-3
 [GDPR]:https://bitbucket.org/mngcorp/mngads-demo-ios/wiki/gdpr
+[OMSDK_Madvertise-x.framework]:https://bitbucket.org/mngcorp/mngads-demo-ios/downloads/OMSDK_Madvertise-1.2.4.framework.zip framework
