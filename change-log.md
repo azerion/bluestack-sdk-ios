@@ -37,6 +37,8 @@ you must check [Upgrade Guide]. You need to keep all Ad Network libs up to date.
 
 All *Adapter.a available on https://bitbucket.org/mngcorp/mngads-demo-ios/downloads/MNGAds-v2.11.zip
 
+and https://bitbucket.org/mngcorp/mngads-demo-ios/downloads/OMSDK_Madvertise-1.2.4.framework.zip for viewability
+
 ## Version 2.10
 #### Release date: May 11th, 2018
 
