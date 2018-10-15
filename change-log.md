@@ -9,9 +9,8 @@ you must check [Upgrade Guide]. You need to keep all Ad Network libs up to date.
 #### Release date: October 12th, 2018
 
 - **Features**
-
-     - GDPR compliant, retrieve consent string from CMP
      - ![omsdk.png](https://bitbucket.org/repo/GyRXRR/images/3400517277-omsdk.png) IAB Open Measurement compliant (viewability https://iabtechlab.com/technology-compliant-companies/#)
+     - GDPR : Automatic consent management (from CMP) so you don't have to export it manually to the sdk, MAdvertiseConsent is now deprecated.
      - preferredHeight for infeed.
      - Support iOS 12.
 
