@@ -33,6 +33,7 @@ you must check [Upgrade Guide]. You need to keep all Ad Network libs up to date.
     - Use new AmazonAd SDK 2.2.17.0 version [AmazonAd.framework]
     - Use new MoPub 5.3.0 version, [MoPub Marketplace] + [libMAdvertiseMoPubAdapter.a]
     - Use new [MngAdsSDK] + *Adapter.a
+    - Add [OMSDK_Madvertise-x.framework]
 
 All *Adapter.a available on https://bitbucket.org/mngcorp/mngads-demo-ios/downloads/MNGAds-v2.11.zip
 
