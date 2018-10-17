@@ -5,6 +5,14 @@ See [Wiki], [Design Guidelines and Best practices] and [Help Center]  for more d
 
 you must check [Upgrade Guide]. You need to keep all Ad Network libs up to date.
 
+## Version 2.11.1
+#### Release date: October 17th, 2018
+
+- **Features**
+
+ - For cocoapod users, OMSDK_Madvertise-x.framework is include into our pod as subspec
+ - For manual install OMSDK_Madvertise-x.framework into https://bitbucket.org/mngcorp/mngads-demo-ios/downloads/MNGAds-v2.11.1.zip
+
 ## Version 2.11
 #### Release date: October 12th, 2018
 
