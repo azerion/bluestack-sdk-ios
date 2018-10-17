@@ -2,6 +2,11 @@
 
 See [Wiki], [Design Guidelines and Best practices] and [Help Center]  for more detailed informations. you must check [Change Log] .
 
+## Upgrading to 2.11.1
+
+ - For cocoapod users, OMSDK_Madvertise-x.framework is include into our pod as subspec
+ - For manual install OMSDK_Madvertise-x.framework into https://bitbucket.org/mngcorp/mngads-demo-ios/downloads/MNGAds-v2.11.1.zip
+
 ## Upgrading to 2.11
  - Add [OMSDK_Madvertise-x.framework] for IAB viewability
  - Add preferredHeight to infeed https://bitbucket.org/mngcorp/mngads-demo-ios/src/master/Demo/MNG-Ads-SDK/InfeedViewController.m
