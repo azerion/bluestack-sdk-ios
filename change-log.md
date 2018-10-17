@@ -803,4 +803,4 @@ You must update [MngAdsSDK], [libSmartAdServer.a] (not available from pod update
 [libSmartAdServer.a]:http://help.smartadserver.com/en/#../../../../specifications/Content/MobileSpecifications/Apps.htm
 [GDPR]:https://bitbucket.org/mngcorp/mngads-demo-ios/wiki/gdpr
 [MAdvertiseVectaury]:https://bitbucket.org/mngcorp/mngads-demo-ios/wiki/MAdvertiseVectaury
-[OMSDK_Madvertise-x.framework]:https://bitbucket.org/mngcorp/mngads-demo-ios/downloads/OMSDK_Madvertise-1.2.4.framework.zip framework
+[OMSDK_Madvertise-x.framework]:https://bitbucket.org/mngcorp/mngads-demo-ios/downloads/OMSDK_Madvertise-1.2.4.framework.zip
