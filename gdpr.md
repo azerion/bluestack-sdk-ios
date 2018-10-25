@@ -18,5 +18,5 @@ We have developed our [Madvertise CMP]
 
 [IAB EU Transparency Consent Framework]: http://advertisingconsent.eu/
 [Here]: https://advertisingconsent.eu/cmp-list/
-[IAB Europe’s Transparency & Consent Framework.]:https://advertisingconsent.eu/vendors-list/
+[IAB Europe’s Transparency & Consent Framework]:https://advertisingconsent.eu/vendors-list/
 [Madvertise CMP]:https://bitbucket.org/mngcorp/madvertise-gdpr-cmp-ios/wiki/Home
