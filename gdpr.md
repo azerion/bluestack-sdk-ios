@@ -16,8 +16,7 @@ We have developed our [Madvertise CMP]
 
 `Notes`:  For now, end user consent string must be passed with key name IAB. Anything else will be ignored.
 
-[GDPR Consent Demo]:https://quantcast.mgr.consensu.org/index.html](https://quantcast.mgr.consensu.org/index.html
 [IAB EU Transparency Consent Framework]: http://advertisingconsent.eu/
-[Here]: http://advertisingconsent.eu/iab-europe-transparency-consent-framework-list-of-registered-cmps/
-[IAB Europe’s Transparency & Consent Framework.]:http://advertisingconsent.eu/transparency-consent-framework-global-vendor-list/
+[Here]: https://advertisingconsent.eu/cmp-list/
+[IAB Europe’s Transparency & Consent Framework.]:https://advertisingconsent.eu/vendors-list/
 [Madvertise CMP]:https://bitbucket.org/mngcorp/madvertise-gdpr-cmp-ios/src
