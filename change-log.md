@@ -5,6 +5,19 @@ See [Wiki], [Design Guidelines and Best practices] and [Help Center]  for more d
 
 you must check [Upgrade Guide]. You need to keep all Ad Network libs up to date.
 
+## Version 2.12
+#### Release date: Nov 13th, 2018
+
+- **Bug Fixes**
+
+    - fix bitcode support.
+    - fix mopub crash when trying to load banners.
+
+- **Ad Network Mediation Updates**
+
+    - Use new Flurry 9.2.1 version [libFlurryAds] , [libFlurry]
+    - Use new [MngAdsSDK] + *Adapter.a
+
 ## Version 2.11.1
 #### Release date: October 17th, 2018
 
