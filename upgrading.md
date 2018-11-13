@@ -2,6 +2,11 @@
 
 See [Wiki], [Design Guidelines and Best practices] and [Help Center]  for more detailed informations. you must check [Change Log] .
 
+## Upgrading to 2.12
+
+- use new Flurry 9.2.1 version [libFlurryAds] , [libFlurry]
+- use new [MngAdsSDK]
+
 ## Upgrading to 2.11.1
 
  - For cocoapod users, OMSDK_Madvertise-x.framework is include into our pod as subspec
