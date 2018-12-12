@@ -30,6 +30,7 @@ Ask the user to share their location data (popup) with the +requestAuthorization
 
 * **Enable Background Mode**
 You need to tick the box "Location updates" in the "Capabilities" of your target.
+
 ![Capabilities.png](https://bitbucket.org/repo/aen579/images/3460637221-Capabilities.png)
 
 * **Initializing MAdvertiseLocation**
