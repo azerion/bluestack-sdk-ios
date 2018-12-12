@@ -53,7 +53,7 @@ Once the installation has been successful you will need to initialise
 ```
 
 * **Start Location tracking position** :
-Start to collect location data with +start function:
+Start to collect location data with start function:
 
 
 ```
