@@ -33,6 +33,7 @@ you must check [Upgrade Guide]. You need to keep all Ad Network libs up to date.
 
     - Use new Flurry 9.2.1 version [libFlurryAds] , [libFlurry]
     - Use new [MngAdsSDK] + *Adapter.a
+    - Use new MoPub 5.4.0 version, [MoPub Marketplace] + [libMAdvertiseMoPubAdapter.a]
 
 ## Version 2.11.1
 #### Release date: October 17th, 2018
