@@ -13,9 +13,6 @@ Publishers are free to implement or develop the CMP of their choice as long as t
 
 We have developed our [Madvertise CMP]
 
-
-`Notes`:  For now, end user consent string must be passed with key name IAB. Anything else will be ignored.
-
 [IAB EU Transparency Consent Framework]: http://advertisingconsent.eu/
 [Here]: https://advertisingconsent.eu/cmp-list/
 [IAB Europe’s Transparency & Consent Framework]:https://advertisingconsent.eu/vendors-list/
