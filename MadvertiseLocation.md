@@ -5,7 +5,16 @@
 
 * ***CocoaPods installation*** :
 
+## Installation:
+## Installation with MNGSDK V2.12.1 ##
+You will just need to specify the subspec for Madvertise Location since it s not included by default like so :
 
+```
+  pod "MNGAds",:subspecs => ["MNGAdsFull", "MadvertiseLocation"]
+```
+
+
+## Installation Without MNGSDK V2.12.1 ##
 ```
 #!Podfile
 
