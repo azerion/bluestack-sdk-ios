@@ -27,7 +27,7 @@ See [Wiki], [Design Guidelines and Best practices] and [Help Center]  for more d
  - Add preferredHeight to infeed https://bitbucket.org/mngcorp/mngads-demo-ios/src/master/Demo/MNG-Ads-SDK/InfeedViewController.m
  - Use new AdColony 3.3.4 version, [AdColony.framework]
  - Use new Vectaury 1.6.3 version, [Vectaury.framework]
- - Use new GoogleMobileAds 7.30.0 version [GoogleMobileAds.framework]
+ - Use new GoogleMobileAds 7.31.0 version [GoogleMobileAds.framework]
  - Use new FacebookAudience 4.28.1 version [FBAudienceNetwork.framework]
  - Use new Flurry 9.0 version [libFlurryAds] , [libFlurry]
  - Use new SmartAdServer 6.10 version [libSmartAdServer.a]
