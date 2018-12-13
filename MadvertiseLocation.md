@@ -1,10 +1,50 @@
 #Madvertise Location SDK
 
-Installation:
+**Installation ** :
+
+*  ## Installation with MNGADS SDK :
+Madvertise Location is integrated in mngadsSDK V2.12.1.
+
+ 
 You will just need to specify the subspec for Madvertise Location since it s not included by default like so:
 
-  pod "MNGAds",:subspecs => ["MNGAdsFull", "MAdvertiseLocation"]
+  
+```
+#!Podfile
 
+pod "MNGAds",:subspecs => ["MNGAdsFull", "MAdvertiseLocation"]
+
+```
+
+*  ## Installation without MNGADS SDK  :
+
+* ***CocoaPods installation*** :
+
+
+```
+#!Podfile
+
+use_frameworks! 
+pod 'MAdvertiseLocation'
+```
+
+
+
+* ***Manually  installation*** : 
+
+1. Go to [MAdvertiseLocation-v1.0](https://bitbucket.org/mngcorp/mngads-demo-ios/downloads/MAdvertiseLocation-v1.0.zip)
+
+2. Select the project file from the project navigator on the left side of the project window.
+
+3. Select the target for where you want to add frameworks in the project settings editor.
+
+4. Select the “Build Phases” tab, and click the small triangle next to “Link Binary With Libraries” to view all of the frameworks in your application.
+
+5. To Add frameworks, click the “+” below the list of frameworks.
+
+
+
+# Integration #
 Also you need to make sure to add their Settings.bundle after the installation is complete 
 
 * **requestAuthorization** :
