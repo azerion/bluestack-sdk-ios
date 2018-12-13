@@ -76,7 +76,7 @@ You need to tick the box "Location updates" in the "Capabilities" of your target
 ![Capabilities.png](https://bitbucket.org/repo/aen579/images/3460637221-Capabilities.png)
 
 * **Initializing MAdvertiseLocation**
-Once the installation has been successful you will need to initialise 
+
 
 
 
