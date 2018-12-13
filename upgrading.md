@@ -2,6 +2,15 @@
 
 See [Wiki], [Design Guidelines and Best practices] and [Help Center]  for more detailed informations. you must check [Change Log] .
 
+## Upgrading to 2.12.1
+
+- remove any previous code related to MNGAds managing user's consent (everything related to MAdvertiseConsent class needs to be removed), since MNGAds will be handling the user's consent automatically according to IAB's guidelines.
+- use new [MAdvertiseLocation-v1.0].
+- use new [MngAdsSDK]
+
+
+[MAdvertiseLocation-v1.0]: https://bitbucket.org/mngcorp/mngads-demo-ios/downloads/MAdvertiseLocation-v1.0.zip
+
 ## Upgrading to 2.12
 
 - use new Flurry 9.2.1 version [libFlurryAds] , [libFlurry]
@@ -497,3 +506,4 @@ instead of
 [AdColony.framework]:https://github.com/AdColony/AdColony-iOS-SDK-3
 [GDPR]:https://bitbucket.org/mngcorp/mngads-demo-ios/wiki/gdpr
 [OMSDK_Madvertise-x.framework]:https://bitbucket.org/mngcorp/mngads-demo-ios/downloads/OMSDK_Madvertise-1.2.4.framework.zip
+[MAdvertiseLocation-v1.0]: https://bitbucket.org/mngcorp/mngads-demo-ios/downloads/MAdvertiseLocation-v1.0.zip
