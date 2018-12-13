@@ -52,10 +52,10 @@ You need to tick the box "Location updates" in the "Capabilities" of your target
 ![Capabilities.png](https://bitbucket.org/repo/aen579/images/3460637221-Capabilities.png)
 
 
-** That for  use  in standalone without the mngads SDK** 
+** That for  use  in standalone without the mngads SDK :** 
 
 
-* **requestAuthorization** :
+1.**requestAuthorization** :
 
 Ask the user to share their location data (popup) with the +requestAuthorization: function:
  Put this line where it makes the most sense for your app user experience. This will trigger a permission request popup. If you already asked thoses permissions elsewhere in your app, you don't need to call it (if you do, it will have no impact).
@@ -79,7 +79,7 @@ Ask the user to share their location data (popup) with the +requestAuthorization
 ```
 
 
-* **Initializing MAdvertiseLocation**
+2.**Initializing MAdvertiseLocation**
 
 
 
@@ -99,7 +99,7 @@ Ask the user to share their location data (popup) with the +requestAuthorization
 
 ```
 
-* **Start Location tracking position** :
+3.**Start Location tracking position** :
 Start to collect location data with start function:
 
 
