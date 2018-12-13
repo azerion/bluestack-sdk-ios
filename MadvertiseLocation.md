@@ -45,7 +45,15 @@ pod 'MAdvertiseLocation'
 
 
 # Integration #
-After the installation is complete 
+
+* **Enable Background Mode**
+You need to tick the box "Location updates" in the "Capabilities" of your target.
+
+![Capabilities.png](https://bitbucket.org/repo/aen579/images/3460637221-Capabilities.png)
+
+
+** That for  use  in standalone without the mngads SDK** 
+
 
 * **requestAuthorization** :
 
@@ -70,10 +78,6 @@ Ask the user to share their location data (popup) with the +requestAuthorization
 
 ```
 
-* **Enable Background Mode**
-You need to tick the box "Location updates" in the "Capabilities" of your target.
-
-![Capabilities.png](https://bitbucket.org/repo/aen579/images/3460637221-Capabilities.png)
 
 * **Initializing MAdvertiseLocation**
 
