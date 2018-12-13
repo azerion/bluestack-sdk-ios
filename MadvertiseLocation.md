@@ -10,10 +10,8 @@ Also you need to make sure to add their Settings.bundle after the installation i
 * **requestAuthorization** :
 
 Ask the user to share their location data (popup) with the +requestAuthorization: function:
- Put this line where it makes the most sense for your app user experience. This will trigger a permission request popup. If you already asked thoses permissions elsewhere in your app, you don't need to call it (if 
+ Put this line where it makes the most sense for your app user experience. This will trigger a permission request popup. If you already asked thoses permissions elsewhere in your app, you don't need to call it (if you do, it will have no impact).
 
-you do, it will have no impact).
-```
 
 
 
