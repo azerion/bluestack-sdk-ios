@@ -7,8 +7,6 @@ The new General Data Protection Regulation law will apply in Europe starting 25t
 
 MAdvertise participates as a vendor in [IAB Europe’s Transparency & Consent Framework].
 
-MAdvertise provides a method with which the publisher will determine whether GDPR scope applies to the app or user / device and if applicable, capture end user consent in [IAB EU Transparency Consent Framework] format.
-
 Publishers are free to implement or develop the CMP of their choice as long as the consent management is based on the IAB Transparency & Consent Framework. [Here] is the list of currently available registered CMPs.
 
 We have developed our [Madvertise CMP]
