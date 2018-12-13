@@ -64,7 +64,7 @@ you must check [Upgrade Guide]. You need to keep all Ad Network libs up to date.
 
     - Use new AdColony 3.3.4 version, [AdColony.framework]
     - Use new Vectaury 1.6.3 version, [Vectaury.framework]
-    - Use new GoogleMobileAds 7.30.0 version [GoogleMobileAds.framework]
+    - Use new GoogleMobileAds 7.31.0 version [GoogleMobileAds.framework]
     - Use new FacebookAudience 4.28.1 version [FBAudienceNetwork.framework]
     - Use new Flurry 9.0 version [libFlurryAds] , [libFlurry]
     - Use new SmartAdServer 6.10 version [libSmartAdServer.a]
