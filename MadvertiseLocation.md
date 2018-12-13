@@ -10,11 +10,15 @@ Also you need to make sure to add their Settings.bundle after the installation i
 * **requestAuthorization** :
 
 Ask the user to share their location data (popup) with the +requestAuthorization: function:
- Put this line where it makes the most sense for your app user experience. This will trigger a permission request popup. If you already asked thoses permissions elsewhere in your app, you don't need to call it (if you do, it will have no impact).
+ Put this line where it makes the most sense for your app user experience. This will trigger a permission request popup. If you already asked thoses permissions elsewhere in your app, you don't need to call it (if 
+
+you do, it will have no impact).
+```
+
 
 
 ```
-#objective-c
+#!objective-c
 
         [MAdvertiseLocation madvertiseLocationRequestAuthorization ];
 
@@ -22,7 +26,7 @@ Ask the user to share their location data (popup) with the +requestAuthorization
 
 
 ```
-#Swift
+#!Swift
 
         MAdvertiseLocation.madvertiseLocationRequestAuthorization()
 
@@ -39,13 +43,13 @@ Once the installation has been successful you will need to initialise
 
 
 ```
-#objective-c
+#!objective-c
 
          MadvertiseBuilder * madvertiseBuilder = [[MadvertiseBuilder alloc] init];
         [madvertiseBuilder setWithAppId:madevertiseLocationKey];
 ```
 ```
-#Swift
+#!Swift
 
         let madvertiseBuilder:MadvertiseBuilder? =  MadvertiseBuilder()
         madvertiseBuilder?.set(appId: ConfigurationFile.madervertiseLocationAppId)
@@ -58,13 +62,13 @@ Start to collect location data with start function:
 
 
 ```
-#objective-c
+#!objective-c
 
  [MAdvertiseLocation startWithMadvertiseLocation:madlocation];
 
 ```
 ```
-#Swift
+#!Swift
   MAdvertiseLocation.start(madvertiseLocation:madvertiseLocationContext!)
 
 ```
