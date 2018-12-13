@@ -13,6 +13,7 @@ See [Wiki], [Design Guidelines and Best practices] and [Help Center]  for more d
 
 ## Upgrading to 2.12
 
+- Use new MoPub 5.4.0 version, [MoPub Marketplace] + [libMAdvertiseMoPubAdapter.a]
 - use new Flurry 9.2.1 version [libFlurryAds] , [libFlurry]
 - use new [MngAdsSDK]
 
