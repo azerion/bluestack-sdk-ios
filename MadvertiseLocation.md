@@ -45,7 +45,7 @@ pod 'MAdvertiseLocation'
 
 
 # Integration #
-Also you need to make sure to add their Settings.bundle after the installation is complete 
+After the installation is complete 
 
 * **requestAuthorization** :
 
