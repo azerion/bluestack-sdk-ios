@@ -1,22 +1,7 @@
 #Madvertise Location SDK
 
-**Installation ** :
 
-*  ## Installation with MNGADS SDK :
-Madvertise Location is integrated in mngadsSDK V2.12.1.
-
- 
-You will just need to specify the subspec for Madvertise Location since it s not included by default like so:
-
-  
-```
-#!Podfile
-
-pod "MNGAds",:subspecs => ["MNGAdsFull", "MAdvertiseLocation"]
-
-```
-
-*  ## Installation without MNGADS SDK  :
+*  ## Installation   :
 
 * ***CocoaPods installation*** :
 
