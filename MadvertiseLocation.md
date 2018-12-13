@@ -10,7 +10,7 @@
 You will just need to specify the subspec for Madvertise Location since it s not included by default like so :
 
 ```
-  pod "MNGAds",:subspecs => ["MNGAdsFull", "MadvertiseLocation"]
+  pod "MNGAds",:subspecs => ["MNGAdsFull", "MAdvertiseLocation"]
 ```
 
 
