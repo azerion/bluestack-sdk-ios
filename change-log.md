@@ -5,6 +5,23 @@ See [Wiki], [Design Guidelines and Best practices] and [Help Center]  for more d
 
 you must check [Upgrade Guide]. You need to keep all Ad Network libs up to date.
 
+## Version 2.12.1
+#### Release date: Dec 13th, 2018
+Features
+- **Features**
+
+    - Remove MAdvertiseConsent class: this class became obsolete since MNGAds will be recovering the consent string directly from the UserDefaults using the official keys set by IAB.
+    - New [MAdvertiseLocation] Adapter
+
+- **Bug Fixes**
+
+    - fix consent string update bug.
+
+- **Ad Network Mediation Updates**
+
+    - Add new [MAdvertiseLocation-v1.0]
+    - Use new [MngAdsSDK] + *Adapter.a
+
 ## Version 2.12
 #### Release date: Nov 13th, 2018
 
@@ -825,3 +842,5 @@ You must update [MngAdsSDK], [libSmartAdServer.a] (not available from pod update
 [GDPR]:https://bitbucket.org/mngcorp/mngads-demo-ios/wiki/gdpr
 [MAdvertiseVectaury]:https://bitbucket.org/mngcorp/mngads-demo-ios/wiki/MAdvertiseVectaury
 [OMSDK_Madvertise-x.framework]:https://bitbucket.org/mngcorp/mngads-demo-ios/downloads/OMSDK_Madvertise-1.2.4.framework.zip
+[MAdvertiseLocation-v1.0]: https://bitbucket.org/mngcorp/mngads-demo-ios/downloads/MAdvertiseLocation-v1.0.zip
+[MAdvertiseLocation]:https://bitbucket.org/mngcorp/mngads-demo-ios/wiki/MadvertiseLocation
