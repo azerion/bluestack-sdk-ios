@@ -7,7 +7,6 @@ you must check [Upgrade Guide]. You need to keep all Ad Network libs up to date.
 
 ## Version 2.12.1
 #### Release date: Dec 13th, 2018
-Features
 - **Features**
 
     - Remove MAdvertiseConsent class: this class became obsolete since MNGAds will be recovering the consent string directly from the UserDefaults using the official keys set by IAB.
