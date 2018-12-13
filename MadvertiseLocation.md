@@ -13,7 +13,7 @@ You will just need to specify the subspec for Madvertise Location since it s not
   pod "MNGAds",:subspecs => ["MNGAdsFull", "MAdvertiseLocation"]
 ```
 
-
+ ===> the functions of madevertiselocation will work automatically after the Init of mngads 
 ## Installation Without MNGSDK V2.12.1 ##
 ```
 #!Podfile
