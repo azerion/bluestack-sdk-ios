@@ -5,6 +5,17 @@ See [Wiki], [Design Guidelines and Best practices] and [Help Center]  for more d
 
 you must check [Upgrade Guide]. You need to keep all Ad Network libs up to date.
 
+## Version 2.12.2
+#### Release date: January 7th, 2018
+
+- **Bug Fixes**
+ 
+   - Fix click issue on some implementation for smartAdserver (use View Controller of Factory)
+
+- **Ad Network Mediation Updates**
+
+    - Use new [MngAdsSDK] + *Adapter.a
+
 ## Version 2.12.1
 #### Release date: Dec 13th, 2018
 - **Features**
