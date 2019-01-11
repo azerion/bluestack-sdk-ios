@@ -483,7 +483,7 @@ With v2.0.4 you can disable auto-displaying.
 ```objc
 [interstitialAdsFactory loadInterstitialWithPreferences:preferences autoDisplayed:NO];
 ```
-To show the interstitial after succes you have call [displayInterstitial].
+To show the interstitial after succes you have call [displayInterstitial] that would preset the interstitial using the viewController passed to the factory, if you wish to have more control over the presentation process you could use showAdFromRootViewController.
 
 To check if the interstitial is reday to be showen, you have to call [isInterstitialReady].
 
@@ -491,7 +491,15 @@ To check if the interstitial is reday to be showen, you have to call [isIntersti
 if ([interstitialAdsFactory isInterstitialReady]) {
     [interstitialAdsFactory displayInterstitial];
 }
+
+// OR
+if ([interstitialAdsFactory isInterstitialReady]) {
+    [interstitialAdsFactory showAdFromRootViewController:rootViewController animated:YES];
+}
+
 ```
+___info:___ in some cases the difference between displayInterstitial and showAdFromRootViewController is a little bigger, for example in the case of smart adserver using displayInterstitial will add the the interstitial as a subview in the view of the viewController assigned to the factory, however when using showAdFromRootViewController it will present the interstitial as a viewController which is the case for most other adservers.
+
 
 ___info:___ To test auto-displayin disabled on demo, you have to go to the page interstitial. others interstitials (return background, when change from page to page...) are with auto-displaying.
 
