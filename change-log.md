@@ -5,6 +5,17 @@ See [Wiki], [Design Guidelines and Best practices] and [Help Center]  for more d
 
 you must check [Upgrade Guide]. You need to keep all Ad Network libs up to date.
 
+## Version 2.12.3
+#### Release date: January 11th, 2018
+
+- **Features**
+ 
+   - You can now display interstitials using a new method [(more infos)]
+
+- **Ad Network Mediation Updates**
+
+    - Use new [MngAdsSDK] + *Adapter.a
+
 ## Version 2.12.2
 #### Release date: January 7th, 2018
 
@@ -855,3 +866,4 @@ You must update [MngAdsSDK], [libSmartAdServer.a] (not available from pod update
 [OMSDK_Madvertise-x.framework]:https://bitbucket.org/mngcorp/mngads-demo-ios/downloads/OMSDK_Madvertise-1.2.4.framework.zip
 [MAdvertiseLocation-v1.0]: https://bitbucket.org/mngcorp/mngads-demo-ios/downloads/MAdvertiseLocation-v1.0.zip
 [MAdvertiseLocation]:https://bitbucket.org/mngcorp/mngads-demo-ios/wiki/MadvertiseLocation
+[(more infos)]:https://bitbucket.org/mngcorp/mngads-demo-ios/wiki/Home#markdown-header-disable-auto-displaying
