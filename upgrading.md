@@ -2,6 +2,28 @@
 
 See [Wiki], [Design Guidelines and Best practices] and [Help Center]  for more detailed informations. you must check [Change Log] .
 
+## Upgrading to 2.12.3
+
+- use new [MngAdsSDK]
+
+To check if the interstitial is reday to be showen, you have to call [isInterstitialReady].
+
+```objc
+if ([interstitialAdsFactory isInterstitialReady]) {
+    [interstitialAdsFactory displayInterstitial];
+}
+
+// OR
+if ([interstitialAdsFactory isInterstitialReady]) {
+    [interstitialAdsFactory showAdFromRootViewController:rootViewController animated:YES];
+}
+
+```
+___info:___ in some cases the difference between displayInterstitial and showAdFromRootViewController is a little bigger, for example in the case of smart adserver using displayInterstitial will add the the interstitial as a subview in the view of the viewController assigned to the factory, however when using showAdFromRootViewController it will present the interstitial as a viewController which is the case for most other adservers.
+
+
+___info:___ To test auto-displayin disabled on demo, you have to go to the page interstitial. others interstitials (return background, when change from page to page...) are with auto-displaying.
+
 ## Upgrading to 2.12.1
 
 - remove any previous code related to MNGAds managing user's consent (everything related to MAdvertiseConsent class needs to be removed), since MNGAds will be handling the user's consent automatically according to IAB's guidelines.
