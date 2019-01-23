@@ -41,6 +41,10 @@ See [Change Log] and [Upgrade Guide].
 
 See [Design Guidelines and Best practices]
 
+## Demo
+
+Once you cloned/downloaded the repository, make sure to run pod install before trying to run our Demo.
+
 ## Help and Troubleshooting
 
 [Help Center]
