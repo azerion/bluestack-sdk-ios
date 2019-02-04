@@ -389,6 +389,12 @@ Recently some ads have caused some audio issues: where after the ad is dismissed
 }
 ```
 
+## Interstial status bar with v2.10
+
+"On info.plist if you are using "View controller-based status bar appearance" (UIViewControllerBasedStatusBarAppearance), it must be setted to No"
+
+Or in case you don't want to change the value of UIViewControllerBasedStatusBarAppearance, then you can manually hide the status bar yourself since in some cases the interstitial will be shown using addSubview in the view of the viewController you passed to the factory.
+
 
 
 [privacy policy]:https://developer.apple.com/app-store/review/guidelines/#privacy
