@@ -185,6 +185,7 @@ Can you please remove debug mode on production.
 ### Initializing the SDK
 
 You have to init the SDK in AppDelegate.m in application:didFinishLaunchingWithOptions:
+**This must be executed everytime you run the App**
 ```objc
 // AppDelegate.m
 #import "MNGAdsSDKFactory.h"
