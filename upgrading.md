@@ -2,6 +2,25 @@
 
 See [Wiki], [Design Guidelines and Best practices] and [Help Center]  for more detailed informations. you must check [Change Log] .
 
+## Version 2.13
+#### Release date: February 22th, 2019
+
+- **Features**
+ 
+     - emphasize on executing init everytime the app runs.
+     - support smart v7.
+     - better support vast.
+     - add OMSDK to debug gyro.
+     - support arm64e (new iphones).
+     - Remove B4S.
+
+- **Ad Network Mediation Updates**
+
+    - Use new [MngAdsSDK] + *Adapter.a
+    - Use new smart v7.
+    - Use new [MAdvertiseLocation-v1.1].
+    - Remove support for Beacon4Store B4S.
+
 ## Upgrading to 2.12.3
 
 - use new [MngAdsSDK]
@@ -530,3 +549,4 @@ instead of
 [GDPR]:https://bitbucket.org/mngcorp/mngads-demo-ios/wiki/gdpr
 [OMSDK_Madvertise-x.framework]:https://bitbucket.org/mngcorp/mngads-demo-ios/downloads/OMSDK_Madvertise-1.2.4.framework.zip
 [MAdvertiseLocation-v1.0]: https://bitbucket.org/mngcorp/mngads-demo-ios/downloads/MAdvertiseLocation-v1.0.zip
+[MAdvertiseLocation-v1.1]: https://bitbucket.org/mngcorp/mngads-demo-ios/downloads/MAdvertiseLocation-v1.1.zip
