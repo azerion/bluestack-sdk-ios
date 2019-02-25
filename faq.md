@@ -395,6 +395,20 @@ Recently some ads have caused some audio issues: where after the ad is dismissed
 
 Or in case you don't want to change the value of UIViewControllerBasedStatusBarAppearance, then you can manually hide the status bar yourself since in some cases the interstitial will be shown using addSubview in the view of the viewController you passed to the factory.
 
+## MAdvertiseErrorSDKUninitialized
+
+in case of MAdvertiseErrorSDKUninitialized error there missing Initialisation
+
+
+```
+#!objective-c
+
+- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+[MNGAdsSDKFactory initWithAppId:@"YOUR_APP_ID"];
+...
+}
+```
+
 
 
 [privacy policy]:https://developer.apple.com/app-store/review/guidelines/#privacy
