@@ -4,6 +4,22 @@ See [Wiki], [Design Guidelines and Best practices] and [Help Center]  for more d
 
 
 you must check [Upgrade Guide]. You need to keep all Ad Network libs up to date.
+
+## Version 2.13.1
+#### Release date: March 19th, 2019
+
+- **Features**
+ 
+   - Improve the custom close button iteractions on Interstitials.
+   - Fix bug where click doesn't occur on certain Ads.
+   - Change the display style of Interstitials to be always on top and FullScreen.
+
+- **Ad Network Mediation Updates**
+
+    - Use new [MngAdsSDK] + *Adapter.a
+    - Use new [MAdvertiseLocation-v1.2].
+
+
 ## Version 2.13
 #### Release date: February 25th, 2019
 
