@@ -2,8 +2,12 @@
 
 See [Wiki], [Design Guidelines and Best practices] and [Help Center]  for more detailed informations. you must check [Change Log] .
 
-## Version 2.13
-#### Release date: February 22th, 2019
+## Upgrading to 2.13.1
+
+    - Use new [MngAdsSDK] + *Adapter.a
+    - Use new [MAdvertiseLocation-v1.2].
+
+## Upgrading to 2.13
 
 - **Features**
  
