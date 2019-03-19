@@ -9,17 +9,6 @@ See [Wiki], [Design Guidelines and Best practices] and [Help Center]  for more d
 
 ## Upgrading to 2.13
 
-- **Features**
- 
-     - emphasize on executing init everytime the app runs.
-     - support smart v7.
-     - better support vast.
-     - add OMSDK to debug gyro.
-     - support arm64e (new iphones).
-     - Remove B4S.
-
-- **Ad Network Mediation Updates**
-
     - Use new [MngAdsSDK] + *Adapter.a
     - Use new smart v7.
     - Use new [MAdvertiseLocation-v1.1].
