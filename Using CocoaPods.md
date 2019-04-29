@@ -87,13 +87,6 @@ To add specifics adNetwork.
 pod "MNGAds",:subspecs => ["AppsFire","Facebook","DFP","SmartAdServer","Amazon","Flurry"]
 ```
 
-#### MAdvertiseBeacon
-
-Get Ebeacon technology to propose to the advertisers to target the users inside the point of sale. An installation base of 12,500 ebeacons ready to track the users.
-
-```ruby
-pod "MNGAds",:subspecs => ["MNGAdsFull"]
-```
 
 #### Eyes tracking
 >available v2.6
