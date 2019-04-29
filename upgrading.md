@@ -11,7 +11,7 @@ See [Wiki], [Design Guidelines and Best practices] and [Help Center]  for more d
 ## Upgrading to 2.13.2
 
     - Use new [MngAdsSDK] + *Adapter.a
-    - Use new [MAdvertiseLocation-v1.3].
+    - Use new [MAdvertiseLocation-v1.3]
 
 ## Upgrading to 2.13.2
 
