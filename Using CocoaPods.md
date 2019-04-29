@@ -84,7 +84,7 @@ On December 21st, Apple announced that they have extended the ATS deadline. Prev
 To add specifics adNetwork.
 
 ```ruby
-pod "MNGAds",:subspecs => ["AppsFire","Facebook","DFP","SmartAdServer","Amazon","Flurry","B4S"]
+pod "MNGAds",:subspecs => ["AppsFire","Facebook","DFP","SmartAdServer","Amazon","Flurry"]
 ```
 
 #### MAdvertiseBeacon
@@ -92,7 +92,7 @@ pod "MNGAds",:subspecs => ["AppsFire","Facebook","DFP","SmartAdServer","Amazon",
 Get Ebeacon technology to propose to the advertisers to target the users inside the point of sale. An installation base of 12,500 ebeacons ready to track the users.
 
 ```ruby
-pod "MNGAds",:subspecs => ["MNGAdsFull", "B4S"]
+pod "MNGAds",:subspecs => ["MNGAdsFull"]
 ```
 
 #### Eyes tracking
