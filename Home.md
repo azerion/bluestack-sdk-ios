@@ -98,8 +98,7 @@ MngAds SDK needs, these libraries are in demo project :
  - [libMNGFlurryAdapter.a]
  - [libMAdvertiseMoPubAdapter.a]
  - [libMAdvertiseAdColonyAdapter.a]
- - [libMAdvertiseVectauryAdapter.a]
- - [libMAdvertiseB4SAdapter.a] (use geographical position of the user)
+ - [libMAdvertiseLocationAdapter.a]
 
 You can see [Installation guide for Swift]
 
@@ -226,7 +225,6 @@ To check out if the SDK is initialized or not, you have to use `[MNGAdsSDKFactor
     NSLog(@"MNGAds failed initialization");
 }
 ```
-
 ### Timeout
 The time given to the ad view to download the ad data. After this time, the dispacher stops the ad server running (with failure) and move to the next.
 
@@ -743,11 +741,10 @@ Keep in mind that in order to track the user's face, the app will require the us
 [libMNGAmazonAdapter.a]:https://bitbucket.org/mngcorp/mngads-demo-ios/downloads/
 [libMNGFlurryAdapter.a]:https://bitbucket.org/mngcorp/mngads-demo-ios/downloads/
 [libMAdvertiseAdColonyAdapter.a]:https://bitbucket.org/mngcorp/mngads-demo-ios/downloads/
-[libMAdvertiseVectauryAdapter.a]:https://bitbucket.org/mngcorp/mngads-demo-ios/downloads/
+[libMAdvertiseLocationAdapter.a]:https://bitbucket.org/mngcorp/mngads-demo-ios/downloads/
 [libMAdvertiseMoPubAdapter.a]:https://bitbucket.org/mngcorp/mngads-demo-ios/downloads/
 [see our Faq]:https://bitbucket.org/mngcorp/mngads-demo-ios/wiki/faq#markdown-header--objc-linker-flag-required
 
-[libMAdvertiseB4SAdapter.a]:https://bitbucket.org/mngcorp/mngads-demo-ios/downloads/
 [App Transport Security]:https://developer.apple.com/library/content/documentation/General/Reference/InfoPlistKeyReference/Articles/CocoaKeys.html#//apple_ref/doc/uid/TP40009251-SW60
 [extended the ATS deadline]:https://developer.apple.com/news/?id=12212016b&1482372961
 
