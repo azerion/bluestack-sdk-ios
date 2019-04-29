@@ -84,9 +84,22 @@ On December 21st, Apple announced that they have extended the ATS deadline. Prev
 To add specifics adNetwork.
 
 ```ruby
-pod "MNGAds",:subspecs => ["AppsFire","Facebook","DFP","SmartAdServer","Amazon","Flurry"]
+pod "MNGAds",:subspecs => ["AppsFire","Facebook","DFP","SmartAdServer","Amazon","Flurry","MAdvertiseLocation"]
 ```
+#### MadvertiseLocation(Since v2.12.1)
 
+You will just need to specify the subspec for Madvertise Location since it s not included by default like so :
+
+```
+  pod "MNGAds",:subspecs => ["MNGAdsFull", "MAdvertiseLocation"]
+```
+* **Enable Background Mode**
+You need to tick the box "Location updates" in the "Capabilities" of your target.
+
+* **requestAuthorization** :
+
+Ask the user to share their location data (popup) with the +requestAuthorization: function:
+ Put this line where it makes the most sense for your app user experience. This will trigger a permission request popup. If you already asked thoses permissions elsewhere in your app, you don't need to call it (if you do, it will have no impact).
 
 #### Eyes tracking
 >available v2.6
@@ -110,8 +123,5 @@ Keep in mind that in order to track the user's face, the app will require the us
 [libANSDK.a]:https://bitbucket.org/mngcorp/mngads-demo-ios/src/HEAD/Demo/MNG-Ads-SDK/AdsSDKs/ANSDK/?at=master
 [LiveRailSDK.framework]:https://bitbucket.org/mngcorp/mngads-demo-ios/src/HEAD/Demo/MNG-Ads-SDK/AdsSDKs/LiveRailSDK.framework/?at=master
 [AmazonAd.framework]:https://bitbucket.org/mngcorp/mngads-demo-ios/src/HEAD/Demo/MNG-Ads-SDK/AdsSDKs/AmazonAd.framework/?at=master
-[libMAdvertiseB4SAdapter.a]:https://bitbucket.org/mngcorp/mngads-demo-ios/src/HEAD/MNGAds/libMAdvertiseB4SAdapter.a?at=master&fileviewer=file-view-default
-[BeaconForStoreSDK.framework]:https://bitbucket.org/mngcorp/mngads-demo-ios/src/d41507a6c8eac3829efd9b05247acac1fcc51f8f/Demo/MNG-Ads-SDK/BeaconForStoreSDK.framework/?at=master
-[BeaconForStoreStorage.bundle]:https://bitbucket.org/mngcorp/mngads-demo-ios/src/HEAD/Demo/MNG-Ads-SDK/BeaconForStoreStorage.bundle/?at=master
 [App Transport Security]:https://developer.apple.com/library/content/documentation/General/Reference/InfoPlistKeyReference/Articles/CocoaKeys.html#//apple_ref/doc/uid/TP40009251-SW33
 [umoove.framework]:https://bitbucket.org/mngcorp/mngads-demo-ios/src/HEAD/Demo/Umoove.framework/?at=master
