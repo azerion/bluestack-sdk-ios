@@ -4,7 +4,7 @@ See [Wiki], [Design Guidelines and Best practices] and [Help Center]  for more d
 ## Upgrading to 2.13.3
 
 - Use new [MngAdsSDK] + *Adapter.a
-- Use new DFP 7.42.1.
+- Use new DFP 7.42.1 [GoogleMobileAds.framework]
 - Remove vectaury
 
 
