@@ -5,6 +5,25 @@ See [Wiki], [Design Guidelines and Best practices] and [Help Center]  for more d
 
 you must check [Upgrade Guide]. You need to keep all Ad Network libs up to date.
 
+## Version 2.13.3
+#### Release date: April 29th, 2019
+
+- **Features**
+ 
+   - Add DFP Infeed
+   - Change the native ad DFP 
+   - Remove Vectaury
+
+- **Bug Fixes**
+
+    - fix crash SendSynchronousRequest / loadRequest
+    - fix minor bugs.
+
+
+- **Ad Network Mediation Updates**
+
+    - Use new [MngAdsSDK] + *Adapter.a
+    - Migration  DFP 
 
 ## Version 2.13.2
 #### Release date: April 8th, 2019
