@@ -5,6 +5,14 @@ See [Wiki], [Design Guidelines and Best practices] and [Help Center]  for more d
 
 you must check [Upgrade Guide]. You need to keep all Ad Network libs up to date.
 
+
+## Version 2.13.2
+#### Release date: April 8th, 2019
+
+- **Ad Network Mediation Updates**
+
+    - Use new [MAdvertiseLocation-v1.3].
+
 ## Version 2.13.1
 #### Release date: March 19th, 2019
 
@@ -901,4 +909,6 @@ You must update [MngAdsSDK], [libSmartAdServer.a] (not available from pod update
 [MAdvertiseLocation-v1.0]: https://bitbucket.org/mngcorp/mngads-demo-ios/downloads/MAdvertiseLocation-v1.0.zip
 [MAdvertiseLocation]:https://bitbucket.org/mngcorp/mngads-demo-ios/wiki/MadvertiseLocation
 [MAdvertiseLocation-v1.1]: https://bitbucket.org/mngcorp/mngads-demo-ios/downloads/MAdvertiseLocation-v1.1.zip
+[MAdvertiseLocation-v1.3]: https://bitbucket.org/mngcorp/mngads-demo-ios/downloads/MAdvertiseLocation-v1.3.zip
+[MAdvertiseLocation-v1.2]: https://bitbucket.org/mngcorp/mngads-demo-ios/downloads/MAdvertiseLocation-v1.2.zip
 [(more infos)]:https://bitbucket.org/mngcorp/mngads-demo-ios/wiki/Home#markdown-header-disable-auto-displaying
