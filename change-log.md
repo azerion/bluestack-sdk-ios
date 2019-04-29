@@ -23,7 +23,7 @@ you must check [Upgrade Guide]. You need to keep all Ad Network libs up to date.
 - **Ad Network Mediation Updates**
 
     - Use new [MngAdsSDK] + *Adapter.a
-    - Migration  DFP 
+    - use new DFP 7.42.1 version [GoogleMobileAds.framework]
 
 ## Version 2.13.2
 #### Release date: April 8th, 2019
