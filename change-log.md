@@ -23,7 +23,15 @@ you must check [Upgrade Guide]. You need to keep all Ad Network libs up to date.
 - **Ad Network Mediation Updates**
 
     - Use new [MngAdsSDK] + *Adapter.a
-    - use new DFP 7.42.1 version [GoogleMobileAds.framework]
+    - use new DFP 7.42.1 version [GoogleMobileAds.framework]:
+
+**`Important :`You should note that it is mandatory that you add to your .plist file:**
+```
+<key>GADIsAdManagerApp</key> 
+<true/>
+```
+**Also you need to add the -ObjC linker flag to Other Linker Flags in your project's build settings **, for more on this checkout : 
+https://developers.google.com/ad-manager/mobile-ads-sdk/ios/quick-start#update_your_infoplist
 
 ## Version 2.13.2
 #### Release date: April 8th, 2019
