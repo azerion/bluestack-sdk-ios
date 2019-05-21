@@ -1,5 +1,11 @@
 Change log and release notes for MadvertiseLocation for iOS.
 
+### Version 1.4
+#### Release date: May 3th, 2019
+
+ - Optimize number of points per day (recurency)
+ - Date optimization
+
 ### Version 1.3
 #### Release date: April 1th, 2019
 
