@@ -409,6 +409,13 @@ in case of MAdvertiseErrorSDKUninitialized error there missing Initialisation
 }
 ```
 
+## Interstitiel Display
+
+
+you must be sure that the viewcontroller must be presented in the screen before you display the interstitiel
+
+
+
 
 
 [privacy policy]:https://developer.apple.com/app-store/review/guidelines/#privacy
