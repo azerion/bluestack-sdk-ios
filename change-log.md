@@ -5,6 +5,13 @@ See [Wiki], [Design Guidelines and Best practices] and [Help Center]  for more d
 
 you must check [Upgrade Guide]. You need to keep all Ad Network libs up to date.
 
+## Version 2.14.1
+#### Release date: July 25th, 2019
+
+- **Bug Fixes**
+
+    - restore DFP 7.42.1 version [GoogleMobileAds.framework], on 2.14 there was 7.31.0
+
 ## Version 2.14
 #### Release date: July 24th, 2019
 
