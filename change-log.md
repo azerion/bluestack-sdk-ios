@@ -28,6 +28,7 @@ you must check [Upgrade Guide]. You need to keep all Ad Network libs up to date.
 
     - Use new [MngAdsSDK] + *Adapter.a
     - Use new FacebookAudience 5.4.0 version [FBAudienceNetwork.framework]
+    - Use new [AmazonPublisherService](https://bitbucket.org/mngcorp/mngads-demo-ios/wiki/AmazonPublisherService)
 
 ## Version 2.13.3
 #### Release date: April 29th, 2019
