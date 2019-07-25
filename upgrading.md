@@ -1,6 +1,13 @@
 # upgrading SDK
 
 See [Wiki], [Design Guidelines and Best practices] and [Help Center]  for more detailed informations. you must check [Change Log] .
+
+## Upgrading to 2.14
+
+- Use new [MngAdsSDK] + *Adapter.a
+- Use new FacebookAudience 5.4.0 version [FBAudienceNetwork.framework]
+- Use new [AmazonPublisherService](https://bitbucket.org/mngcorp/mngads-demo-ios/wiki/AmazonPublisherService)
+
 ## Upgrading to 2.13.3
 
 - Remove vectaury
