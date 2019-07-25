@@ -5,6 +5,30 @@ See [Wiki], [Design Guidelines and Best practices] and [Help Center]  for more d
 
 you must check [Upgrade Guide]. You need to keep all Ad Network libs up to date.
 
+## Version 2.14
+#### Release date: July 24th, 2019
+
+- **Features**
+    - New AmazonAPS mediation adapter.
+    - Fresh initialization after an update of the sdk.
+    - Viewability feature to track how much of the ad had been seen.
+    - VAST4 and VAST4 wrapper support for Madvertise Adserving
+    - Enabling debug MAdvertiseLocation sdk along with the MAdvertise SDK.
+    - compliant to xcode 10.2 and swift 5
+    - New nativeAd for Facebook Audience Network and Mopub
+    - Blocked the following ad networks when they are disabled by cmp: Facebook Audience, Amazon Publisher Service (require [MadvertiseCMP v21](https://bitbucket.org/mngcorp/madvertise-gdpr-cmp-ios/downloads/) ).
+    - Blocked retency when it is disabled by cmp (require [MadvertiseCMP v21](https://bitbucket.org/mngcorp/madvertise-gdpr-cmp-ios/downloads/) ).
+
+- **Bug Fixes**
+
+    - fix crash mopub crashes
+    - fix minor bugs.
+
+- **Ad Network Mediation Updates**
+
+    - Use new [MngAdsSDK] + *Adapter.a
+    - Use new FacebookAudience 5.4.0 version [FBAudienceNetwork.framework]
+
 ## Version 2.13.3
 #### Release date: April 29th, 2019
 
