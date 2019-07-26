@@ -4,6 +4,36 @@ See [Wiki], [Design Guidelines and Best practices] and [Help Center]  for more d
 
 ## Upgrading to 2.14
 
+- nativeAd implementation change, Now cover image is downloaded directly by SDK. therefore you must replace 
+
+
+
+```
+#!objective-c
+
+[nativeObject downloadAssetWithType:MAdvertiseAssetTypeAppIcon completition:^(UIImage *image) {
+     dispatch_async(dispatch_get_main_queue(), ^{
+         if (!weakSelf) {
+             return;
+         }
+         __strong NativeAdViewController *strongSelf = weakSelf;
+         strongSelf.iconeImage.image = image;
+         strongSelf.nativeView.hidden = NO;
+     });
+ }];
+```
+
+
+By: 
+
+
+```
+#!objective-c
+
+[_nativeObject registerViewForInteraction:self.nativeView withMediaView:self.backgroundImage withIconImageView:self.iconeImage withViewController:[APP_DELEGATE drawerViewController] withClickableView:self.callToActionButton];
+```
+
+
 - Use new [MngAdsSDK] + *Adapter.a
 - Use new FacebookAudience 5.4.0 version [FBAudienceNetwork.framework]
 - Use new [AmazonPublisherService](https://bitbucket.org/mngcorp/mngads-demo-ios/wiki/AmazonPublisherService)
