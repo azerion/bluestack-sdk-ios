@@ -11,6 +11,7 @@ MNG Ads provides functionalities for monetizing your mobile application: from pr
 - [AppNexus] (Via Server)
 - [Amazon]
 - [Flurry]
+- [Beacon For Store]
 - [MoPub Marketplace]
 
 It contains a dispacher that will select an ads server according to the priority and state ([mngAds state diagram]).
@@ -73,6 +74,8 @@ MngAds SDK needs, these libraries are in demo project :
 - [libFlurryAds.a]
 - [libFlurry.a]
 - [MoPub Marketplace]
+- [BeaconForStoreSDK.framework] (use geographical position of the user)
+- [BeaconForStoreStorage.bundle] (use geographical position of the user)
 - [umoove.framework],  (mandatory, eyes tracking solution for MAS, need camera permission)
 - CoreGraphics.framework
 - QuartzCore.framework
@@ -98,7 +101,8 @@ MngAds SDK needs, these libraries are in demo project :
  - [libMNGFlurryAdapter.a]
  - [libMAdvertiseMoPubAdapter.a]
  - [libMAdvertiseAdColonyAdapter.a]
- - [libMAdvertiseLocationAdapter.a]
+ - [libMAdvertiseVectauryAdapter.a]
+ - [libMAdvertiseB4SAdapter.a] (use geographical position of the user)
 
 You can see [Installation guide for Swift]
 
@@ -225,6 +229,10 @@ To check out if the SDK is initialized or not, you have to use `[MNGAdsSDKFactor
     NSLog(@"MNGAds failed initialization");
 }
 ```
+### MAdvertiseBeacon
+
+If you plan on using Beacon in your app, please follow our [MAdvertiseBeacon guide].
+
 ### Timeout
 The time given to the ad view to download the ad data. After this time, the dispacher stops the ad server running (with failure) and move to the next.
 
@@ -533,7 +541,7 @@ self.bodyLabel.text = nativeObject.body;
 //possibility to customize the badge title
 [nativeObject updateBadgeTitle:@"Publicité"];
 badgeView = nativeObject.badgeView;
-[nativeObject setMediaContainer:self.container];
+[_nativeObject registerViewForInteraction:self.nativeView withMediaView:self.backgroundImage withIconImageView:self.iconeImage withViewController:[APP_DELEGATE drawerViewController] withClickableView:self.callToActionButton];
 ...
 }
 ```
@@ -741,13 +749,18 @@ Keep in mind that in order to track the user's face, the app will require the us
 [libMNGAmazonAdapter.a]:https://bitbucket.org/mngcorp/mngads-demo-ios/downloads/
 [libMNGFlurryAdapter.a]:https://bitbucket.org/mngcorp/mngads-demo-ios/downloads/
 [libMAdvertiseAdColonyAdapter.a]:https://bitbucket.org/mngcorp/mngads-demo-ios/downloads/
-[libMAdvertiseLocationAdapter.a]:https://bitbucket.org/mngcorp/mngads-demo-ios/downloads/
+[libMAdvertiseVectauryAdapter.a]:https://bitbucket.org/mngcorp/mngads-demo-ios/downloads/
 [libMAdvertiseMoPubAdapter.a]:https://bitbucket.org/mngcorp/mngads-demo-ios/downloads/
 [see our Faq]:https://bitbucket.org/mngcorp/mngads-demo-ios/wiki/faq#markdown-header--objc-linker-flag-required
+
+[libMAdvertiseB4SAdapter.a]:https://bitbucket.org/mngcorp/mngads-demo-ios/downloads/
+[BeaconForStoreSDK.framework]:https://github.com/ezeeworld/B4S-iOS-SDK/releases
+[BeaconForStoreStorage.bundle]:https://github.com/ezeeworld/B4S-iOS-SDK/releases
 
 [App Transport Security]:https://developer.apple.com/library/content/documentation/General/Reference/InfoPlistKeyReference/Articles/CocoaKeys.html#//apple_ref/doc/uid/TP40009251-SW60
 [extended the ATS deadline]:https://developer.apple.com/news/?id=12212016b&1482372961
 
 [umoove.framework]:https://bitbucket.org/mngcorp/mngads-demo-ios/downloads/
+[MAdvertiseBeacon guide]:https://bitbucket.org/mngcorp/mngads-demo-ios/wiki/MAdvertiseBeacon
 
 [MoPub Marketplace]: https://github.com/mopub/mopub-ios-sdk
