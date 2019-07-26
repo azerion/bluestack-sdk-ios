@@ -22,7 +22,7 @@ you must check [Upgrade Guide]. You need to keep all Ad Network libs up to date.
     - VAST4 and VAST4 wrapper support for Madvertise Adserving
     - Enabling debug MAdvertiseLocation sdk along with the MAdvertise SDK.
     - compliant to xcode 10.2 and swift 5
-    - New nativeAd for Facebook Audience Network and Mopub
+    - New nativeAd for Facebook Audience Network and Mopub, **You must check [Upgrade Guide], implementation has changed**
     - Blocked the following ad networks when they are disabled by cmp: Facebook Audience, Amazon Publisher Service (require [MadvertiseCMP v21](https://bitbucket.org/mngcorp/madvertise-gdpr-cmp-ios/downloads/) ).
     - Blocked retency when it is disabled by cmp (require [MadvertiseCMP v21](https://bitbucket.org/mngcorp/madvertise-gdpr-cmp-ios/downloads/) ).
 
