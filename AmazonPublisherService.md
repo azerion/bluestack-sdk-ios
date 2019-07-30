@@ -5,9 +5,11 @@
 * ***CocoaPods installation*** :
 
 Installation with MNGSDK V2.14 (since v2.14)
-You will just need to specify the subspec for "AmazonAps" since it s not included by default like so :
+You must download manually [DTBAmazonAps](https://bitbucket.org/mngcorp/mngads-demo-ios/downloads/DTBiOSSDK.zip) and you will need to specify the subspec for "AmazonAps" since it s not included by default like so :
+
 1. Go to [DTBAmazonAps](https://bitbucket.org/mngcorp/mngads-demo-ios/downloads/DTBiOSSDK.zip)
-2. 
+2. Drag and drop it in your project (inside the folder of MNGAds).
+3. Run pod command
 
 ```
   pod "MNGAds",:subspecs => ["MNGAdsFull", "AmazonAps"]
