@@ -6,7 +6,8 @@
 
 Installation with MNGSDK V2.14 (since v2.14)
 You will just need to specify the subspec for "AmazonAps" since it s not included by default like so :
-
+1. Go to [DTBAmazonAps](https://bitbucket.org/mngcorp/mngads-demo-ios/downloads/DTBiOSSDK.zip)
+2. 
 
 ```
   pod "MNGAds",:subspecs => ["MNGAdsFull", "AmazonAps"]
