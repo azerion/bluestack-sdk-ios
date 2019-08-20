@@ -5,6 +5,18 @@ See [Wiki], [Design Guidelines and Best practices] and [Help Center]  for more d
 
 you must check [Upgrade Guide]. You need to keep all Ad Network libs up to date.
 
+## Version 2.14.2
+#### Release date: Aout 16th, 2019
+
+- **Bug Fixes**
+
+    - fix crash MNGAdsMotionQueue 
+
+- **Ad Network Mediation Updates**
+
+    - Use new [MngAdsSDK] + *Adapter.a
+    - use new DFP 7.48.0 version [GoogleMobileAds.framework]:
+    - Use new [MAdvertiseLocation-v1.4].
 ## Version 2.14.1
 #### Release date: July 25th, 2019
 
@@ -970,4 +982,5 @@ You must update [MngAdsSDK], [libSmartAdServer.a] (not available from pod update
 [MAdvertiseLocation-v1.1]: https://bitbucket.org/mngcorp/mngads-demo-ios/downloads/MAdvertiseLocation-v1.1.zip
 [MAdvertiseLocation-v1.3]: https://bitbucket.org/mngcorp/mngads-demo-ios/downloads/MAdvertiseLocation-v1.3.zip
 [MAdvertiseLocation-v1.2]: https://bitbucket.org/mngcorp/mngads-demo-ios/downloads/MAdvertiseLocation-v1.2.zip
+[MAdvertiseLocation-v1.4]: https://bitbucket.org/mngcorp/mngads-demo-ios/downloads/MAdvertiseLocation-v1.4.zip
 [(more infos)]:https://bitbucket.org/mngcorp/mngads-demo-ios/wiki/Home#markdown-header-disable-auto-displaying
