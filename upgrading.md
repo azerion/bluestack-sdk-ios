@@ -2,6 +2,14 @@
 
 See [Wiki], [Design Guidelines and Best practices] and [Help Center]  for more detailed informations. you must check [Change Log] .
 
+
+## Upgrading to 2.14.2
+
+- Use new [MngAdsSDK] + *Adapter.a
+- Use new DFP 7.48.0 [GoogleMobileAds.framework]
+- Use new [MAdvertiseLocation-v1.4].
+
+
 ## Upgrading to 2.14
 
 - nativeAd implementation change, Now cover image is downloaded directly by SDK. therefore you must replace 
