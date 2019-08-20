@@ -17,6 +17,7 @@ you must check [Upgrade Guide]. You need to keep all Ad Network libs up to date.
     - Use new [MngAdsSDK] + *Adapter.a
     - use new DFP 7.48.0 version [GoogleMobileAds.framework]:
     - Use new [MAdvertiseLocation-v1.4].
+
 ## Version 2.14.1
 #### Release date: July 25th, 2019
 
