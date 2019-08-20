@@ -6,7 +6,7 @@ See [Wiki], [Design Guidelines and Best practices] and [Help Center]  for more d
 you must check [Upgrade Guide]. You need to keep all Ad Network libs up to date.
 
 ## Version 2.14.2
-#### Release date: Aout 16th, 2019
+#### Release date: August 16th, 2019
 
 - **Bug Fixes**
 
