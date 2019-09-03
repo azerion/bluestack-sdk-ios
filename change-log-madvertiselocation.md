@@ -1,5 +1,10 @@
 Change log and release notes for MadvertiseLocation for iOS.
 
+### Version 1.5
+#### Release date: September 3th, 2019
+
+ - A MESSAGE THAT TELLS THE USER WHY THE APP IS REQUESTING ACCESS TO THE USER’S LOCATION INFORMATION WHILE THE APP IS RUNNING IN THE FOREGROUND 
+
 ### Version 1.4
 #### Release date: May 3th, 2019
 
