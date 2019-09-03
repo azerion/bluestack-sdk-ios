@@ -26,7 +26,7 @@ pod 'MAdvertiseLocation'
 
 * ***Manually  installation*** : 
 
-1. Go to [MAdvertiseLocation-v1.0](https://bitbucket.org/mngcorp/mngads-demo-ios/downloads/MAdvertiseLocation-v1.0.zip)
+1. Go to [MAdvertiseLocation-vx](https://bitbucket.org/mngcorp/mngads-demo-ios/downloads/)
 
 2. Select the project file from the project navigator on the left side of the project window.
 
