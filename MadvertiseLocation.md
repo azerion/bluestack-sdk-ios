@@ -8,7 +8,7 @@
          * From iOS 10, set “NSLocationAlwaysUsageDescription” and “NSLocationWhenInUseUsageDescription” in the Info.plist file.
          * From iOS 11, set “NSLocationAlwaysAndWhenInUseUsageDescription” and “NSLocationWhenInUseUsageDescription” in the Info.plist file.
 
-    * ##### A message that tells the user why the app is requesting access to the user’s location information while the app is running in the foreground. (Since madvertiseLocation V1.5) :
+    * ##### A message that tells the user why the app is requesting access to the user’s location information while the app is running in the foreground. **(Since madvertiseLocation V1.5)** :
 
 
          * From iOS 10, set “NSLocationWhenInUseUsageDescription” in the Info.plist file.
