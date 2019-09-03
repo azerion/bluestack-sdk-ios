@@ -1,17 +1,21 @@
 #Madvertise Location SDK
 
 
+* ### Prerequisites
+ 
+    * ##### A message that tells the user why the app is requesting access to the user’s location at all times:
+
+         * From iOS 10, set “NSLocationAlwaysUsageDescription” and “NSLocationWhenInUseUsageDescription” in the Info.plist file.
+         * From iOS 11, set “NSLocationAlwaysAndWhenInUseUsageDescription” and “NSLocationWhenInUseUsageDescription” in the Info.plist file.
+
+    * ##### A message that tells the user why the app is requesting access to the user’s location information while the app is running in the foreground. (Since madvertiseLocation V1.5) :
+
+
+         * From iOS 10, set “NSLocationWhenInUseUsageDescription” in the Info.plist file.
+
 *  ## Installation   :
 
-* ***CocoaPods installation*** :
-
-## Installation:
-###Prerequisites
-######A message that tells the user why the app is requesting access to the user’s location at all times:
-*From iOS 10, set “NSLocationAlwaysUsageDescription” and “NSLocationWhenInUseUsageDescription” in the Info.plist file.
-*From iOS 11, set “NSLocationAlwaysAndWhenInUseUsageDescription” and “NSLocationWhenInUseUsageDescription” in the Info.plist file.
-######A message that tells the user why the app is requesting access to the user’s location information while the app is running in the foreground. (Since madvertiseLocation V1.5)
-*From iOS 10, set “NSLocationWhenInUseUsageDescription” in the Info.plist file.
+* ***CocoaPods installation*** :  
 
 ## Installation with MNGSDK V2.3.1 (since v2.12.1)
 You will just need to specify the subspec for Madvertise Location since it s not included by default like so :
