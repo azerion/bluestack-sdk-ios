@@ -376,8 +376,19 @@ infeedAdsFactory.placementId = @"/YOUR_APP_ID/PLACEMENT_ID";
 ##### Make a request
 To make a request you have to call 'loadInfeedInFrame'.
 
+###### Parameter :
+
+ - madvertiseFrame: MAdvertiseInfeedFrame  frame with parametres  WidthDP : widht of viewInfeed and infeedRatio:
+ 
+ ```objc
+ (INFEED_RATIO_16_9 / INFEED_RATIO_4_3)
+ ```
+
+ - Returns: void result will be returned in the callback.
+
 ```objc
-[infeedAdsFactory loadInfeedInFrame:CGRectMake(0, 0, 320, 50)]
+MAdvertiseInfeedFrame * frameinfeed = [[MAdvertiseInfeedFrame alloc] initWithWidthDP:self.view.frame.size.width andInfeedRatio:INFEED_RATIO_4_3];
+[infeedAdsFactory loadInfeedInFrame:frameinfeed withPreferences:preferences];
 ```
 
 ##### Handle callBack from InfeedDelegate
