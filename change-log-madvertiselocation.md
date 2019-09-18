@@ -1,5 +1,11 @@
 Change log and release notes for MadvertiseLocation for iOS.
 
+### Version 1.6
+#### Release date: September 18th, 2019
+
+ - xcode 11 and iOS13 support
+ - use UTC timezone for all events
+
 ### Version 1.5
 #### Release date: September 3th, 2019
 
