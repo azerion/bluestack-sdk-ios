@@ -2,6 +2,27 @@
 
 See [Wiki], [Design Guidelines and Best practices] and [Help Center]  for more detailed informations. you must check [Change Log] .
 
+## Upgrading to 2.14.2
+
+- Use new [MngAdsSDK] + *Adapter.a
+- Use new Smart-Display-SDK 7.2.0
+- Use new DFP 7.49.0 [GoogleMobileAds.framework]
+- Use new FacebookAudience 5.5.0 version [FBAudienceNetwork.framework]
+- Use new MoPub 5.9.0 version, [MoPub Marketplace] + [libMAdvertiseMoPubAdapter.a]
+- use new Flurry 9.3.1 version [libFlurryAds] , [libFlurry]
+- use new AdColony 3.3.8.1 version, [AdColony.framework]
+- Use new [MAdvertiseLocation-v1.6]
+
+- **infeed implementation change, now you must new constant :**
+
+
+```
+#!objective-c
+MAdvertiseInfeedFrame * frameinfeed = [[MAdvertiseInfeedFrame alloc] initWithWidthDP:self.view.frame.size.width andInfeedRatio:INFEED_RATIO_4_3];
+[infeedAdsFactory loadInfeedInFrame:frameinfeed withPreferences:preferences];
+```
+
+
 
 ## Upgrading to 2.14.2
 
@@ -615,4 +636,5 @@ instead of
 [MAdvertiseLocation-v1.2]: https://bitbucket.org/mngcorp/mngads-demo-ios/downloads/MAdvertiseLocation-v1.2.zip
 [MAdvertiseLocation-v1.3]: https://bitbucket.org/mngcorp/mngads-demo-ios/downloads/MAdvertiseLocation-v1.3.zip
 [MAdvertiseLocation-v1.4]: https://bitbucket.org/mngcorp/mngads-demo-ios/downloads/MAdvertiseLocation-v1.4.zip
+[MAdvertiseLocation-v1.6]: https://bitbucket.org/mngcorp/mngads-demo-ios/downloads/MAdvertiseLocation-v1.6.zip
 [(more infos)]:https://bitbucket.org/mngcorp/mngads-demo-ios/wiki/Home#markdown-header-disable-auto-displaying
