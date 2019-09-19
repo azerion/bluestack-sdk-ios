@@ -5,6 +5,31 @@ See [Wiki], [Design Guidelines and Best practices] and [Help Center]  for more d
 
 you must check [Upgrade Guide]. You need to keep all Ad Network libs up to date.
 
+## Version 2.15
+#### Release date: September 18th, 2019
+- **Features**
+    - Xcode 11 and iOS13 support
+    - Added AppLovin SDK for mediation.
+    - mngAdsSDKFactoryDidResetConfig is now deprecated to avoid confusion
+    - Dispatcher cache optimization
+    - New infeed size constant(INFEED_RATIO_16_9 / INFEED_RATIO_4_3)
+
+
+- **Bug Fixes**
+	- Fix mute issue
+        - Fix Debug gyro issue
+
+- **Ad Network Mediation Updates**
+
+    - Use new [MngAdsSDK] + *Adapter.a
+    - Use new Smart-Display-SDK 7.2.0
+    - Use new FacebookAudience 5.5.0 version [FBAudienceNetwork.framework]
+    - use new DFP 7.49.0 version [GoogleMobileAds.framework]
+    - Use new Flurry 9.3.1 version [libFlurryAds] , [libFlurry]
+    - Use new MoPub 5.9.0 version, [MoPub Marketplace] + [libMAdvertiseMoPubAdapter.a]
+    - Use new AdColony 3.3.8.1 version, [AdColony.framework]
+    - Use new [MAdvertiseLocation-v1.6].
+
 ## Version 2.14.2
 #### Release date: August 16th, 2019
 
@@ -984,4 +1009,6 @@ You must update [MngAdsSDK], [libSmartAdServer.a] (not available from pod update
 [MAdvertiseLocation-v1.3]: https://bitbucket.org/mngcorp/mngads-demo-ios/downloads/MAdvertiseLocation-v1.3.zip
 [MAdvertiseLocation-v1.2]: https://bitbucket.org/mngcorp/mngads-demo-ios/downloads/MAdvertiseLocation-v1.2.zip
 [MAdvertiseLocation-v1.4]: https://bitbucket.org/mngcorp/mngads-demo-ios/downloads/MAdvertiseLocation-v1.4.zip
+[MAdvertiseLocation-v1.6]: https://bitbucket.org/mngcorp/mngads-demo-ios/downloads/MAdvertiseLocation-v1.4.zip
+[MAdvertiseLocation-v1.6]: https://bitbucket.org/mngcorp/mngads-demo-ios/downloads/MAdvertiseLocation-v1.6.zip
 [(more infos)]:https://bitbucket.org/mngcorp/mngads-demo-ios/wiki/Home#markdown-header-disable-auto-displaying
