@@ -16,8 +16,8 @@ you must check [Upgrade Guide]. You need to keep all Ad Network libs up to date.
 
 
 - **Bug Fixes**
-	- Fix mute issue
-        - Fix Debug gyro issue
+    - Fix mute issue
+    - Fix Debug gyro issue
 
 - **Ad Network Mediation Updates**
 
