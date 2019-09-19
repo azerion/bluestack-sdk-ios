@@ -374,16 +374,14 @@ You have also to set placementId (minimum one time)
 infeedAdsFactory.placementId = @"/YOUR_APP_ID/PLACEMENT_ID";
 ```
 ##### Make a request
-To make a request you have to call 'loadInfeedInFrame'.
+To make a request you have to call 'loadInfeedInFrame'. 
 
-###### Parameter :
-
+######Parameter :
  - madvertiseFrame: MAdvertiseInfeedFrame  frame with parametres  WidthDP : widht of viewInfeed and infeedRatio:
  
  ```objc
  (INFEED_RATIO_16_9 / INFEED_RATIO_4_3)
  ```
-
  - Returns: void result will be returned in the callback.
 
 ```objc
