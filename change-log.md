@@ -10,6 +10,7 @@ you must check [Upgrade Guide]. You need to keep all Ad Network libs up to date.
 - **Features**
     - Remove the UIWebview
     - use the latest version OM SDK - 1.2.19.
+    - New BlueStack Demo application
    
 - **Bug Fixes**
     - fix the crash nslogv
