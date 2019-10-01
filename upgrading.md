@@ -5,6 +5,7 @@ See [Wiki], [Design Guidelines and Best practices] and [Help Center]  for more d
 ## Upgrading to 2.15.1
 
 - Use new [MngAdsSDK] + *Adapter.a
+- Use new DFP 7.50.0 [GoogleMobileAds.framework]
 - use new OMSDK 1.2.19 (default dependancy)
 - Use new FacebookAudience 5.5.1 version [FBAudienceNetwork.framework]
 - Use new AdColony 4.1 version, [AdColony.framework].
