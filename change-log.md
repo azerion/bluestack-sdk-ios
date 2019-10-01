@@ -5,6 +5,22 @@ See [Wiki], [Design Guidelines and Best practices] and [Help Center]  for more d
 
 you must check [Upgrade Guide]. You need to keep all Ad Network libs up to date.
 
+## Version 2.15.1
+#### Release date: October 1, 2019
+- **Features**
+    - Remove the UIWebview
+    - use the latest version OM SDK - 1.2.19.
+   
+- **Bug Fixes**
+    - fix the crash nslogv
+
+- **Ad Network Mediation Updates**
+
+    - Use new [MngAdsSDK] + *Adapter.a
+    - use new DFP 7.50.0 version [GoogleMobileAds.framework]
+    - Use new FacebookAudience 5.5.1 version [FBAudienceNetwork.framework]
+    - Use new AdColony 4.1 version, [AdColony.framework]
+
 ## Version 2.15
 #### Release date: September 18th, 2019
 - **Features**
