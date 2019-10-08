@@ -55,7 +55,7 @@ On your Google Ad Manager UI, create a custom event
 ### 1. Set Up
 
 * check [Using CocoaPods] or [Manual Install] in order include MNGAds SDK on your application project.
-* import the Custom Events adapters in your code :
+* import[Madvertise Custom Events adapters] in your code :
 
 ```objc
  import "MadvertiseCustomEventInterstitial.h"
@@ -360,3 +360,4 @@ adLoader:didFailToReceiveAdWithError: will be called when all ad request fail. i
 [DFP Documentation]:https://developers.google.com/ad-manager/mobile-ads-sdk/ios/quick-start
 [Google Ad Manager UI]:https://admanager.google.com/
 [Step 1]:https://bitbucket.org/mngcorp/mngads-demo-ios/wiki/dfp-adapter-ios#markdown-header-1-create-a-yield-groups
+[Madvertise Custom Events adapters] :https://bitbucket.org/mngcorp/mngads-demo-ios/src/master/Demo/MNG-Ads-SDK/GoogleMobileAds-Adapter/
