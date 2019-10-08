@@ -55,7 +55,7 @@ On your Google Ad Manager UI, create a custom event
 ### 1. Set Up
 
 * check [Using CocoaPods] or [Manual Install] in order include MNGAds SDK on your application project.
-* import[Madvertise Custom Events adapters] in your code :
+* import [Madvertise Custom Events adapters] in your code :
 
 ```objc
  import "MadvertiseCustomEventInterstitial.h"
