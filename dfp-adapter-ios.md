@@ -42,8 +42,16 @@ On your Google Ad Manager UI, create a custom event
 
 ### 1. Set Up
 
-* Add our adapter [mngads-dfp-adapter-1.0.0.aar]
 * check [Using CocoaPods] or [Manual Install] in order include MNGAds SDK on your application project.
+* import the Custom Events adapters in your code :
+
+```objc
+ import "MadvertiseCustomEventInterstitial.h"
+ import "MadvertiseCustomEventBanner.h"
+ import "MadvertiseCustomEventNativead.h"
+ 
+```
+ 
 
 
 
@@ -80,12 +88,6 @@ To create a banner you have to init an object with type GADBannerView and set th
          initWithAdSize:kGADAdSizeBanner];
    bannerAdView.adUnitID = @"AdUnitId";
    bannerAdView.rootViewController = self;
-   bannerAdView.delegate = self;
-    
-   CGRect frame = bannerAdView.frame;
-   frame.origin.y = [[UIScreen mainScreen] bounds].size.height - 50;
-   frame.size.width = [[UIScreen mainScreen]bounds].size.width;
-   bannerAdView.frame = frame;
    [MadvertiseCustomEventBanner setViewController:self];
     
     DFPRequest* request = [self prepareDFPRequest];
@@ -102,14 +104,34 @@ the DFP will call your CustomEventBanner Class and will enter to this method :
               parameter:(NSString *)serverParameter
                   label:(NSString *)serverLabel
                 request:(GADCustomEventRequest *)request {
-                  _bannerFactory = [[MNGAdsSDKFactory alloc]init];
+     if (_viewController == nil) {
+          return;
+        }
+   _bannerFactory = [[MNGAdsSDKFactory alloc]init];
         _bannerFactory.bannerDelegate = self;
         _bannerFactory.viewController = [self.delegate viewControllerForPresentingModalView];
         _bannerFactory.placementId = serverParameter;
         
         _bannerFactory.clickDelegate = self;
         
-        [_bannerFactory loadBannerInFrame:CGRectMake(0, 0, [[UIScreen mainScreen]bounds].size.width, 50)];
+       MNGPreference *preferences = [Utils getTestPreferences];
+       MNGAdSize size;
+        if (GADAdSizeEqualToSize(adSize,kGADAdSizeLargeBanner)) { //SQUARE
+            size = kMNGAdSizeLargeBanner;
+        }else {
+            if (GADAdSizeEqualToSize(adSize,kGADAdSizeMediumRectangle)) {
+                 size = kMNGAdSizeMediumRectangle;
+            } else {
+                if (GADAdSizeEqualToSize(adSize,kGADAdSizeFullBanner)) {
+                     size = kMNGAdSizeFullBanner;
+                } else {
+                      BOOL isIPAD = ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPad);
+                      size = (isIPAD)?kMNGAdSizeDynamicLeaderboard:kMNGAdSizeDynamicBanner;
+                }
+            }
+        }
+    
+        [_bannerFactory loadBannerInFrame:size withPreferences:preferences];
                 
 }
    
@@ -121,20 +143,20 @@ adViewDidReceiveAd: will be called by the SDK when your bannerView is ready. now
 ```objc
 /// Tells the delegate an ad request loaded an ad.
 -(void)adsAdapter:(MNGAdsAdapter *)adsAdapter bannerDidLoad:(UIView *)adView preferredHeight:(CGFloat)preferredHeight {
-    if ([self.delegate respondsToSelector:@selector(customEventBanner:didReceiveAd:)]) {
-         dispatch_async(dispatch_get_main_queue(), ^{
-        [self.delegate customEventBanner:self didReceiveAd:adView];
-       
-          CGRect frame = adView.frame;
-          frame.origin.y = [[UIScreen mainScreen] bounds].size.height - adView.frame.size.height;
-          frame.origin.x = 0;
-          frame.size.width = [[UIScreen mainScreen]bounds].size.width;
-          adView.frame = frame;
-          ((DFPDemoViewController*)_viewController).bannerFromMNGView = adView;
-          [_viewController.view addSubview:adView];
-        });
+
+   int width = _viewController.view.frame.size.width;
+    adView.frame = CGRectMake( 0, [[UIScreen mainScreen] bounds].size.height - preferredHeight, width, preferredHeight);
+    adView.autoresizingMask = UIViewAutoresizingFlexibleHeight | UIViewAutoresizingFlexibleWidth;
+    DFPDemoViewController* dfpDemoVC  = (DFPDemoViewController*)_viewController ;
+    if (dfpDemoVC.bannerFromMNGView) {
+        [dfpDemoVC.bannerFromMNGView removeFromSuperview];
     }
-}
+    dfpDemoVC.bannerFromMNGView = adView;
+    dispatch_async(dispatch_get_main_queue(), ^{
+        [_viewController.view addSubview:adView];
+    });
+    
+   }
 
 ```
 
