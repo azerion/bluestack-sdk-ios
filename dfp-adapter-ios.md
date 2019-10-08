@@ -25,18 +25,30 @@ The custom event must be defined in the [Google Ad Manager UI].
 2. Choose **Appsfire** network
 3. Allow mediation
 
+### 2. Add a Yield Group
 
-![screenshot-admanager.google.com-2019.10.02-22_32_42.jpg](https://bitbucket.org/repo/GyRXRR/images/3231118223-screenshot-admanager.google.com-2019.10.02-22_32_42.jpg)
+![screenshot-admanager.google.com-2019.10.08-18_32_29.jpg](https://bitbucket.org/repo/aen579/images/3579724023-screenshot-admanager.google.com-2019.10.08-18_32_29.jpg)
 
-### 2. Define a custom event
+1. Choose a name
+2. Choose a format (You must create a Yield Group by format)
+3. Choose at least one size according format
+4. Target a specific placement
+
+### 3. Add A Yield Partner and Define a custom event
 
 On your Google Ad Manager UI, create a custom event 
 
-![screenshot-admanager.google.com-2019.10.02-22_33_13.jpg](https://bitbucket.org/repo/GyRXRR/images/1642703664-screenshot-admanager.google.com-2019.10.02-22_33_13.jpg)
+![screenshot-admanager.google.com-2019.10.08-18_33_45.jpg](https://bitbucket.org/repo/aen579/images/837721569-screenshot-admanager.google.com-2019.10.08-18_33_45.jpg)
 
-![screenshot-admanager.google.com-2019.10.02-22_36_16.jpg](https://bitbucket.org/repo/GyRXRR/images/4019010383-screenshot-admanager.google.com-2019.10.02-22_36_16.jpg)
+1. Select **Madvertise Ad-Network** created on [Step 1]
+2. Choose **Custom Event** for Integration type
+3. Choose your platform iOS or Android
+4. Set the following **Label**, **class Name**  and **Parameter** according your format :
 
-![l.png](https://bitbucket.org/repo/GyRXRR/images/3601965291-l.png)
+* Banner : Label= **MadvertiseCustomEventBanner**, class Name= **MadvertiseCustomEventBanner** and Parameter= /YOUR_APP_ID/PLACEMENT_ID_BANNER
+* Banner : Label= **MadvertiseCustomEventInterstitial**, class Name= **MadvertiseCustomEventInterstitial** and Parameter= /YOUR_APP_ID/PLACEMENT_ID_INTER
+* Banner : Label= **MadvertiseCustomEventNativead**, class Name= **MadvertiseCustomEventNativead** and Parameter= /YOUR_APP_ID/PLACEMENT_ID_NATIVEAD
+
 
 ## Integrate MNGAds in your application project
 
@@ -347,3 +359,4 @@ adLoader:didFailToReceiveAdWithError: will be called when all ad request fail. i
 [mngads-sdk-x.aar Android SDK]:https://bitbucket.org/mngcorp/mngads-demo-android/src/HEAD/MngAdsDemo/app/libs/mngads-sdk-2.7.aar?at=master
 [DFP Documentation]:https://developers.google.com/ad-manager/mobile-ads-sdk/ios/quick-start
 [Google Ad Manager UI]:https://admanager.google.com/
+[Step 1]:https://bitbucket.org/mngcorp/mngads-demo-ios/wiki/dfp-adapter-ios#markdown-header-1-create-a-yield-groups
