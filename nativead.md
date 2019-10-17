@@ -59,51 +59,51 @@ NSLog(@"%@",error);
 }
 ```
 
-##2. Native Ad Assets
+## 2. Native Ad Assets
 
 Once a native ad is loaded, you may retrieve its metadata with the following methods:
 
-###**Main Image**
+### **Main Image**
 
  - 1200x627px image,
  - Wide aspect ratio main image.
  - asset name : **nativeObject.coverImageUrl**
 
 
-###**Icon Image**
+### **Icon Image**
 
  - 128x128 max
  - asset name : **nativeObject.photoUrl**
 
 
-###**Ad Title**
+### **Ad Title**
 
  - 50 maximum character length string of ad headline
  - Provide enough space to display the entire length of the Ad Title
  - asset name : **nativeObject.title**
 
 
-###**Ad Text**
+### **Ad Text**
 
  - 150 maximum character length string of ad text
  - Provide enough space to display the entire length of the Ad Text
  - asset name : **nativeObject.body**
 
-###**CTA Text**
+### **CTA Text**
 
  - Text for a button
  - 12 characters maximum
  - asset name : **nativeObject.callToAction**
 
 
-###**Sponsored Marker**
+### **Sponsored Marker**
 
  - Badge view (an icon)
  - change according ad network
  - must be inserted on top right
  - asset name : **nativeObject.adChoiceBadgeView**
 
-###**Distinguishable Ad**
+### **Distinguishable Ad**
 
  - “Ad” (can be localized)
  - Badge that says “AD” and is at least 15x15px (can be localized)
@@ -137,14 +137,14 @@ callToAction=nativeObject.callToAction;
 [_nativeObject registerViewForInteraction:...];
 
 ```
-###**Native Ad Without Cover Image **
+### **Native Ad Without Cover Image **
 ```objc
 
 [_nativeObject registerViewForInteraction:self.nativeView withMediaView:nil withIconImageView:self.iconeImage withViewController:[APP_DELEGATE drawerViewController] withClickableView:self.callToActionButton];
 
 ```
 
-###**Native Ad With Cover Image **
+### **Native Ad With Cover Image **
 ```objc
 
 [_nativeObject registerViewForInteraction:self.nativeView withMediaView:self.backgroundImage withIconImageView:self.iconeImage withViewController:[APP_DELEGATE drawerViewController] withClickableView:self.callToActionButton];
