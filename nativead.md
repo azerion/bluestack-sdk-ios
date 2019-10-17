@@ -63,19 +63,6 @@ NSLog(@"%@",error);
 
 Once a native ad is loaded, you may retrieve its metadata with the following methods:
 
-### **Main Image**
-
- - 1200x627px image,
- - Wide aspect ratio main image.
- - asset name : **nativeObject.coverImageUrl**
-
-
-### **Icon Image**
-
- - 128x128 max
- - asset name : **nativeObject.photoUrl**
-
-
 ### **Ad Title**
 
  - 50 maximum character length string of ad headline
@@ -137,25 +124,11 @@ callToAction=nativeObject.callToAction;
 [_nativeObject registerViewForInteraction:...];
 
 ```
-### **Native Ad Without Cover Image **
-```objc
 
-[_nativeObject registerViewForInteraction:self.nativeView withMediaView:nil withIconImageView:self.iconeImage withViewController:[APP_DELEGATE drawerViewController] withClickableView:self.callToActionButton];
-
-```
-
-### **Native Ad With Cover Image **
-```objc
-
-[_nativeObject registerViewForInteraction:self.nativeView withMediaView:self.backgroundImage withIconImageView:self.iconeImage withViewController:[APP_DELEGATE drawerViewController] withClickableView:self.callToActionButton];
-
-```
 
 ## 3. Native Ad Implementation
 
-![native-ios.png](https://bitbucket.org/repo/aen579/images/1393323123-native-ios.png)
-
-
+![nativeAd.png](https://bitbucket.org/repo/aen579/images/1993529083-nativeAd.png)
 ## 4. Video
 You can also integrate video ads into your Native Ad experience. To enable video you must complete the following steps:
  - Have SDK version 2.0 or later
@@ -174,19 +147,30 @@ Ad metadata that you receive can be cached and re-used for up to 3 hours. If you
 
 we provide method to download assets.
 
+### ** registerViewForInteraction Paramètres **
+
+    * self.nativeView.   : containerView of native Ad
+    * withMediaView      : coverImageView 
+    * withIconImageView  : iconeImageView
+    * withViewController : parent ViewController of nativeAd
+    * withClickableView  : the button of nativeAd 
+
+
+### **Native Ad Without Cover Image **
+
 ```objc
-__weak NativeAdViewController *weakSelf = self;
-    [nativeObject downloadAssetWithType:MAdvertiseAssetTypeAppIcon completition:^(UIImage *image) {
-        dispatch_async(dispatch_get_main_queue(), ^{
-            if (!weakSelf) {
-                return;
-            }
-            __strong NativeAdViewController *strongSelf = weakSelf;
-            strongSelf.iconeImage.image = image;
-            strongSelf.nativeView.hidden = NO;
-        });
-    }];
+
+[_nativeObject registerViewForInteraction:self.nativeView withMediaView:nil withIconImageView:self.iconeImage withViewController:[APP_DELEGATE drawerViewController] withClickableView:self.callToActionButton];
+
 ```
+
+### **Native Ad With Cover Image **
+```objc
+
+[_nativeObject registerViewForInteraction:self.nativeView withMediaView:self.backgroundImage withIconImageView:self.iconeImage withViewController:[APP_DELEGATE drawerViewController] withClickableView:self.callToActionButton];
+
+```
+
 
 ## 6. customizable Badge
 
