@@ -134,15 +134,23 @@ if(nativeObject.adChoiceBadgeView){
 // Get the localized text to print on the call to action button, such as "DOWNLOAD , LEARNE MORE ..."
 callToAction=nativeObject.callToAction;
 
-// Get the URL of the icon image for the app
- iconUrl=nativeObject.photoUrl;
+[_nativeObject registerViewForInteraction:...];
 
-// Get ahe URL of the cover image for the app
- coverImageUrl=nativeObject.coverImageUrl;
-
-// Register your custom ad view to automatically report impressions and clicks, and react to clicks by opening the app in the store. This is mandatory
-[_nativeObject registerViewForInteraction:container withViewController:vc withClickableView:self.callToActionButton];
 ```
+###**Native Ad Without Cover Image **
+```objc
+
+[_nativeObject registerViewForInteraction:self.nativeView withMediaView:nil withIconImageView:self.iconeImage withViewController:[APP_DELEGATE drawerViewController] withClickableView:self.callToActionButton];
+
+```
+
+###**Native Ad With Cover Image **
+```objc
+
+[_nativeObject registerViewForInteraction:self.nativeView withMediaView:self.backgroundImage withIconImageView:self.iconeImage withViewController:[APP_DELEGATE drawerViewController] withClickableView:self.callToActionButton];
+
+```
+
 ## 3. Native Ad Implementation
 
 ![native-ios.png](https://bitbucket.org/repo/aen579/images/1393323123-native-ios.png)
