@@ -58,9 +58,10 @@ On your Google Ad Manager UI, create a custom event
 * import [Madvertise Custom Events adapters] in your code :
 
 ```objc
- import "MadvertiseCustomEventInterstitial.h"
- import "MadvertiseCustomEventBanner.h"
- import "MadvertiseCustomEventNativead.h"
+
+#import "MadvertiseCustomEventInterstitial.h"
+#import "MadvertiseCustomEventBanner.h"
+#import "MadvertiseCustomEventNativead.h"
  
 ```
  
