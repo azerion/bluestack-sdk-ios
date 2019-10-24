@@ -55,304 +55,107 @@ On your Google Ad Manager UI, create a custom event
 ### 1. Set Up
 
 * check [Using CocoaPods] or [Manual Install] in order include MNGAds SDK on your application project.
-* import [Madvertise Custom Events adapters] in your code :
+
+* check [GoogleMobileAds-Adapter] and add manually on  your application project. 
+
+* import Adapter files in your code :
 
 ```objc
 
 #import "MadvertiseCustomEventInterstitial.h"
 #import "MadvertiseCustomEventBanner.h"
 #import "MadvertiseCustomEventNativead.h"
+@import GoogleMobileAds;
  
 ```
- 
-
-
 
 ### 2. Initialize your ads
 
-#### Init Preférence
-we initialize the preferences to be used for the request for differents types of Ads.
+You can check our [Demo] page.
 
-```objc
+#### Banner and Interstitial
 
--(DFPRequest*)prepareDFPRequest{
-    MNGPreference *preferences = [Utils getTestPreferences];
-       
-       DFPRequest* request = [DFPRequest request];
-       request.customTargeting = @{@"location" :preferences.location ,
-                                   @"gender" : @(preferences.gender),
-                                   @"keyWord" : preferences.keyWord
-       };
-    return request;
-}
+**No additional code is required for integration.** 
 
-
-```
-
-####  Banner
-
-
-##### Init GADBannerView
-
-To create a banner you have to init an object with type GADBannerView and set the GADBannerViewDelegate and the viewController.
-
-```objc
-   bannerAdView = [[GADBannerView alloc]
-         initWithAdSize:kGADAdSizeBanner];
-   bannerAdView.adUnitID = @"AdUnitId";
-   bannerAdView.rootViewController = self;
-   [MadvertiseCustomEventBanner setViewController:self];
-    
-    DFPRequest* request = [self prepareDFPRequest];
-    
-   [bannerAdView loadRequest:request];
-```
-
-##### Handle the Request from DFP
-
-the DFP will call your CustomEventBanner Class and will enter to this method :
-
-```objc
-   - (void)requestBannerAd:(GADAdSize)adSize
-              parameter:(NSString *)serverParameter
-                  label:(NSString *)serverLabel
-                request:(GADCustomEventRequest *)request {
-     if (_viewController == nil) {
-          return;
-        }
-   _bannerFactory = [[MNGAdsSDKFactory alloc]init];
-        _bannerFactory.bannerDelegate = self;
-        _bannerFactory.viewController = [self.delegate viewControllerForPresentingModalView];
-        _bannerFactory.placementId = serverParameter;
-        
-        _bannerFactory.clickDelegate = self;
-        
-       MNGPreference *preferences = [Utils getTestPreferences];
-       MNGAdSize size;
-        if (GADAdSizeEqualToSize(adSize,kGADAdSizeLargeBanner)) { //SQUARE
-            size = kMNGAdSizeLargeBanner;
-        }else {
-            if (GADAdSizeEqualToSize(adSize,kGADAdSizeMediumRectangle)) {
-                 size = kMNGAdSizeMediumRectangle;
-            } else {
-                if (GADAdSizeEqualToSize(adSize,kGADAdSizeFullBanner)) {
-                     size = kMNGAdSizeFullBanner;
-                } else {
-                      BOOL isIPAD = ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPad);
-                      size = (isIPAD)?kMNGAdSizeDynamicLeaderboard:kMNGAdSizeDynamicBanner;
-                }
-            }
-        }
-    
-        [_bannerFactory loadBannerInFrame:size withPreferences:preferences];
-                
-}
-   
-```
-
-##### Handle callBack from GADBannerViewDelegate
-adViewDidReceiveAd: will be called by the SDK when your bannerView is ready. now you can add your adView to th ViewHierarchy.
-
-```objc
-/// Tells the delegate an ad request loaded an ad.
--(void)adsAdapter:(MNGAdsAdapter *)adsAdapter bannerDidLoad:(UIView *)adView preferredHeight:(CGFloat)preferredHeight {
-
-   int width = _viewController.view.frame.size.width;
-    adView.frame = CGRectMake( 0, [[UIScreen mainScreen] bounds].size.height - preferredHeight, width, preferredHeight);
-    adView.autoresizingMask = UIViewAutoresizingFlexibleHeight | UIViewAutoresizingFlexibleWidth;
-    DFPDemoViewController* dfpDemoVC  = (DFPDemoViewController*)_viewController ;
-    if (dfpDemoVC.bannerFromMNGView) {
-        [dfpDemoVC.bannerFromMNGView removeFromSuperview];
-    }
-    dfpDemoVC.bannerFromMNGView = adView;
-    dispatch_async(dispatch_get_main_queue(), ^{
-        [_viewController.view addSubview:adView];
-    });
-    
-   }
-
-```
-
-adView: didFailToReceiveAdWithError: will be called when ad  request fail. it will return the error of last called ad request.
-
-```objc
-/// Tells the delegate an ad request failed.
--(void)adsAdapter:(MNGAdsAdapter *)adsAdapter bannerDidFailWithError:(NSError *)error{
-    if ([self.delegate respondsToSelector:@selector(customEventBanner:didFailAd:)]) {
-        [self.delegate customEventBanner:self didFailAd:error];
-    }
-    
-}
-
-```
-#### Interstitial
-
-##### Init GADInterstitial
-
-To create an interstitial you must init an object with type GADInterstitial and set the GADInterstitialDelegate and the viewController.
-
-```objc
-    interstitial = [[GADInterstitial alloc] initWithAdUnitID:@"AdUnitId"];
-    interstitial.delegate = self;
-    DFPRequest* request = [self prepareDFPRequest];
-    [interstitial loadRequest:request];
-```
-##### Handle the Request from DFP
-
-the DFP will call your CustomEventInterstitial  Class and will enter to this method :
-
-```objc
- - (void)requestInterstitialAdWithParameter:(NSString *)serverParameter
-                                     label:(NSString *)serverLabel
-                                   request:(GADCustomEventRequest *)request {
-      if (_interFactory.isBusy) {
-          NSLog(@"Ads Factory is busy");
-          return;
-      }
-      
-      _interFactory = [[MNGAdsSDKFactory alloc]init];
-      _interFactory.interstitialDelegate = self;
-      _interFactory.placementId =  serverParameter ; 
-      _interFactory.viewController = [[[[UIApplication sharedApplication]delegate] window]rootViewController];
-      _interFactory.clickDelegate = self;
-      
-      [_interFactory loadInterstitialAutoDisplayed:YES];
-    
-    
-}
-```
-
-##### Handle callBack from GADInterstitialDelegate
-interstitialDidReceiveAd: will be called by the SDK when your Interstitial is ready. Interstitial will be showen.
-
-```objc
--(void)adsAdapterInterstitialDidLoad:(MNGAdsAdapter *)adsAdapter {
-    if ([self.delegate respondsToSelector:@selector(customEventInterstitialDidReceiveAd:)]) {
-        [self.delegate customEventInterstitialDidReceiveAd:self];
-    }
-}
-
-```
-
-adsAdapter: didFailToReceiveAdWithError: will be called when  ad request fail. it will return the error of last called ad request.
-
-
-```objc
--(void)adsAdapter:(MNGAdsAdapter *)adsAdapter interstitialDidFailWithError:(NSError *)error {
-    if ([self.delegate
-         respondsToSelector:@selector(customEventInterstitial:didFailAd:)]) {
-        [self.delegate customEventInterstitial:self didFailAd:error];
-    }
-}
-```
-
- Tells the delegate that an interstitial will be presented.
-
-```objc
-- (void)interstitialWillPresentScreen:(DFPInterstitial *)ad {
-  NSLog(@"interstitialWillPresentScreen");
-  }
-
-```
+You may now use MNG DFP Adaptor to show [Interstitial Ads] and [Banner Ads] the same way it's described in the [DFP Documentation].The adapter code and the setup you did on your Google Ad Manager UI will allow MNG Ads to deliver ads.
 
 
 #### Native Ads 
 
 ##### Init MadvertiseCustomEventNativead
 
-To create a nativeAd  you have to init an object with type MadvertiseCustomEventNativead and set the GADNativeCustomTemplateAdLoaderDelegate.
+To create a nativeAd  you have to init an object with type MadvertiseCustomEventNativead and set the DFPNativeAdLoadedDelegate to the self view controller.
 
 ```objc
-     [MadvertiseCustomEventNativead setMainImage:_mainImageView andIconeImage:_iconImageView andNativeView:_nativeView andButton:_callToActionLabel andWithViewController:self andTitleLabel:_titleLabel andMainLabel:_mainTextLabel];
-     GADNativeAdViewAdOptions *adViewOptions = [[GADNativeAdViewAdOptions alloc] init];
-     adLoader = [[GADAdLoader alloc] initWithAdUnitID:@"AdUnit" rootViewController:self adTypes:@[kGADAdLoaderAdTypeUnifiedNative] options:@[adViewOptions]];
-     adLoader.delegate = self;
-     DFPRequest* request = [self prepareDFPRequest];
-     [adLoader loadRequest:request];
+   [MadvertiseCustomEventNativead setMainImage:_mainImageView andIconeImage:_iconImageView andNativeView:_nativeView andButton:_callToActionLabel andWithViewController:self andTitleLabel:_titleLabel andMainLabel:_mainTextLabel];
+
+    [MadvertiseCustomEventNativead setCustomDFPNativeAdDelegate:self];
+
+    GADNativeAdViewAdOptions *adViewOptions = [[GADNativeAdViewAdOptions alloc] init];
+    adLoader = [[GADAdLoader alloc] initWithAdUnitID: NATIVE_AD_ADUNIT rootViewController:self adTypes:@[kGADAdLoaderAdTypeUnifiedNative] options:@[adViewOptions]];
+    
+  DFPRequest* request = [DFPRequest request];
+  GADCustomEventExtras *extras = [[GADCustomEventExtras alloc] init];
+  [extras setExtras:[self getExtrasDictFromPreferences] forLabel:@"MadvertiseCustomEventNativead"];
+  [request registerAdNetworkExtras:extras];
+    [adLoader loadRequest:request];
 ```
 
-##### handle the request from DFP
-the DFP will call your CustomEventNativeAd  Class and will enter to this method :
+##### Handle callBack from DFPNativeAdLoadedDelegate
+customDFPEventNativeAddidReceiveAd: will be called when the nativeObject is ready. now you can create your own view.
 
 ```objc
-    - (void)requestNativeAdWithParameter:(NSString *)serverParameter
-                             request:(GADCustomEventRequest *)request
-                             adTypes:(NSArray *)adTypes
-                             options:(NSArray *)options
-                  rootViewController:(UIViewController *)rootViewController {
-  BOOL requestedUnified = [adTypes containsObject:kGADAdLoaderAdTypeUnifiedNative];
 
-  // This custom event assumes you have implemented unified native advanced in your app as is done
-  // in this sample.
-
-  if (!requestedUnified) {
-    NSString *description = @"You must request the unified native ad format.";
-    NSDictionary *userInfo =
-        @{NSLocalizedDescriptionKey : description, NSLocalizedFailureReasonErrorKey : description};
-    NSError *error =
-        [NSError errorWithDomain:@"com.google.mediation.sample" code:0 userInfo:userInfo];
-    [self.delegate customEventNativeAd:self didFailToLoadWithError:error];
-    return;
-  }
-
-  // This custom event uses the server parameter to carry an ad unit ID, which is the most common
-  // use case.
-    if (_nativeFactory != nil) {
-        [_nativeFactory releaseMemory];
-        _nativeFactory = nil;
-    }
-    
-    _nativeFactory = [[MNGAdsSDKFactory alloc]init];
-    _nativeFactory.nativeDelegate = self;
-    _nativeFactory.viewController = _viewController;
-    _nativeFactory.placementId =  serverParameter ; //_nativePlacement;
-    _nativeFactory.clickDelegate = self;
-    
-    [_nativeFactory loadNative];
-}
-```
-
-##### Handle callBack from NativeDelegate
-adLoaderDidFinishLoading: will be called by the SDK when your nativeObject is ready. now you can create your own view.
-
-```objc
-- (BOOL)handlesUserClicks {
-    return NO;
-}
-
-
-- (BOOL)handlesUserImpressions {
-    return NO;
-}
-
-
--(void)adsAdapter:(MNGAdsAdapter *)adsAdapter nativeObjectDidLoad:(MNGNAtiveObject *)adView{
-    SampleMediatedNativeAd *mediatedAd =
-    [[SampleMediatedNativeAd alloc] initWithSampleNativeAd:adView
-                                     nativeAdViewAdOptions:_nativeAdViewAdOptions];
-    [self.delegate customEventNativeAd:self didReceiveMediatedUnifiedNativeAd:mediatedAd];
-    
-    //set the graphics
-    dispatch_async(dispatch_get_main_queue(), ^{
-        _nativeView.hidden = NO;
-        [_callToActionLabel setTitle:adView.callToAction forState:UIControlStateNormal];
-        _titleLabel.text = adView.title;
-        _mainTextLabel.text = adView.body;
-         [adView registerViewForInteraction:_nativeView withMediaView:_mainImageView withIconImageView:_iconImageView withViewController:_viewController withClickableView:_callToActionLabel];
-    });
-
+-(void)customDFPEventNativeAddidReceiveAd:(MNGNAtiveObject *)nativeDFPObject{
+    _nativeView.hidden = NO;
+    [self.view bringSubviewToFront:_nativeView];
+    [_callToActionLabel setTitle:nativeDFPObject.callToAction forState:UIControlStateNormal];
+    _titleLabel.text = nativeDFPObject.title;
+    _mainTextLabel.text = nativeDFPObject.body;
+    [nativeDFPObject registerViewForInteraction:_nativeView withMediaView:_mainImageView withIconImageView:_iconImageView withViewController:self withClickableView:_callToActionLabel];
 }
 
 ```
 adLoader:didFailToReceiveAdWithError: will be called when all ad request fail. it will return the error of last called ad request.
 
 ```objc
-
-- (void)adsAdapter:(MNGAdsAdapter *)adsAdapter nativeObjectDidFailWithError:(NSError *)error{
-    [self.delegate customEventNativeAd:self didFailToLoadWithError:error];
+-(void)customDFPEventNativeAd:(NSObject *)adapter didFailToLoadWithError:(NSError *)error{
+    NSLog(@"native dfp Object did fail");
 }
 
 ```
+### 3. Init Preference
+If you need to send your preferences (Age, Location, Keyword, Content URL) use the GADCustomEventExtras class.
+
+```objc
+       GADCustomEventExtras *extras = [[GADCustomEventExtras alloc] init];
+       [extras setExtras:extratDict forLabel:CUSTOMLABELADAPTER];
+
+```
+You must pass CUSTOMLABELADAPTER  with custom event adapter class name for :
+
+ * **Banner :** MadvertiseCustomEventBanner :
+ 
+ 
+```objc
+  DFPRequest* request = [DFPRequest request];
+  GADCustomEventExtras *extras = [[GADCustomEventExtras alloc] init];
+  [extras setExtras:[self getExtrasDictFromPreferences] forLabel:@"MadvertiseCustomEventBanner"];
+  [request registerAdNetworkExtras:extras];
+``` 
+ * **Interstitial :** MadvertiseCustomEventInterstitial :
+
+ 
+```objc
+  DFPRequest* request = [DFPRequest request];
+  GADCustomEventExtras *extras = [[GADCustomEventExtras alloc] init];
+  [extras setExtras:[self getExtrasDictFromPreferences] forLabel:@"MadvertiseCustomEventInterstitial"];
+  [request registerAdNetworkExtras:extras];
+``` 
+ 
+
+
+
 
 [Using CocoaPods]:https://bitbucket.org/mngcorp/mngads-demo-ios/wiki/Home#markdown-header-using-cocoapods
 [Manual Install]:https://bitbucket.org/mngcorp/mngads-demo-ios/wiki/Home#markdown-header-manual-install
@@ -362,3 +165,8 @@ adLoader:didFailToReceiveAdWithError: will be called when all ad request fail. i
 [Google Ad Manager UI]:https://admanager.google.com/
 [Step 1]:https://bitbucket.org/mngcorp/mngads-demo-ios/wiki/dfp-adapter-ios#markdown-header-1-create-a-yield-groups
 [Madvertise Custom Events adapters]:https://bitbucket.org/mngcorp/mngads-demo-ios/src/master/Demo/MNG-Ads-SDK/GoogleMobileAds-Adapter/
+[Banner Ads]:https://developers.google.com/ad-manager/mobile-ads-sdk/ios/banner
+[Interstitial Ads]:https://developers.google.com/ad-manager/mobile-ads-sdk/ios/interstitial
+[Native Ads Documentation]:https://developers.google.com/ad-manager/mobile-ads-sdk/ios/native/advanced
+[Demo]: https://bitbucket.org/mngcorp/mngads-demo-ios/src/master/Demo/MNG-Ads-SDK/GoogleMobileAds-Adapter/
+[GoogleMobileAds-Adapter]: https://bitbucket.org/mngcorp/mngads-demo-ios/downloads/GoogleMobileAds-Adapter-v1.0.zip
