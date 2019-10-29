@@ -88,16 +88,25 @@ To create a nativeAd  you have to init an object with type MadvertiseCustomEvent
 
 ```objc
    [MadvertiseCustomEventNativead setMainImage:_mainImageView andIconeImage:_iconImageView andNativeView:_nativeView andButton:_callToActionLabel andWithViewController:self andTitleLabel:_titleLabel andMainLabel:_mainTextLabel];
-
+    
     [MadvertiseCustomEventNativead setCustomDFPNativeAdDelegate:self];
-
+    
     GADNativeAdViewAdOptions *adViewOptions = [[GADNativeAdViewAdOptions alloc] init];
     adLoader = [[GADAdLoader alloc] initWithAdUnitID: NATIVE_AD_ADUNIT rootViewController:self adTypes:@[kGADAdLoaderAdTypeUnifiedNative] options:@[adViewOptions]];
     
-  DFPRequest* request = [DFPRequest request];
-  GADCustomEventExtras *extras = [[GADCustomEventExtras alloc] init];
-  [extras setExtras:[self getExtrasDictFromPreferences] forLabel:@"MadvertiseCustomEventNativead"];
-  [request registerAdNetworkExtras:extras];
+    DFPRequest* request = [DFPRequest request];
+    CLLocation *currentLocation = _locationManager.location;
+    if (currentLocation) {
+        [request setLocationWithLatitude:currentLocation.coordinate.latitude
+                               longitude:currentLocation.coordinate.longitude
+                                accuracy:currentLocation.horizontalAccuracy];
+    }
+        request.keywords = [self setRequestKeyword:@"target=mngadsdemo;version=2.15.1"];
+
+ request.customTargeting = @{@"key1" : @"key1vaule", @"key2" :@"key2vaule"};
+    GADCustomEventExtras *extras = [[GADCustomEventExtras alloc] init];
+    [extras setExtras:request.customTargeting forLabel:@"MadvertiseCustomEventNativead"];
+    [request registerAdNetworkExtras:extras];
     [adLoader loadRequest:request];
 ```
 
@@ -124,39 +133,88 @@ adLoader:didFailToReceiveAdWithError: will be called when all ad request fail. i
 }
 
 ```
-### 3. Init Preference
-If you need to send your preferences (Age, Location, Keyword, Content URL) use the GADCustomEventExtras class.
+
+### 3. Location
+
+- If a user has granted your app location permissions, Ad Manager automatically passes this location data to the SDK. The SDK uses this data to improve ad targeting without requiring any code changes in your app. 
+- You can specify location-targeting information in the ad request as follows:
 
 ```objc
-       GADCustomEventExtras *extras = [[GADCustomEventExtras alloc] init];
-       [extras setExtras:extratDict forLabel:CUSTOMLABELADAPTER];
-
+ DFPRequest* request = [DFPRequest request];
+    CLLocation *currentLocation = _locationManager.location;
+    if (currentLocation) {
+        [request setLocationWithLatitude:currentLocation.coordinate.latitude
+                               longitude:currentLocation.coordinate.longitude
+                                accuracy:currentLocation.horizontalAccuracy];
+    }
 ```
+
+### 4. Custom targeting 
+
+If you need to send your preferences (Age, Keyword, Content URL) use the GADCustomEventExtras  setExtras  method.
+ 
+```objc
+   DFPRequest* request = [DFPRequest request];
+    request.customTargeting = @{@"key1" : @"key1vaule", @"key2" :@"key2vaule"};
+    GADCustomEventExtras *extras = [[GADCustomEventExtras alloc] init];
+    [extras setExtras:request.customTargeting forLabel:@"MadvertiseCustomEventBanner"];
+    [request registerAdNetworkExtras:extras];
+```
+
 You must pass CUSTOMLABELADAPTER  with custom event adapter class name for :
 
  * **Banner :** MadvertiseCustomEventBanner :
  
  
 ```objc
-  DFPRequest* request = [DFPRequest request];
-  GADCustomEventExtras *extras = [[GADCustomEventExtras alloc] init];
-  [extras setExtras:[self getExtrasDictFromPreferences] forLabel:@"MadvertiseCustomEventBanner"];
-  [request registerAdNetworkExtras:extras];
+  MadvertiseCustomEventBanner * customEventBanner = [[MadvertiseCustomEventBanner alloc] init];
+    [customEventBanner setViewController:self];
+    [customEventBanner setCustomDFPBannerDelegate:self];
+    
+    
+    DFPRequest* request = [DFPRequest request];
+    CLLocation *currentLocation = _locationManager.location;
+    if (currentLocation) {
+        [request setLocationWithLatitude:currentLocation.coordinate.latitude
+                               longitude:currentLocation.coordinate.longitude
+                                accuracy:currentLocation.horizontalAccuracy];
+    }
+    request.keywords = [self setRequestKeyword:@"target=mngadsdemo;version=2.15.1"];
+    request.customTargeting = @{@"key1" : @"key1vaule", @"key2" :@"key2vaule"};
+    GADCustomEventExtras *extras = [[GADCustomEventExtras alloc] init];
+    [extras setExtras:request.customTargeting forLabel:@"MadvertiseCustomEventBanner"];
+    [request registerAdNetworkExtras:extras];
+    //create banner
+    GADBannerView* bannerAdView = [[GADBannerView alloc]
+                                   initWithAdSize:kGADAdSizeBanner];
+    bannerAdView.adUnitID = BANNER_AD_ADUNIT;
+    bannerAdView.rootViewController = self ;
+    
+    [bannerAdView loadRequest:request];
 ``` 
  * **Interstitial :** MadvertiseCustomEventInterstitial :
 
  
 ```objc
-  DFPRequest* request = [DFPRequest request];
-  GADCustomEventExtras *extras = [[GADCustomEventExtras alloc] init];
-  [extras setExtras:[self getExtrasDictFromPreferences] forLabel:@"MadvertiseCustomEventInterstitial"];
-  [request registerAdNetworkExtras:extras];
+    MadvertiseCustomEventInterstitial * customEventInterstitial = [[MadvertiseCustomEventInterstitial alloc]init];
+    [customEventInterstitial setViewController: APP_DELEGATE.drawerViewController];
+    
+    DFPRequest* request = [DFPRequest request];
+    CLLocation *currentLocation = _locationManager.location;
+    if (currentLocation) {
+        [request setLocationWithLatitude:currentLocation.coordinate.latitude
+                               longitude:currentLocation.coordinate.longitude
+                                accuracy:currentLocation.horizontalAccuracy];
+    }
+    request.keywords = [self setRequestKeyword:@"target=mngadsdemo;version=2.15.1"];
+    request.customTargeting = @{@"key1" : @"key1vaule", @"key2" :@"key2vaule"};
+    GADCustomEventExtras *extras = [[GADCustomEventExtras alloc] init];
+    [extras setExtras:request.customTargeting forLabel:@"MadvertiseCustomEventInterstitial"];
+    [request registerAdNetworkExtras:extras];
+    interstitial = [[GADInterstitial alloc] initWithAdUnitID: INTERSTITIEL_AD_ADUNIT];
+    [interstitial loadRequest:request];
 ``` 
  
-
-
-
-
 [Using CocoaPods]:https://bitbucket.org/mngcorp/mngads-demo-ios/wiki/Home#markdown-header-using-cocoapods
 [Manual Install]:https://bitbucket.org/mngcorp/mngads-demo-ios/wiki/Home#markdown-header-manual-install
 [mngads-dfp-adapter-1.0.0.aar]:https://bitbucket.org/mngcorp/mngads-demo-android/src/HEAD/MopubDemo/app/libs/mngads-mopub-adapter.aar?at=master&fileviewer=file-view-default
@@ -169,4 +227,4 @@ You must pass CUSTOMLABELADAPTER  with custom event adapter class name for :
 [Interstitial Ads]:https://developers.google.com/ad-manager/mobile-ads-sdk/ios/interstitial
 [Native Ads Documentation]:https://developers.google.com/ad-manager/mobile-ads-sdk/ios/native/advanced
 [Demo]: https://bitbucket.org/mngcorp/mngads-demo-ios/src/master/Demo/MNG-Ads-SDK/GoogleMobileAds-Adapter_Demo/
-[GoogleMobileAds-Adapter]: https://bitbucket.org/mngcorp/mngads-demo-ios/downloads/GoogleMobileAds-Adapter-v1.0.zip
+[GoogleMobileAds-Adapter]: https://bitbucket.org/mngcorp/mngads-demo-ios/downloads/GoogleMobileAds-Adapter-v1.1.zip
