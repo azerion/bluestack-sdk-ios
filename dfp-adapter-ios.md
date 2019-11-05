@@ -46,8 +46,8 @@ On your Google Ad Manager UI, create a custom event
 4. Set the following **Label**, **class Name**  and **Parameter** according your format :
 
 * Banner : Label= **MadvertiseCustomEventBanner**, class Name= **MadvertiseCustomEventBanner** and Parameter= /YOUR_APP_ID/PLACEMENT_ID_BANNER
-* Banner : Label= **MadvertiseCustomEventInterstitial**, class Name= **MadvertiseCustomEventInterstitial** and Parameter= /YOUR_APP_ID/PLACEMENT_ID_INTER
-* Banner : Label= **MadvertiseCustomEventNativead**, class Name= **MadvertiseCustomEventNativead** and Parameter= /YOUR_APP_ID/PLACEMENT_ID_NATIVEAD
+* Interstitial : Label= **MadvertiseCustomEventInterstitial**, class Name= **MadvertiseCustomEventInterstitial** and Parameter= /YOUR_APP_ID/PLACEMENT_ID_INTER
+* Native Ad : Label= **MadvertiseCustomEventNativead**, class Name= **MadvertiseCustomEventNativead** and Parameter= /YOUR_APP_ID/PLACEMENT_ID_NATIVEAD
 
 
 ## Integrate MNGAds in your application project
