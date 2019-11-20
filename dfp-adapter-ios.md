@@ -214,6 +214,35 @@ You must pass CUSTOMLABELADAPTER  with custom event adapter class name for :
     interstitial = [[GADInterstitial alloc] initWithAdUnitID: INTERSTITIEL_AD_ADUNIT];
     [interstitial loadRequest:request];
 ``` 
+
+ * ***HANDLE CALLBACK FROM interstitialMadvertiseDFPDelegate*** : 
+
+1. set the interstitialMadvertiseDFPDelegate and the viewController:
+
+ ```objc
+   [customEventInterstitial setInterstitialMadvertiseDFPDelegate:self];
+  ``` 
+2. will be called by the SDK when your Interstitial is ready. Interstitial will be showen:
+
+ ```objc
+ -(void)interstitialMadvertiseDFPDidload{
+    NSLog(@"interstitialMadvertiseDFPDidload");
+}
+ ``` 
+3.  interstitialMadvertiseDFPDisappear: will be called when intertisialView did disappear. now you can update your UI for example: 
+ 
+ ```objc
+ -(void)interstitialMadvertiseDFPDisappear{
+    NSLog(@"adsMadvertiseDFPInterstitialDisappear");
+}
+ ``` 
+4.  interstitialMadvertiseDFPDidFail:: will be called when all ads servers fail. it will return the error of last called ads server.: 
+ 
+ ```objc
+ -(void)interstitialMadvertiseDFPDidFail{
+    NSLog(@"interstitialMadvertiseDFPDidFail");
+}
+ ``` 
  
 [Using CocoaPods]:https://bitbucket.org/mngcorp/mngads-demo-ios/wiki/Home#markdown-header-using-cocoapods
 [Manual Install]:https://bitbucket.org/mngcorp/mngads-demo-ios/wiki/Home#markdown-header-manual-install
@@ -227,4 +256,4 @@ You must pass CUSTOMLABELADAPTER  with custom event adapter class name for :
 [Interstitial Ads]:https://developers.google.com/ad-manager/mobile-ads-sdk/ios/interstitial
 [Native Ads Documentation]:https://developers.google.com/ad-manager/mobile-ads-sdk/ios/native/advanced
 [Demo]: https://bitbucket.org/mngcorp/mngads-demo-ios/src/master/Demo/MNG-Ads-SDK/GoogleMobileAds-Adapter_Demo/
-[GoogleMobileAds-Adapter]: https://bitbucket.org/mngcorp/mngads-demo-ios/downloads/GoogleMobileAds-Adapter-v1.1.zip
+[GoogleMobileAds-Adapter]: https://bitbucket.org/mngcorp/mngads-demo-ios/downloads/GoogleMobileAds-Adapter-v1.2.zip
