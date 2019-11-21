@@ -215,15 +215,14 @@ You must pass CUSTOMLABELADAPTER  with custom event adapter class name for :
     [interstitial loadRequest:request];
 ``` 
 
- * ***HANDLE CALLBACK FROM interstitialMadvertiseDFPDelegate*** : 
+### 5. HANDLE CALLBACK FROM interstitialMadvertiseDFPDelegate
 
 1. set the interstitialMadvertiseDFPDelegate and the viewController:
 
 ```objc
 
    [customEventInterstitial setInterstitialMadvertiseDFPDelegate:self];
-
-  ``` 
+``` 
 
 2. will be called by the SDK when your Interstitial is ready. Interstitial will be showen:
 
@@ -232,8 +231,7 @@ You must pass CUSTOMLABELADAPTER  with custom event adapter class name for :
  -(void)interstitialMadvertiseDFPDidload{
     NSLog(@"interstitialMadvertiseDFPDidload");
 }
-
- ``` 
+``` 
 
 3.  interstitialMadvertiseDFPDisappear: will be called when intertisialView did disappear. now you can update your UI for example: 
  
@@ -242,8 +240,7 @@ You must pass CUSTOMLABELADAPTER  with custom event adapter class name for :
  -(void)interstitialMadvertiseDFPDisappear{
     NSLog(@"adsMadvertiseDFPInterstitialDisappear");
 }
-
- ``` 
+``` 
 
 4.  interstitialMadvertiseDFPDidFail:: will be called when all ads servers fail. it will return the error of last called ads server.: 
  
@@ -252,8 +249,7 @@ You must pass CUSTOMLABELADAPTER  with custom event adapter class name for :
  -(void)interstitialMadvertiseDFPDidFail{
     NSLog(@"interstitialMadvertiseDFPDidFail");
 }
-
- ``` 
+``` 
  
 [Using CocoaPods]:https://bitbucket.org/mngcorp/mngads-demo-ios/wiki/Home#markdown-header-using-cocoapods
 [Manual Install]:https://bitbucket.org/mngcorp/mngads-demo-ios/wiki/Home#markdown-header-manual-install
