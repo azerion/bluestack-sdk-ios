@@ -221,7 +221,9 @@ You must pass CUSTOMLABELADAPTER  with custom event adapter class name for :
 
  ```objc
    [customEventInterstitial setInterstitialMadvertiseDFPDelegate:self];
+
   ``` 
+
 2. will be called by the SDK when your Interstitial is ready. Interstitial will be showen:
 
  ```objc
@@ -229,6 +231,7 @@ You must pass CUSTOMLABELADAPTER  with custom event adapter class name for :
     NSLog(@"interstitialMadvertiseDFPDidload");
 }
  ``` 
+
 3.  interstitialMadvertiseDFPDisappear: will be called when intertisialView did disappear. now you can update your UI for example: 
  
  ```objc
@@ -236,6 +239,7 @@ You must pass CUSTOMLABELADAPTER  with custom event adapter class name for :
     NSLog(@"adsMadvertiseDFPInterstitialDisappear");
 }
  ``` 
+
 4.  interstitialMadvertiseDFPDidFail:: will be called when all ads servers fail. it will return the error of last called ads server.: 
  
  ```objc
