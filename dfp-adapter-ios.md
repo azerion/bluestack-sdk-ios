@@ -89,11 +89,12 @@ To create a nativeAd  you have to init an object with type MadvertiseCustomEvent
 ```objc
    [MadvertiseCustomEventNativead setMainImage:_mainImageView andIconeImage:_iconImageView andNativeView:_nativeView andButton:_callToActionLabel andWithViewController:self andTitleLabel:_titleLabel andMainLabel:_mainTextLabel];
     
-    [MadvertiseCustomEventNativead setCustomDFPNativeAdDelegate:self];
+    [MadvertiseCustomEventNativead setNativeAdMadvertiseDFPDelegate:self];
     
     GADNativeAdViewAdOptions *adViewOptions = [[GADNativeAdViewAdOptions alloc] init];
     adLoader = [[GADAdLoader alloc] initWithAdUnitID: NATIVE_AD_ADUNIT rootViewController:self adTypes:@[kGADAdLoaderAdTypeUnifiedNative] options:@[adViewOptions]];
-    
+   [MadvertiseCustomEventNativead setNativeAdMadvertiseDFPDelegate:self];
+
     DFPRequest* request = [DFPRequest request];
     CLLocation *currentLocation = _locationManager.location;
     if (currentLocation) {
@@ -110,12 +111,12 @@ To create a nativeAd  you have to init an object with type MadvertiseCustomEvent
     [adLoader loadRequest:request];
 ```
 
-##### Handle callBack from DFPNativeAdLoadedDelegate
-customDFPEventNativeAddidReceiveAd: will be called when the nativeObject is ready. now you can create your own view.
+##### Handle callBack from NativeAdMadvertiseDFPDelegate
+madvertiseCustomEventNativeAdidReceiveAd: will be called when the nativeObject is ready. now you can create your own view.
 
 ```objc
 
--(void)customDFPEventNativeAddidReceiveAd:(MNGNAtiveObject *)nativeDFPObject{
+-(void)madvertiseCustomEventNativeAdidReceiveAd:(MNGNAtiveObject *)nativeDFPObject{
     _nativeView.hidden = NO;
     [self.view bringSubviewToFront:_nativeView];
     [_callToActionLabel setTitle:nativeDFPObject.callToAction forState:UIControlStateNormal];
@@ -123,12 +124,13 @@ customDFPEventNativeAddidReceiveAd: will be called when the nativeObject is read
     _mainTextLabel.text = nativeDFPObject.body;
     [nativeDFPObject registerViewForInteraction:_nativeView withMediaView:_mainImageView withIconImageView:_iconImageView withViewController:self withClickableView:_callToActionLabel];
 }
+}
 
 ```
 adLoader:didFailToReceiveAdWithError: will be called when all ad request fail. it will return the error of last called ad request.
 
 ```objc
--(void)customDFPEventNativeAd:(NSObject *)adapter didFailToLoadWithError:(NSError *)error{
+-(void)madvertiseCustomEventNativeAd:(NSObject *)adapter didFailToLoadWithError:(NSError *)error{
     NSLog(@"native dfp Object did fail");
 }
 
@@ -169,7 +171,7 @@ You must pass CUSTOMLABELADAPTER  with custom event adapter class name for :
 ```objc
   MadvertiseCustomEventBanner * customEventBanner = [[MadvertiseCustomEventBanner alloc] init];
     [customEventBanner setViewController:self];
-    [customEventBanner setCustomDFPBannerDelegate:self];
+    [customEventBanner setBannerMadvertiseDFPDelegate:self];
     
     
     DFPRequest* request = [DFPRequest request];
@@ -198,7 +200,7 @@ You must pass CUSTOMLABELADAPTER  with custom event adapter class name for :
 ```objc
     MadvertiseCustomEventInterstitial * customEventInterstitial = [[MadvertiseCustomEventInterstitial alloc]init];
     [customEventInterstitial setViewController: APP_DELEGATE.drawerViewController];
-    
+     [customEventInterstitial setInterstitialMadvertiseDFPDelegate:self];
     DFPRequest* request = [DFPRequest request];
     CLLocation *currentLocation = _locationManager.location;
     if (currentLocation) {
@@ -215,39 +217,39 @@ You must pass CUSTOMLABELADAPTER  with custom event adapter class name for :
     [interstitial loadRequest:request];
 ``` 
 
-### 5. HANDLE CALLBACK FROM interstitialMadvertiseDFPDelegate
+### 5. HANDLE CALLBACK FROM InterstitialMadvertiseDFPDelegate
 
-1. set the interstitialMadvertiseDFPDelegate and the viewController:
+  *  set the interstitialMadvertiseDFPDelegate and the viewController:
 
 ```objc
 
    [customEventInterstitial setInterstitialMadvertiseDFPDelegate:self];
 ``` 
 
-2. will be called by the SDK when your Interstitial is ready. Interstitial will be showen:
+ *   will be called by the SDK when your Interstitial is ready. Interstitial will be showen:
 
 ```objc
 
- -(void)interstitialMadvertiseDFPDidload{
-    NSLog(@"interstitialMadvertiseDFPDidload");
+ -(void)madvertiseCustomEventInterstitialDidload{
+    NSLog(@"adsmadvertiseCustomEventInterstitialDidload");
 }
 ``` 
 
-3.  interstitialMadvertiseDFPDisappear: will be called when intertisialView did disappear. now you can update your UI for example: 
+ *   madvertiseCustomEventInterstitialDisappear: will be called when intertisialView did disappear. now you can update your UI for example: 
  
 ```objc
 
- -(void)interstitialMadvertiseDFPDisappear{
+-(void)madvertiseCustomEventInterstitialDisappear{
     NSLog(@"adsMadvertiseDFPInterstitialDisappear");
 }
 ``` 
 
-4.  interstitialMadvertiseDFPDidFail:: will be called when all ads servers fail. it will return the error of last called ads server.: 
+ *   madvertiseCustomEventInterstitial: didFailToLoadWithError: will be called when all ads servers fail. it will return the error of last called ads server.: 
  
 ```objc
 
- -(void)interstitialMadvertiseDFPDidFail{
-    NSLog(@"interstitialMadvertiseDFPDidFail");
+-(void)madvertiseCustomEventInterstitial:(NSObject *)adapter didFailToLoadWithError:(NSError *)error{
+    NSLog(@"adsmadvertiseCustomEventInterstitialDidFail");
 }
 ``` 
  
@@ -263,4 +265,4 @@ You must pass CUSTOMLABELADAPTER  with custom event adapter class name for :
 [Interstitial Ads]:https://developers.google.com/ad-manager/mobile-ads-sdk/ios/interstitial
 [Native Ads Documentation]:https://developers.google.com/ad-manager/mobile-ads-sdk/ios/native/advanced
 [Demo]: https://bitbucket.org/mngcorp/mngads-demo-ios/src/master/Demo/MNG-Ads-SDK/GoogleMobileAds-Adapter_Demo/
-[GoogleMobileAds-Adapter]: https://bitbucket.org/mngcorp/mngads-demo-ios/downloads/GoogleMobileAds-Adapter-v1.2.zip
+[GoogleMobileAds-Adapter]: https://bitbucket.org/mngcorp/mngads-demo-ios/downloads/GoogleMobileAds-Adapter-v1.3.zip
