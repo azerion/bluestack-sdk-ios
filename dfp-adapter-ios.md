@@ -73,7 +73,7 @@ On your Google Ad Manager UI, create a custom event
 
 You can check our [Demo] page.
 
-#### Banner and Interstitial
+#### Banner
 You must pass CUSTOMLABELADAPTER  with custom event adapter class name for :
 
  * **Banner :** MadvertiseCustomEventBanner :
@@ -116,8 +116,6 @@ You must pass CUSTOMLABELADAPTER  with custom event adapter class name for :
 ##### Handle callBack from GADCustomEventBannerDelegate
 GADCustomEventBannerDelegate: will be called when the BannerView is ready. now you can create your own view.
 
-
-
 ```objc
 
 /// Tells the delegate an ad request loaded an ad.
@@ -144,6 +142,7 @@ GADCustomEventBannerDelegate: will be called when the BannerView is ready. now y
     });
 }
 
+#### Interstitial
 
 ```
 
