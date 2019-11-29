@@ -114,6 +114,7 @@ You must pass CUSTOMLABELADAPTER  with custom event adapter class name for :
 ```
 
 ##### Handle callBack from GADCustomEventBannerDelegate
+
 GADCustomEventBannerDelegate: will be called when the BannerView is ready. now you can create your own view.
 
 ```objc
@@ -169,8 +170,7 @@ GADCustomEventBannerDelegate: will be called when the BannerView is ready. now y
     _interstitial.delegate = self;
     [_interstitial loadRequest:request];
 ``` 
-
-### 5. HANDLE CALLBACK FROM GADInterstitialDelegate
+##### Handle callBack from GADInterstitialDelegate
 
   *  set the GADInterstitialDelegate and the viewController and add "GADInterstitialDelegate" in the interface viewController :
 
