@@ -142,10 +142,11 @@ GADCustomEventBannerDelegate: will be called when the BannerView is ready. now y
         [self.view addSubview:_bannerView];
     });
 }
+```
 
 #### Interstitial
 
-```
+
 
  * **Interstitial :** MadvertiseCustomEventInterstitial :
 
