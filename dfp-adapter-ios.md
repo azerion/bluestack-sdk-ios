@@ -73,103 +73,56 @@ On your Google Ad Manager UI, create a custom event
 
 You can check our [Demo] page.
 
-#### Banner
-You must pass CUSTOMLABELADAPTER  with custom event adapter class name for :
+#### 2.1 Banner and Interstitial:
+
+You may now use MNG DFP Adaptor to show Interstitial Ads and Banner Ads the same way it's described in the DFP Documentation.The adapter code and the setup you did on your Google Ad Manager UI will allow MNG Ads to deliver ads.
+
+You must pass CUSTOMLABELADAPTER  with custom event adapter class name for  and Passed the ViewController to the Adapter:
 
  * **Banner :** MadvertiseCustomEventBanner :
  
+```objc
+    MadvertiseCustomEventBanner * customEventBanner = [[MadvertiseCustomEventBanner alloc] init];
+    [customEventBanner setViewController:self];    
  
-```objc
-  MadvertiseCustomEventBanner * customEventBanner = [[MadvertiseCustomEventBanner alloc] init];
-    [customEventBanner setViewController:self];
-    [customEventBanner setGADCustomEventBannerDelegate:self];
-    
-    
-    //  create Dfp Request
-    DFPRequest* request = [DFPRequest request];
-    CLLocation *currentLocation = _locationManager.location;
-    if (currentLocation) {
-        [request setLocationWithLatitude:currentLocation.coordinate.latitude
-                               longitude:currentLocation.coordinate.longitude
-                                accuracy:currentLocation.horizontalAccuracy];
-    }
-    setRequestKeyword:@"target=YOURAPPTARGET;version=VERSION"];
-    request.customTargeting = @{@"key1" : @"key1vaule", @"key2" :@"key2vaule"};
-    GADCustomEventExtras *extras = [[GADCustomEventExtras alloc] init];
-    [extras setExtras:request.customTargeting forLabel:@"MadvertiseCustomEventBanner"];
-    [request registerAdNetworkExtras:extras];
-    
-    //create banner
-    
-    DFPBannerView *  dFPBannerView = [[DFPBannerView alloc]initWithAdSize:kGADAdSizeBanner];
-    dFPBannerView.adUnitID = BANNER_AD_ADUNIT;
-    dFPBannerView.rootViewController = self ;
-    [dFPBannerView loadRequest:request];
 ``` 
-*  set the GADCustomEventBannerDelegate and the viewController add GADCustomEventBannerDelegate in the interface viewController:
+##### Handle callBack from GADBannerViewDelegate
+  Through the use of GADBannerViewDelegate, you can listen for lifecycle events, such as when an ad is closed or the user leaves the app.
+     
+  * Registering for banner events :
 
 ```objc
-    [customEventBanner setGADCustomEventBannerDelegate:self];
+    _bannerView.delegate = self;
 
-```
+``` 
 
-##### Handle callBack from GADCustomEventBannerDelegate
-
-GADCustomEventBannerDelegate: will be called when the BannerView is ready. now you can create your own view.
+ *  Tells the delegate an ad request loaded an ad:
 
 ```objc
-
-/// Tells the delegate an ad request loaded an ad.
-
-- (void)customEventBanner:(nonnull id<GADCustomEventBanner>)customEvent didReceiveAd:(nonnull UIView *)view {
-//   Adding a banner to the view hierarchy once an ad is received
-    [self addBannerViewToView:view];
+- (void)adViewDidReceiveAd:(nonnull GADBannerView *)bannerView{
 
 }
 
-- (void)customEventBanner:(nonnull id<GADCustomEventBanner>)customEvent didFailAd:(nullable NSError *)error {
+``` 
+
+ *   Tells the delegate an ad request failed..
+
+```objc
+- (void)adView:(nonnull GADBannerView *)bannerView
+didFailToReceiveAdWithError:(nonnull GADRequestError *)error{
     
 }
-
-- (void)addBannerViewToView:(UIView *)adview {
-    int width = self.view.frame.size.width;
-    int heightBanner = adview.frame.size.height;
-
-    adview.frame = CGRectMake( 0, self.view.frame.size.height - heightBanner , width, heightBanner);
-    adview.autoresizingMask = UIViewAutoresizingFlexibleHeight | UIViewAutoresizingFlexibleWidth;
-   
-    dispatch_async(dispatch_get_main_queue(), ^{
-        [self.view addSubview:_bannerView];
-    });
-}
-```
-
+``` 
 #### Interstitial
-
-
 
  * **Interstitial :** MadvertiseCustomEventInterstitial :
 
  
 ```objc
  MadvertiseCustomEventInterstitial * customEventInterstitial = [[MadvertiseCustomEventInterstitial alloc]init];
-    [customEventInterstitial setViewController: APP_DELEGATE.drawerViewController];
+    [customEventInterstitial setViewController: YourViewController];
     
-    DFPRequest* request = [DFPRequest request];
-    CLLocation *currentLocation = _locationManager.location;
-    if (currentLocation) {
-        [request setLocationWithLatitude:currentLocation.coordinate.latitude
-                               longitude:currentLocation.coordinate.longitude
-                                accuracy:currentLocation.horizontalAccuracy];
-    }
-    request.keywords = [self setRequestKeyword:@"target=mngadsdemo;version=2.15.1"];
-    request.customTargeting = @{@"key1" : @"key1vaule", @"key2" :@"key2vaule"};
-    GADCustomEventExtras *extras = [[GADCustomEventExtras alloc] init];
-    [extras setExtras:request.customTargeting forLabel:@"MadvertiseCustomEventInterstitial"];
-    [request registerAdNetworkExtras:extras];
-    _interstitial = [[GADInterstitial alloc] initWithAdUnitID: INTERSTITIEL_AD_ADUNIT];
-    _interstitial.delegate = self;
-    [_interstitial loadRequest:request];
+
 ``` 
 ##### Handle callBack from GADInterstitialDelegate
 
@@ -275,7 +228,7 @@ adLoader:didFailToReceiveAdWithError: will be called when all ad request fail. i
 If you need to send your preferences (Age, Keyword, Content URL) use the GADCustomEventExtras  setExtras  method.
  
 ```objc
-   DFPRequest* request = [DFPRequest request];
+    DFPRequest* request = [DFPRequest request];
     request.customTargeting = @{@"key1" : @"key1vaule", @"key2" :@"key2vaule"};
     GADCustomEventExtras *extras = [[GADCustomEventExtras alloc] init];
     [extras setExtras:request.customTargeting forLabel:@"MadvertiseCustomEventBanner"];
@@ -297,3 +250,5 @@ If you need to send your preferences (Age, Keyword, Content URL) use the GADCust
 [Native Ads Documentation]:https://developers.google.com/ad-manager/mobile-ads-sdk/ios/native/advanced
 [Demo]: https://bitbucket.org/mngcorp/mngads-demo-ios/src/master/Demo/MNG-Ads-SDK/GoogleMobileAds-Adapter_Demo/
 [GoogleMobileAds-Adapter]: https://bitbucket.org/mngcorp/mngads-demo-ios/downloads/GoogleMobileAds-Adapter-v1.4.zip
+[Interstitial Ads]:https://developers.google.com/ad-manager/mobile-ads-sdk/ios/interstitial
+[Banner Ads]:https://developers.google.com/ad-manager/mobile-ads-sdk/ios/banner
