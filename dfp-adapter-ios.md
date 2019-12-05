@@ -249,6 +249,6 @@ If you need to send your preferences (Age, Keyword, Content URL) use the GADCust
 [Interstitial Ads]:https://developers.google.com/ad-manager/mobile-ads-sdk/ios/interstitial
 [Native Ads Documentation]:https://developers.google.com/ad-manager/mobile-ads-sdk/ios/native/advanced
 [Demo]: https://bitbucket.org/mngcorp/mngads-demo-ios/src/master/Demo/MNG-Ads-SDK/GoogleMobileAds-Adapter_Demo/
-[GoogleMobileAds-Adapter]: https://bitbucket.org/mngcorp/mngads-demo-ios/downloads/GoogleMobileAds-Adapter-v1.4.2.zip
+[GoogleMobileAds-Adapter]: https://bitbucket.org/mngcorp/mngads-demo-ios/downloads/GoogleMobileAds-Adapter-v1.4.3.zip
 [Interstitial Ads]:https://developers.google.com/ad-manager/mobile-ads-sdk/ios/interstitial
 [Banner Ads]:https://developers.google.com/ad-manager/mobile-ads-sdk/ios/banner
