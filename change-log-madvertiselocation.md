@@ -1,5 +1,10 @@
 Change log and release notes for MadvertiseLocation for iOS.
 
+### Version 1.7
+#### Release date: December 16th, 2019
+
+ - Loc-CheckConsent - header
+
 ### Version 1.6
 #### Release date: September 18th, 2019
 
