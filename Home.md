@@ -533,6 +533,15 @@ To make a request you have to call 'loadNative'.
 [nativeAdsFactory loadNative]
 ```
 
+##### Native Ad AdChoice Without Cover Image
+if you like to execute the request  without cover Image you can set the option **withCover**  to NO : 
+
+```objc
+MNGPreference *preferences = MNGPreference *preferences = [[MNGPreference alloc]init];
+preferences.preferredAdChoicesPosition = MAdvertiseAdChoiceTopLeft;
+[nativeAdsFactory loadNativeWithPreferences:preferences withCover:NO];
+
+```
 ##### Handle callBack from NativeDelegate
 adsAdapter:nativeObjectDidLoad: will be called by the SDK when your nativeObject is ready. now you can create your own view.
 ```objc
@@ -551,8 +560,7 @@ badgeView = nativeObject.badgeView;
 
 adsAdapter:nativeObjectDidFailWithError: will be called when all ads servers fail. it will return the error of last called ads server.
 ```objc
--(void)adsAdapter:(MNGAdsAdapter *)adsAdapter nativeObjectDidFailWithError:(NSError *)error{
-NSLog(@"%@",error);
+-(void)adsAdapter:(MNGAdsAdapter *)adsAdapter nativeObjectDidFailWithError:(NSError *)error withCover:(BOOL)cover;
 }
 ```
 
