@@ -29,9 +29,11 @@ nativeAdsFactory.placementId = @"/YOUR_APP_ID/PLACEMENT_ID";
 ##### Make a request for native ad
 Using MNGPreference you can set the preferred adchoices position , although you need to keep in mind that in some cases it might not position it where mentioned since some of the adnetworks wont take this parameter into consideration , so preferably set the preferred position here as well in the didLoad once the request succeeds.
 
-###### Native Ad AdChoice
+###### Native Ad AdChoice  : 
 
 Finally to execute the request you have to call '[loadNativeWithPreferences]'.
+
+default is loaded with Cover Image
 
 ```objc
 MNGPreference *preferences = MNGPreference *preferences = [[MNGPreference alloc]init];
@@ -39,23 +41,35 @@ preferences.preferredAdChoicesPosition = MAdvertiseAdChoiceTopLeft;
 [nativeAdsFactory loadNativeWithPreferences:preferences];
 ```
 
+###### Native Ad AdChoice Without Cover Image
+if you like to execute the request  without cover Image you can set the option **withCover**  to NO : 
+
+```objc
+MNGPreference *preferences = MNGPreference *preferences = [[MNGPreference alloc]init];
+preferences.preferredAdChoicesPosition = MAdvertiseAdChoiceTopLeft;
+[nativeAdsFactory loadNativeWithPreferences:preferences withCover:NO];
+
+```
+
 ##### Handle callBack from NativeDelegate
-[adsAdapter:nativeObjectDidLoad:] will be called by the SDK when your nativeObject is ready. now you can create your own view.
+adsAdapter:nativeObjectDidLoad: will be called by the SDK when your nativeObject is ready. now you can create your own view.
 ```objc
 -(void)adsAdapter:(MNGAdsAdapter *)adsAdapter nativeObjectDidLoad:(MNGNAtiveObject *)nativeObject{
 NSLog(@"adsAdapterNativeObjectDidLoad:");
 self.titleLabel.text = nativeObject.title;
 self.contextLabel.text = nativeObject.socialContext;
 self.bodyLabel.text = nativeObject.body;
-[nativeObject setMediaContainer:self.container];
+//possibility to customize the badge title
+[nativeObject updateBadgeTitle:@"Publicité"];
+badgeView = nativeObject.badgeView;
+[_nativeObject registerViewForInteraction:self.nativeView withMediaView:self.backgroundImage withIconImageView:self.iconeImage withViewController:[APP_DELEGATE drawerViewController] withClickableView:self.callToActionButton];
 ...
 }
 ```
 
 [adsAdapter:nativeObjectDidFail:] will be called when all ads servers fail. it will return the error of last called ads server.
 ```objc
--(void)adsAdapter:(MNGAdsAdapter *)adsAdapter nativeObjectDidFailWithError:(NSError *)error{
-NSLog(@"%@",error);
+-(void)adsAdapter:(MNGAdsAdapter *)adsAdapter nativeObjectDidFailWithError:(NSError *)error withCover:(BOOL)cover;
 }
 ```
 
