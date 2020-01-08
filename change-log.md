@@ -5,6 +5,26 @@ See [Wiki], [Design Guidelines and Best practices] and [Help Center]  for more d
 
 you must check [Upgrade Guide]. You need to keep all Ad Network libs up to date.
 
+## Version 2.16
+#### Release date: January 8, 2020
+- **Features**
+    - use the latest version OM SDK - 1.2.19.
+    - New Native Ad implementation with Cover Image
+   
+- **Bug Fixes**
+    - Fix status Bar bug 
+    - Fix bug capping
+    - Fix appsfire interstial bug 
+    - Fix mute issue
+
+- **Ad Network Mediation Updates**
+
+    - Use new [MngAdsSDK] + *Adapter.a
+    - use new DFP 7.53.1 version [GoogleMobileAds.framework]
+    - Use new FacebookAudience 5.6.0 version [FBAudienceNetwork.framework]
+    - Use new [MAdvertiseLocation-v1.7].
+
+
 ## Version 2.15.1
 #### Release date: October 1, 2019
 - **Features**
@@ -1028,4 +1048,5 @@ You must update [MngAdsSDK], [libSmartAdServer.a] (not available from pod update
 [MAdvertiseLocation-v1.4]: https://bitbucket.org/mngcorp/mngads-demo-ios/downloads/MAdvertiseLocation-v1.4.zip
 [MAdvertiseLocation-v1.6]: https://bitbucket.org/mngcorp/mngads-demo-ios/downloads/MAdvertiseLocation-v1.4.zip
 [MAdvertiseLocation-v1.6]: https://bitbucket.org/mngcorp/mngads-demo-ios/downloads/MAdvertiseLocation-v1.6.zip
+[MAdvertiseLocation-v1.7]: https://bitbucket.org/mngcorp/mngads-demo-ios/downloads/MAdvertiseLocation-v1.7.zip
 [(more infos)]:https://bitbucket.org/mngcorp/mngads-demo-ios/wiki/Home#markdown-header-disable-auto-displaying
