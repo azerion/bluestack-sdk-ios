@@ -10,6 +10,27 @@ See [Wiki], [Design Guidelines and Best practices] and [Help Center]  for more d
 - Use new FacebookAudience 5.6.0 version [FBAudienceNetwork.framework]
 - Use new [MAdvertiseLocation-v1.7]
 
+- **nativeAd  new implementation, now you must new Boolean withCover :**
+
+
+###### Native Ad AdChoice Without Cover Image
+if you like to execute the request  without cover Image you can set the option **withCover**  to NO : 
+
+```objc
+MNGPreference *preferences = MNGPreference *preferences = [[MNGPreference alloc]init];
+preferences.preferredAdChoicesPosition = MAdvertiseAdChoiceTopLeft;
+[nativeAdsFactory loadNativeWithPreferences:preferences withCover:NO];
+
+```
+###### nativeAd  callBack **nativeObjectDidFailWithError** implementation change , now you must new Boolean **withCover** :
+
+
+```objc
+-(void)adsAdapter:(MNGAdsAdapter *)adsAdapter nativeObjectDidFailWithError:(NSError *)error withCover:(BOOL)cover;
+}
+```
+
+
 ## Upgrading to 2.15.1
 
 - Use new [MngAdsSDK] + *Adapter.a
