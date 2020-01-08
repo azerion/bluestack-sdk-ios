@@ -2,6 +2,14 @@
 
 See [Wiki], [Design Guidelines and Best practices] and [Help Center]  for more detailed informations. you must check [Change Log] .
 
+## Upgrading to 2.16
+
+- Use new [MngAdsSDK] + *Adapter.a
+- Use new DFP 7.53.1 [GoogleMobileAds.framework]
+- use new OMSDK 1.2.19 (default dependancy)
+- Use new FacebookAudience 5.6.0 version [FBAudienceNetwork.framework]
+- Use new [MAdvertiseLocation-v1.7]
+
 ## Upgrading to 2.15.1
 
 - Use new [MngAdsSDK] + *Adapter.a
@@ -645,4 +653,5 @@ instead of
 [MAdvertiseLocation-v1.3]: https://bitbucket.org/mngcorp/mngads-demo-ios/downloads/MAdvertiseLocation-v1.3.zip
 [MAdvertiseLocation-v1.4]: https://bitbucket.org/mngcorp/mngads-demo-ios/downloads/MAdvertiseLocation-v1.4.zip
 [MAdvertiseLocation-v1.6]: https://bitbucket.org/mngcorp/mngads-demo-ios/downloads/MAdvertiseLocation-v1.6.zip
+[MAdvertiseLocation-v1.7]: https://bitbucket.org/mngcorp/mngads-demo-ios/downloads/MAdvertiseLocation-v1.7.zip
 [(more infos)]:https://bitbucket.org/mngcorp/mngads-demo-ios/wiki/Home#markdown-header-disable-auto-displaying
