@@ -7,6 +7,9 @@ you must check [Upgrade Guide]. You need to keep all Ad Network libs up to date.
 
 ## Version 2.16
 #### Release date: January 8, 2020
+- **Requirements** 
+    - Xcode 11.3
+
 - **Features**
     - use the latest version OM SDK - 1.2.19.
     - New Native Ad implementation with Cover Image
@@ -27,6 +30,8 @@ you must check [Upgrade Guide]. You need to keep all Ad Network libs up to date.
 
 ## Version 2.15.1
 #### Release date: October 1, 2019
+- **Requirements** 
+    - Xcode 11.3.2
 - **Features**
     - Remove the UIWebview
     - use the latest version OM SDK - 1.2.19.
@@ -44,8 +49,10 @@ you must check [Upgrade Guide]. You need to keep all Ad Network libs up to date.
 
 ## Version 2.15
 #### Release date: September 18th, 2019
+- **Requirements** 
+    - Xcode 11.3.2
 - **Features**
-    - Xcode 11 and iOS13 support
+    - iOS13 support
     - Added AppLovin SDK for mediation.
     - mngAdsSDKFactoryDidResetConfig is now deprecated to avoid confusion
     - Dispatcher cache optimization
