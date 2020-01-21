@@ -17,7 +17,8 @@ It contains a dispacher that will select an ads server according to the priority
 
 ## Requirements
 
-Requires **Xcode 8**.
+check [Change Log] for  **Xcode version**
+
 #### Legacy
 for versions under v2.7 installing the sdk require **git lfs**.
 
