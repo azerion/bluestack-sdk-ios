@@ -4,6 +4,18 @@ See [Wiki], [Design Guidelines and Best practices] and [Help Center]  for more d
 
 
 you must check [Upgrade Guide]. You need to keep all Ad Network libs up to date.
+## Version 2.16.1
+#### Release date: January 27, 2020
+- **Requirements** 
+    - Xcode 11.3
+
+- **Features**
+    - New Native Ad Collection implementation with Cover Image
+   
+- **Bug Fixes**
+    - Fix Dissmis Bug ios 13 : appsfire interstial 
+    - Fix NSCalendarsUsageDescription issue
+    - FIx Session OMSDK issue 
 
 ## Version 2.16
 #### Release date: January 8, 2020

@@ -2,6 +2,22 @@
 
 See [Wiki], [Design Guidelines and Best practices] and [Help Center]  for more detailed informations. you must check [Change Log] .
 
+
+## Upgrading to 2.16.1
+
+- Use new [MngAdsSDK] + *Adapter.a
+- nativeAd Collection  new implementation, now you must new Boolean withCover :
+
+
+###### Native Ad AdChoice Without Cover Image
+if you like to execute the request  without cover Image you can set the option **withCover**  to NO : 
+
+```objc
+ [nativeCollectionAdsFactory createNativeCollection:5 WithPreferences:preferences WithCover:cover];
+
+```
+ Check [Carrousel](https://bitbucket.org/mngcorp/mngads-demo-ios/src/master/Demo/MNG-Ads-SDK/CarrouselViewController.m) Page in demo 
+
 ## Upgrading to 2.16
 
 - Use new [MngAdsSDK] + *Adapter.a

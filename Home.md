@@ -567,6 +567,10 @@ adsAdapter:nativeObjectDidFailWithError: will be called when all ads servers fai
 
 See [Native Ads guidelines]
 
+##### Native Ad Collection  Implementation :
+
+Check [Carrousel](https://bitbucket.org/mngcorp/mngads-demo-ios/src/master/Demo/MNG-Ads-SDK/CarrouselViewController.m) Page in demo 
+
 ### ClickDelegate
 The clickDelegate notify you when the ad has been clicked.
 
