@@ -200,3 +200,8 @@ badge in the nativeAd is customizable now using the method:
 ## 7. click - registerViewForInteraction
 
 It's **HIGHLY** recommended to only register ONE and ONLY one view for interaction , because some of the AdNetworks only accept one view and if you try to assign more than one then probably none of the views you assign will be responsive.
+
+## 8. Native Ad Collection  Implementation :
+
+ Check [Carrousel](https://bitbucket.org/mngcorp/mngads-demo-ios/src/master/Demo/MNG-Ads-SDK/CarrouselViewController.m) Page in demo 
+ 
