@@ -43,7 +43,7 @@ you must check [Upgrade Guide]. You need to keep all Ad Network libs up to date.
 ## Version 2.15.1
 #### Release date: October 1, 2019
 - **Requirements** 
-    - Xcode 11.3.2
+    - Xcode 11.2
 - **Features**
     - Remove the UIWebview
     - use the latest version OM SDK - 1.2.19.
