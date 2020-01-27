@@ -203,5 +203,4 @@ It's **HIGHLY** recommended to only register ONE and ONLY one view for interacti
 
 ## 8. Native Ad Collection  Implementation :
 
- Check [Carrousel](https://bitbucket.org/mngcorp/mngads-demo-ios/src/master/Demo/MNG-Ads-SDK/CarrouselViewController.m) Page in demo 
- 
+ Check [Carrousel](https://bitbucket.org/mngcorp/mngads-demo-ios/src/master/Demo/MNG-Ads-SDK/CarrouselViewController.m) Page in demo
