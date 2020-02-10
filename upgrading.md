@@ -2,6 +2,13 @@
 
 See [Wiki], [Design Guidelines and Best practices] and [Help Center]  for more detailed informations. you must check [Change Log] .
 
+## Upgrading to 2.16.2
+
+- Use new [MngAdsSDK] + *Adapter.a
+- Use new DFP 7.55.0 [GoogleMobileAds.framework]
+- Use new FacebookAudience 5.6.1 version [FBAudienceNetwork.framework]
+
+
 
 ## Upgrading to 2.16.1
 
