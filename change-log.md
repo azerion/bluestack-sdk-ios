@@ -4,6 +4,23 @@ See [Wiki], [Design Guidelines and Best practices] and [Help Center]  for more d
 
 
 you must check [Upgrade Guide]. You need to keep all Ad Network libs up to date.
+
+## Version 2.16.2
+#### Release date: February 10, 2020 
+- **Requirements** 
+    - Xcode 11.3
+  
+- **Bug Fixes**
+    - Fix Native Ad google  issue
+    - Fix Google crash NSInternalInconsistencyException
+    - Fix de debug mode MNGAdsMotionQueue
+ 
+- **Ad Network Mediation Updates**
+    - Use new [MngAdsSDK] + *Adapter.a
+    - Use new FacebookAudience 5.6.1 version [FBAudienceNetwork.framework]
+    - use new DFP 7.55.0 version [GoogleMobileAds.framework]
+
+
 ## Version 2.16.1
 #### Release date: January 27, 2020
 - **Requirements** 
