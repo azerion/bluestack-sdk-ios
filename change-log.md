@@ -1,6 +1,6 @@
 ## Change log and release notes for the MngAds SDK for iOS.
 
-See [Wiki], [Design Guidelines and Best practices] and [Help Center]  for more detailed informations.
+See [Wiki] and [Help Center]  for more detailed informations.
 
 
 you must check [Upgrade Guide]. You need to keep all Ad Network libs up to date.
