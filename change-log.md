@@ -5,6 +5,21 @@ See [Wiki] and [Help Center]  for more detailed informations.
 
 you must check [Upgrade Guide]. You need to keep all Ad Network libs up to date.
 
+## Version 2.16.3
+#### Release date: February 26, 2020 
+- **Requirements** 
+    - Xcode 11.3
+  
+- **Bug Fixes**
+    - Fix crash NSInternalInconsistencyException
+    - Removed all references to **UIWebView**. **UIWebView** is no longer supported.
+ 
+- **Ad Network Mediation Updates**
+    - Use new [MngAdsSDK] + *Adapter.a
+    - Use new Smart-Display-SDK 7.4.0
+    - Use new DFP 7.55.1 version [GoogleMobileAds.framework]
+    - Use new MoPub 5.11.0 version, [MoPub Marketplace] + [libMAdvertiseMoPubAdapter.a]
+
 ## Version 2.16.2
 #### Release date: February 10, 2020 
 - **Requirements** 
