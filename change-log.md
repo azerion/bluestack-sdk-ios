@@ -12,7 +12,7 @@ you must check [Upgrade Guide]. You need to keep all Ad Network libs up to date.
   
 - **Bug Fixes**
     - Fix crash NSInternalInconsistencyException
-    - Removed all references to **UIWebView**. **UIWebView** is no longer supported.
+    - Removed all references to **UIWebView**. **UIWebView** (Smart-Display-SDK) is no longer supported.
  
 - **Ad Network Mediation Updates**
     - Use new [MngAdsSDK] + *Adapter.a
