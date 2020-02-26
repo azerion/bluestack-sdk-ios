@@ -2,6 +2,12 @@
 
 See [Wiki], [Design Guidelines and Best practices] and [Help Center]  for more detailed informations. you must check [Change Log] .
 
+## Upgrading to 2.16.3
+
+- Use new [MngAdsSDK] + *Adapter.a
+- Use new DFP 7.55.1 [GoogleMobileAds.framework]
+- Use new Smart-Display-SDK 7.4.0
+
 ## Upgrading to 2.16.2
 
 - Use new [MngAdsSDK] + *Adapter.a
