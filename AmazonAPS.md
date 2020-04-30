@@ -15,7 +15,7 @@ You will just need to specify the subspec for "AmazonAps" since it s not include
 * ***Manual  installation*** : 
 
 
-1. Go to [DTBAmazonAps](https://bitbucket.org/mngcorp/mngads-demo-ios/downloads/DTBAmazonAps.zip)
+1. Go to [DTBAmazonAps](https://bitbucket.org/mngcorp/mngads-demo-ios/downloads/DTBiOSSDK.zip)
 
 2.  drag and drop it in your project (inside the folder of MNGAds).
 
