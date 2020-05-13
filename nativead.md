@@ -1,9 +1,13 @@
+![mad_AdNetworkMediation_rgb_small.png](https://bitbucket.org/repo/GyRXRR/images/3981639300-mad_AdNetworkMediation_rgb_small.png) for IOS
+
 # Native ads
 [TOC]
 
 MNG Ads supports native ads, that allow you to retrieve the metadata of ad campaigns and present the ads yourself, within the context of your app, using your own art style. You are fully responsible
 for rendering the ad views using the information we supply. Native ads however offer methods to help you register impressions and clicks on your custom view.
 
+## Overview
+Before You Start. Make sure that you have correctly integrated the MNG SDK into your application. Integration is outlined [here](https://bitbucket.org/mngcorp/mngads-demo-ios/wiki/setup).
 ## 1. Requesting a native ad
 
 ##### Import the necessary classes

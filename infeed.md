@@ -1,3 +1,6 @@
+![mad_AdNetworkMediation_rgb_small.png](https://bitbucket.org/repo/GyRXRR/images/3981639300-mad_AdNetworkMediation_rgb_small.png) for IOS
+
+
 # Infeed Integration for IOS
 Ads that show up in the middle of the stream as you scroll through your content Parallax or Video.
 
