@@ -8,6 +8,8 @@
 
 Require MngAdsSDK >= 2.8
 
+## Overview
+Before You Start. Make sure that you have correctly integrated the MNG SDK into your application. Integration is outlined [here](https://bitbucket.org/mngcorp/mngads-demo-ios/wiki/setup).
 
 
 ## Implementation:
@@ -94,3 +96,10 @@ which serve to inform the publisher that the user has finished watching the vide
 the reward can be set from the web console of the differents adnetworks used , although some of them will return a nil reward, for example ads coming from facebook audience will just inform you that the user finished watching but wont suggest a reward , rather leave it to the publisher to decide the fitting reward on his own, so the publisher should always verify the reward object accordingly.
 
 - Obviously incase of fail, you can always try to load an Interstitial or any other type of ad incase you need to display something to the user, but of course any other type of ad wont invoke reward callback.
+
+
+# Example
+
+ - [Example Reward Video]
+
+ [Example Reward Video]:https://bitbucket.org/mngcorp/mngads-demo-ios/src/master/Demo/MNG-Ads-SDK/RewardVideoViewController.m
