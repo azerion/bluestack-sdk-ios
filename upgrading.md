@@ -233,8 +233,8 @@ All *Adapter.a available on https://bitbucket.org/mngcorp/mngads-demo-ios/downlo
 
 ```objc
 
-MAdvertiseConsent *consent = [[MAdvertiseConsent alloc]initWithGDPRScope:true.on andConsentStrings:@{@"IAB":"BONlRnIONlRnIAAABAENAAAAAAAAoAA"}];
-[MAdvertiseConsent setConsentInformation:consent]
+MAdvertiseConsent *consent = [[MAdvertiseConsent alloc]initWithGDPRScope:true.on andConsentStrings:@{@"IAB":"BOyrFHBOyrFHBAGABBENDH-AAAAvSAbAAqACAAFQALQAdgBFACSAFIALYAXgAxAB3AEAAIQATIAnABQgDAAGgAOIAgwBCACJgIAgQeBCACQAFhg"}];
+[MAdvertiseConsent setConsentInformation:consent];
 
 ```
 
