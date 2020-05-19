@@ -20,6 +20,7 @@ you must check [Upgrade Guide]. You need to keep all Ad Network libs up to date.
  
 - **Bug Fixes**
     - Removed all references to **UIWebView**. **UIWebView** is no longer supported.
+    - fix click Handler issue on Interstitial
  
 - **Ad Network Mediation Updates**
     - Use new [BlueStack-SDK] + *Adapter.a
