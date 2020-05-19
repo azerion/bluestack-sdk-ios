@@ -19,7 +19,7 @@ pod "MNGAds/MNGAdsFull"
 or
 
 ```ruby
-pod "MNGAds",:subspecs => ["Facebook","DFP","SmartAdServer","Flurry","MAdvertiseLocation"]
+pod "MNGAds",:subspecs => ["Facebook","DFP","SmartAdServer","MAdvertiseLocation"]
 ```
 - and replace with :
 
