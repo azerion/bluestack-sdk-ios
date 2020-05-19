@@ -5,6 +5,33 @@ See [Wiki] and [Help Center]  for more detailed informations.
 
 you must check [Upgrade Guide]. You need to keep all Ad Network libs up to date.
 
+## Version 3.0.0
+#### Release date: MAY 19, 2020 
+- **Requirements** 
+    - Xcode 11.3
+    
+- **Features**
+ - replace pod name  from MngAds to BlueStack-SDK 
+ - In-App Bidding feature.
+ - Support for Parallax on Infeed format
+ - Add support for the Transparency and Consent Framework V2 (accept TCF v2 consentString https://github.com/InteractiveAdvertisingBureau/GDPR-Transparency-and-Consent-Framework/blob/master/TCFv2/IAB%20Tech%20Lab%20-%20CMP%20API%20v2.md#what-is-the-cmp-in-app-internal-structure-for-the-defined-api).
+ - Added OguryAds SDK (Version 1.3.2) 
+ - Added Criteo SDK (Version 3.4.0) 
+ 
+- **Bug Fixes**
+    - Removed all references to **UIWebView**. **UIWebView** is no longer supported.
+ 
+- **Ad Network Mediation Updates**
+    - Use new [BlueStack-SDK] + *Adapter.a
+    - Use new Smart-Display-SDK 7.4.2
+    - Use new DFP 7.58.0 version [GoogleMobileAds.framework]
+    - Use new MoPub 5.12.1 version, [MoPub Marketplace] + [libMAdvertiseMoPubAdapter.a]
+    - Use new adColony 4.1.4 version, [AdColony.framework]
+    - Use new appLovinSDK 6.12.4 
+    - Use new [MAdvertiseLocation-v1.8].
+    - Use new FacebookAudience 5.9.0 version [FBAudienceNetwork.framework]
+    - Use new Flurry 10.3.1 version [libFlurryAds] , [libFlurry]
+
 ## Version 2.16.3
 #### Release date: February 26, 2020 
 - **Requirements** 
@@ -1059,6 +1086,7 @@ You must update [MngAdsSDK], [libSmartAdServer.a] (not available from pod update
 ---
 [Upgrade Guide]:https://bitbucket.org/mngcorp/mngads-demo-ios/wiki/upgrading
 [MngAdsSDK]:https://bitbucket.org/mngcorp/mngads-demo-ios/downloads/
+[BlueStack-SDK]:https://bitbucket.org/mngcorp/mngads-demo-ios/downloads/
 [GoogleMobileAds.framework]:https://bitbucket.org/mngcorp/mngads-demo-ios/src/HEAD/Demo/Pods/Google-Mobile-Ads-SDK/?at=master
 [Design Guidelines and Best practices]:https://bitbucket.org/mngcorp/mngads-demo-ios/wiki/guidelines
 [Wiki]:https://bitbucket.org/mngcorp/mngads-demo-ios/wiki/
@@ -1100,4 +1128,5 @@ You must update [MngAdsSDK], [libSmartAdServer.a] (not available from pod update
 [MAdvertiseLocation-v1.6]: https://bitbucket.org/mngcorp/mngads-demo-ios/downloads/MAdvertiseLocation-v1.4.zip
 [MAdvertiseLocation-v1.6]: https://bitbucket.org/mngcorp/mngads-demo-ios/downloads/MAdvertiseLocation-v1.6.zip
 [MAdvertiseLocation-v1.7]: https://bitbucket.org/mngcorp/mngads-demo-ios/downloads/MAdvertiseLocation-v1.7.zip
+[MAdvertiseLocation-v1.8]: https://bitbucket.org/mngcorp/mngads-demo-ios/downloads/MAdvertiseLocation-v1.8.zip
 [(more infos)]:https://bitbucket.org/mngcorp/mngads-demo-ios/wiki/Home#markdown-header-disable-auto-displaying

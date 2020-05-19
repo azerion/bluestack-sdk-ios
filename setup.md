@@ -29,20 +29,6 @@ It contains a dispacher that will select an ads server according to the priority
 
 check [Change Log] for  **Xcode version**
 
-#### Legacy
-for versions under v2.7 installing the sdk require **git lfs**.
-
-
-- First Download and install the [git-lfs command line client](https://git-lfs.github.com)
-- Then install the Git LFS filters:
-
-```
-#!unix
-
-$ git lfs install —force
-```
-For more about installing git LFS go to:
-[LFS Configuration](https://git-lfs.github.com)
 
 
 ## Version
@@ -115,6 +101,38 @@ BlueStack SDK needs, these libraries are in demo project :
  - [libMAdvertiseOguryAdapter.a]
 
 
+**Recommended :**
+
+ - Google Ads SDK 
+ - FBAudienceNetwork 
+ - Smart-Display-SDK (**Note :** It available as in-App Bidding Bidder)
+
+```ruby
+pod "BlueStack-SDK",:subspecs => ["FBAudienceNetwork","Google-Mobile-Ads-SDK","Smart-Display-SDK"]
+
+```
+**Recommended in-App Bidding :**
+
+- AmazonPublisherServicesSDK 
+- CriteoPublisherSdk
+
+```ruby
+pod "BlueStack-SDK",:subspecs => ["In-App-Bidding","CriteoPublisherSdk","AmazonPublisherServicesSDK"]
+
+```
+**Optional :**
+
+- AppLovinSDK
+- mopub-ios-sdk 
+- FlurryAds 
+- AdColony 
+- OguryAds (**Note :** An API Key will be assigned to your application by BlueStack support team for Ogury library.) 
+
+```ruby
+pod "BlueStack-SDK",:subspecs => ["AppLovinSDK","mopub-ios-sdk","FlurryAds","AdColony","OguryAds"]
+
+```
+
 You can see [Installation guide for Swift]
 
 ## App Transport Security Settings
@@ -123,6 +141,7 @@ You can see [Installation guide for Swift]
 MNGAds SDK (with Mediation) are now ATS-compliant, but a small percentage of creatives (near to zero) not directly hosted on our platform are not.
 
 If you must make an exception for a reason, we recommend that you minimize it by only setting the NSAllowsArbitraryLoadsInWebContent and NSAllowsArbitraryLoadsForMedia keys,
+
 ```xml
 <key>NSAppTransportSecurity</key>
     <dict>
@@ -343,6 +362,7 @@ adsFactory = nil;
 But we recommand to release memory in order to avoid **crashes with a "EXC_BAD_ACCESS" ** for some adNetworks.
 
 ###### No ARC
+
 ```objc
 [adsFactory releaseMemory];//required
 [adsFactory release];
@@ -367,7 +387,9 @@ The simplest way is:
     intersFactory = [[MNGAdsFactory alloc]init];// Or
     intersFactory = nil;
 ```
-- Calling releaseMemory at the dealloc of delegate
+- Calling releaseMemory at the dealloc of delegate$
+
+
 ```objc
     -(void)dealloc{
         [intersFactory releaseMemory];
@@ -375,6 +397,19 @@ The simplest way is:
     }
 ```
 
+## Select an ad format
+
+BlueStack SDK offers a number of different ad formats :
+
+- Banner [Integration guides](https://bitbucket.org/mngcorp/mngads-demo-ios/wiki/banner)
+
+- Interstitial [Integration guides](https://bitbucket.org/mngcorp/mngads-demo-ios/wiki/interstitial)
+
+- Native Ads [Integration guides](https://bitbucket.org/mngcorp/mngads-demo-ios/wiki/nativead)
+
+- Rewarded Video [Integration guides](https://bitbucket.org/mngcorp/mngads-demo-ios/wiki/rewarded-video-ios)
+
+- Infeed [Integration guides](https://bitbucket.org/mngcorp/mngads-demo-ios/wiki/infeed)
 
 
 [ARC]:https://developer.apple.com/library/ios/documentation/Swift/Conceptual/Swift_Programming_Language/AutomaticReferenceCounting.html
@@ -397,7 +432,7 @@ The simplest way is:
 [GoogleMobileAds.framework]:https://developers.google.com/mobile-ads-sdk/docs/dfp/ios/download
 [libAppsfireSDK.a]:https://bitbucket.org/mngcorp/mngads-demo-ios/src/HEAD/Demo/Pods/AppsfireSDK/?at=master
 [libMng-perf.a]:https://bitbucket.org/mngcorp/mngads-demo-ios/src/HEAD/Demo/Pods/Mng-perf/?at=master
-[Using CocoaPods]:https://bitbucket.org/mngcorp/mngads-demo-ios/wiki/Using%20CocoaPods
+[Using CocoaPods]:https://bitbucket.org/mngcorp/mngads-demo-ios/wiki/Using-CocoaPods
 [BlueStack state diagram]:https://bitbucket.org/mngcorp/mngads-demo-ios/wiki/diagram
 [Installation guide for Swift]:https://bitbucket.org/mngcorp/mngads-demo-ios/wiki/Swift
 [Design Guidelines and Best practices]:https://bitbucket.org/mngcorp/mngads-demo-ios/wiki/guidelines

@@ -2,6 +2,57 @@
 
 See [Wiki], [Design Guidelines and Best practices] and [Help Center]  for more detailed informations. you must check [Change Log] .
 
+
+## Upgrading to 3.0.0
+
+- New pod name (BlueStack-SDK)
+###### New instalation Cocoapods
+The BlueStack-SDK is available through  cocoaPods
+To download and incorporate the BlueStack-SDK  into your project using Cocoapods, add the following line to your project's podfile:
+
+
+- delete the ligne from Podfile :
+
+```ruby
+pod "MNGAds/MNGAdsFull"
+```
+or
+
+```ruby
+pod "MNGAds",:subspecs => ["Facebook","DFP","SmartAdServer","Flurry","MAdvertiseLocation"]
+```
+- and replace with :
+
+```ruby
+pod "BlueStack-SDK/Full"
+```
+or 
+
+```ruby
+pod "BlueStack-SDK",:subspecs => ["FBAudienceNetwork","Google-Mobile-Ads-SDK","Smart-Display-SDK","In-App-Bidding","FlurryAds","MAdvertiseLocation"]
+```
+- Update name of subspecs :
+
+  * MNGAdsFull -> Full
+  * Facebook -> FBAudienceNetwork
+  * DFP -> Google-Mobile-Ads-SDK
+  * Flurry -> FlurryAds
+  * SmartAdServer -> Smart-Display-SDK
+
+
+ Check [Using CocoaPods](https://bitbucket.org/mngcorp/mngads-demo-ios/wiki/Using%20CocoaPods) 
+ 
+
+- Use new [BlueStack-SDK] + *Adapter.a
+- Use new Smart-Display-SDK 7.4.2
+- Use new DFP 7.58.0 version 
+- Use new MoPub 5.12.1 version
+- Use new adColony 4.1.4 version
+- Use new appLovinSDK 6.12.4 
+- Use new [MAdvertiseLocation-v1.8].
+- Use new FacebookAudience 5.9.0 
+- Use new Flurry 10.3.1 version 
+
 ## Upgrading to 2.16.3
 
 - Use new [MngAdsSDK] + *Adapter.a
