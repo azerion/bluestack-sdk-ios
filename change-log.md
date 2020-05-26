@@ -5,6 +5,26 @@ See [Wiki] and [Help Center]  for more detailed informations.
 
 you must check [Upgrade Guide]. You need to keep all Ad Network libs up to date.
 
+## Version 3.0.1
+#### Release date: May 26th, 2020 
+- **Requirements** 
+    - Xcode 11.3
+    
+- **Features**
+
+    - New Native Ad Collection Callback click 
+   
+- **Ad Network Mediation Updates**
+    - Use new [BlueStack-SDK] + *Adapter.a
+    - Use new Smart-Display-SDK 7.6.0
+    - Use new DFP 7.60.0 version [GoogleMobileAds.framework]
+    - Use new adColony 4.1.5 version, [AdColony.framework]
+    - Use new appLovinSDK 6.12.4 
+    - Use new AmazonPublisherServicesSDK 3.3.1 
+    - Use new CriteoPublisherSdk 3.5.0 
+    - Use new OguryAds 1.4.1 
+
+
 ## Version 3.0.0
 #### Release date: May 19th, 2020 
 - **Requirements** 

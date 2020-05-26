@@ -207,4 +207,28 @@ It's **HIGHLY** recommended to only register ONE and ONLY one view for interacti
 
 ## 8. Native Ad Collection  Implementation :
 
+
  Check [Carrousel](https://bitbucket.org/mngcorp/mngads-demo-ios/src/master/Demo/MNG-Ads-SDK/CarrouselViewController.m) Page in demo
+ 
+ if you want to get the clicked native Ad from the collection : 
+
+ * set the MNGClickDelegate.
+
+ ```
+ @interface ViewController : UIViewController<MNGClickDelegate>
+ 
+ ```
+
+ ```
+ nativeCollectionAdsFactory.clickDelegate = self;
+ 
+ ```
+
+ * Handle callBack from MNGClickDelegate
+adsAdapterNativeAdWasClicked:nativeObjectClicked: will be called by the SDK when the nativeAd has been clicked  from the collection 
+
+```
+-(void)adsAdapterNativeAdWasClicked:(MNGAdsAdapter *)adsAdapter nativeObjectClicked:(MNGNAtiveObject *)clickedAdView{
+   
+}
+```

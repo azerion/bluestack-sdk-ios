@@ -2,6 +2,26 @@
 
 See [Wiki], [Design Guidelines and Best practices] and [Help Center]  for more detailed informations. you must check [Change Log] .
 
+## Upgrading to 3.0.1
+
+- Use new [BlueStack-SDK] + *Adapter.a
+- Use new Smart-Display-SDK 7.6.0
+- Use new DFP 7.60.0 version [GoogleMobileAds.framework]
+- Use new adColony 4.1.5 version, [AdColony.framework]
+- Use new appLovinSDK 6.12.4 
+- Use new AmazonPublisherServicesSDK 3.3.1 
+- Use new CriteoPublisherSdk 3.5.0 
+- Use new OguryAds 1.4.1 
+
+- nativeAd Collection  new callback Click, now you must check any nativeAd is clicked :
+
+```objc
+ -(void)adsAdapterNativeAdWasClicked:(MNGAdsAdapter *)adsAdapter nativeObjectClicked:(MNGNAtiveObject *)clickedAdView{
+    
+}
+
+```
+ Check [Carrousel](https://bitbucket.org/mngcorp/mngads-demo-ios/src/master/Demo/MNG-Ads-SDK/CarrouselViewController.m) Page in demo 
 
 ## Upgrading to 3.0.0
 
