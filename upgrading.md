@@ -2,6 +2,11 @@
 
 See [Wiki], [Design Guidelines and Best practices] and [Help Center]  for more detailed informations. you must check [Change Log] .
 
+## Upgrading to 3.0.2
+
+- Use new [BlueStack-SDK] + *Adapter.a
+- Use new OguryAds 1.4.2 
+
 ## Upgrading to 3.0.1
 
 - Use new [BlueStack-SDK] + *Adapter.a
@@ -776,3 +781,4 @@ instead of
 [MAdvertiseLocation-v1.6]: https://bitbucket.org/mngcorp/mngads-demo-ios/downloads/MAdvertiseLocation-v1.6.zip
 [MAdvertiseLocation-v1.7]: https://bitbucket.org/mngcorp/mngads-demo-ios/downloads/MAdvertiseLocation-v1.7.zip
 [(more infos)]:https://bitbucket.org/mngcorp/mngads-demo-ios/wiki/Home#markdown-header-disable-auto-displaying
+[BlueStack-SDK]:https://bitbucket.org/mngcorp/mngads-demo-ios/downloads/
