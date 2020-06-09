@@ -5,6 +5,21 @@ See [Wiki] and [Help Center]  for more detailed informations.
 
 you must check [Upgrade Guide]. You need to keep all Ad Network libs up to date.
 
+## Version 3.0.2
+#### Release date: Juin 9, 2020
+- **Requirements** 
+    - Xcode 11.5
+    
+- **Bug Fixes**
+    - Fix inappBidding crash Memory 
+    - Fix Native Ad Crash
+    - Fix save NSUserDefault crash
+ 
+- **Ad Network Mediation Updates**
+    - Use new [BlueStack-SDK] + *Adapter.a
+    - Use new OguryAds 1.4.2 
+    - use the latest version OM SDK - 1.3.5
+
 ## Version 3.0.1
 #### Release date: May 26th, 2020 
 - **Requirements** 
