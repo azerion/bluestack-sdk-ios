@@ -5,6 +5,21 @@ See [Wiki] and [Help Center]  for more detailed informations.
 
 you must check [Upgrade Guide]. You need to keep all Ad Network libs up to date.
 
+## Version 3.0.3
+#### Release date: Juin 26, 2020
+- **Requirements** 
+    - Xcode 11.5
+    
+- **Bug Fixes**
+    - Fix inappBidding Crash Heap Corruption 
+    - Fix URL Session Crash
+ 
+- **Ad Network Mediation Updates**
+    - Use new [BlueStack-SDK] + *Adapter.a
+    - Use new CriteoPublisherSdk 3.7.0 
+    - Use new Smart-Display-SDK 7.6.2
+
+
 ## Version 3.0.2
 #### Release date: Juin 9, 2020
 - **Requirements** 

@@ -2,6 +2,13 @@
 
 See [Wiki], [Design Guidelines and Best practices] and [Help Center]  for more detailed informations. you must check [Change Log] .
 
+## Upgrading to 3.0.3
+
+- Use new [BlueStack-SDK] + *Adapter.a
+- Use new CriteoPublisherSdk 3.7.0 
+- Use new Smart-Display-SDK 7.6.2
+
+
 ## Upgrading to 3.0.2
 
 - Use new [BlueStack-SDK] + *Adapter.a
