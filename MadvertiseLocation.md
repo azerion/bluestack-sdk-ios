@@ -14,7 +14,7 @@
          * From iOS 10, set “NSLocationWhenInUseUsageDescription” in the Info.plist file.
 
 *  ## Installation   :
-
+https://bitbucket.org/mngcorp/mngads-demo-android/wiki/change-log-madvertiselocation
 * ***CocoaPods installation*** :  
 
 ## Installation with MNGSDK V2.3.1 (since v2.12.1)
