@@ -805,3 +805,4 @@ instead of
 [MAdvertiseLocation-v1.7]: https://bitbucket.org/mngcorp/mngads-demo-ios/downloads/MAdvertiseLocation-v1.7.zip
 [(more infos)]:https://bitbucket.org/mngcorp/mngads-demo-ios/wiki/Home#markdown-header-disable-auto-displaying
 [BlueStack-SDK]:https://bitbucket.org/mngcorp/mngads-demo-ios/downloads/
+[MAdvertiseLocation-v1.9]: https://bitbucket.org/mngcorp/mngads-demo-ios/downloads/MAdvertiseLocation-v1.9.zip
