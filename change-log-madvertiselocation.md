@@ -1,5 +1,16 @@
 Change log and release notes for MadvertiseLocation for iOS.
 
+### Version 1.9
+#### Release date: july 23th, 2020
+
+ - Implemented  new Init MadvertiseBuilder with new attribute consent flag 
+
+case consentFlag = "0" = user do not allow
+case consentFlag = "1" = user provide consent
+case consentFlag = "2" = SDK must check consent IAB consent
+case consentFlag = "3" = SDK must check Madvertise consent
+
+
 
 ### Version 1.8
 #### Release date: March 27th, 2020
