@@ -13,7 +13,7 @@ you must check [Upgrade Guide]. You need to keep all Ad Network libs up to date.
 - **Features**
 
     -  Support for GDPR TCF v1 
-    -  implemented  new Function setLocationPreferences  
+    -  implemented  new Function setLocationPreferences (**if you are use location data only**)
     
         * case consentFlag =  0  // user do not allow  
         * case consentFlag =  1 // user provide consent
