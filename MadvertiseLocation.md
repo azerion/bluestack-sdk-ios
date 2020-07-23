@@ -87,14 +87,13 @@ Ask the user to share their location data (popup) with the +requestAuthorization
 2.**Initializing MAdvertiseLocation**
 
 
-
-
 ```
 #!objective-c
 
          MadvertiseBuilder * madvertiseBuilder = [[MadvertiseBuilder alloc] init];
         [madvertiseBuilder setWithAppId:madevertiseLocationKey];
 ```
+
 ```
 #!Swift
 
@@ -103,6 +102,28 @@ Ask the user to share their location data (popup) with the +requestAuthorization
         let madvertiseLocationContext: MAdvertiseLocation? = madvertiseBuilder?.build()
 
 ```
+ ***(since v1.9) new attribute Consent flag passed to init madvertiseBuilder :***
+ 
+ * case consentFlag =  "0" = user do not allow  
+ * case consentFlag =  "1" = user provide consent
+ * case consentFlag =  "2" = SDK must check consent IAB consent
+ * case consentFlag =  "3" = SDK must check Madvertise consent
+
+ 
+```
+#!objective-c
+
+        [madvertiseBuilder setWithConsentFlag:@"0"];
+```
+
+```
+#!Swift
+
+        madvertiseBuilder?.set(consentFlag: consentFlag)
+        
+
+```
+ 
 
 3.**Start Location tracking position** :
 Start to collect location data with start function:
