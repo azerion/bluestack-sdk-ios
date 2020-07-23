@@ -5,6 +5,30 @@ See [Wiki] and [Help Center]  for more detailed informations.
 
 you must check [Upgrade Guide]. You need to keep all Ad Network libs up to date.
 
+## Version 3.0.4
+#### Release date: July 23, 2020
+- **Requirements** 
+    - Xcode 11.5
+    
+- **Features**
+
+    -  Support for GDPR TCF v1 
+    -  implemented  new Function setLocationPreferences  
+    
+        * case consentFlag =  0  // user do not allow  
+        * case consentFlag =  1 // user provide consent
+        * case consentFlag =  2 // SDK must check consent IAB consent
+        * case consentFlag =  3  //SDK must check Madvertise consent
+
+```objc
+    preferences.location = [preferences setLocationPreferences:[APP_DELEGATE sharedLocationManager].location WithConsentFlag: consentFlag] ;
+```
+      
+ 
+- **Ad Network Mediation Updates**
+    - Use new [BlueStack-SDK] + *Adapter.a
+    - Use new [MAdvertiseLocation-v1.9].
+
 ## Version 3.0.3
 #### Release date: Juin 26, 2020
 - **Requirements** 
@@ -1180,4 +1204,5 @@ You must update [MngAdsSDK], [libSmartAdServer.a] (not available from pod update
 [MAdvertiseLocation-v1.6]: https://bitbucket.org/mngcorp/mngads-demo-ios/downloads/MAdvertiseLocation-v1.6.zip
 [MAdvertiseLocation-v1.7]: https://bitbucket.org/mngcorp/mngads-demo-ios/downloads/MAdvertiseLocation-v1.7.zip
 [MAdvertiseLocation-v1.8]: https://bitbucket.org/mngcorp/mngads-demo-ios/downloads/MAdvertiseLocation-v1.8.zip
+[MAdvertiseLocation-v1.9]: https://bitbucket.org/mngcorp/mngads-demo-ios/downloads/MAdvertiseLocation-v1.9.zip
 [(more infos)]:https://bitbucket.org/mngcorp/mngads-demo-ios/wiki/Home#markdown-header-disable-auto-displaying
