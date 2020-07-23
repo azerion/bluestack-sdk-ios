@@ -2,6 +2,22 @@
 
 See [Wiki], [Design Guidelines and Best practices] and [Help Center]  for more detailed informations. you must check [Change Log] .
 
+## Upgrading to 3.0.4
+
+- Use new [BlueStack-SDK] + *Adapter.a
+- Use new [MAdvertiseLocation-v1.9].
+-  Support for GDPR TCF v1 
+   -  implemented  new Function setLocationPreferences  
+    
+        * case consentFlag =  0  // user do not allow  
+        * case consentFlag =  1 // user provide consent
+        * case consentFlag =  2 // SDK must check consent IAB consent
+        * case consentFlag =  3  //SDK must check Madvertise consent
+
+```objc
+    preferences.location = [preferences setLocationPreferences:[APP_DELEGATE sharedLocationManager].location WithConsentFlag: consentFlag] ;
+```
+
 ## Upgrading to 3.0.3
 
 - Use new [BlueStack-SDK] + *Adapter.a
