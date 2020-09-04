@@ -1,4 +1,5 @@
 # Prepare for iOS 14+
+[TOC]
 
 ## Request App Tracking Transparency authorization
 
