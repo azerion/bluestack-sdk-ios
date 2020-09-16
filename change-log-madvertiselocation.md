@@ -1,5 +1,10 @@
 Change log and release notes for MadvertiseLocation for iOS.
 
+### Version 2.0
+#### Release date: September 16th, 2020
+* TCF v2 support.
+* fix iOS 10 crashes.
+
 ### Version 1.9
 #### Release date: july 23th, 2020
 
