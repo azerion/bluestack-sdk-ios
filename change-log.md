@@ -4,6 +4,20 @@ See [Wiki] and [Help Center]  for more detailed informations.
 
 
 you must check [Upgrade Guide]. You need to keep all Ad Network libs up to date.
+## Version 3.0.5
+#### Release date: September 18, 2020
+- **Requirements** 
+    - Xcode 11.5
+    
+- **Features**
+
+    -  Support for GDPR TCF v2 
+   
+- **Ad Network Mediation Updates**
+    - Use new [BlueStack-SDK] + *Adapter.a
+    - Use new [MAdvertiseLocation-v2.0].
+    - Use new DFP 7.65.0 version [GoogleMobileAds.framework]
+    - Use new adColony 4.1.5 version, [AdColony.framework]
 
 ## Version 3.0.4
 #### Release date: July 23, 2020
@@ -1205,4 +1219,5 @@ You must update [MngAdsSDK], [libSmartAdServer.a] (not available from pod update
 [MAdvertiseLocation-v1.7]: https://bitbucket.org/mngcorp/mngads-demo-ios/downloads/MAdvertiseLocation-v1.7.zip
 [MAdvertiseLocation-v1.8]: https://bitbucket.org/mngcorp/mngads-demo-ios/downloads/MAdvertiseLocation-v1.8.zip
 [MAdvertiseLocation-v1.9]: https://bitbucket.org/mngcorp/mngads-demo-ios/downloads/MAdvertiseLocation-v1.9.zip
+[MAdvertiseLocation-v2.0]: https://bitbucket.org/mngcorp/mngads-demo-ios/downloads/MAdvertiseLocation-v2.0.zip
 [(more infos)]:https://bitbucket.org/mngcorp/mngads-demo-ios/wiki/Home#markdown-header-disable-auto-displaying

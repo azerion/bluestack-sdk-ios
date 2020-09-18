@@ -2,6 +2,18 @@
 
 See [Wiki], [Design Guidelines and Best practices] and [Help Center]  for more detailed informations. you must check [Change Log] .
 
+
+## Upgrading to 3.0.5
+
+  - Use new [BlueStack-SDK] + *Adapter.a
+  - Use new [MAdvertiseLocation-v2.0].
+  - Use new DFP 7.65.0 version [GoogleMobileAds.framework]
+  - Use new adColony 4.1.5 version, [AdColony.framework]
+
+
+-  Support for GDPR TCF v2
+
+
 ## Upgrading to 3.0.4
 
 - Use new [BlueStack-SDK] + *Adapter.a
