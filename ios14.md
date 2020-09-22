@@ -17,38 +17,8 @@ To display the App Tracking Transparency authorization request for accessing the
 
 ![att-iOS.png](https://bitbucket.org/repo/aen579/images/2434364878-att-iOS.png)
 
-To present the authorization request, call requestTrackingAuthorizationWithCompletionHandler:. We recommend waiting for the completion callback prior to loading ads, so that if the user grants the App Tracking Transparency permission, the BlueStack-SDK can use the IDFA in ad requests.
 
-
-```
-#!swift
-
-import AppTrackingTransparency
-import AdSupport
-...
-func requestIDFA() {
-  ATTrackingManager.requestTrackingAuthorization(completionHandler: { status in
-    // Tracking authorization completed. Start loading ads here.
-    // loadAd()
-  })
-}
-```
-
-
-```
-#!objective-c
-
-#import <AppTrackingTransparency/AppTrackingTransparency.h>
-#import <AdSupport/AdSupport.h>
-...
-- (void)requestIDFA {
-  [ATTrackingManager requestTrackingAuthorizationWithCompletionHandler:^(ATTrackingManagerAuthorizationStatus status) {
-    // Tracking authorization completed. Start loading ads here.
-    // [self loadAd];
-  }];
-}
-```
-
+BlueStack-SDK  include App Tracking Transparency (ATT) in order to display the App Tracking Transparency authorization request for accessing the IDFA.
 
 
 For more information about the possible status values, see [ATTrackingManager.AuthorizationStatus].
