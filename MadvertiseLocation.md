@@ -17,7 +17,7 @@
  prompt for reduced accuracy by default : 
 
 ```
-#!swift
+#!xml
 
 
 <! -- info.plist -->
