@@ -13,7 +13,15 @@
 
          * From iOS 10, set “NSLocationWhenInUseUsageDescription” in the Info.plist file.
 
-*  ## Installation   :
+         * from IOS 14 
+ prompt for reduced accuracy by default : 
+
+<! -- info.plist -->
+<key>NSLocationDefaultAccuracyReduced<\key><true/>
+
+
+
+*  ##  Installation   :
 https://bitbucket.org/mngcorp/mngads-demo-android/wiki/change-log-madvertiselocation
 * ***CocoaPods installation*** :  
 
