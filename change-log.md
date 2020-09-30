@@ -15,7 +15,7 @@ you must check [Upgrade Guide]. You need to keep all Ad Network libs up to date.
    
 - **Ad Network Mediation Updates**
     - Use new [BlueStack-SDK] + *Adapter.a
-    - Use new [MAdvertiseLocation-v2.1].
+    - Use new [MAdvertiseLocation-v2.1] (https://bitbucket.org/mngcorp/mngads-demo-ios/wiki/change-log-madvertiselocation)
 
 
 ## Version 3.0.5
