@@ -2,6 +2,26 @@
 
 See [Wiki] and [Help Center]  for more detailed informations.
 
+## Version 3.1.0
+#### Release date: September 30, 2020
+- **Requirements** 
+    - Xcode 12
+    
+- **Features**
+
+ - Prepare for iOS 14 (https://bitbucket.org/mngcorp/mngads-demo-ios/wiki/ios14) :
+
+    App Tracking Transparency:
+
+To request permission to track the user and access IDFA, use App Tracking Transparency. If your app doesn't present this request, the IDFA will be all zeros and you may not track them which may lead to significant loss in ad revenue.
+
+You will need to add **NSUserTrackingUsageDescription** key with a custom message describing your usage of IDFA in your Info.plist file.
+
+   
+- **Ad Network Mediation Updates**
+    - Use new [BlueStack-SDK] + *Adapter.a
+    - Use new [MAdvertiseLocation-v2.1].
+
 
 you must check [Upgrade Guide]. You need to keep all Ad Network libs up to date.
 ## Version 3.0.5
