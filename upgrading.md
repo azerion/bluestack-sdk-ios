@@ -2,6 +2,24 @@
 
 See [Wiki], [Design Guidelines and Best practices] and [Help Center]  for more detailed informations. you must check [Change Log] .
 
+## Upgrading to 3.1.0
+
+  - Use new [BlueStack-SDK] + *Adapter.a
+  - Use new [MAdvertiseLocation-v2.1].
+  - Prepare for iOS 14 https://bitbucket.org/mngcorp/mngads-demo-ios/wiki/ios14 :
+
+    App Tracking Transparency:
+
+To display the App Tracking Transparency authorization request for accessing the IDFA, update your Info.plist to add the NSUserTrackingUsageDescription key with a custom message describing your usage. Below is an example description text:
+
+
+```
+#!objective-c
+
+<key>NSUserTrackingUsageDescription</key>
+<string>This identifier will be used to deliver personalized ads to you.</string>
+```
+
 
 ## Upgrading to 3.0.5
 
