@@ -15,7 +15,7 @@ To display the App Tracking Transparency authorization request for accessing the
 
 ![editor.png](https://bitbucket.org/repo/aen579/images/4098905308-editor.png)
 
-![att-iOS.png](https://bitbucket.org/repo/aen579/images/2434364878-att-iOS.png)
+![Image from iOS.png](https://bitbucket.org/repo/aen579/images/537684478-Image%20from%20iOS.png)
 
 
 BlueStack-SDK  include App Tracking Transparency (ATT) in order to display the App Tracking Transparency authorization request for accessing the IDFA.
