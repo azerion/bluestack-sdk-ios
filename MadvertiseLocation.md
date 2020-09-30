@@ -16,8 +16,14 @@
          * from IOS 14 
  prompt for reduced accuracy by default : 
 
+```
+#!swift
+
+
 <! -- info.plist -->
 <key>NSLocationDefaultAccuracyReduced<\key><true/>
+```
+
 
 
 
