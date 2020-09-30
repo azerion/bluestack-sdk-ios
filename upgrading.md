@@ -5,7 +5,7 @@ See [Wiki], [Design Guidelines and Best practices] and [Help Center]  for more d
 ## Upgrading to 3.1.0
 
   - Use new [BlueStack-SDK] + *Adapter.a
-  - Use new [MAdvertiseLocation-v2.1].
+  - Use new [MAdvertiseLocation-v2.1]. (https://bitbucket.org/mngcorp/mngads-demo-ios/wiki/change-log-madvertiselocation)
   - Prepare for iOS 14 https://bitbucket.org/mngcorp/mngads-demo-ios/wiki/ios14 :
 
     App Tracking Transparency:
