@@ -2,9 +2,9 @@ Change log and release notes for MadvertiseLocation for iOS.
 
 ### Version 2.1
 #### Release date: September 30th, 2020
-* Xcode 12 + target on Swift 5.x
+* **Xcode 12 + target on Swift 5.x**
 * fix iOS 14 accuracy.
-* new key in plist for prompt reduced accuracy by default : 
+* **IMPORTANT add new key in plist for prompt reduced accuracy by default** : 
 
 <! -- info.plist -->
 <key>NSLocationDefaultAccuracyReduced<\key><true/>
