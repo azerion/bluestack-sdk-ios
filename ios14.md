@@ -33,8 +33,12 @@ To enable this functionality, you will need to update the SKAdNetworkItems key w
 #!plist
 
 
-<key>SKAdNetworkItems</key>
+    <key>SKAdNetworkItems</key>
   <array>
+    <dict>
+      <key>SKAdNetworkIdentifier</key>
+      <string>cstr6suwn9.skadnetwork</string>
+    </dict>
     <dict>
       <key>SKAdNetworkIdentifier</key>
       <string>PD25VRRWZN.skadnetwork</string>
