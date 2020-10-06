@@ -28,7 +28,7 @@
 
 
 *  ##  Installation   :
-https://bitbucket.org/mngcorp/mngads-demo-android/wiki/change-log-madvertiselocation
+https://bitbucket.org/mngcorp/mngads-demo-ios/wiki/change-log-madvertiselocation
 * ***CocoaPods installation*** :  
 
 ## Installation with MNGSDK V2.3.1 (since v2.12.1)
