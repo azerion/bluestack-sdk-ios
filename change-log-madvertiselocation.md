@@ -1,5 +1,10 @@
 Change log and release notes for MadvertiseLocation for iOS.
 
+### Version 2.1.1
+#### Release date: October 6th, 2020
+* **Xcode 12.0.1 + target on Swift 5.x**
+* fix Xcode 12.0.1 compilation issue.
+
 ### Version 2.1
 #### Release date: September 30th, 2020
 * **Xcode 12 + target on Swift 5.x**
