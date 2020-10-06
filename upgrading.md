@@ -2,6 +2,13 @@
 
 See [Wiki], [Design Guidelines and Best practices] and [Help Center]  for more detailed informations. you must check [Change Log] .
 
+
+## Upgrading to 3.1.1
+
+  - Use new [BlueStack-SDK] + *Adapter.a
+  - Use new [MAdvertiseLocation-v2.1.1]. (https://bitbucket.org/mngcorp/mngads-demo-ios/wiki/change-log-madvertiselocation)
+
+
 ## Upgrading to 3.1.0
 
   - Use new [BlueStack-SDK] + *Adapter.a
