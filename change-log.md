@@ -4,6 +4,24 @@ See [Wiki] and [Help Center]  for more detailed informations.
 you must check [Upgrade Guide]. You need to keep all Ad Network libs up to date.
 
 
+## Version 3.1.2
+#### Release date: October 12th, 2020
+- **Requirements** 
+    - Xcode 12.0.1
+- **Features**
+
+    - fix xcode 12 build simulateur .
+    - fix crash [MNGAnalyticsManager sendAdRequestData]
+ 
+
+- **Ad Network Mediation Updates**
+    - Use new [BlueStack-SDK] + *Adapter.a
+    - Use new DFP 7.66.0 version [GoogleMobileAds.framework]
+    - Use new FacebookAudience 6.0.0 version [FBAudienceNetwork.framework]
+    - use the latest version OM SDK - 1.3.11
+
+
+
 ## Version 3.1.1
 #### Release date: October 6th, 2020
 - **Requirements** 
