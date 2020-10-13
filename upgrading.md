@@ -3,6 +3,13 @@
 See [Wiki], [Design Guidelines and Best practices] and [Help Center]  for more detailed informations. you must check [Change Log] .
 
 
+## Upgrading to 3.1.2
+
+  - Use new [BlueStack-SDK] + *Adapter.a
+  - Use new DFP 7.66.0 version [GoogleMobileAds.framework]
+  - Use new FacebookAudience 6.0.0 version [FBAudienceNetwork.framework] 
+  - use the latest version OM SDK - 1.3.11
+
 ## Upgrading to 3.1.1
 
   - Use new [BlueStack-SDK] + *Adapter.a
