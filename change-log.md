@@ -10,7 +10,7 @@ you must check [Upgrade Guide]. You need to keep all Ad Network libs up to date.
     - Xcode 12.0.1
 - **Features**
 
- - Upgrade OM SDK 1.3.11 (viewability with VAST optimization)
+   - Upgrade OM SDK 1.3.11 (viewability with VAST optimization)
 
 - **Bug Fixes**
 
