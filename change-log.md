@@ -8,8 +8,8 @@ you must check [Upgrade Guide]. You need to keep all Ad Network libs up to date.
 #### Release date: October 12th, 2020
 - **Requirements** 
     - Xcode 12.0.1
-- **Features**
 
+- **Features**
    - Upgrade OM SDK 1.3.11 (viewability with VAST optimization)
 
 - **Bug Fixes**
