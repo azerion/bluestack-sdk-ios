@@ -1,5 +1,10 @@
 Change log and release notes for MadvertiseLocation for iOS.
 
+### Version 2.2
+#### Release date: October 31th, 2020
+
+ - fix IDFA and CMP issue
+
 ### Version 2.1.1
 #### Release date: October 6th, 2020
 * **Xcode 12.0.1 + target on Swift 5.x**
