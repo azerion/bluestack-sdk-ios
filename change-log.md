@@ -3,6 +3,26 @@
 See [Wiki] and [Help Center]  for more detailed informations.
 you must check [Upgrade Guide]. You need to keep all Ad Network libs up to date.
 
+## Version 3.1.3
+#### Release date: November 6th, 2020
+- **Requirements** 
+     - Xcode 12.0.1
+- **Bug Fixes**
+
+    - fix crash CoreTelephony .
+    - fix crash [MNGAdsSDKFactory createInfeedInFrame withPreferences] .
+    - fix crash [MNGAdsSDKFactory initRequest:preferences:error:] .
+    - fix crash [MNGAdsSDKFactory sortAdsServersByPriority].
+    - fix crash [MNGAdsAdapter setBannerDelegate:].
+    - fix crash DFP nativeAd without cover 
+    - fix bug infeed click .
+
+- **Ad Network Mediation Updates**
+    - Use new [BlueStack-SDK] + *Adapter.a
+    - Use new [MAdvertiseLocation-v2.2]
+    - Use new adColony 4.4.1.1 version, [AdColony.framework]
+    - use the latest version OM SDK - 1.3.11
+
 
 ## Version 3.1.2
 #### Release date: October 12th, 2020
@@ -1268,4 +1288,6 @@ You must update [MngAdsSDK], [libSmartAdServer.a] (not available from pod update
 [MAdvertiseLocation-v1.9]: https://bitbucket.org/mngcorp/mngads-demo-ios/downloads/MAdvertiseLocation-v1.9.zip
 [MAdvertiseLocation-v2.0]: https://bitbucket.org/mngcorp/mngads-demo-ios/downloads/MAdvertiseLocation-v2.0.zip
 [MAdvertiseLocation-v2.1.1]: https://bitbucket.org/mngcorp/mngads-demo-ios/downloads/MAdvertiseLocation-v2.1.1.zip
+[MAdvertiseLocation-v2.2]: https://bitbucket.org/mngcorp/mngads-demo-ios/downloads/MAdvertiseLocation-v2.2.zip
+
 [(more infos)]:https://bitbucket.org/mngcorp/mngads-demo-ios/wiki/Home#markdown-header-disable-auto-displaying
