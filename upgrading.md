@@ -3,10 +3,18 @@
 See [Wiki], [Design Guidelines and Best practices] and [Help Center]  for more detailed informations. you must check [Change Log] .
 
 
+## Upgrading to 3.1.3
+
+  - Use new [BlueStack-SDK] + *Adapter.a
+  - Use new [MAdvertiseLocation-v2.2]
+  - Use new adColony 4.4.1.1 version, [AdColony.framework]
+  - use the latest version OM SDK - 1.3.11
+
+
 ## Upgrading to 3.1.2
 
   - Use new [BlueStack-SDK] + *Adapter.a
-  - Use new DFP 7.66.0 version [GoogleMobileAds.framework]
+  - Use new MAdvertiseLocation-v2.2
   - Use new FacebookAudience 6.0.0 version [FBAudienceNetwork.framework] 
   - use the latest version OM SDK - 1.3.11
 
@@ -874,3 +882,4 @@ instead of
 [(more infos)]:https://bitbucket.org/mngcorp/mngads-demo-ios/wiki/Home#markdown-header-disable-auto-displaying
 [BlueStack-SDK]:https://bitbucket.org/mngcorp/mngads-demo-ios/downloads/
 [MAdvertiseLocation-v1.9]: https://bitbucket.org/mngcorp/mngads-demo-ios/downloads/MAdvertiseLocation-v1.9.zip
+[MAdvertiseLocation-v2.2]: https://bitbucket.org/mngcorp/mngads-demo-ios/downloads/MAdvertiseLocation-v2.2.zip
