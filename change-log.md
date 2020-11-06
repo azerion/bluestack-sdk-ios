@@ -14,7 +14,7 @@ you must check [Upgrade Guide]. You need to keep all Ad Network libs up to date.
     - fix crash [MNGAdsSDKFactory initRequest:preferences:error:] .
     - fix crash [MNGAdsSDKFactory sortAdsServersByPriority].
     - fix crash [MNGAdsAdapter setBannerDelegate:].
-    - fix crash DFP nativeAd without cover 
+    - fix crash DFP nativeAd without cover adLoader:didReceiveUnifiedNativeAd.
     - fix bug infeed click .
 
 - **Ad Network Mediation Updates**
