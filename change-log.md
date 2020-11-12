@@ -4,7 +4,7 @@ See [Wiki] and [Help Center]  for more detailed informations.
 you must check [Upgrade Guide]. You need to keep all Ad Network libs up to date.
 
 
-## Version 3.1.3
+## Version 3.1.4
 #### Release date: November 11th, 2020
 - **Requirements** 
     - Xcode 12.0.1
