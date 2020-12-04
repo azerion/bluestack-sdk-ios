@@ -3,6 +3,16 @@
 See [Wiki] and [Help Center]  for more detailed informations.
 you must check [Upgrade Guide]. You need to keep all Ad Network libs up to date.
 
+## Version 3.1.5
+#### Release date: December 4th, 2020
+- **Requirements** 
+    - Xcode 12.2
+ 
+- **Ad Network Mediation Updates**
+    - Use new [BlueStack-SDK] + *Adapter.a
+    - Use new OguryAds 2.3.2
+
+
 
 ## Version 3.1.4
 #### Release date: November 11th, 2020
