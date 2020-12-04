@@ -5,8 +5,8 @@ See [Wiki], [Design Guidelines and Best practices] and [Help Center]  for more d
 
 ## Upgrading to 3.1.5
 
-    - Use new [BlueStack-SDK] + *Adapter.a
-    - Use new OguryAds 2.3.2
+  - Use new [BlueStack-SDK] + *Adapter.a
+  - Use new OguryAds 2.3.2
 
 ## Upgrading to 3.1.3
 
