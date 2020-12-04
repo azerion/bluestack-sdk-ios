@@ -3,11 +3,10 @@
 See [Wiki], [Design Guidelines and Best practices] and [Help Center]  for more detailed informations. you must check [Change Log] .
 
 
-## Upgrading to 3.1.4
+## Upgrading to 3.1.5
 
-  - Use new [BlueStack-SDK] + *Adapter.a
-  - Use new Smart-Display-SDK 7.8.0
-
+    - Use new [BlueStack-SDK] + *Adapter.a
+    - Use new OguryAds 2.3.2
 
 ## Upgrading to 3.1.3
 
