@@ -2,6 +2,12 @@
 
 See [Wiki], [Design Guidelines and Best practices] and [Help Center]  for more detailed informations. you must check [Change Log] .
 
+## Upgrading to 3.1.6
+
+  - Use new [BlueStack-SDK] + *Adapter.a
+  - Use new FacebookAudience 6.2.0 version [FBAudienceNetwork.framework] 
+  - Use new DFP 7.69.0 version [GoogleMobileAds.framework]
+
 
 ## Upgrading to 3.1.5
 
