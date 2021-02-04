@@ -35,7 +35,7 @@ To enable this functionality, you will need to update the SKAdNetworkItems key w
     <array>
         <dict>
             <key>SKAdNetworkIdentifier</key>
-            <string>PD25VRRWZN.skadnetwork</string>
+            <string>pd25vrrwzn.skadnetwork</string>
         </dict>
         <dict>
             <key>SKAdNetworkIdentifier</key>
