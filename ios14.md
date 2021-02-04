@@ -31,21 +31,44 @@ To enable this functionality, you will need to update the SKAdNetworkItems key w
 
 ```
 #!plist
-
-
     <key>SKAdNetworkItems</key>
-  <array>
-    <dict>
-      <key>SKAdNetworkIdentifier</key>
-      <string>cstr6suwn9.skadnetwork</string>
-    </dict>
-    <dict>
-      <key>SKAdNetworkIdentifier</key>
-      <string>PD25VRRWZN.skadnetwork</string>
-    </dict>
-  </array>
+    <array>
+        <dict>
+            <key>SKAdNetworkIdentifier</key>
+            <string>PD25VRRWZN.skadnetwork</string>
+        </dict>
+        <dict>
+            <key>SKAdNetworkIdentifier</key>
+            <string>cstr6suwn9.skadnetwork</string>
+        </dict>
+        <dict>
+            <key>SKAdNetworkIdentifier</key>
+            <string>v9wttpbfk9.skadnetwork</string>
+        </dict>
+        <dict>
+            <key>SKAdNetworkIdentifier</key>
+            <string>n38lu8286q.skadnetwork</string>
+        </dict>
+        <dict>
+            <key>SKAdNetworkIdentifier</key>
+            <string>p78axxw29g.skadnetwork</string>
+        </dict>
+        <dict>
+            <key>SKAdNetworkIdentifier</key>
+            <string>hs6bdukanm.skadnetwork</string>
+        </dict>
+        <dict>
+            <key>SKAdNetworkIdentifier</key>
+            <string>4pfyvq9l8r.skadnetwork</string>
+        </dict>
+    </array>
+
 ```
 
+Up to date list available on following links
+
+* https://madvertise.com/skadnetworkids.xml
+* https://madvertise.com/skadnetworkids.json
   
 
 
