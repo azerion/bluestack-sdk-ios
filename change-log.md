@@ -25,7 +25,7 @@ you must check [Upgrade Guide]. You need to keep all Ad Network libs up to date.
  
 - **Ad Network Mediation Updates**
 
-   - Use new [BlueStack-SDK] + *Adapter.a
+     - Use new [BlueStack-SDK] + *Adapter.a
    - Use new FacebookAudience 6.2.1 version [FBAudienceNetwork.framework] 
    - Use new DFP 8.0.0 version [GoogleMobileAds.xcframework]
    - Use new [MAdvertiseLocation-v2.3]
