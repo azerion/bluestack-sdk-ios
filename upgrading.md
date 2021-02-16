@@ -2,6 +2,19 @@
 
 See [Wiki], [Design Guidelines and Best practices] and [Help Center]  for more detailed informations. you must check [Change Log] .
 
+## Upgrading to 3.2.0
+
+ - Use new [BlueStack-SDK] + *Adapter.a
+   - Use new FacebookAudience 6.2.1 version [FBAudienceNetwork.framework] 
+   - Use new DFP 8.0.0 version [GoogleMobileAds.xcframework]
+   - Use new [MAdvertiseLocation-v2.3]
+   - Use new appLovinSDK 6.15.1 
+   - Use new adColony 4.5.0 version, [AdColony.framework]
+   - Use new AmazonPublisherServicesSDK 3.4.2 
+   - Use new CriteoPublisherSdk 4.2.1
+   - Use new OguryAds 2.3.3
+
+
 ## Upgrading to 3.1.6
 
   - Use new [BlueStack-SDK] + *Adapter.a
@@ -894,3 +907,5 @@ instead of
 [BlueStack-SDK]:https://bitbucket.org/mngcorp/mngads-demo-ios/downloads/
 [MAdvertiseLocation-v1.9]: https://bitbucket.org/mngcorp/mngads-demo-ios/downloads/MAdvertiseLocation-v1.9.zip
 [MAdvertiseLocation-v2.2]: https://bitbucket.org/mngcorp/mngads-demo-ios/downloads/MAdvertiseLocation-v2.2.zip
+[MAdvertiseLocation-v2.3]: https://bitbucket.org/mngcorp/mngads-demo-ios/downloads/MAdvertiseLocation-v2.3.zip
+[GoogleMobileAds.xcframework]:https://developers.google.com/mobile-ads-sdk/docs/dfp/ios/download
