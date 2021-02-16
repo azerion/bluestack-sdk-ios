@@ -3,6 +3,37 @@
 See [Wiki] and [Help Center]  for more detailed informations.
 you must check [Upgrade Guide]. You need to keep all Ad Network libs up to date.
 
+## Version 3.2.0
+#### Release date: February 16th, 2021
+- **Requirements** 
+    
+    - Xcode 12.4
+
+- **Features**
+      - Prepare for iOS 14+ 
+      - Upgrade OM SDK 1.3.16 
+      - New AdFormat [Thumbnail Ads] For Ogury SDK.
+      - Support of Facebook Audience Network bidding for in-app ads.
+      - New Mngperf AdFormat RewardVideo
+      - Enable SKAdNetwork to track conversions
+      - mngPreference.setLanguage is now deprecated.
+
+- **Bug Fixes**
+
+    - Fix crash DTBAds.m line 74 
+    - Fix ATTrackingManager issue
+ 
+- **Ad Network Mediation Updates**
+   - Use new [BlueStack-SDK] + *Adapter.a
+   - Use new FacebookAudience 6.2.1 version [FBAudienceNetwork.framework] 
+   - Use new DFP 8.0.0 version [GoogleMobileAds.xcframework]
+   - Use new [MAdvertiseLocation-v2.3]
+   - Use new appLovinSDK 6.15.1 
+   - Use new adColony 4.5.0 version, [AdColony.framework]
+   - Use new AmazonPublisherServicesSDK 3.4.2 
+   - Use new CriteoPublisherSdk 4.2.1
+   - Use new OguryAds 2.3.3
+
 
 ## Version 3.1.6
 #### Release date: December 8th, 2020
@@ -1325,3 +1356,5 @@ You must update [MngAdsSDK], [libSmartAdServer.a] (not available from pod update
 [MAdvertiseLocation-v2.2]: https://bitbucket.org/mngcorp/mngads-demo-ios/downloads/MAdvertiseLocation-v2.2.zip
 
 [(more infos)]:https://bitbucket.org/mngcorp/mngads-demo-ios/wiki/Home#markdown-header-disable-auto-displaying
+
+[Thumbnail Ads]:https://bitbucket.org/mngcorp/mngads-demo-ios/wiki/thumbnail
