@@ -1,5 +1,9 @@
 Change log and release notes for MadvertiseLocation for iOS.
 
+### Version 2.3.1
+#### Release date: February 18th, 2021
+
+* Fix compilation issue on Swift project ("Failed to build module 'MAdvertiseLocation' from its module interface; it may have been damaged or it may have triggered a bug in the Swift compiler when it was produced")
 
 ### Version 2.3
 #### Release date: February 8th, 2021
