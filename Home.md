@@ -51,4 +51,4 @@ Madvertise provides functionalities for monetizing your mobile application: from
 [IOS Banner Ads]:https://bitbucket.org/mngcorp/mngads-demo-ios/wiki/banner
 [IOS Interstitial Ads]:https://bitbucket.org/mngcorp/mngads-demo-ios/wiki/interstitial
 [IOS Google Mobile Ads Adapter]:https://bitbucket.org/mngcorp/mngads-demo-ios/wiki/dfp-adapter-ios
-[IOS Thumbnail Ads]:https://bitbucket.org/mngcorp/mngads-demo-ios/wiki/Thumbnail
+[IOS Thumbnail Ads]:https://bitbucket.org/mngcorp/mngads-demo-ios/wiki/thumbnail
