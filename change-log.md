@@ -4,13 +4,14 @@ See [Wiki] and [Help Center]  for more detailed informations.
 you must check [Upgrade Guide]. You need to keep all Ad Network libs up to date.
 
 ## Version 3.2.2
-#### Release date: Mars 9th, 2021
+#### Release date: March 9th, 2021
 - **Requirements** 
     
     - Xcode 12.4
 ​
+
 - **Bug Fixes**
-​
+
     - Fix inApp bidding keyValue Issue 
     - Fix intersitial issue showAdFromRootViewController 
  
@@ -20,6 +21,7 @@ you must check [Upgrade Guide]. You need to keep all Ad Network libs up to date.
     
     - Xcode 12.4
 ​
+
 - **Bug Fixes**
 ​
     - Fix Bitcode activation 
