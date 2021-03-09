@@ -1,6 +1,14 @@
 # upgrading SDK
 
 See [Wiki], [Design Guidelines and Best practices] and [Help Center]  for more detailed informations. you must check [Change Log] .
+## Upgrading to 3.2.2
+
+ - Use new [BlueStack-SDK] 3.2.2 + *Adapter.a
+ 
+## Upgrading to 3.2.1
+
+ - Use new [BlueStack-SDK] 3.2.1 + *Adapter.a
+ 
 
 ## Upgrading to 3.2.0
 

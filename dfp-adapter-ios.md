@@ -58,6 +58,7 @@ On your Google Ad Manager UI, create a custom event
 
 * check [GoogleMobileAds-Adapter] and add manually on  your application project. 
 
+* since 
 * import Adapter files in your code :
 
 ```objc
@@ -76,6 +77,14 @@ You can check our [Demo] page.
 #### 2.1 Banner and Interstitial:
 
 You may now use MNG DFP Adaptor to show Interstitial Ads and Banner Ads the same way it's described in the DFP Documentation.The adapter code and the setup you did on your Google Ad Manager UI will allow MNG Ads to deliver ads.
+
+##### Since BlueStack V3.2.0 and Google-Mobile-Ads-SDK V8.0.0 
+
+  * GADInterstitialDelegate is deprecated : use GADFullScreenContentDelegate 
+  * DFPRequest is renamed to GAMRequest
+  
+
+ Migrate With the DFP Documentation: [Prepare SDK v8 ]
 
 You must pass CUSTOMLABELADAPTER  with custom event adapter class name for  and Passed the ViewController to the Adapter:
 
@@ -150,7 +159,6 @@ _interstitial.delegate = self;
     
 }
 ``` 
-
 
 #### Native Ads 
 
@@ -236,6 +244,9 @@ If you need to send your preferences (Age, Keyword, Content URL) use the GADCust
 ```
 
 
+
+
+
  
 [Using CocoaPods]:https://bitbucket.org/mngcorp/mngads-demo-ios/wiki/Home#markdown-header-using-cocoapods
 [Manual Install]:https://bitbucket.org/mngcorp/mngads-demo-ios/wiki/Home#markdown-header-manual-install
@@ -252,3 +263,4 @@ If you need to send your preferences (Age, Keyword, Content URL) use the GADCust
 [GoogleMobileAds-Adapter]: https://bitbucket.org/mngcorp/mngads-demo-ios/downloads/GoogleMobileAds-Adapter-v1.4.3.zip
 [Interstitial Ads]:https://developers.google.com/ad-manager/mobile-ads-sdk/ios/interstitial
 [Banner Ads]:https://developers.google.com/ad-manager/mobile-ads-sdk/ios/banner
+[Prepare SDK v8 ]:https://developers.google.com/ad-manager/mobile-ads-sdk/ios/migration
