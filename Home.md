@@ -7,6 +7,7 @@ Madvertise provides functionalities for monetizing your mobile application: from
 
 | **SDK Integration** | 
 | -------- | -------- 
+| [Prepare for iOS 14+] |
 | [Setup the IOS SDK] | 
 | [IOS Change Log] 
 | [IOS Upgrade Guide] 
@@ -52,3 +53,4 @@ Madvertise provides functionalities for monetizing your mobile application: from
 [IOS Interstitial Ads]:https://bitbucket.org/mngcorp/mngads-demo-ios/wiki/interstitial
 [IOS Google Mobile Ads Adapter]:https://bitbucket.org/mngcorp/mngads-demo-ios/wiki/dfp-adapter-ios
 [IOS Thumbnail Ads]:https://bitbucket.org/mngcorp/mngads-demo-ios/wiki/thumbnail
+[Prepare for iOS 14+]:https://bitbucket.org/mngcorp/mngads-demo-ios/wiki/ios14
