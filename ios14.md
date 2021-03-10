@@ -16,7 +16,7 @@ To display the App Tracking Transparency authorization request for accessing the
 #!objective-c
 
 <key>NSUserTrackingUsageDescription</key>
-<string>Cet identifiant sera utilisé pour vous délivrer des publicités personnalisées.</string>
+<string>Cet identifiant sera utilis\u00e9 pour vous d\u00e9livrer des publicit\u00e9s personnalis\u00e9es.</string>
 ```
 
 
