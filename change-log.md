@@ -12,17 +12,7 @@ you must check [Upgrade Guide]. You need to keep all Ad Network libs up to date.
   
 - **Features**
 
-     - New Pod for [BlueStack-SDK-Core] without the following Ads servers :
-  Smart-Display-SDK
-  FBAudienceNetwork
-  Google-Mobile-Ads-SDK
-  AmazonPublisherServicesSDK
-  CriteoPublisherSdk
-  OguryAds
-  AppLovinSDK
-  FlurryAds
-  mopub-ios-sdk
-  AdColony
+     - New Pod for [BlueStack-SDK-Core] without mediation dependencies
 
 - **Bug Fixes**
 
