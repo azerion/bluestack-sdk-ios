@@ -3,6 +3,36 @@
 See [Wiki] and [Help Center]  for more detailed informations.
 you must check [Upgrade Guide]. You need to keep all Ad Network libs up to date.
 
+
+## Version 3.2.3
+#### Release date: March 12th, 2021
+- **Requirements** 
+    
+    - Xcode 12.4
+  
+- **Features**
+
+     - New Pod for [BlueStack-SDK-Core] without the following Ads servers :
+  Smart-Display-SDK
+  FBAudienceNetwork
+  Google-Mobile-Ads-SDK
+  AmazonPublisherServicesSDK
+  CriteoPublisherSdk
+  OguryAds
+  AppLovinSDK
+  FlurryAds
+  mopub-ios-sdk
+  AdColony
+
+- **Bug Fixes**
+
+    - Fix duplicate intersitial  show issue 
+
+- **Ad Network Mediation Updates**
+
+    - Use new [BlueStack-SDK] + *Adapter.a
+    - Use new AmazonPublisherServicesSDK 3.4.4
+
 ## Version 3.2.2
 #### Release date: March 9th, 2021
 - **Requirements** 
@@ -1385,3 +1415,4 @@ You must update [MngAdsSDK], [libSmartAdServer.a] (not available from pod update
 [(more infos)]:https://bitbucket.org/mngcorp/mngads-demo-ios/wiki/Home#markdown-header-disable-auto-displaying
 
 [Thumbnail Ads]:https://bitbucket.org/mngcorp/mngads-demo-ios/wiki/thumbnail
+[BlueStack-SDK-Core]: https://bitbucket.org/mngcorp/mngads-demo-ios/downloads/Bluestack-SDK-Core-v3.2.3.zip
