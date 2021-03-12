@@ -1,6 +1,17 @@
 # upgrading SDK
 
 See [Wiki], [Design Guidelines and Best practices] and [Help Center]  for more detailed informations. you must check [Change Log] .
+
+## Upgrading to 3.2.3
+
+ - Use new [BlueStack-SDK] + *Adapter.a
+ - Use new AmazonPublisherServicesSDK 3.4.4
+
+or
+
+ - Use new pod [BlueStack-SDK-Core]: https://bitbucket.org/mngcorp/mngads-demo-ios/downloads/Bluestack-SDK-Core-v3.2.3.zip
+
+ 
 ## Upgrading to 3.2.2
 
  - Use new [BlueStack-SDK] 3.2.2 + *Adapter.a
