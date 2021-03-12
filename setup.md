@@ -134,6 +134,13 @@ pod "BlueStack-SDK",:subspecs => ["AppLovinSDK","mopub-ios-sdk","FlurryAds","AdC
 ```
 
 You can see [Installation guide for Swift]
+### Bluestack-SDK-Core
+
+you can use Bluestack-SDK-Core only without the adNetworks SDKs 
+
+```ruby
+pod "Bluestack-SDK-Core"
+```
 
 ## App Transport Security Settings
 [App Transport Security] improves privacy and data integrity by ensuring your app’s network connections employ only industry-standard protocols and ciphers without known weaknesses. This helps instill user trust that your app does not accidentally leak transmitted data to malicious parties.
@@ -195,8 +202,15 @@ You can also edit the plist by adding NSAppTransportSecurity key of dictionary t
 
  - **FBAudienceNetwork.framework** and  **libSmartAdServer.a** do not work with **Xcode 6.4**. Therefore, MngAds needs **Xcode 7**.
  
- 
-## Sample Application
+  - **GoogleMobileAds.framework:** : 
+
+  Important :You should note that it is mandatory that you add to your .plist file:
+
+```
+<key>GADIsAdManagerApp</key> 
+<true/>
+```
+  - ## Sample Application
 
 Included is a [BlueStack sample app] to use as example and for help on BlueStack integration. This basic application allows users to test our differents formats.
 
@@ -466,4 +480,3 @@ BlueStack SDK offers a number of different ad formats :
 [OguryAds]: https://www.ogury.com
 [AppLovinSDK]:https://www.applovin.com
 [AdColony]: http://adcolony.com
-
