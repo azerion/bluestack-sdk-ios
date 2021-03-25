@@ -2,6 +2,16 @@
 
 See [Wiki], [Design Guidelines and Best practices] and [Help Center]  for more detailed informations. you must check [Change Log] .
 
+## Upgrading to 3.2.4
+
+ - Use new [BlueStack-SDK] + *Adapter.a
+ - Use new [MAdvertiseLocation-v2.3.1]
+
+or
+
+ - Use new [Bluestack-SDK-Core-v3.2.4] 
+ 
+
 ## Upgrading to 3.2.3
 
  - Use new [BlueStack-SDK] + *Adapter.a
@@ -9,7 +19,7 @@ See [Wiki], [Design Guidelines and Best practices] and [Help Center]  for more d
 
 or
 
- - Use new pod [BlueStack-SDK-Core]: https://bitbucket.org/mngcorp/mngads-demo-ios/downloads/Bluestack-SDK-Core-v3.2.3.zip
+ - Use new pod [BlueStack-SDK-Core]
 
  
 ## Upgrading to 3.2.2
