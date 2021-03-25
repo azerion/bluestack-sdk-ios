@@ -4,12 +4,11 @@ See [Wiki], [Design Guidelines and Best practices] and [Help Center]  for more d
 
 ## Upgrading to 3.2.4
 
- - Use new [BlueStack-SDK] + *Adapter.a
- - Use new [MAdvertiseLocation-v2.3.1]
+ - Use new [BlueStack-SDK] v3.2.4 + *Adapter.a
 
 or
 
- - Use new [Bluestack-SDK-Core-v3.2.4] 
+ - Use new [BlueStack-SDK-Core] 
  
 
 ## Upgrading to 3.2.3
@@ -29,6 +28,7 @@ or
 ## Upgrading to 3.2.1
 
  - Use new [BlueStack-SDK] 3.2.1 + *Adapter.a
+ - Use new [MAdvertiseLocation-v2.3.1]
  
 
 ## Upgrading to 3.2.0
@@ -938,3 +938,4 @@ instead of
 [MAdvertiseLocation-v2.2]: https://bitbucket.org/mngcorp/mngads-demo-ios/downloads/MAdvertiseLocation-v2.2.zip
 [MAdvertiseLocation-v2.3]: https://bitbucket.org/mngcorp/mngads-demo-ios/downloads/MAdvertiseLocation-v2.3.zip
 [GoogleMobileAds.xcframework]:https://developers.google.com/mobile-ads-sdk/docs/dfp/ios/download
+[Bluestack-SDK-Core]:https://bitbucket.org/mngcorp/mngads-demo-ios/downloads/
