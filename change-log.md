@@ -3,6 +3,14 @@
 See [Wiki] and [Help Center]  for more detailed informations.
 you must check [Upgrade Guide]. You need to keep all Ad Network libs up to date.
 
+## Version 3.2.4
+#### Release date: March 25th, 2021
+- **Requirements** 
+    
+    - Xcode 12.4
+
+- **Features**
+    - Replace iabtechlab.OMSDK by madvertisebluestack.OMSDK
 
 ## Version 3.2.3
 #### Release date: March 12th, 2021
