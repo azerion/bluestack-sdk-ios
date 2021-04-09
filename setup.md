@@ -67,7 +67,6 @@ BlueStack SDK needs, these libraries are in demo project :
 - [libSmartAdServer.a], use version >=6.3, in used on demo project.
 - [FBAudienceNetwork.framework]
 - [GoogleMobileAds.framework], use version >=7.8.1, in used on demo project.
-- [AmazonAd.framework]
 - [libFlurryAds.a]
 - [libFlurry.a]
 - [MoPub Marketplace]
