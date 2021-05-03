@@ -6,7 +6,7 @@ Madvertise provides functionalities for monetizing your mobile application: from
 
 
 | **SDK Integration** | 
-| -------- | -------- 
+| -------- | --------  |
 | [Prepare for iOS 14+] |
 | [Setup the IOS SDK] | 
 | [IOS Change Log] 
@@ -14,7 +14,7 @@ Madvertise provides functionalities for monetizing your mobile application: from
 
 
 | **Ad Formats** | 
-| -------- | -------- 
+| -------- | -------- |
 | [IOS Banner Ads] | 
 | [IOS Interstitial Ads] |
 | [IOS Infeed Ads] |
@@ -25,14 +25,14 @@ Madvertise provides functionalities for monetizing your mobile application: from
 
 
 | **Advanced Settings** | 
-| -------- | -------- 
+| -------- | -------- |
 |[IOS FAQ and Troubleshooting]
 |[IOS Debug Mode with Gyroscope Sensor]
 |[IOS Targeting Audiences] 
 
 
 | **Mediation Adapters** | 
-| -------- | -------- 
+| -------- | -------- |
 | [IOS Google Mobile Ads Adapter]
 | [IOS Mopub Adapter]
 
