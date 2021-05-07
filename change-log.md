@@ -23,8 +23,7 @@ you must check [Upgrade Guide]. You need to keep all Ad Network libs up to date.
      - New Pod for [BlueStack-SDK-Core] without mediation dependencies
      - Measure ATT trackingAuthorizationStatus
 
-```
-#!objective-c
+```objective-c
 
  // ATTrackingManagerAuthorizationStatusNotDetermined = 0
         // ATTrackingManagerAuthorizationStatusRestricted =1
