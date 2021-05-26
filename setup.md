@@ -269,14 +269,6 @@ To check out if the SDK is initialized or not, you have to use `[MNGAdsSDKFactor
 }
 ```
 
-### Timeout
-The time given to the ad view to download the ad data. After this time, the dispacher stops the ad server running (with failure) and move to the next.
-the default timeout is 1s.
-
-```objc
-adsFactory = [[MNGAdsSDKFactory alloc]init];
-adsFactory.timeout = 3;
-```
 ### isBusy
 Before making a request you have to check that factory not busy (handling old request).
 
