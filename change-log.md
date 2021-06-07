@@ -3,6 +3,37 @@
 See [Wiki] and [Help Center]  for more detailed informations.
 you must check [Upgrade Guide]. You need to keep all Ad Network libs up to date.
 
+## Version 3.3.0
+#### Release date: Juin 7th, 2021
+- **Requirements** 
+    
+    - Xcode 12.4
+
+
+  - **Bug Fixes**
+
+   - Fix viewability bug
+   - Fix impscript bug
+   - Fix IAS - OM SDK bug
+   - Fix key/value madvertiseSSP bug
+   - Fix OMSDK - VAST bug
+   - Fix SKAdNetwork click
+   - Fix Vast withe page bug
+   - Fix smart semantic 
+
+
+
+- **Ad Network Mediation Updates**
+
+    
+   - Use new [BlueStack-SDK] + *Adapter.a
+   - Use new [BlueStack-SDK-Core] 
+   - Use new FacebookAudience 6.5.0 version [FBAudienceNetwork.framework] 
+   - Use new DFP 8.5.0 version [GoogleMobileAds.xcframework]
+   - Use new [MAdvertiseLocation-v2.3.1]
+   - Use new AmazonPublisherServicesSDK 4.0.0 
+   - Use new Smart-Display-SDK 7.10.1
+
 ## Version 3.2.4
 #### Release date: March 25th, 2021
 - **Requirements** 
@@ -1420,6 +1451,7 @@ You must update [MngAdsSDK], [libSmartAdServer.a] (not available from pod update
 [MAdvertiseLocation-v2.1.1]: https://bitbucket.org/mngcorp/mngads-demo-ios/downloads/MAdvertiseLocation-v2.1.1.zip
 [MAdvertiseLocation-v2.2]: https://bitbucket.org/mngcorp/mngads-demo-ios/downloads/MAdvertiseLocation-v2.2.zip
 [MAdvertiseLocation-v2.3]: https://bitbucket.org/mngcorp/mngads-demo-ios/downloads/MAdvertiseLocation-v2.3.zip
+[MAdvertiseLocation-v2.3.1]: https://bitbucket.org/mngcorp/mngads-demo-ios/downloads/MAdvertiseLocation-v2.3.1.zip
 
 [(more infos)]:https://bitbucket.org/mngcorp/mngads-demo-ios/wiki/Home#markdown-header-disable-auto-displaying
 

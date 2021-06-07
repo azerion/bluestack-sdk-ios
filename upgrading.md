@@ -2,6 +2,20 @@
 
 See [Wiki], [Design Guidelines and Best practices] and [Help Center]  for more detailed informations. you must check [Change Log] .
 
+## Upgrading to 3.3.0
+
+ - Use new [BlueStack-SDK] v3.3.0 + *Adapter.a
+ - Use new [BlueStack-SDK-Core]   v3.3.0
+ - Use new [BlueStack-SDK] + *Adapter.a
+ - Use new [BlueStack-SDK-Core] 
+ - Use new FacebookAudience 6.5.0 version [FBAudienceNetwork.framework] 
+ - Use new DFP 8.5.0 version [GoogleMobileAds.xcframework]
+ - Use new [MAdvertiseLocation-v2.3.1]
+ - Use new AmazonPublisherServicesSDK 4.0.0 
+ - Use new Smart-Display-SDK 7.10.1
+
+ 
+
 ## Upgrading to 3.2.4
 
  - Use new [BlueStack-SDK] v3.2.4 + *Adapter.a
