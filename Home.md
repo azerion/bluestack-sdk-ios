@@ -32,7 +32,7 @@ Madvertise provides functionalities for monetizing your mobile application: from
 
 
 | **Mediation Adapters** | 
-| -------- | -------- |
+| -------- | 
 | [IOS Google Mobile Ads Adapter]
 | [IOS Mopub Adapter]
 
