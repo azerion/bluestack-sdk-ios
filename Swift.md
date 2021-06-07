@@ -17,9 +17,9 @@ If you don't have a Bridging-Header.h, you have to create a one. (steps: [Object
 After that you can use BlueStack SDK in your Swift file. (example: [SwiftViewController.swift](https://bitbucket.org/mngcorp/mngads-demo-ios/src/HEAD/Demo/MNG-Ads-SDK/SwiftViewController.swift?at=master))
 
 
-Or  that you can use BlueStack SDK in your Swift Project. (Demo Swift : [SwiftViewController.swift](https://bitbucket.org/mngcorp/mngads-demo-ios/src/HEAD/Demo/MNG-Ads-SDK/SwiftViewController.swift?at=master))
+Or  that you can use BlueStack SDK in your Swift Project. (Demo Swift : [Demo Swift](https://bitbucket.org/mngcorp/mngads-demo-ios/src/HEAD/Demo/MNG-Ads-SDK/SwiftViewController.swift?at=master))
 
-[Demo Swift](https://bitbucket.org/mngcorp/mngads-demo-ios/src/HEAD/Demo/MNG-Ads-SDK/SwiftViewController.swift?at=master))
+[Demo Swift](https://bitbucket.org/mngcorp/mngads-demo-ios/src/master/DemoSwift/)
 # Error Handling : 
 
 if you have this error log : 
