@@ -12,16 +12,16 @@ you must check [Upgrade Guide]. You need to keep all Ad Network libs up to date.
 
   - **Bug Fixes**
 
-   - Fix viewability bug
-   - Fix impscript bug
-   - Fix IAS - OM SDK bug
-   - Fix key/value madvertiseSSP bug
-   - Fix OMSDK - VAST bug
-   - Fix SKAdNetwork click
-   - Fix Vast withe page bug
-   - Fix smart semantic 
+     - Fix viewability bug
+     - Fix impscript bug
+     - Fix IAS - OM SDK bug
+     - Fix key/value madvertiseSSP bug
+     - Fix OMSDK - VAST bug
+     - Fix SKAdNetwork click
 
+- **Features**
 
+    - Manage smartAdserver Semantic 
 
 - **Ad Network Mediation Updates**
 
