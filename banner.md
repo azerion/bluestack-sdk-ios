@@ -12,25 +12,56 @@ Before You Start. Make sure that you have correctly integrated the MNG SDK into 
 
 To create a banner you have to init an object with type MNGAdsSDKFactory and set the bannerDelegate and the viewController.
 
+**Objective-C**
+
 ```objc
 bannerAdsFactory = [[MNGAdsSDKFactory alloc]init];
 bannerAdsFactory.bannerDelegate = self;
 bannerAdsFactory.viewController = self;
 ```
+**Swift**
+
+```Swift
+bannerAdsFactory = MNGAdsSDKFactory()
+bannerAdsFactory.viewController = self
+bannerAdsFactory.bannerDelegate = self
+```
 You have also to set placementId (minimum one time)
+**Objective-C**
 
 ```objc
 bannerAdsFactory.placementId = @"/YOUR_APP_ID/PLACEMENT_ID";
 ```
+**Swift**
+
+```Swift
+ bannerAdsFactory.placementId = "/YOUR_APP_ID/PLACEMENT_ID"
+```
+
 ## Step 2. Make a request
 To make a request you have to call 'loadBannerInFrame'.
 
+**Objective-C**
+
 ```objc
 [bannerAdsFactory loadBannerInFrame:kMNGAdSizeDynamicBanner]
+
 ```
+
+**Swift**
+
+```Swift
+
+ bannerFactory.loadBanner(inFrame: CGRect(x:0, y:60,width:self.view.frame.size.width,height: 50), withPreferences: preference)
+ 
+```
+
+
 
 ## Step 3. Handle callBack from BannerDelegate
 adsAdapter:bannerDidLoad: will be called by the SDK when your bannerView is ready. now you can add your bannerView to th ViewHierarchy.
+
+**Objective-C**
 
 ```objc
 -(void)adsAdapter:(MNGAdsAdapter  *)adsAdapter bannerDidLoad:(UIView  *)bannerView preferredHeight:(CGFloat)preferredHeight{
@@ -40,43 +71,81 @@ adsAdapter:bannerDidLoad: will be called by the SDK when your bannerView is read
     [self.view addSubview:_bannerView];
 }
 ```
+**Swift**
+
+```Swift
+  func adsAdapter(_ adsAdapter: MNGAdsAdapter!, bannerDidLoad adView: UIView!, preferredHeight: CGFloat) {
+        adView.frame = CGRect(x:0, y:self.view.frame.size.height - 50,width:self.view.frame.size.width,height: 50)
+        self.view.addSubview(adView)
+    }
+```
+
 
 adsAdapter:bannerDidFailWithError: will be called when all ads servers fail. it will return the error of last called ads server.
+
+**Objective-C**
 
 ```objc
 -(void)adsAdapter:(MNGAdsAdapter *)adsAdapter bannerDidFailWithError:(NSError *)error{
 NSLog(@"%@",error);
 }
 ```
+**Swift**
+
+```Swift
+  func adsAdapter(_ adsAdapter: MNGAdsAdapter!, bannerDidFailWithError error: Error!) {
+        //
+    }
+```
+
 Some Ad Network (like Smart ads server) allow user to expand and collapse ad.
 
 Even on refresh, banner can change the size.
 
 adsAdapter:bannerDidChangeFrame: will be called when ad did change size
 
+**Objective-C**
+
 ```objc
+
 -(void)adsAdapter:(MNGAdsAdapter *)adsAdapter bannerDidChangeFrame:(CGRect)frame{
+
     ...
 }
+
+```
+**Swift**
+
+```Swift
+
+  func adsAdapter(_ adsAdapter: MNGAdsAdapter!, bannerDidChangeFrame frame: CGRect) {
+
+    }
 ```
 
 ## Step 3.  Handle callBack from RefreshDelegate
 If you want tobe notified on refresh, you have to set refresh delegate
+
 ```objc
 bannerAdsFactory.refreshDelegate = self;
 ```
 On banner refresh, the SDK invoke the calback
+
+**Objective-C**
+
 ```objc
 -(void)adsAdapterBannerDidRefresh:(MNGAdsAdapter *)adsAdapter{
     ...
 }
 ```
 
-On banner fail to refresh, the SDK invoke the calback
-```objc
--(void)adsAdapterBannerDidRefresh:(MNGAdsAdapter *)adsAdapter{
-    ...
-}
+**Swift**
+
+```swift
+ func adsAdapter(_ adsAdapter: MNGAdsAdapter!, adsAdapterBannerDidRefresh) {
+        //
+    }
+
 ```
 
 ### MNGAdSize
@@ -106,8 +175,11 @@ Example:
     }
     [bannerAdsFactory loadBannerInFrame:size];
 ```
+
 ### ClickDelegate
 The clickDelegate notify you when the ad has been clicked.
+
+**Objective-C**
 
 ```objc
 //.h
@@ -123,4 +195,16 @@ adsFactory.clickDelegate = self;
     ...
 }
 ```
+**Swift**
 
+```Swift
+class SwiftViewController: UIViewController,MNGClickDelegate,
+
+...
+   bannerFactory.clickDelegate = self
+
+   func adsAdapterAdWasClicked(_ adsAdapter: MNGAdsAdapter!) {
+        
+    }
+    
+```

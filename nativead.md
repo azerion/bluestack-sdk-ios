@@ -12,23 +12,52 @@ Before You Start. Make sure that you have correctly integrated the MNG SDK into 
 
 ##### Import the necessary classes
 
+Objc : 
+
 ```objc
 #import "MNGNAtiveObject.h"
 #import "MNGAdsSDKFactory.h"
-```
 
+```
+Swift  : 
+
+You have to import MNGAds SDK's headers in your Bridging-Header.h
+
+```swift
+#import "MNGNAtiveObject.h"
+#import "MNGAdsSDKFactory.h"
+
+```
 ##### Init factory
 
 To create a nativeAd  you have to init an object with type MNGAdsSDKFactory and set the nativeDelegate.
+
+Objc : 
 
 ```objc
 nativeAdsFactory = [[MNGAdsSDKFactory alloc]init];
 nativeAdsFactory.nativeDelegate = self;
 ```
+Swift  : 
+
+```swift
+ nativeAdFactory = MNGAdsSDKFactory()
+ nativeAdFactory.nativeDelegate = self
+
+```
 You have also to set placementId (minimum one time)
+
+
+Objc : 
 
 ```objc
 nativeAdsFactory.placementId = @"/YOUR_APP_ID/PLACEMENT_ID";
+```
+
+Swift  : 
+
+```swift
+  nativeAdFactory.placementId = "/YOUR_APP_ID/PLACEMENT_ID"
 ```
 ##### Make a request for native ad
 Using MNGPreference you can set the preferred adchoices position , although you need to keep in mind that in some cases it might not position it where mentioned since some of the adnetworks wont take this parameter into consideration , so preferably set the preferred position here as well in the didLoad once the request succeeds.
@@ -39,24 +68,48 @@ Finally to execute the request you have to call '[loadNativeWithPreferences]'.
 
 default is loaded with Cover Image
 
+
+Objc : 
+
 ```objc
 MNGPreference *preferences = MNGPreference *preferences = [[MNGPreference alloc]init];
-preferences.preferredAdChoicesPosition = MAdvertiseAdChoiceTopLeft;
 [nativeAdsFactory loadNativeWithPreferences:preferences];
+```
+
+
+Swift  : 
+
+```swift
+ let preferences = MNGPreference.init()
+  nativeAdFactory.loadNative(withPreferences: preferences)
+  
 ```
 
 ###### Native Ad AdChoice Without Cover Image
 if you like to execute the request  without cover Image you can set the option **withCover**  to NO : 
 
+Objc : 
+
 ```objc
 MNGPreference *preferences = MNGPreference *preferences = [[MNGPreference alloc]init];
-preferences.preferredAdChoicesPosition = MAdvertiseAdChoiceTopLeft;
 [nativeAdsFactory loadNativeWithPreferences:preferences withCover:NO];
 
 ```
 
+Swift  : 
+
+```swift
+let preferences = MNGPreference.init()
+        nativeAdFactory.loadNative(withPreferences: preferences,withCover:false)
+  
+```
+
 ##### Handle callBack from NativeDelegate
 adsAdapter:nativeObjectDidLoad: will be called by the SDK when your nativeObject is ready. now you can create your own view.
+
+
+Objc : 
+
 ```objc
 -(void)adsAdapter:(MNGAdsAdapter *)adsAdapter nativeObjectDidLoad:(MNGNAtiveObject *)nativeObject{
 NSLog(@"adsAdapterNativeObjectDidLoad:");
@@ -71,10 +124,81 @@ badgeView = nativeObject.badgeView;
 }
 ```
 
+
+Swift  : 
+
+```swift
+func adsAdapter(_ adsAdapter: MNGAdsAdapter!, nativeObjectDidLoad nativeObject: MNGNAtiveObject!) {
+        nativeView.layer.borderWidth = 1
+        nativeView.layer.borderColor = UIColor.lightGray.cgColor
+        titleLabel.text = nativeObject.title
+        socialContextLabel.text = nativeObject.socialContext
+        descriptionLabel.text = nativeObject.body
+        if self.badgeView != nil {
+            self.badgeView?.removeFromSuperview()
+        }
+        self.nativeObject = nativeObject
+        badgeView = self.nativeObject?.badgeView
+        if (badgeView != nil) {
+            var frame = badgeView?.frame
+            frame?.origin.y = 3
+            frame?.origin.x = 3
+            badgeView?.frame = frame!
+            self.nativeView.addSubview(badgeView!)
+        }
+        
+        if adChoiceBadgeView != nil {
+            adChoiceBadgeView?.removeFromSuperview()
+        }
+        adChoiceBadgeView = self.nativeObject?.adChoiceBadgeView
+        if adChoiceBadgeView != nil {
+            var frame = adChoiceBadgeView?.frame
+            let widhtFrame = frame!.size.width - 3
+            frame?.origin.y = 3
+            frame?.origin.x = self.nativeView.frame.size.width - widhtFrame
+            adChoiceBadgeView?.frame = frame!
+            self.nativeView.addSubview(adChoiceBadgeView!)
+        }
+        
+        // download images
+        self.backgroundImage.image = nil
+        self.iconeImage.image = nil
+        self.iconeImage.layer.cornerRadius = 16
+        self.iconeImage.clipsToBounds = true
+   
+        
+        self.callToActionButton.setTitle(self.nativeObject?.callToAction, for: UIControl.State())
+        if self.nativeObject?.displayType == MNGDisplayType.appInstall {
+            self.callToActionButton.setImage(#imageLiteral(resourceName: "download"), for: UIControl.State())
+        }else if self.nativeObject?.displayType == .content {
+            self.callToActionButton.setImage(#imageLiteral(resourceName: "arrow"), for: UIControl.State())
+        }
+        self.callToActionButton.titleLabel?.textAlignment = .center
+        
+        self.nativeObject?.registerView(forInteraction: self.nativeView, withMediaView: self.backgroundImage, withIconImageView: self.iconeImage, with: self, withClickableView: self.callToActionButton)
+        
+        self.nativeView.isHidden = false
+
+
+    }```
+    
+    
 [adsAdapter:nativeObjectDidFail:] will be called when all ads servers fail. it will return the error of last called ads server.
+
+Objc : 
+
 ```objc
 -(void)adsAdapter:(MNGAdsAdapter *)adsAdapter nativeObjectDidFailWithError:(NSError *)error withCover:(BOOL)cover;
 }
+```
+
+Swift  : 
+
+```swift
+ func adsAdapter(_ adsAdapter: MNGAdsAdapter!, nativeObjectDidFailWithError error: Error!, withCover cover: Bool){
+        NSLog("\(String(describing: error))")
+    }
+    
 ```
 
 ## 2. Native Ad Assets
@@ -116,6 +240,9 @@ Once a native ad is loaded, you may retrieve its metadata with the following met
  - must be inserted on top left
  - asset name : **ativeObject.badgeView**
 
+
+Objc : 
+
 ```objc
 
 // Get the app name
@@ -144,17 +271,37 @@ callToAction=nativeObject.callToAction;
 ```
 
 
+Swift  : 
+
+```swift
+ // Get the app name
+title=nativeObject.title;
+
+// Get the app description (tagline)
+body=nativeObject.body;
+
+// Get the "Ad" badge view. You must show this view on your ad view to denote an ad
+if(nativeObject.badgeView){
+	badge=nativeObject.badgeView;
+	...
+}
+
+// Get the "AdChoice" badge view. You must show this view on your ad view to denote an ad
+if(nativeObject.adChoiceBadgeView){
+	adChoiceBadge=nativeObject.adChoiceBadgeView;
+	...
+}
+
+// Get the localized text to print on the call to action button, such as "DOWNLOAD , LEARNE MORE ..."
+callToAction=nativeObject.callToAction;
+
+self.nativeObject?.registerView(forInteraction: self.nativeView, withMediaView: self.backgroundImage, withIconImageView: self.iconeImage, with: self, withClickableView: self.callToActionButton)   
+ 
+```
+
 ## 3. Native Ad Implementation
 
 ![nativeAd.png](https://bitbucket.org/repo/aen579/images/1993529083-nativeAd.png)
-## 4. Video
-You can also integrate video ads into your Native Ad experience. To enable video you must complete the following steps:
- - Have SDK version 2.0 or later
- -  You have to call [setMediaContainer:(UIView*)] then the sdk will handle the rendering process ( displaying)  the image cover or the media video inside the view group that depends on the ad network result
-```objc
-[nativeObject setMediaContainer:self.container];
-
-```
 
 ## 4. cache
 
@@ -175,30 +322,60 @@ we provide method to download assets.
 
 
 ### **Native Ad Without Cover Image **
+Objc:
 
 ```objc
 
 [_nativeObject registerViewForInteraction:self.nativeView withMediaView:nil withIconImageView:self.iconeImage withViewController:[APP_DELEGATE drawerViewController] withClickableView:self.callToActionButton];
 
 ```
+Swift:
 
+```Swift
+
+self.nativeObject?.registerView(forInteraction: self.nativeView, withMediaView: nil, withIconImageView: self.iconeImage, with: self, withClickableView: self.callToActionButton)
+        
+
+```
 ### **Native Ad With Cover Image **
+
+Objc:
+
 ```objc
 
 [_nativeObject registerViewForInteraction:self.nativeView withMediaView:self.backgroundImage withIconImageView:self.iconeImage withViewController:[APP_DELEGATE drawerViewController] withClickableView:self.callToActionButton];
 
 ```
 
+Swift:
 
+```Swift
+
+self.nativeObject?.registerView(forInteraction: self.nativeView, withMediaView: self.backgroundImage, withIconImageView: self.iconeImage, with: self, withClickableView: self.callToActionButton)
+        
+
+```
 ## 6. customizable Badge
 
 badge in the nativeAd is customizable now using the method:
 
-```
-    [_nativeObject updateBadgeTitle:@"newBadgeTitle"];
+
+
+Objc:
+
+```objc
+
+ [_nativeObject updateBadgeTitle:@"newBadgeTitle"];
 
 ```
 
+Swift:
+
+```Swift
+
+ self.nativeObject?.updateBadgeTitle("newBadgeTitle")
+
+```
 >note that the new method returns a BOOL indicating if the update was successful or not.
 
 ## 7. click - registerViewForInteraction
@@ -215,8 +392,14 @@ It's **HIGHLY** recommended to only register ONE and ONLY one view for interacti
  * set the MNGClickDelegate.
 
  ```
+   //.h
+
  @interface ViewController : UIViewController<MNGClickDelegate>
  
+ 
+  //.Swift
+ SwiftViewController: UIViewController, MNGAdsAdapterNativeDelegate,MNGClickDelegate
+
  ```
 
  ```
@@ -231,4 +414,9 @@ adsAdapterNativeAdWasClicked:nativeObjectClicked: will be called by the SDK when
 -(void)adsAdapterNativeAdWasClicked:(MNGAdsAdapter *)adsAdapter nativeObjectClicked:(MNGNAtiveObject *)clickedAdView{
    
 }
+
+//swift 
+func adsAdapterNativeAdWasClicked(_ adsAdapter: MNGAdsAdapter!,_ clickedAdView: MNGNAtiveObject!) {
+        
+    }
 ```
