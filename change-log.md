@@ -24,15 +24,14 @@ you must check [Upgrade Guide]. You need to keep all Ad Network libs up to date.
     - Manage smartAdserver Semantic 
 
 - **Ad Network Mediation Updates**
-
-    
-   - Use new [BlueStack-SDK] + *Adapter.a
-   - Use new [BlueStack-SDK-Core] 
-   - Use new FacebookAudience 6.5.0 version [FBAudienceNetwork.framework] 
-   - Use new DFP 8.5.0 version [GoogleMobileAds.xcframework]
-   - Use new [MAdvertiseLocation-v2.3.1]
-   - Use new AmazonPublisherServicesSDK 4.0.0 
-   - Use new Smart-Display-SDK 7.10.1
+ 
+     - Use new [BlueStack-SDK] + *Adapter.a
+     - Use new [BlueStack-SDK-Core] 
+     - Use new FacebookAudience 6.5.0 version [FBAudienceNetwork.framework] 
+     - Use new DFP 8.5.0 version [GoogleMobileAds.xcframework]
+     - Use new [MAdvertiseLocation-v2.3.1]
+     - Use new AmazonPublisherServicesSDK 4.0.0 
+     - Use new Smart-Display-SDK 7.10.1
 
 ## Version 3.2.4
 #### Release date: March 25th, 2021
