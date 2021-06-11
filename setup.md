@@ -224,6 +224,8 @@ just run pod install after cloning the demo
 You have to init the SDK in AppDelegate.m in application:didFinishLaunchingWithOptions:
 **This must be executed everytime you run the App**
 
+**Objective-C**
+
 ```objc
 // AppDelegate.m
 #import "MNGAdsSDKFactory.h"
@@ -234,11 +236,33 @@ You have to init the SDK in AppDelegate.m in application:didFinishLaunchingWithO
 }
 ```
 
+** Swift**
+
+```Swift
+ func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+        
+        MNGAdsSDKFactory.initWithAppId("YOUR_APP_ID")
+
+       
+        return true
+    }
+
+    
+```
 ### Initialisation Delegate
 
 MNGAds SDK is configured by server or from last configuration. So in first run after installation, initialisation take some time before be done .
 
 To check out if the SDK is initialized or not, you have to use `[MNGAdsSDKFactory isInitialized]`. To know when the SDK has finished Initializing you have to use MNGAdsSDKFactoryDelegate.
+
+**PS : [MNGAdsSDKFactory isInitialized] it's just to use  MNGAdsSDKFactoryDelegate and not to [MNGAdsSDKFactory initWithAppId:@"YOUR_APP_ID"] 
+**
+
+**PS:  [MNGAdsSDKFactory initWithAppId:@"YOUR_APP_ID"] is obligatory to call each time the app is opened
+** 
+
+
+**Objective-C**
 
 ```objc
 // AppDelegate.h
@@ -254,7 +278,9 @@ To check out if the SDK is initialized or not, you have to use `[MNGAdsSDKFactor
     [MNGAdsSDKFactory initWithAppId:@"YOUR_APP_ID"];
     if([MNGAdsSDKFactory isInitialized] == NO){
         [MNGAdsSDKFactory setDelegate:self];
-    }
+    }else{
+        INIT_FACTORIES_AND_USE_THEM_TO_SHOW_ADS;
+      }
     ...
 }
 
@@ -269,6 +295,40 @@ To check out if the SDK is initialized or not, you have to use `[MNGAdsSDKFactor
 }
 ```
 
+** Swift**
+
+```swift
+// AppDelegate.swift
+...
+
+ func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+        
+        MNGAdsSDKFactory.initWithAppId("YOUR_APP_ID")
+
+        if(MNGAdsSDKFactory.isInitialized()){
+            MNGAdsSDKFactory.setDelegate(self)
+        }else{
+        INIT_FACTORIES_AND_USE_THEM_TO_SHOW_ADS;
+         }
+
+        return true
+    }
+
+
+
+
+func mngAdsSDKFactoryDidFinishInitializing() {
+        if (YOUR_APP_IS_READY_TO_SHOW_AD) {
+        INIT_FACTORIES_AND_USE_THEM_TO_SHOW_ADS;
+    }
+    }
+
+    func mngAdsSDKFactoryDidFailInitializationWithError(_ error:Error) {
+        
+    }
+```
+
+
 ### isBusy
 Before making a request you have to check that factory not busy (handling old request).
 
@@ -279,6 +339,8 @@ isBusy will be setted to true when factory start handling request.
 isBusy will be setted to false when factory finish handling request.
 
 **example:**
+
+**Objective-C**
 
 ```objc
 if (bannerAdsFactory.isBusy) {
@@ -292,6 +354,26 @@ NSLog(@"Ads Factory is busy");
 }else{
 NSLog(@"Ads Factory is not busy");
 }
+```
+
+** Swift**
+
+
+```swift
+if (bannerAdsFactory.isBusy) {
+print("Ads Factory is busy")
+}else{
+print("Ads Factory is not busy");
+}
+  bannerFactory.loadBanner(inFrame: CGRect(x:0, y:60,width:self.view.frame.size.width,height: 50), withPreferences: preference)
+
+if (bannerAdsFactory.isBusy) {
+print("Ads Factory is busy")
+}else{
+print("Ads Factory is not busy");
+}
+
+
 ```
 **Log:**
 
@@ -313,6 +395,7 @@ informations that you can set are:
 - content url : URL for content related to your app (url must be a string which length not exceed 512 caracters).
 - preferredAdChoicesPosition : set the preferred adchoices position , although you need to keep in mind that in some cases it might not position it where mentioned since some of the adnetworks wont take this parameter into consideration , so preferably set the preferred position here as well in the didLoad once the request succeeds.
 
+**Objective-C**
 
 ```
 #!objective-c
@@ -326,13 +409,27 @@ key=value;key2=value2
 ...
 MNGPreference * preference = [[MNGPreference alloc]init];
 preference.age = 25;
-preference.language = @"fr";
 preference.keyword = @"brand=myBrand;category=sport";//Separator in case of multiple entries is ; key=value
 preference.gender = MNGGenderFemale;
 preference.location = [[CLLocation alloc]initWithLatitude:48.876 longitude:10.453];
 [preference setContentUrl:@"your content url"];
 [bannerAdsFactory loadBannerInFrame:CGRectMake(0, 0, 320, 50)withPreferences:preference];
 ```
+
+** Swift**
+
+
+```swift
+...
+let preference = MNGPreference.init()
+    preference.age = 25
+    preference.keyWord = "brand=myBrand;category=sport";//Separator in case of multiple entries is ; key=value
+    preference.gender = MNGGender.male
+    preference.setLocationPreferences(CLLocation.init(latitude: 48.87610, longitude: 10.453), withConsentFlag: 2)
+    preference.contentUrl = "your content url"
+
+```
+ 
 `Note`: this [link] can help you to get device location.
 
 ### Error Handling
@@ -342,6 +439,8 @@ Whenever an Ad fails to load, its correspondent delegate would be invoked provid
 ![MAdvertiseError.png](https://bitbucket.org/repo/aen579/images/3273016750-MAdvertiseError.png)
 
 the different errors are pretty much self explanatory , and here s and example use just to remove any ambiguity there might be on how to use it :
+
+**Objective-C**
 
 ```objc
 
@@ -355,23 +454,61 @@ the different errors are pretty much self explanatory , and here s and example u
 
 ```
 
+**Swift**
+
+```Swift
+
+ func adsAdapter(_ adsAdapter: MNGAdsAdapter!, interstitialDidFailWithError error: Error!) {
+
+    }
+
+```
+
 ### Memory managment
 When you have finished your ads plant you must free the memory.
 
 When using [ARC] it will be done automatically. Otherwise you have to call "releaseMemory".
 ###### ARC
+
+**Objective-C**
+
 ```objc
 [adsFactory releaseMemory];//optional
 adsFactory = nil;
 ```
+
+** Swift**
+
+```Swift
+ adsFactory.releaseMemory()
+ adsFactory = nil 
+
+
+```
+
 But we recommand to release memory in order to avoid **crashes with a "EXC_BAD_ACCESS" ** for some adNetworks.
 
 ###### No ARC
+
+
+**Objective-C**
 
 ```objc
 [adsFactory releaseMemory];//required
 [adsFactory release];
 adsFactory = nil;
+
+```
+
+
+** Swift**
+
+
+```Swift
+ adsFactory.releaseMemory() //required
+ adsFactory.release()
+ adsFactory = nil 
+
 ```
 
 ###### Avoid crashes
@@ -386,19 +523,54 @@ The simplest way is:
 
 - Calling releaseMemory before setting your property:
 
+
+**Objective-C**
+
+
 ```objc
     [intersFactory releaseMemory];
     intersFactory = otherFactory;// Or
     intersFactory = [[MNGAdsFactory alloc]init];// Or
     intersFactory = nil;
 ```
+
+
+
+
+** Swift**
+
+
+```Swift
+ intersFactory.releaseMemory() 
+ intersFactory = otherFactory// Or
+ intersFactory = MNGAdsFactory.init()
+ intersFactory = nil
+
+```
+
 - Calling releaseMemory at the dealloc of delegate$
 
+
+
+**Objective-C**
 
 ```objc
     -(void)dealloc{
         [intersFactory releaseMemory];
         intersFactory = nil;
+    }
+```
+
+
+
+
+** Swift**
+
+
+```Swift
+  func dealloc() {
+ intersFactory.releaseMemory() 
+ intersFactory = nil
     }
 ```
 
