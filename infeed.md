@@ -103,7 +103,7 @@ adsAdapter:infeedDidLoad: will be called by the SDK when your bannerView is read
 - 16:9 : is the international standard format of HDTV
 
 
-`NB:` if you use infeed parallax you can customise your cell height   
+`NB:` if you use infeed in tableView  is recommended to customise your cell height .
 
 
 **Objective-C**
