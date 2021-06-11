@@ -103,6 +103,9 @@ adsAdapter:infeedDidLoad: will be called by the SDK when your bannerView is read
 - 16:9 : is the international standard format of HDTV
 
 
+`NB:` if you use infeed parallax you can customise your cell height   
+
+
 **Objective-C**
 
 ```objc
@@ -124,7 +127,7 @@ adsAdapter:infeedDidLoad: will be called by the SDK when your bannerView is read
 func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         if indexPath.row == 6 {
             if infeedView != nil {
-                return infeedView!.frame.size.height
+                return self.view.frame.size.width * (3/5)
             }else {
                 return 0
             }
