@@ -255,10 +255,10 @@ MNGAds SDK is configured by server or from last configuration. So in first run a
 
 To check out if the SDK is initialized or not, you have to use `[MNGAdsSDKFactory isInitialized]`. To know when the SDK has finished Initializing you have to use MNGAdsSDKFactoryDelegate.
 
-**PS : [MNGAdsSDKFactory isInitialized] it's just to use  MNGAdsSDKFactoryDelegate and not to [MNGAdsSDKFactory initWithAppId:@"YOUR_APP_ID"] 
+** - [MNGAdsSDKFactory isInitialized] it's just to use  MNGAdsSDKFactoryDelegate and not to [MNGAdsSDKFactory initWithAppId:@"YOUR_APP_ID"] 
 **
 
-**PS:  [MNGAdsSDKFactory initWithAppId:@"YOUR_APP_ID"] is mandatory to call each time the app is opened
+** - [MNGAdsSDKFactory initWithAppId:@"YOUR_APP_ID"] is mandatory to call each time the app is opened
 ** 
 
 
