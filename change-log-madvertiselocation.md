@@ -1,8 +1,10 @@
 Change log and release notes for MadvertiseLocation for iOS.
 ### Version 3.0.0
-#### Release date: Juin 14th, 2021
+#### Release date: June 14th, 2021
 
 * Swift version 5.4 and Xcode 12.5
+* Distinguish foreground and background points.
+* Manage ATT (App Tracking Transparency)
 
 ### Version 2.3.1
 #### Release date: February 18th, 2021
