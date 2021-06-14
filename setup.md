@@ -258,7 +258,7 @@ To check out if the SDK is initialized or not, you have to use `[MNGAdsSDKFactor
 **PS : [MNGAdsSDKFactory isInitialized] it's just to use  MNGAdsSDKFactoryDelegate and not to [MNGAdsSDKFactory initWithAppId:@"YOUR_APP_ID"] 
 **
 
-**PS:  [MNGAdsSDKFactory initWithAppId:@"YOUR_APP_ID"] is obligatory to call each time the app is opened
+**PS:  [MNGAdsSDKFactory initWithAppId:@"YOUR_APP_ID"] is mandatory to call each time the app is opened
 ** 
 
 
