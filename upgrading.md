@@ -2,6 +2,20 @@
 
 See [Wiki], [Design Guidelines and Best practices] and [Help Center]  for more detailed informations. you must check [Change Log] .
 
+## Upgrading to 3.3.2
+
+ - Use new [BlueStack-SDK] v3.3.2 + *Adapter.a
+ - Use new [BlueStack-SDK-Core]   v3.3.2
+ - Use new [MAdvertiseLocation-v3.0.0]
+
+ 
+## Upgrading to 3.3.1
+
+ - Use new [BlueStack-SDK] v3.3.1 + *Adapter.a
+ - Use new [BlueStack-SDK-Core]   v3.3.1
+ - Use new [MAdvertiseLocation-v3.0.0]
+
+ 
 ## Upgrading to 3.3.0
 
  - Use new [BlueStack-SDK] v3.3.0 + *Adapter.a
@@ -951,5 +965,6 @@ instead of
 [MAdvertiseLocation-v1.9]: https://bitbucket.org/mngcorp/mngads-demo-ios/downloads/MAdvertiseLocation-v1.9.zip
 [MAdvertiseLocation-v2.2]: https://bitbucket.org/mngcorp/mngads-demo-ios/downloads/MAdvertiseLocation-v2.2.zip
 [MAdvertiseLocation-v2.3]: https://bitbucket.org/mngcorp/mngads-demo-ios/downloads/MAdvertiseLocation-v2.3.zip
+[MAdvertiseLocation-v3.0.0] : https://bitbucket.org/mngcorp/mngads-demo-ios/downloads/MAdvertiseLocation-v3.0.0.zip
 [GoogleMobileAds.xcframework]:https://developers.google.com/mobile-ads-sdk/docs/dfp/ios/download
 [Bluestack-SDK-Core]:https://bitbucket.org/mngcorp/mngads-demo-ios/downloads/
