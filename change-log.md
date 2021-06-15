@@ -2,6 +2,24 @@
 
 See [Wiki] and [Help Center]  for more detailed informations.
 you must check [Upgrade Guide]. You need to keep all Ad Network libs up to date.
+
+
+## Version 3.3.2
+#### Release date: June 15th, 2021
+- **Requirements** 
+    
+    - Xcode 12.4
+
+  - **Bug Fixes**
+
+     - Fix issue local path "ld: library not found for -lBlueStack"
+    
+- **Ad Network Mediation Updates**
+ 
+     - Use new [BlueStack-SDK] + *Adapter.a
+     - Use new [BlueStack-SDK-Core] 
+     - Use new [MAdvertiseLocation-v3.0.0]
+
 ## Version 3.3.1
 #### Release date: June 14th, 2021
 - **Requirements** 
