@@ -8,7 +8,7 @@ you must check [Upgrade Guide]. You need to keep all Ad Network libs up to date.
 #### Release date: June 15th, 2021
 - **Requirements** 
     
-    - Xcode 12.4
+    - Xcode 12.5
 
   - **Bug Fixes**
 
