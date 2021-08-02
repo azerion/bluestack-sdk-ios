@@ -208,3 +208,24 @@ class SwiftViewController: UIViewController,MNGClickDelegate,
     }
     
 ```
+
+### Remove Banner View
+f you like to Remove banner from the view, you can use this code :
+
+**Objective-C**
+
+```objc
+    [_bannerView removeFromSuperview];
+    _bannerView = nil;
+    [bannerAdsFactory releaseMemory];
+```
+
+**Swift**
+
+``` Swift
+
+    _bannerView.removeFromSuperview()
+    _bannerView = nil
+    bannerAdsFactory.releaseMemory()
+
+```
