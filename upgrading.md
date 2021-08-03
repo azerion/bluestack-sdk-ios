@@ -2,6 +2,12 @@
 
 See [Wiki], [Design Guidelines and Best practices] and [Help Center]  for more detailed informations. you must check [Change Log] .
 
+## Upgrading to 3.3.5
+
+ - Use new [BlueStack-SDK] v3.3.5 + *Adapter.a
+ - Use new [BlueStack-SDK-Core]   v3.3.5
+
+
 ## Upgrading to 3.3.4
 
  - Use new [BlueStack-SDK] v3.3.4 + *Adapter.a
