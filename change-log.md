@@ -2,6 +2,23 @@
 
 See [Wiki] and [Help Center]  for more detailed informations.
 you must check [Upgrade Guide]. You need to keep all Ad Network libs up to date.
+## Version 3.3.5
+#### Release date: August 3th, 2021
+- **Requirements** 
+    
+    - Xcode 12.5
+
+  - **Bug Fixes**
+
+     - remove FlurryAds from full podspec
+     - remove mopub-ios-sdk from full podspec
+     - remove AdColony from full podspec
+
+    
+- **Ad Network Mediation Updates**
+ 
+     - Use new [BlueStack-SDK] + *Adapter.a
+     - Use new [BlueStack-SDK-Core] 
 
 ## Version 3.3.4
 #### Release date: August 2th, 2021
