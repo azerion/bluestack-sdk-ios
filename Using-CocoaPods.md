@@ -77,7 +77,7 @@ On December 21st, Apple announced that they have extended the ATS deadline. Prev
 To add specifics adNetwork.
 
 ```ruby
-pod "BlueStack-SDK",:subspecs => ["FBAudienceNetwork","Google-Mobile-Ads-SDK","Smart-Display-SDK","In-App-Bidding","FlurryAds","AppLovinSDK","mopub-ios-sdk","AdColony","OguryAds","CriteoPublisherSdk","AmazonPublisherServicesSDK","MAdvertiseLocation"]
+pod "BlueStack-SDK",:subspecs => ["FBAudienceNetwork","Google-Mobile-Ads-SDK","Smart-Display-SDK","In-App-Bidding","OguryAds","CriteoPublisherSdk","AmazonPublisherServicesSDK","MAdvertiseLocation"]
 
 ```
 #### MadvertiseLocation(Since v2.12.1)
