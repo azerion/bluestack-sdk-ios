@@ -27,15 +27,15 @@ you must check [Upgrade Guide]. You need to keep all Ad Network libs up to date.
  
   
 
-  - Use new [BlueStack-SDK] + *Adapter.xcframework
-  - Use new [MAdvertiseLocation-v3.0.3]
-  - Use new FacebookAudience 6.9.0 
-  - Use new DFP 9.0.0 version [GoogleMobileAds.xcframework]
-  - Use new AmazonPublisherServicesSDK 4.3.1 
-  - Use new Smart-Display-SDK 7.15.0
-  - Use new CriteoPublisherSdk 4.5.0
-  - Use new OguryAds (OgurySdk) 2.0.0
-  - Use new MAdvertiseCMP  v58
+    - Use new [BlueStack-SDK] + *Adapter.xcframework
+    - Use new [MAdvertiseLocation-v3.0.3]
+    - Use new FacebookAudience 6.9.0 
+    - Use new DFP 9.0.0 version [GoogleMobileAds.xcframework]
+    - Use new AmazonPublisherServicesSDK 4.3.1 
+    - Use new Smart-Display-SDK 7.15.0
+    - Use new CriteoPublisherSdk 4.5.0
+    - Use new OguryAds (OgurySdk) 2.0.0
+    - Use new MAdvertiseCMP  v58
 
 
 
