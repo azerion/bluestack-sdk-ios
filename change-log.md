@@ -2,6 +2,37 @@
 
 See [Wiki] and [Help Center]  for more detailed informations.
 you must check [Upgrade Guide]. You need to keep all Ad Network libs up to date.
+
+## Version 4.0.0
+#### Release date: February 25th, 2022
+- **Requirements** 
+    
+    - Xcode 12.5
+ - **Bug Fixes**
+     - Migration .a vers .xcframework.
+     - Fix issue Capping.
+     - Fix issue MNGAdsSDKFactoryDidFailInitializationWithError:connectionError Delegate .( This must be executed everytime you run the App).
+     - Fixed the fail process and callbacks in interstitial format
+
+ - **Added**
+     - New ad format Thumbnail Ad For Ogury SDK and BlueStack SDK.
+     - The SDK is now certified for IAB Open Measurement SDK 1.3.23.
+     - Add the interstitialDidShown new callback to better count impressions of Interstitial Ad formats.
+     - iOS Simulator on Apple Silicon Macs
+
+- **Ad Network Mediation Updates**
+ 
+     - Use new [BlueStack-SDK] + *Adapter.xcframework
+     - Use new [MAdvertiseLocation-v3.0.3]
+     - Use new FacebookAudience 6.9.0 
+     - Use new DFP 9.0.0 version [GoogleMobileAds.xcframework]
+     - Use new AmazonPublisherServicesSDK 4.3.1 
+     - Use new Smart-Display-SDK 7.15.0
+     - Use new CriteoPublisherSdk 4.5.0
+     - Use new OguryAds (OgurySdk) 2.0.0
+
+
+
 ## Version 3.3.5
 #### Release date: August 3th, 2021
 - **Requirements** 
