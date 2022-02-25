@@ -29,8 +29,9 @@ It contains a dispacher that will select an ads server according to the priority
 
 check [Change Log] for  **Xcode version**
 
-
-
+## Migration 
+ The BlueStack SDK version 4.0.0 is coming in Febrary 2022 with a few major changes ,This guide outlines these changes and the best practices to bring your app up to date with our latest SDK  [migrationV4.0.0] .
+ 
 ## Version
 See [Change Log] and [Upgrade Guide].
 
@@ -228,6 +229,9 @@ You have to init the SDK in AppDelegate.m in application:didFinishLaunchingWithO
 
 ```objc
 // AppDelegate.m
+#Since v4.0.0
+#import <BlueStackSDK/MNGAdsSDKFactory.h>
+#earlier v4.0.0
 #import "MNGAdsSDKFactory.h"
 ...
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
@@ -243,7 +247,6 @@ You have to init the SDK in AppDelegate.m in application:didFinishLaunchingWithO
         
         MNGAdsSDKFactory.initWithAppId("YOUR_APP_ID")
 
-       
         return true
     }
 
@@ -251,12 +254,12 @@ You have to init the SDK in AppDelegate.m in application:didFinishLaunchingWithO
 ```
 ### Initialisation Delegate
 
-MNGAds SDK is configured by server or from last configuration. So in first run after installation, initialisation take some time before be done .
+BlueStack SDK is configured by server or from last configuration.
 
-To check out if the SDK is initialized or not, you have to use `[MNGAdsSDKFactory isInitialized]`. To know when the SDK has finished Initializing you have to use MNGAdsSDKFactoryDelegate.
+set the **MNGAdsSDKFactoryDelegate** To know when the SDK has finished Initializing you have to use MNGAdsSDKFactoryDelegate.
 
-** - [MNGAdsSDKFactory isInitialized] it's just to use  MNGAdsSDKFactoryDelegate and not to [MNGAdsSDKFactory initWithAppId:@"YOUR_APP_ID"] 
-**
+To check out if the SDK is initialized or not, you have to use `[MNGAdsSDKFactory isInitialized]`
+
 
 ** - [MNGAdsSDKFactory initWithAppId:@"YOUR_APP_ID"] is mandatory to call each time the app is opened
 ** 
@@ -266,6 +269,9 @@ To check out if the SDK is initialized or not, you have to use `[MNGAdsSDKFactor
 
 ```objc
 // AppDelegate.h
+#Since v4.0.0
+#import <BlueStackSDK/MNGAdsSDKFactory.h>
+#earlier v4.0.0
 #import "MNGAdsSDKFactory.h"
 
 @interface AppDelegate : UIResponder <UIApplicationDelegate,MNGAdsSDKFactoryDelegate>
@@ -276,22 +282,18 @@ To check out if the SDK is initialized or not, you have to use `[MNGAdsSDKFactor
 ...
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     [MNGAdsSDKFactory initWithAppId:@"YOUR_APP_ID"];
-    if([MNGAdsSDKFactory isInitialized] == NO){
-        [MNGAdsSDKFactory setDelegate:self];
-    }else{
-        INIT_FACTORIES_AND_USE_THEM_TO_SHOW_ADS;
-      }
+    [MNGAdsSDKFactory setDelegate:self];
+   
     ...
 }
 
 -(void)MNGAdsSDKFactoryDidFinishInitializing{
-    if (YOUR_APP_IS_READY_TO_SHOW_AD) {
-        INIT_FACTORIES_AND_USE_THEM_TO_SHOW_ADS;
-    }
+       //YOUR_APP_IS_READY_TO_SHOW_AD
+       //INIT_FACTORIES_AND_USE_THEM_TO_SHOW_ADS;
 }
 
 -(void)MNGAdsSDKFactoryDidFailInitializationWithError:(NSError *)error {
-    NSLog(@"MNGAds failed initialization");
+    NSLog(@"BlueStack SDK  failed initialization");
 }
 ```
 
@@ -304,12 +306,7 @@ To check out if the SDK is initialized or not, you have to use `[MNGAdsSDKFactor
  func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         
         MNGAdsSDKFactory.initWithAppId("YOUR_APP_ID")
-
-        if(MNGAdsSDKFactory.isInitialized()){
-            MNGAdsSDKFactory.setDelegate(self)
-        }else{
-        INIT_FACTORIES_AND_USE_THEM_TO_SHOW_ADS;
-         }
+        MNGAdsSDKFactory.setDelegate(self)
 
         return true
     }
@@ -318,13 +315,13 @@ To check out if the SDK is initialized or not, you have to use `[MNGAdsSDKFactor
 
 
 func mngAdsSDKFactoryDidFinishInitializing() {
-        if (YOUR_APP_IS_READY_TO_SHOW_AD) {
-        INIT_FACTORIES_AND_USE_THEM_TO_SHOW_ADS;
-    }
+       //YOUR_APP_IS_READY_TO_SHOW_AD) 
+       //INIT_FACTORIES_AND_USE_THEM_TO_SHOW_ADS;
     }
 
     func mngAdsSDKFactoryDidFailInitializationWithError(_ error:Error) {
-        
+            print("BlueStack SDK  failed initialization")
+
     }
 ```
 
@@ -588,6 +585,7 @@ BlueStack SDK offers a number of different ad formats :
 
 - Infeed [Integration guides](https://bitbucket.org/mngcorp/mngads-demo-ios/wiki/infeed)
 
+[migrationV4.0.0]:https://bitbucket.org/mngcorp/mngads-demo-ios/wiki/migration-v4.0.0
 
 [ARC]:https://developer.apple.com/library/ios/documentation/Swift/Conceptual/Swift_Programming_Language/AutomaticReferenceCounting.html
 [link]:http://www.tutorialspoint.com/ios/ios_location_handling.htm
