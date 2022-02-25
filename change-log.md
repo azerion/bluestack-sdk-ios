@@ -8,6 +8,7 @@ you must check [Upgrade Guide]. You need to keep all Ad Network libs up to date.
 - **Requirements** 
     
     - Xcode 12.5
+
  - **Bug Fixes**
      - Migration .a vers .xcframework.
      - Fix issue Capping.
