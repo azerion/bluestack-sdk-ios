@@ -1,5 +1,11 @@
 Change log and release notes for MadvertiseLocation for iOS.
 
+### Version 3.0.3
+#### Release date: February 25th, 2022
+
+
+* iOS Simulator on Apple Silicon Macs
+
 ### Version 3.0.2
 #### Release date: September 22th, 2021
 
