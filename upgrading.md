@@ -944,12 +944,11 @@ instead of
 ```
 
 
-
-
  [Learn what's new in iOS 9 from Apple]:https://developer.apple.com/library/prerelease/ios/releasenotes/General/WhatsNewIniOS/Articles/iOS9.html
  [App Transport Security]:https://developer.apple.com/library/prerelease/ios/technotes/App-Transport-Security-Technote/
 
 
+[migrationV4.0.0]:https://bitbucket.org/mngcorp/mngads-demo-ios/wiki/migration-v4.0.0
 
 [MngAdsSDK]:https://bitbucket.org/mngcorp/mngads-demo-ios/downloads/
 [libSmartAdServer.a]:http://help.smartadserver.com/en/#../../../../specifications/Content/MobileSpecifications/Apps.htm
@@ -995,7 +994,7 @@ instead of
 [MAdvertiseLocation-v1.9]: https://bitbucket.org/mngcorp/mngads-demo-ios/downloads/MAdvertiseLocation-v1.9.zip
 [MAdvertiseLocation-v2.2]: https://bitbucket.org/mngcorp/mngads-demo-ios/downloads/MAdvertiseLocation-v2.2.zip
 [MAdvertiseLocation-v2.3]: https://bitbucket.org/mngcorp/mngads-demo-ios/downloads/MAdvertiseLocation-v2.3.zip
-[MAdvertiseLocation-v3.0.0] : https://bitbucket.org/mngcorp/mngads-demo-ios/downloads/MAdvertiseLocation-v3.0.0.zip
+[MAdvertiseLocation-v3.0.0]:https://bitbucket.org/mngcorp/mngads-demo-ios/downloads/MAdvertiseLocation-v3.0.0.zip
+[MAdvertiseLocation-v3.0.3]:https://bitbucket.org/mngcorp/mngads-demo-ios/downloads/MAdvertiseLocation-v3.0.3.zip
 [GoogleMobileAds.xcframework]:https://developers.google.com/mobile-ads-sdk/docs/dfp/ios/download
 [Bluestack-SDK-Core]:https://bitbucket.org/mngcorp/mngads-demo-ios/downloads/
-[migrationV4.0.0]:https://bitbucket.org/mngcorp/mngads-demo-ios/wiki/migration-v4.0.0
