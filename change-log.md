@@ -9,28 +9,35 @@ you must check [Upgrade Guide]. You need to keep all Ad Network libs up to date.
     
     - Xcode 12.5
 
- - **Bug Fixes**
-     - Migration .a vers .xcframework.
-     - Fix issue Capping.
-     - Fix issue MNGAdsSDKFactoryDidFailInitializationWithError:connectionError Delegate .( This must be executed everytime you run the App).
-     - Fixed the fail process and callbacks in interstitial format
-
  - **Added**
+
+     - The BlueStack SDK version 4.0.0 is coming in Febrary 2022 with a few major changes ,This guide outlines these changes and the best practices to bring your app up to date with our latest SDK  [migrationV4.0.0] .
+
      - New ad format Thumbnail Ad For Ogury SDK and BlueStack SDK.
      - The SDK is now certified for IAB Open Measurement SDK 1.3.23.
      - Add the interstitialDidShown new callback to better count impressions of Interstitial Ad formats.
      - iOS Simulator on Apple Silicon Macs
 
+ - **Bug Fixes**
+     - Fix issue Capping.
+     - Fix issue MNGAdsSDKFactoryDidFailInitializationWithError:connectionError Delegate .( This must be executed everytime you run the App).
+     - Fixed the fail process and callbacks in interstitial format
+
 - **Ad Network Mediation Updates**
  
-     - Use new [BlueStack-SDK] + *Adapter.xcframework
-     - Use new [MAdvertiseLocation-v3.0.3]
-     - Use new FacebookAudience 6.9.0 
-     - Use new DFP 9.0.0 version [GoogleMobileAds.xcframework]
-     - Use new AmazonPublisherServicesSDK 4.3.1 
-     - Use new Smart-Display-SDK 7.15.0
-     - Use new CriteoPublisherSdk 4.5.0
-     - Use new OguryAds (OgurySdk) 2.0.0
+  
+
+ - Use new [BlueStack-SDK] + *Adapter.xcframework
+ - Use new [MAdvertiseLocation-v3.0.3]
+ - Use new FacebookAudience 6.9.0 
+ - Use new DFP 9.0.0 version [GoogleMobileAds.xcframework]
+ - Use new AmazonPublisherServicesSDK 4.3.1 
+ - Use new Smart-Display-SDK 7.15.0
+ - Use new CriteoPublisherSdk 4.5.0
+ - Use new OguryAds (OgurySdk) 2.0.0
+ - Use new MAdvertiseCMP  v58
+
+
 
 
 
@@ -1514,6 +1521,8 @@ You must update [MngAdsSDK], [libSmartAdServer.a] (not available from pod update
  - Initial version
 
 ---
+[migrationV4.0.0]:https://bitbucket.org/mngcorp/mngads-demo-ios/wiki/migration-v4.0.0
+
 [Upgrade Guide]:https://bitbucket.org/mngcorp/mngads-demo-ios/wiki/upgrading
 [MngAdsSDK]:https://bitbucket.org/mngcorp/mngads-demo-ios/downloads/
 [BlueStack-SDK]:https://bitbucket.org/mngcorp/mngads-demo-ios/downloads/
@@ -1567,6 +1576,8 @@ You must update [MngAdsSDK], [libSmartAdServer.a] (not available from pod update
 [MAdvertiseLocation-v2.3]: https://bitbucket.org/mngcorp/mngads-demo-ios/downloads/MAdvertiseLocation-v2.3.zip
 [MAdvertiseLocation-v2.3.1]: https://bitbucket.org/mngcorp/mngads-demo-ios/downloads/MAdvertiseLocation-v2.3.1.zip
 [MAdvertiseLocation-v3.0.0] : https://bitbucket.org/mngcorp/mngads-demo-ios/downloads/MAdvertiseLocation-v3.0.0.zip
+[MAdvertiseLocation-v3.0.3] : https://bitbucket.org/mngcorp/mngads-demo-ios/downloads/MAdvertiseLocation-v3.0.3.zip
+
 
 [(more infos)]:https://bitbucket.org/mngcorp/mngads-demo-ios/wiki/Home#markdown-header-disable-auto-displaying
 
