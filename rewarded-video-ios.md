@@ -29,6 +29,22 @@ In your View Controller header file, import the 2 Reward Video Ad headers, decla
 @end
 ```
 
+```
+#!swift in -Bridging-Header.h
+#import <BlueStackSDK/MAdvertiseReward.h>
+#import <BlueStackSDK/MAdvertiseRewardedVideoAd.h>
+
+```
+
+```
+#!swift 
+class RewardVideoViewController: UIViewController, MAdvertiseAdapterRewardedVideoAdDelegate {
+   }
+
+```
+
+
+
 Add a function in your View Controller that initializes the rewarded video object and caches the video creative ahead of the time you want to show it.
 
 ```
@@ -46,6 +62,26 @@ MAdvertiseRewardedVideoAd *rewardedVideoAd;
   rewardedVideoAd = [[MAdvertiseRewardedVideoAd alloc]initWithPlacementID:@"YOUR_PLACEMENT_ID"];
   [rewardedVideoAd setDelegate:self];
   [rewardedVideoAd loadAd];
+  //You can use loadAdWithPreferences: as well for better targeting
+}
+
+```
+```
+#!Swift
+var rewardedVideoAd : MAdvertiseRewardedVideoAd?
+
+  override func viewDidLoad() {
+        super.viewDidLoad()
+        self.loadRewardedVideoAd()
+
+    }
+
+func loadRewardedVideoAd()
+{
+       rewardedVideoAd = MAdvertiseRewardedVideoAd.init("YOUR_PLACEMENT_ID")
+       rewardedVideoAd?.delegate = self
+       rewardedVideoAd?.load()
+
   //You can use loadAdWithPreferences: as well for better targeting
 }
 
@@ -76,6 +112,27 @@ For example :
 ```
 
 
+```
+#!Swift
+func adsAdapterRewardedVideoAdDidLoad(_ adsAdapter: MNGAdsAdapter!) { }
+    
+    func adsAdapter(_ adsAdapter: MNGAdsAdapter!, rewardedVideoAdDidFailWithError error: Error!) { }
+    
+
+    func adsAdapterRewardedVideoAdDidClose(_ adsAdapter: MNGAdsAdapter!) {
+        
+    }
+    
+    func adsAdapterRewardedVideoAdDidClick(_ adsAdapter: MNGAdsAdapter!) {
+        
+    }
+    
+    func adsAdapterRewardedVideoAdWillLogImpression(_ adsAdapter: MNGAdsAdapter!) {
+        
+    }
+    
+```
+
 
 - Once the Video has been loaded, you will need to present it whenever you see fit using the following method :
 
@@ -84,15 +141,33 @@ For example :
 -(void)showAdFromRootViewController:(UIViewController*)rootViewController animated:(BOOL)flag;
 ```
 
+```
+#!Swift
+rewardedVideoAd?.show(fromRootViewController: self, animated: true)
+```
 
 
 But the most important callBack has to be :
 
 ```
 #!objective-c
+
 - (void)adsAdapterRewardedVideoAdComplete:(MNGAdsAdapter *)adsAdapter withReward:(MAdvertiseReward *)reward;
 
 ```
+```
+#!Swift
+
+    func adsAdapterRewardedVideoAdComplete(_ adsAdapter: MNGAdsAdapter!, with reward: MAdvertiseReward!) {
+        var message = "Video rewarded"
+        if (reward != nil) {
+            message = "\(message) \ntype:\( reward.type ?? "Not Found") \namount: \(reward.amount ?? 0)"
+        }
+         
+    }
+
+```
+
 
 which serve to inform the publisher that the user has finished watching the video and should be rewarded with the suggested MAdvertiseReward, which is a new object representing, as the name suggest, the reward and it has 2 main properties: amount and type, for example 100 (amount of the reward) diamonds (type of the reward),
 the reward can be set from the web console of the differents adnetworks used , although some of them will return a nil reward, for example ads coming from facebook audience will just inform you that the user finished watching but wont suggest a reward , rather leave it to the publisher to decide the fitting reward on his own, so the publisher should always verify the reward object accordingly.
@@ -102,6 +177,9 @@ the reward can be set from the web console of the differents adnetworks used , a
 
 # Example
 
- - [Example Reward Video]
+ - [Example Reward Video objective C]
+ - [Example Reward Video Swift]
 
- [Example Reward Video]:https://bitbucket.org/mngcorp/mngads-demo-ios/src/master/Demo/MNG-Ads-SDK/RewardVideoViewController.m
+
+ [Example Reward Video objective C]:https://bitbucket.org/mngcorp/mngads-demo-ios/src/master/Demo/MNG-Ads-SDK/RewardVideoViewController.m
+ [Example Reward Video Swift ]:https://bitbucket.org/mngcorp/mngads-demo-ios/src/master/DemoSwift/DemoSwift/RewardVideoViewController.swift
