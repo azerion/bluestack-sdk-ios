@@ -11,7 +11,8 @@
  - Use new Smart-Display-SDK 7.15.0
  - Use new CriteoPublisherSdk 4.5.0
  - Use new OguryAds (OgurySdk) 2.0.0
- - Use new MAdvertiseCMP  v58
+ - Use new MAdvertiseCMP  v59
+ - Use new [BlueStack-SDK-Core] 4.0.0
 
 See [Wiki], [Design Guidelines and Best practices] and [Help Center]  for more detailed informations. you must check [Change Log] .
 
@@ -997,4 +998,4 @@ instead of
 [MAdvertiseLocation-v3.0.0]:https://bitbucket.org/mngcorp/mngads-demo-ios/downloads/MAdvertiseLocation-v3.0.0.zip
 [MAdvertiseLocation-v3.0.3]:https://bitbucket.org/mngcorp/mngads-demo-ios/downloads/MAdvertiseLocation-v3.0.3.zip
 [GoogleMobileAds.xcframework]:https://developers.google.com/mobile-ads-sdk/docs/dfp/ios/download
-[Bluestack-SDK-Core]:https://bitbucket.org/mngcorp/mngads-demo-ios/downloads/
+[BlueStack-SDK-Core] :https://bitbucket.org/mngcorp/mngads-demo-ios/downloads/Bluestack-SDK-Core-v4.0.0.zip
