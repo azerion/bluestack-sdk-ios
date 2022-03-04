@@ -10,8 +10,8 @@ Thanks for taking a look at BlueStack! We take pride in having an easy-to-use, f
 You can find integration documentation on our [wiki] and additional help documentation on our [developer help site].
 
 ## Requirements:
- - Requires **cocoapods 1.2.1**
- - Requires **Xcode 8**.
+ - Requires **cocoapods 1.11.2**
+ - Requires **Xcode 12**.
 
 ## Using CocoaPods
 The BlueStack-SDK is available through [Cocoapods], a popular dependency management system for Objective-C projects.
@@ -80,6 +80,15 @@ To add specifics adNetwork.
 pod "BlueStack-SDK",:subspecs => ["FBAudienceNetwork","Google-Mobile-Ads-SDK","Smart-Display-SDK","In-App-Bidding","OguryAds","CriteoPublisherSdk","AmazonPublisherServicesSDK","MAdvertiseLocation"]
 
 ```
+
+### Bluestack-SDK-Core
+
+you can use Bluestack-SDK-Core only without the adNetworks SDKs 
+
+```ruby
+pod "Bluestack-SDK-Core"
+```
+
 #### MadvertiseLocation(Since v2.12.1)
 
 You will just need to specify the subspec for Madvertise Location since it s not included by default like so :
