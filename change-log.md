@@ -35,7 +35,8 @@ you must check [Upgrade Guide]. You need to keep all Ad Network libs up to date.
     - Use new Smart-Display-SDK 7.15.0
     - Use new CriteoPublisherSdk 4.5.0
     - Use new OguryAds (OgurySdk) 2.0.0
-    - Use new MAdvertiseCMP  v58
+    - Use new MAdvertiseCMP  v59
+    - Use new [BlueStack-SDK-Core] 
 
 
 
@@ -1582,4 +1583,4 @@ You must update [MngAdsSDK], [libSmartAdServer.a] (not available from pod update
 [(more infos)]:https://bitbucket.org/mngcorp/mngads-demo-ios/wiki/Home#markdown-header-disable-auto-displaying
 
 [Thumbnail Ads]:https://bitbucket.org/mngcorp/mngads-demo-ios/wiki/thumbnail
-[BlueStack-SDK-Core]: https://bitbucket.org/mngcorp/mngads-demo-ios/downloads/Bluestack-SDK-Core-v3.2.3.zip
+[BlueStack-SDK-Core]: https://bitbucket.org/mngcorp/mngads-demo-ios/downloads/Bluestack-SDK-Core-v4.0.0.zip
