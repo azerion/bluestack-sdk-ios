@@ -1,5 +1,10 @@
 Change log and release notes for MadvertiseLocation for iOS.
 
+### Version 3.1.0
+#### Release date: April 1th, 2022
+
+* Swift version 5.5 and Xcode 13.3
+
 ### Version 3.0.3
 #### Release date: February 25th, 2022
 
