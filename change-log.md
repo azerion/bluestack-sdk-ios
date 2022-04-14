@@ -3,6 +3,26 @@
 See [Wiki] and [Help Center]  for more detailed informations.
 you must check [Upgrade Guide]. You need to keep all Ad Network libs up to date.
 
+## Version 4.1.0
+#### Release date: April 14th, 2022
+- **Requirements** 
+    
+    - Xcode 12.5
+
+ - **Bug Fixes**
+     - Fix issue banner size Smart.
+     - Fix issue AVAudioSession.
+
+- **Ad Network Mediation Updates**
+     - Upgrade OM SDK 1.3.31 
+     - Use new [BlueStack-SDK] + *Adapter.xcframework
+     - Use new [MAdvertiseLocation-v3.1.0]
+     - Use new DFP 9.2.0 version [GoogleMobileAds.xcframework]
+     - Use new AmazonPublisherServicesSDK 4.4.1 
+     - Use new OguryAds (OgurySdk) 2.0.1
+     - Use new MAdvertiseCMP  v60
+     - Use new [BlueStack-SDK-Core] 4.1.0
+
 ## Version 4.0.0
 #### Release date: February 25th, 2022
 - **Requirements** 
