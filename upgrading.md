@@ -1,5 +1,15 @@
 # upgrading SDK
 
+
+## Upgrading to 4.1.0
+ - Use new [BlueStack-SDK] + *Adapter.xcframework
+ - Use new [MAdvertiseLocation-v3.1.0]
+ - Use new DFP 9.2.0 version [GoogleMobileAds.xcframework]
+ - Use new AmazonPublisherServicesSDK 4.4.1 
+ - Use new OguryAds (OgurySdk) 2.0.1
+ - Use new MAdvertiseCMP  v60
+ - Use new [BlueStack-SDK-Core] 4.1.0
+
 ## Upgrading to 4.0.0
  -  The BlueStack SDK version 4.0.0 is coming in Febrary 2022 with a few major changes ,This guide outlines these changes and the best practices to bring your app up to date with our latest SDK  [migrationV4.0.0] .
 
@@ -997,5 +1007,6 @@ instead of
 [MAdvertiseLocation-v2.3]: https://bitbucket.org/mngcorp/mngads-demo-ios/downloads/MAdvertiseLocation-v2.3.zip
 [MAdvertiseLocation-v3.0.0]:https://bitbucket.org/mngcorp/mngads-demo-ios/downloads/MAdvertiseLocation-v3.0.0.zip
 [MAdvertiseLocation-v3.0.3]:https://bitbucket.org/mngcorp/mngads-demo-ios/downloads/MAdvertiseLocation-v3.0.3.zip
+[MAdvertiseLocation-v3.1.0]:https://bitbucket.org/mngcorp/mngads-demo-ios/downloads/MAdvertiseLocation-v3.1.0.zip
 [GoogleMobileAds.xcframework]:https://developers.google.com/mobile-ads-sdk/docs/dfp/ios/download
 [BlueStack-SDK-Core] :https://bitbucket.org/mngcorp/mngads-demo-ios/downloads/Bluestack-SDK-Core-v4.0.0.zip
