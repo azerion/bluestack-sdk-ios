@@ -38,7 +38,7 @@ The custom event must be defined in the [Google Ad Manager UI].
 
 On your Google Ad Manager UI, create a custom event 
 
-![screenshot-admanager.google.com-2019.10.08-18_33_45.jpg](https://bitbucket.org/repo/aen579/images/837721569-screenshot-admanager.google.com-2019.10.08-18_33_45.jpg)
+![2022-04-15_11-06.png](https://bitbucket.org/repo/aen579/images/2602893636-2022-04-15_11-06.png)
 
 1. Select **Madvertise Ad-Network** created on [Step 1]
 2. Choose **Custom Event** for Integration type
