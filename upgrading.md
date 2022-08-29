@@ -1,6 +1,14 @@
 # upgrading SDK
 
 
+## Upgrading to 4.1.1
+  - Use new [BlueStack-SDK] + *Adapter.xcframework
+  - Use new DFP 9.9.0 version [GoogleMobileAds.xcframework]
+  - Use new AmazonPublisherServicesSDK 4.5.1 
+  - Use new OguryAds (OgurySdk) 2.1.0
+  - Use new Smart (SmartSdk) 7.18.0
+  - Use new [BlueStack-SDK-Core] 4.1.1
+ 
 ## Upgrading to 4.1.0
  - Use new [BlueStack-SDK] + *Adapter.xcframework
  - Use new [MAdvertiseLocation-v3.1.0]
