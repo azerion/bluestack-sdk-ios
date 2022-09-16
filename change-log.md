@@ -3,6 +3,19 @@
 See [Wiki] and [Help Center]  for more detailed informations.
 you must check [Upgrade Guide]. You need to keep all Ad Network libs up to date.
 
+## Version 4.1.2
+#### Release date: September 16th, 2022
+- **Requirements** 
+    
+    - Xcode 14.0
+
+ - **Bug Fixes**
+     - Add support to Xcode 14
+
+- **Ad Network Mediation Updates**
+
+     - Use new [BlueStack-SDK-Core] 4.1.2
+
 ## Version 4.1.1
 #### Release date: August 29th, 2022
 - **Requirements** 
@@ -1618,6 +1631,6 @@ You must update [MngAdsSDK], [libSmartAdServer.a] (not available from pod update
 [MAdvertiseLocation-v3.0.3]: https://bitbucket.org/mngcorp/mngads-demo-ios/downloads/MAdvertiseLocation-v3.0.3.zip
 [MAdvertiseLocation-v3.1.0]: https://bitbucket.org/mngcorp/mngads-demo-ios/downloads/MAdvertiseLocation-v3.1.0.zip
 [Thumbnail Ads]:https://bitbucket.org/mngcorp/mngads-demo-ios/wiki/thumbnail
-[BlueStack-SDK-Core]: https://bitbucket.org/mngcorp/mngads-demo-ios/downloads/Bluestack-SDK-Core-v4.1.1.zip
+[BlueStack-SDK-Core]: https://bitbucket.org/mngcorp/mngads-demo-ios/downloads/Bluestack-SDK-Core-v4.1.2.zip
 
 [(more infos)]:https://bitbucket.org/mngcorp/mngads-demo-ios/wiki/Home#markdown-header-disable-auto-displaying
