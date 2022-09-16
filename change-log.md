@@ -10,7 +10,8 @@ you must check [Upgrade Guide]. You need to keep all Ad Network libs up to date.
     - Xcode 14.0
 
  - **Bug Fixes**
-     - Add support to Xcode 14
+     - Add support to Xcode 14 
+     - Disable the Bitcode (Target -> Build Settings -> Build Options -> Enable Bitcode = No) 
 
 - **Ad Network Mediation Updates**
 
