@@ -1,5 +1,8 @@
 # upgrading SDK
 
+## Upgrading to 4.1.2
+
+  - Use new [BlueStack-SDK-Core] 4.1.2
 
 ## Upgrading to 4.1.1
   - Use new [BlueStack-SDK] + *Adapter.xcframework
