@@ -1,5 +1,11 @@
 Change log and release notes for MadvertiseLocation for iOS.
 
+### Version 3.1.3
+#### Release date: September 20th, 2022
+
+* Swift version 5.5 and Xcode 14
+* rename the class **MAdvertiseLocation**  with **BlueStackLocation** 
+
 ### Version 3.1.2
 #### Release date: September 14th, 2022
 
