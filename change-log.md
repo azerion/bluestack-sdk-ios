@@ -10,9 +10,9 @@ you must check [Upgrade Guide]. You need to keep all Ad Network libs up to date.
     - Xcode 14.0
 
  - **Added**
-     - add the possibility of not adding the option "mixWithOthers" to the Audio Session.
-     ```
-MNGAdsSDKFactory.setAudioMixedWithOthersEnabled(false)
+     - add the possibility of not adding the option "mixWithOthers" to  the Audio Session.
+      ```objc
+   MNGAdsSDKFactory.setAudioMixedWithOthersEnabled(false);
 ```
 
 - **Ad Network Mediation Updates**
