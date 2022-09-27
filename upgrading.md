@@ -1,5 +1,9 @@
 # upgrading SDK
 
+## Upgrading to 4.1.3
+
+  - Use new [BlueStack-SDK-Core] 4.1.3
+
 ## Upgrading to 4.1.2
 
   - Use new [BlueStack-SDK-Core] 4.1.2
@@ -1020,4 +1024,4 @@ instead of
 [MAdvertiseLocation-v3.0.3]:https://bitbucket.org/mngcorp/mngads-demo-ios/downloads/MAdvertiseLocation-v3.0.3.zip
 [MAdvertiseLocation-v3.1.0]:https://bitbucket.org/mngcorp/mngads-demo-ios/downloads/MAdvertiseLocation-v3.1.0.zip
 [GoogleMobileAds.xcframework]:https://developers.google.com/mobile-ads-sdk/docs/dfp/ios/download
-[BlueStack-SDK-Core] :https://bitbucket.org/mngcorp/mngads-demo-ios/downloads/Bluestack-SDK-Core-v4.0.0.zip
+[BlueStack-SDK-Core] :https://bitbucket.org/mngcorp/mngads-demo-ios/downloads/Bluestack-SDK-Core-v4.1.3.zip
