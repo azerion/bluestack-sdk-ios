@@ -11,6 +11,11 @@ you must check [Upgrade Guide]. You need to keep all Ad Network libs up to date.
 
  - **Added**
      - add the possibility of not adding the option "mixWithOthers" to  the Audio Session.
+   
+```swift
+   MNGAdsSDKFactory.setAudioMixedWithOthersEnabled(false)
+```
+
 
 - **Ad Network Mediation Updates**
 
