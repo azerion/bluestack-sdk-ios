@@ -1,40 +1,38 @@
-![mad_AdNetworkMediation_rgb_small.png](https://bitbucket.org/repo/GyRXRR/images/3981639300-mad_AdNetworkMediation_rgb_small.png) for IOS
+![BlueStack SDK](./images/logo-bluestack.svg)
+# BlueStack Mobile Ads SDK for IOS
 
-# BlueStack Mediation SDK for IOS
-
-Madvertise provides functionalities for monetizing your mobile application: from premium sales with rich media, video and innovative formats, it facilitates inserting native mobile ads as well all standard display formats. MngAds SDK (BlueStack) is a library that allow you to handle Ads servers with the easy way.
+BlueStack provides functionalities for monetizing your mobile application: from premium sales with rich media, video and innovative formats, it facilitates inserting native mobile ads as well all standard display formats. BlueStack is a library that allow you to handle Ads servers with the easy way.
 
 
-| **SDK Integration** | 
-| -------- |
+| **SDK Integration**   |
+|-----------------------|
 | [Prepare for iOS 14+] |
-| [Setup the IOS SDK] | 
-| [IOS Change Log] 
-| [IOS Upgrade Guide] 
+| [Setup the IOS SDK]   |
+| [IOS Change Log]      |
+| [IOS Upgrade Guide]   |
 
 
-| **Ad Formats** | 
-| -------- |
-| [IOS Banner Ads] | 
-| [IOS Interstitial Ads] |
-| [IOS Infeed Ads] |
-| [IOS Native Ads] | 
-| [IOS Rewarded Video Ads]| 
-| [IOS Thumbnail Ads]| 
+| **Ad Formats**           | 
+|--------------------------|
+| [IOS Banner Ads]         | 
+| [IOS Interstitial Ads]   |
+| [IOS Infeed Ads]         |
+| [IOS Native Ads]         | 
+| [IOS Rewarded Video Ads] | 
+| [IOS Thumbnail Ads]      | 
 
 
 
-| **Advanced Settings** | 
-| -------- |
-|[IOS FAQ and Troubleshooting]
-|[IOS Debug Mode with Gyroscope Sensor]
-|[IOS Targeting Audiences] 
+| **Advanced Settings**                  | 
+|----------------------------------------|
+| [IOS FAQ and Troubleshooting]          |
+| [IOS Debug Mode with Gyroscope Sensor] |
+| [IOS Targeting Audiences]              |
 
 
-| **Mediation Adapters** | 
-| -------- | 
-| [IOS Google Mobile Ads Adapter]
-| [IOS Mopub Adapter]
+| **Mediation Adapters**          |
+|---------------------------------|
+| [IOS Google Mobile Ads Adapter] |
 
 
 
@@ -44,9 +42,7 @@ Madvertise provides functionalities for monetizing your mobile application: from
 [IOS Native Ads]:/nativead.md
 [IOS Upgrade Guide]:/upgrading.md
 [IOS FAQ and Troubleshooting]:/faq.md
-[IOS Best practices]:/guidelines.md
 [IOS Debug Mode with Gyroscope Sensor]:/debug-mode-gyro.md
-[IOS Mopub Adapter]:https://bitbucket.org/mngcorp/mobile.mng-ads.com-mngperf/wiki/mopub-adaptor-ios
 [IOS Rewarded Video Ads]:/rewarded-video-ios.md
 [IOS Infeed Ads]:/infeed.md
 [IOS Banner Ads]:/banner.md
